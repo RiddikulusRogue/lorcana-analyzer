@@ -98,7 +98,7 @@ TEMPO EXCHANGES (Card Advantage vs Tempo Tradeoffs):
 **9 Major Topics**:
 
 #### A. Curve Theory & Consistency
-- Ideal mana curve distribution (4/6/6/6 formula)
+ - Ideal ink curve distribution (4/6/6/6 formula)
 - Evaluates current deck's average cost
 - Smooth vs two-humped curves explained
 
@@ -120,9 +120,9 @@ TEMPO EXCHANGES (Card Advantage vs Tempo Tradeoffs):
 - Threat targets (30+ copies)
 - Answer targets (8-15 copies)
 
-#### F. Mulligan Patterns (Color-Specific)
+#### F. Mulligan Patterns (Ink-Specific)
 - Generic mulligan rules
-- **Color-specific patterns tailored to deck**:
+- **Ink-specific patterns tailored to deck**:
   - Ruby: "KEEP: 1-cost Rush creature + any 2-drop"
   - Sapphire: "KEEP: Draw creature + blocker"
   - Emerald: "KEEP: Ramp creature + follow-ups"
@@ -134,14 +134,15 @@ TEMPO EXCHANGES (Card Advantage vs Tempo Tradeoffs):
 - Opportunity cost calculation
 
 #### H. Common Deckbuilding Mistakes (With Auto-Detection)
-- ✓ Too many colors (detects if deck has >3)
-- ✓ Bad mana curve (detects if avg cost off)
+ - ✓ Too many ink colors (detects if deck has >3)
+ - ✓ Bad ink curve (detects if avg cost off)
 - ✓ Too many finishers
 - ✓ Ignoring staples
 - ✓ Over-synergizing
 
 #### I. Improvement Path (4-Week Progression)
 - **Week 1**: Fix mana curve (target 3.5-4.0 average)
+ - **Week 1**: Fix ink curve (target 3.5-4.0 average)
 - **Week 2**: Reduce colors, improve consistency
 - **Week 3**: Study meta, add tech cards
 - **Week 4**: Play 10 games, refine based on results
@@ -157,7 +158,7 @@ CURVE THEORY (Cost distribution):
 MULLIGAN PATTERNS FOR THIS DECK:
   • KEEP (Good hand): Turn-1 creature + 2-drop + land
   • MULLIGAN (Weak hand): No creatures OR all spells OR all high-cost
-  • Specific to YOU (Ruby/Amethyst):
+  • Specific to YOU (Ruby/Amethyst inks):
     - KEEP: 1-cost Rush creature (Moana/Rapunzel) + any 2-drop
     - MULLIGAN: No 1-drops, or only high-cost creatures
 ```
@@ -184,8 +185,8 @@ MULLIGAN PATTERNS FOR THIS DECK:
 
 **Coaching Report Now Includes**:
 
-1. **Deck Composition Check** ✅ (Existing)
-   - 60 cards, avg cost 3.87, Ruby/Amethyst colors
+  1. **Deck Composition Check** ✅ (Existing)
+  - 60 cards, avg cost 3.87, Ruby/Amethyst ink colors
 
 2. **Mulligan Strategy** ✅ (Existing)
    - Specific to Ruby cards in deck: Moana, Mirabel, Gaston
@@ -224,8 +225,8 @@ MULLIGAN PATTERNS FOR THIS DECK:
 
 ## ✨ Key Personalization Features
 
-### 1. Color-Based Tailoring
-Each new section references the actual deck colors:
+### 1. Ink-Based Tailoring
+Each new section references the actual deck ink colors:
 ```javascript
 if (primaryColorRaw === 'ruby') {
   // Ruby-specific advice
@@ -235,7 +236,7 @@ if (primaryColorRaw === 'ruby') {
 ```
 
 ### 2. Cost-Based Evaluation
-Analyzes actual deck's mana curve:
+Analyzes actual deck's ink curve:
 ```javascript
 const avgCost = parseFloat(analysis.avgCost);
 if (avgCost > 4.5) {
@@ -251,7 +252,7 @@ if (avgCost > 4.5) {
 - Detects card types: creatures/spells/items/songs
 
 ### 4. Matchup-Specific Advice
-Each color pairing gets tailored recommendations:
+Each ink pairing gets tailored recommendations:
 - Ruby vs Steel: "DISADVANTAGE - High power/Resist walls"
 - Sapphire vs Ruby: "ADVANTAGE - Defense beats Rush"
 - Emerald vs Emerald: "Mirror Match - Speed check"
@@ -283,13 +284,12 @@ vite v5.4.21 building for production...
 
 ## 📋 Content Checklist
 
-### Matchup Analysis Coverage
-- ✅ Ruby vs all colors (6 variants)
-- ✅ Sapphire vs all colors (6 variants)
-- ✅ Emerald vs all colors (6 variants)
-- ✅ Steel vs all colors (6 variants)
-- ✅ Amber vs all colors (6 variants)
-- ✅ Amethyst vs all colors (6 variants)
+- ✅ Ruby vs all ink colors (6 variants)
+- ✅ Sapphire vs all ink colors (6 variants)
+- ✅ Emerald vs all ink colors (6 variants)
+- ✅ Steel vs all ink colors (6 variants)
+- ✅ Amber vs all ink colors (6 variants)
+- ✅ Amethyst vs all ink colors (6 variants)
 - **Total**: 36 matchup scenarios covered
 
 ### Trading Strategy Coverage
@@ -305,12 +305,12 @@ vite v5.4.21 building for production...
 - ✅ Synergy payoff timing
 
 ### Deck-Building Coverage
-- ✅ Mana curve theory (ideal distribution)
+- ✅ Ink curve theory (ideal distribution)
 - ✅ Consistency vs power balance
 - ✅ Threat/answer ratio targets
 - ✅ Synergy vs staples balance
 - ✅ Card draw targets
-- ✅ Mulligan patterns (generic + color-specific)
+- ✅ Mulligan patterns (generic + ink-specific)
 - ✅ Card selection framework
 - ✅ 5 common mistakes with detection
 - ✅ 4-week improvement path

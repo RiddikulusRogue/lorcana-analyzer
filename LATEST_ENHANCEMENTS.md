@@ -5,8 +5,8 @@ Added three comprehensive new sections to the Lorcana Deck Analyzer coaching rep
 
 ## New Sections Added
 
-### 1. **Matchup Analysis vs All Color Combinations** ✨
-**Purpose**: Provide detailed matchup guidance for every possible opponent color combination.
+### 1. **Matchup Analysis vs All Ink Color Combinations** ✨
+**Purpose**: Provide detailed matchup guidance for every possible opponent ink color combination.
 
 **Coverage**:
 - Ruby Matchups (Mirror match, vs Control, vs Others)
@@ -16,9 +16,9 @@ Added three comprehensive new sections to the Lorcana Deck Analyzer coaching rep
 - Amber Matchups (Mirror match, vs Aggro, vs Control)
 - Amethyst Matchups (Mirror match, vs Aggro, vs Others)
 
-**Personalization**: Each matchup analysis is **tailored based on the analyzed deck's actual colors** - shows:
+**Personalization**: Each matchup analysis is **tailored based on the analyzed deck's actual ink colors** - shows:
 - Whether the matchup is advantage/disadvantage
-- Specific tactical recommendations based on both decks' colors
+-- Specific tactical recommendations based on both decks' ink colors
 - Turn-by-turn strategy for that matchup
 - Win condition for that specific matchup
 
@@ -86,7 +86,7 @@ Added three comprehensive new sections to the Lorcana Deck Analyzer coaching rep
    
 6. **Mulligan Patterns for This Deck**
    - What hands to keep vs mulligan
-   - **Specific patterns based on detected deck colors**
+   - **Specific patterns based on detected deck inks**
    - Examples:
      - Ruby: "KEEP: 1-cost Rush creature + any 2-drop"
      - Sapphire: "KEEP: Draw creature + blocker or threat"
@@ -97,15 +97,15 @@ Added three comprehensive new sections to the Lorcana Deck Analyzer coaching rep
    - Opportunity cost calculation
    
 8. **Common Deckbuilding Mistakes** (with detection)
-   - Too many colors ✓ (detects current deck problem)
-   - Bad mana curve ✓ (detects current issue)
+   - Too many ink colors ✓ (detects current deck problem)
+   - Bad ink curve ✓ (detects current issue)
    - Too many finishers
    - Ignoring staples
    - Over-synergizing
    
 9. **Improvement Path** - 4-week progression plan
-   - Week 1: Fix mana curve
-   - Week 2: Reduce colors, increase consistency
+   - Week 1: Fix ink curve
+   - Week 2: Reduce ink colors, increase consistency
    - Week 3: Study meta, add tech
    - Week 4: Play and refine
    - Month 2: Continue iterations
@@ -115,11 +115,11 @@ Added three comprehensive new sections to the Lorcana Deck Analyzer coaching rep
 ## Key Features of New Content
 
 ### ✅ All Personalized to Analyzed Deck
-- Matchup analysis references the actual deck's colors
+- Matchup analysis references the actual deck's ink colors
 - Deck-building advice tailored to current card composition
 - Example: If deck has low average cost, suggests high-cost additions
 
-### ✅ Color-Specific Recommendations
+### ✅ Ink-Specific Recommendations
 - Ruby advice differs from Sapphire advice differs from Emerald
 - Emerald/Steel matchup analysis includes ink-specific tactics
 
@@ -165,7 +165,7 @@ The new sections integrate seamlessly with existing content:
 
 ✅ **Code Errors**: None (verified with linter)
 ✅ **Syntax**: Valid JavaScript template strings
-✅ **Logic**: All color combinations covered (6 primary colors)
+✅ **Logic**: All ink color combinations covered (6 primary inks)
 ✅ **Personalization**: References `${primaryColorRaw}`, `${avgCost}`, `${singletonCount}` for dynamic content
 ✅ **File Size**: 70,911 bytes (reasonable, no bloat)
 
@@ -175,7 +175,7 @@ The new sections integrate seamlessly with existing content:
 
 When users analyze a deck in the Lorcana Analyzer:
 1. ✅ Existing sections run first (Deck Composition, Mulligan, Turn-by-turn, etc.)
-2. ✅ New Matchup Analysis section provides color-specific guidance
+2. ✅ New Matchup Analysis section provides ink-specific guidance
 3. ✅ Advanced Trading Strategy teaches resource management
 4. ✅ Deck-Building Principles explains the "why" behind recommendations
 5. ✅ Final Tips section wraps up coaching report

@@ -9,13 +9,13 @@ Successfully added three comprehensive coaching sections to the Disney Lorcana D
 ## What Was Added
 
 ### 1. **Matchup Analysis vs All 6 Ink Colors** 🎲
-- Analyzes how your deck performs against: Ruby, Sapphire, Emerald, Steel, Amber, Amethyst
-- **Personalized**: Shows advantage/disadvantage based on YOUR deck's colors
+ Analyzes how your deck performs against: Ruby, Sapphire, Emerald, Steel, Amber, Amethyst
+ **Personalized**: Shows advantage/disadvantage based on YOUR deck's ink colors
 - **Tactical**: Includes turn-by-turn strategy for each matchup
-- **140+ lines** of detailed guidance
-
+ **Curve Theory**: Ideal ink distribution for consistency
+ **Ink-Specific Mulligans**: Tailored patterns for each ink color
 ### 2. **Advanced Trading Card Strategy** 📈
-- **Positioning**: When to attack vs defend (with decision framework)
+VS EMERALD: Mirror Match - Ink efficiency...
 - **Tempo Exchanges**: Card advantage vs tempo tradeoffs
 - **Resource Management**: Ink, hand size, board state control
 - **Optimization**: Mulch/discard timing and synergy payoffs

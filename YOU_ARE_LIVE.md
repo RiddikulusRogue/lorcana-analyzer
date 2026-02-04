@@ -31,7 +31,7 @@
 ✅ **AI Coaching Report** (1,156+ lines per deck!)
 - Mulligan strategy (actual deck cards)
 - Turn-by-turn gameplay guide
-- Build strategy (tailored to colors)
+- Build strategy (tailored to ink colors)
 - Meta analysis (tier rankings)
 - **NEW: Matchup analysis vs all 6 ink colors**
 - **NEW: Advanced trading strategies**
