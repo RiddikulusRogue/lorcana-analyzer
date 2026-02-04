@@ -1,0 +1,565 @@
+{
+  "advancedConcepts": {
+    "tempoAndCardAdvantage": {
+      "description": "Tempo describes how efficiently you're using resources vs opponent. Card advantage measures cards in hand relative to opponent.",
+      "keyPoints": [
+        "Early deployment: Summon low-cost characters that challenge effectively",
+        "Removal timing: Use removal before opponent's synergy triggers",
+        "Quest/Challenge balance: Know when to exert for lore vs staying ready",
+        "Combining tempo + card advantage is lethal - control the flow of the game"
+      ],
+      "tempoDecks": "Feature 2-3 cost creatures with immediate board impact, snowball advantage by having more creatures than opponent"
+    },
+    "inkCurve": {
+      "description": "Balanced distribution of cards across different costs for playable options at every stage",
+      "recommended": {
+        "lowCost": "8-10 cards at 1-2 cost (early pressure)",
+        "midCost": "10-12 cards at 3-4 cost (board building)",
+        "highCost": "8-10 cards at 5-6 cost (value generators)",
+        "bombs": "2-4 cards at 7+ cost (finishers)"
+      },
+      "warning": "Don't get stuck with high-cost uninkable cards - consider 40-50% of deck should be ink-eligible"
+    },
+    "keywordSynergy": {
+      "evasive": "Can only be challenged by other Evasive characters. Deck built around Evasive forces opponent to run Evasive or use removal",
+      "bodyguard": "Can redirect challenges, protecting key questers. Don't waste them as ink",
+      "shift": "Play upgraded versions at reduced cost if base version exists. Accelerates tempo significantly",
+      "importance": "Don't neglect staple effects just to jam more synergy"
+    },
+    "metaAnalysis": {
+      "steps": [
+        "Identify common decks in your area/online",
+        "Spot their weaknesses",
+        "Reserve 2-3 flex slots for meta tech cards",
+        "If sideboarding allowed, treat as targeted solution kit"
+      ]
+    }
+  },
+  "beginnerTips": {
+    "mulliganStrategy": {
+      "goal": "Assemble an ink curve with 1-drop on turn 1, 2-drop on turn 2, etc",
+      "aggressive": "Mulligan duplicate ink costs, keeping best of each drop",
+      "examples": [
+        "Two 1-drops, three 3-drops = keep one 1-drop and one 3-drop, bottom rest to find 2-drop and 4-drop",
+        "Perfect 1-2-3-4 curve + 4 different 4-drops = keep good 4-drop, bottom others to find 5-6 drop"
+      ],
+      "warning": "Be careful with non-inkable cards - bottom some if hand has more than 2. Avoid aggressive mulligans if deck has 25%+ non-inkable"
+    },
+    "inkellingDecisions": {
+      "goal": "Plan ahead, mapping first few turns to ensure smooth curve",
+      "principles": [
+        "Turn 1-5: Always ink something to curve out properly",
+        "Ink the worst card you won't play if something better is available",
+        "If hand is worst 4-drop, best 5-drop, two 2-drops: ink worst 4-drop and keep excess 2-drop",
+        "Late game: Stop inking after turn 5-6 if you've hit natural mana cap (e.g., 5 ink spent/turn)"
+      ]
+    },
+    "questingVsChallenging": {
+      "principle": "Only quest when ahead and/or safe. Game is about maintaining board state that gains 20 lore faster.",
+      "rules": [
+        "If opponent is ahead in race: challenge defensively",
+        "If board is equal: don't quest if it gives favorable trade",
+        "Board control is more important than rushing lore early game",
+        "Challenge is control strategy, questing is aggro strategy"
+      ]
+    },
+    "cardValuation": {
+      "overperformers": [
+        "Efficient removal spells",
+        "Ramp spells",
+        "Evasive characters",
+        "Bodyguards",
+        "Card advantage generators"
+      ],
+      "note": "Willpower appears more important than strength or lore values"
+    }
+  },
+  "intermediateTips": {
+    "whoIsTheBeatdown": {
+      "description": "Fundamental question: Am I trying to finish fast (beatdown) or stabilize and grind (control)?",
+      "beatdown": "Player trying to push to win as fast as possible. Quest aggressively. Finish before opponent's finishers matter.",
+      "control": "Player stabilizing and stopping opponent. Challenge and remove threats. Buy time for your answers.",
+      "fluid": "In Lorcana the question changes turn by turn based on board state and hand strength",
+      "decisionRule": "When tempted to quest for lore: Am I the beatdown? If no, prioritize stabilizing over questing"
+    },
+    "tempoPlays": {
+      "definition": "Plays that build momentum or disrupt opponent's progress while advancing your own",
+      "example": "Bounce high-cost threat back to hand instead of removing. Costs them another turn, gives you time to draw answer",
+      "value": "Buying one turn of unopposed questing (if you're beatdown) is regularly enough to win games",
+      "principle": "Lorcana is game of small incremental advantages that add up to 20 lore"
+    },
+    "stayOnCurve": {
+      "definition": "Every turn drop card into inkwell and play card using that ink. 1-drop T1, 2-drop T2, etc",
+      "mistake": "Playing inkable 1-costs on turn 2 just because you have ink available",
+      "priority": "Ensure you can drop that amazing 6-8 cost card on turn 6-8 when you hit it",
+      "overInking": "Don't keep going past natural mana cap. Most decks lack drawing power. Holding cards lets you play around removal"
+    },
+    "playAroundRemoval": {
+      "ruby": "Be aware of: Be Prepared (board wipe at 7 ink), Dragon Fire (4 copies likely)",
+      "steel": "Be aware of: Grab Your Sword, Smash, Fire the Cannons (assume 3-4 copies if seen)",
+      "tactics": [
+        "Don't throw down weak characters to get exiled",
+        "Play smaller threat first to bait removal before deploying your big threat",
+        "Keep characters in hand to replace removed ones",
+        "Don't overcommit to board vs Ruby/Steel"
+      ]
+    },
+    "tradeUp": {
+      "definition": "Exchange a card for opponent's card of higher value (usually by ink cost)",
+      "good": "Your 1-cost takes out their 2-cost - you're ahead",
+      "bad": "Your 4-cost trades with their 3-cost - net negative",
+      "principle": "Equal trades only work if you're ahead. Always trade upwards in value"
+    },
+    "patience": {
+      "principle": "Lorcana is won by building and maintaining board state that reaches 20 lore, not racing",
+      "timing": "Only throw everything on board when opponent is 15+ lore AND board shows you'll lose in 2 turns",
+      "rules": [
+        "Only quest aggressively if you're beatdown",
+        "Disrupt opponent's tempo where possible",
+        "Play ink and cards on curve",
+        "Don't get baited into board wipes",
+        "Trade to remove higher value opponent cards",
+        "Keep your cool"
+      ]
+    }
+  },
+  "deckArchetypes": {
+    "rubyAmethystAggroControl": {
+      "idea": "Ruby aggressive minions + Amethyst draw and Shift for sustained pressure",
+      "cards": [
+        "Low-cost Ruby characters with 2 lore icons for quick questing",
+        "Amethyst Shift characters that upgrade cheaply to outscale",
+        "Removal songs/actions that double as ink if ahead or removal if behind"
+      ],
+      "decisions": [
+        "When to quest aggressively vs save for challenges",
+        "Timing Shift upgrades without losing tempo",
+        "Balancing uninkable vs inkable card ratio"
+      ]
+    },
+    "emeraldSapphireMidrangeControl": {
+      "idea": "Sturdy Sapphire characters for stalling, mid-cost Emerald units that debuff and control",
+      "curve": {
+        "early": "1-2 cost defensive minions or item draw",
+        "mid": "3-5 cost creatures that remove or hamper threats",
+        "late": "6-7 cost bombs that flip board or collect lore"
+      },
+      "strengths": [
+        "Grinding out value-based decks by outlasting",
+        "Surviving hyper-aggro with midrange taunts and removal",
+        "Playing defense until big finishers online"
+      ]
+    },
+    "princessSynergy": {
+      "idea": "Leverage synergy cards that buff Princess characters specifically",
+      "considerations": [
+        "Enough synergy cards for consistent triggers (don't spread too thin)",
+        "Deck functions if key synergy pieces are banished",
+        "Include Bodyguard or Evasive support",
+        "Don't neglect universal removal options"
+      ]
+    }
+  },
+  "playstyleGuides": {
+    "aggro": {
+      "goal": "Win by turn 5-6 with early pressure",
+      "mulligan": "Aggressively mulligan for low-cost openers, accept weak late game",
+      "strategy": "Snowball advantage with efficient creatures, force opponent into defensive plays",
+      "curveAdjustment": "If avg cost >4, replace 5-8 high-cost cards with low-cost units (1-3)",
+      "questions": [
+        "Do I have enough 1-3 cost creatures for early pressure?",
+        "Can I threaten lethal by turn 6?",
+        "Do I have evasive creatures to force unfavorable blocks?"
+      ]
+    },
+    "control": {
+      "goal": "Survive until turn 7+, win with locked board",
+      "mulligan": "Search for removal and card draw, accept weak early game",
+      "strategy": "Answer every threat, stabilize board, deploy finishers once safe",
+      "curveAdjustment": "If avg cost <4, add 4-6 high-cost cards (5+) as finishers",
+      "questions": [
+        "Do I have enough removal for major threats?",
+        "Do I have card draw to maintain tempo?",
+        "Can I stabilize before opponent's threats dominate?"
+      ]
+    },
+    "midrange": {
+      "goal": "Tempo and value, win with efficient threats into turn 7",
+      "mulligan": "Balance of threats and answers, aim for perfect curve",
+      "strategy": "Value trades, efficient board presence, flexible answers",
+      "curveAdjustment": "If avg cost 4-4.5 (ideal), keep curve. <4: add mid-costers. >4.5: add low-costers",
+      "questions": [
+        "Do I have 50% threats and 50% answers?",
+        "Can I make trades favorably?",
+        "Is my deck consistent turn to turn?"
+      ]
+    }
+  },
+  "starterDeckAdvice": {
+    "recommended": "High-cost inkable characters are like MTG's land/bomb split cards - Lorcana allows top-heavy curves",
+    "upgrade": "Remove low-impact items/actions, add more 5-7 cost characters",
+    "underperformers": [
+      "Dinglehopper",
+      "Part of Your World",
+      "Hakuna Matata",
+      "Stampede",
+      "Steal from the Rich",
+      "He's Got a Sword",
+      "Ransack",
+      "Magic Golden Flower",
+      "Frying Pan"
+    ]
+  },
+  "coachingTips": {
+    "deck_construction_checklist": [
+      "✓ 60 cards exactly",
+      "✓ Max 4 copies per card (except special)",
+      "✓ 2 colors maximum for constructed",
+      "✓ 8-10 one-drops for early pressure",
+      "✓ 40-50% of deck is ink-eligible",
+      "✓ Balanced curve from turns 1-7+",
+      "✓ Includes removal (3-6 removal spells)",
+      "✓ Includes card draw (2-4 draw effects)",
+      "✓ Clear win condition"
+    ],
+    "early_game_priorities": [
+      "Mulligan aggressively for curve",
+      "Land your first creature turn 1-2",
+      "Maintain board presence (1+ creature)",
+      "Watch opponent's opening plays",
+      "Play to ink curve (T1-T5 add ink each turn)"
+    ],
+    "mid_game_priorities": [
+      "Balance tempo vs card advantage",
+      "Make favorable trades (1-cost for 2-cost)",
+      "Hold removal for key threats",
+      "Build towards your finishers",
+      "Watch opponent's hand size"
+    ],
+    "late_game_priorities": [
+      "Protect your lore total (20 is finish line)",
+      "Control board state completely",
+      "Deploy finishers when safe",
+      "Have outs if opponent has threats",
+      "Close out cleanly"
+    ],
+    "critical_decision_moments": {
+      "do_I_quest_or_challenge": "Ask: Am I the beatdown? If yes, quest. If no, challenge.",
+      "which_cards_to_ink": "Ink worst cards you won't play. Plan first 5-6 turns ahead.",
+      "when_to_hold_removal": "Keep removal for game-ending threats, not low-impact creatures.",
+      "how_many_creatures": "Minimum 1-2 creatures per turn early, 3+ mid-game, control board late.",
+      "when_do_i_pass": "Only pass when board is safe or you're out of playable cards."
+    },
+    "deckbuilding_archetypes": {
+      "tempo_aggro": {
+        "goal": "Win turns 5-6 with early pressure",
+        "cards": "12-15 one-drops, 10-12 two-drops, 8-10 three-drops, 3-4 finishers",
+        "removal": "Efficient 2-3 cost removal, burn/direct damage",
+        "draw": "1-2 card draw effects (optional, tempo is more important)"
+      },
+      "midrange": {
+        "goal": "Win turns 6-7 with efficient threats + answers",
+        "cards": "6-8 one-drops, 8-10 two-drops, 10-12 three-cost, 8-10 four-cost, 4-6 five-plus",
+        "removal": "4-6 removal spells, flexible answers",
+        "draw": "2-4 card draw effects for consistency"
+      },
+      "control": {
+        "goal": "Win turn 8+ after locking board",
+        "cards": "2-4 one-drops, 4-6 two-drops, 8-10 three-cost, 8-10 four-cost, 6-8 five-plus",
+        "removal": "8-10 removal spells, board wipes, sweepers",
+        "draw": "4-6 card draw effects for consistency"
+      }
+    },
+    "common_mistakes_to_avoid": [
+      "Playing ink candidates early when you should save them",
+      "Questing when you should challenge (behind in tempo)",
+      "Overcommitting creatures to board with removal coming",
+      "Keeping too many singletons (reduces consistency)",
+      "Not counting opponent's lore (always know the race)",
+      "Forgetting to ask: Who is the beatdown?",
+      "Mulliganing too conservatively for perfect curve",
+      "Inking cards you might need later (plan ahead!)",
+      "Not playing around known removal threats",
+      "Wasting removal on low-impact creatures"
+    ],
+    "card_valuation_guide": {
+      "overrated": [
+        "High-cost creatures without synergy (6+ costs)",
+        "Cards that only work in specific situations",
+        "Singleton copies of mediocre cards",
+        "Cards that can't be inked (except essential)"
+      ],
+      "underrated": [
+        "One-drops (early pressure matters!)",
+        "Removal spells (tempo + card advantage)",
+        "Evasive creatures (force removal or favorable blocks)",
+        "Cheap card draw (consistency wins games)",
+        "Bodyguards (protect your threats)"
+      ]
+    },
+    "matchup_framework": {
+      "vs_aggro": {
+        "priority": "Survival → Board control → Reach 20 lore",
+        "tactics": "Challenge everything, remove threats immediately, life gain if available",
+        "win_condition": "Out-value their threats with efficient removal + stabilization"
+      },
+      "vs_midrange": {
+        "priority": "Tempo → Favorable trades → Out-value them",
+        "tactics": "Trade up (your 1-drop for their 2-drop), keep hand full, pressure lore",
+        "win_condition": "Accumulate small advantages into large leads"
+      },
+      "vs_control": {
+        "priority": "Consistency → Board presence → Overwhelm answers",
+        "tactics": "Hold cards in hand, bait removal with small threats, deploy finishers when answers are gone",
+        "win_condition": "Have 1-2 finishers when they're out of removal"
+      }
+    }
+  },
+  "advancedCoachingStrategies": {
+    "resource_management": {
+      "ink_management": "Plan first 6 turns of inking. Don't over-ink past natural mana cap. Reserve ink for curve plays.",
+      "hand_management": "Hold cards to play around removal. Don't empty hand on single turn unless you're beatdown.",
+      "threat_management": "Identify 2-3 key threats per turn. Know what you can remove. Know what threatens you."
+    },
+    "game_theory": {
+      "information_advantage": "Watch opponent's hand size. Count their discard. Predict their plays.",
+      "decision_trees": "Each action has pros/cons. Consider opponent's responses. Play defensively if unsure.",
+      "positioning": "Order of play matters. Play threats after removal bait. Chain advantages."
+    },
+    "tournament_preparation": {
+      "meta_awareness": "Research top decks in your area. Know their gameplans. Build counters.",
+      "sideboarding": "If allowed, prepare answers to meta decks. 8-15 flex cards.",
+      "mental_game": "Stay calm. Play at consistent pace. Don't tilt after losses."
+    },
+    "rapid_improvement": {
+      "playtesting": "Play 20+ games with your deck before tournament",
+      "notes": "Write down what beat you and why. Adjust accordingly.",
+      "watching_vods": "Study pro players' decision-making. Learn from their mistakes.",
+      "deck_refinement": "Cut cards that never help. Add cards you desperately needed."
+    },
+    "meta_predictions": {
+      "watch_for": "If one deck wins multiple events, expect it everywhere",
+      "build_counters": "If Evasive is dominant, add cheap removal or Evasive of your own",
+      "stay_flexible": "Keep 2-3 flex slots for last-minute tech cards"
+    }
+  },
+  "currentMeta": {
+    "dominantArchetypes": {
+      "rubyAmethyst": {
+        "archetype": "Ruby/Amethyst Aggro-Control",
+        "description": "Aggressive opening with Rush abilities combined with hand manipulation and control. Currently the most consistent tournament performer.",
+        "strengths": [
+          "Turn 1-3 tempo pressure via Rush creatures",
+          "Hand disruption (Amethyst) slows opponent setup",
+          "Shift mechanics enable mid-game transitions",
+          "Can pivot to control with Amethyst spells",
+          "Evasive creatures dodge removal"
+        ],
+        "weaknesses": [
+          "Vulnerable to early board wipes and Resist abilities",
+          "Hand manipulation can be disrupted by card draw engines",
+          "Falls behind to value-based decks in long games"
+        ],
+        "howToCounter": [
+          "Pack Steel-based defensive structures with Resist",
+          "Use Amber recovery effects to stabilize after hand pressure",
+          "Build in early blockers to slow Rush pressure",
+          "Include Sapphire draw to rebuild after hand disruption",
+          "Run creature-based removal that trades well with early threats"
+        ]
+      },
+      "sapphireSteel": {
+        "archetype": "Sapphire/Steel Control",
+        "description": "Resource management and card draw engine paired with powerful defensive characters. Consistent top finisher in regional events.",
+        "strengths": [
+          "Superior card draw and ink smoothing via Sapphire",
+          "Steel provides powerful high-willpower creatures with Resist",
+          "Can stabilize board quickly with defensive creatures",
+          "Answers library enables tech flexibility",
+          "Outvalues opponents in long games"
+        ],
+        "weaknesses": [
+          "Can be outpaced by faster aggro in early game",
+          "Sometimes mana-flooded in control mirror matchups",
+          "Slow to establish board presence turn 1-2"
+        ],
+        "howToCounter": [
+          "Build consistent early pressure with Ruby/Amethyst tempo",
+          "Deploy threats faster than they can establish answers",
+          "Use hand disruption (Amethyst) to prevent drawing key answers",
+          "Include creatures with Evasive to bypass Steel blockers",
+          "Push damage before they stabilize with draw engine"
+        ]
+      },
+      "emeraldSapphire": {
+        "archetype": "Emerald/Sapphire Midrange",
+        "description": "Gameplay manipulation and control effects paired with resource generation. Flexible adaptation to metagame shifts.",
+        "strengths": [
+          "Emerald manipulation answers almost any threat",
+          "Sapphire provides resource smoothing and draw",
+          "Efficient mid-cost creatures with abilities",
+          "Can control game while building board presence"
+        ],
+        "weaknesses": [
+          "Relies on having answers in hand (vulnerable to resource denial)",
+          "Can struggle against consistent threats that snowball",
+          "Slower setup than pure aggro decks"
+        ],
+        "howToCounter": [
+          "Deploy multiple threats simultaneously to overwhelm answers",
+          "Use hand pressure (Amethyst discard) to deny answers",
+          "Build aggressive curve that applies pressure before they answer",
+          "Include creatures with Rush to punch through before blockers",
+          "Use Amber recovery to stabilize if they DO answer your threats"
+        ]
+      },
+      "amberSteel": {
+        "archetype": "Amber/Steel Defensive Ramp",
+        "description": "Early defense and resource recovery paired with late-game power plays. Specifically counters aggressive strategies.",
+        "strengths": [
+          "Early defensive creatures with Resist abilities",
+          "Amber recovery mechanics stabilize quickly",
+          "Steel provides powerful creatures as ramp payoff",
+          "Can execute powerful threats once stabilized"
+        ],
+        "weaknesses": [
+          "Slower setup allows aggressive decks to build momentum",
+          "Recovery mechanics can create card disadvantage situations",
+          "Vulnerable to disruption before stabilizing"
+        ],
+        "howToCounter": [
+          "Prevent stabilization with consistent early pressure",
+          "Use hand disruption to prevent recovery setup",
+          "Deploy multiple threats so they can't trade efficiently",
+          "Use Sapphire tempo threats to apply pressure faster",
+          "Include evasion so they can't block everything"
+        ]
+      }
+    },
+    "inkColorMetaRoles": {
+      "ruby": {
+        "role": "Aggressive Tempo",
+        "description": "Rush and Evasive abilities enable early pressure",
+        "metaPosition": "Staple in aggro and tempo decks. Strong against control.",
+        "currentTrend": "Rising in popularity post-Fabled, especially in Ruby/Steel variants"
+      },
+      "sapphire": {
+        "role": "Card Draw & Control",
+        "description": "Ink management and resource generation enable consistent play",
+        "metaPosition": "Essential for control decks. Strong in midrange.",
+        "currentTrend": "Dominant in Sapphire/Steel control, which is tier-1"
+      },
+      "emerald": {
+        "role": "Gameplay Manipulation",
+        "description": "Creature control and game-state effects",
+        "metaPosition": "Strong in midrange. Versatile in hybrid decks.",
+        "currentTrend": "Consistent performer in Emerald/Sapphire midrange"
+      },
+      "steel": {
+        "role": "Defensive Power",
+        "description": "High-power creatures with Resist abilities",
+        "metaPosition": "Increasingly important in control and tempo-control decks",
+        "currentTrend": "Rising popularity in Sapphire/Steel and Ruby/Steel"
+      },
+      "amber": {
+        "role": "Defense & Recovery",
+        "description": "Healing and stabilization effects",
+        "metaPosition": "Strong in defensive decks. Emerging in tempo-control.",
+        "currentTrend": "Solid performer in Amber/Steel defensive decks"
+      },
+      "amethyst": {
+        "role": "Hand Manipulation",
+        "description": "Discard pressure and spell-based control",
+        "metaPosition": "Staple in aggro-control. Critical for hand denial.",
+        "currentTrend": "Essential in Ruby/Amethyst, highest performer currently"
+      }
+    },
+    "metaTechGuide": {
+      "against_rubyAmethyst": [
+        "Resist creatures - Steel blockers don't take damage from Rush",
+        "Early board wipes - prevent snowballing in turns 1-3",
+        "Healing/Recovery - Amber effects stabilize before they finish",
+        "Card draw engines - rebuild after hand disruption",
+        "Creatures with evasion blockers - trade efficiently"
+      ],
+      "against_sapphireSteel": [
+        "Turn 1-2 pressure - force answers before draw engine",
+        "Hand disruption - prevent them from drawing key answers",
+        "Multiple simultaneous threats - overwhelm removal suite",
+        "Evasive creatures - bypass their Steel blockers",
+        "Fast clock - win before they stabilize board"
+      ],
+      "against_emeraldSapphire": [
+        "Redundant threats - they can't answer everything",
+        "Resource denial - discard their answers before turn plays",
+        "Cheap efficient creatures - establish presence while they setup",
+        "Removal immune creatures - forces their answers to be inefficient",
+        "Tempo pressure - apply damage faster than they can stabilize"
+      ],
+      "against_amberSteel": [
+        "Aggressive early turns - don't let them stabilize",
+        "Hand disruption - prevent recovery setup",
+        "Multiple threats - force inefficient trades",
+        "Evasion creatures - bypass defensive blockers",
+        "Consistent clock - pressure before finisher turns online"
+      ]
+    },
+    "recentSetImpact": {
+      "winterspell_february2026": {
+        "set": "Winterspell (Latest - Feb 13-20, 2026)",
+        "impact": "New character pool with Pixar set integration. Meta still stabilizing.",
+        "keyCards": "New Pixar characters being explored for builds. Evaluate for your archetype.",
+        "advice": "Test against Winterspell decks. Identify emerging strategies early."
+      },
+      "whispers_november2025": {
+        "set": "Whispers in the Well (Nov 2025)",
+        "impact": "Boost mechanic enabled value/snowball strategies. Extended some game lengths.",
+        "innovation": "Boost-focused decks emerged but haven't dominated meta",
+        "advice": "Consider Boost mechanics in matchup analysis. Some decks snowball harder with Boost."
+      },
+      "fabled_september2025": {
+        "set": "Fabled (Aug-Sep 2025)",
+        "impact": "Epic and Iconic rarities printed - highest power ceiling ever",
+        "keyCards": "Goofy Movie characters. Epic/Iconic cards from all inks.",
+        "advice": "If you haven't seen Fabled cards in meta yet, expect them to emerge in counters"
+      },
+      "archazia_march2025": {
+        "set": "Archazia's Island (Mar 2025)",
+        "impact": "Dual-ink cards introduced - expanded deck flexibility",
+        "innovation": "Dual-ink cards not inherently more powerful, but enabled new builds",
+        "advice": "Dual-ink cards provide flexibility without breaking existing color balance"
+      }
+    },
+    "metaShiftWarnings": [
+      "Ruby/Amethyst is HIGHEST threat - build specific counters if you see multiple at events",
+      "Sapphire/Steel on the rise - if you lose to control, pack tempo pressure",
+      "Dual-ink cards (from Archazia) enabled more flexibility - expect less color-predictability",
+      "Resist abilities are extremely strong against aggressive decks right now",
+      "Shift mechanics are enabling smoother mana in meta decks - don't ignore Shift synergy"
+    ],
+    "flexSlotRecommendations": {
+      "against_currentMeta": [
+        "1x Cheap removal for Ruby Rush creatures (combat damage prevention)",
+        "1x Card draw engine piece (counter hand disruption from Amethyst)",
+        "1x Creature with Resist (defensive against aggro pressure)",
+        "1x Board wipe or mass answer (prevent snowballing)",
+        "1x Hand disruption piece (if not already in deck, pressure their setup)"
+      ],
+      "sideboard_if_available": [
+        "2-3 Resist creatures - transforms matchups vs Ruby/Amethyst",
+        "2x Early removal suite - flexes for aggro-heavy metagame",
+        "2x Card draw pieces - tech in vs hand disruption heavy meta",
+        "2x Evasive creatures - bypass defensive decks",
+        "2-3 Specific archetype counters - adjust to your local meta"
+      ]
+    },
+    "tieringGuide": {
+      "tier_s": "Ruby/Amethyst Aggro-Control - Most consistent winner. Play it or counter it.",
+      "tier_1a": "Sapphire/Steel Control - Rising popularity. Strong matchup-based deck.",
+      "tier_1b": "Emerald/Sapphire Midrange - Flexible. Adapts to metagame.",
+      "tier_2": "Amber/Steel Defensive Ramp, Ruby/Steel Tempo - Solid performers with good matchups",
+      "tier_3": "Rogue strategies, Mono-color decks - Can steal games but less consistent",
+      "advice": "Tier placement changes based on local metagame. Play what you understand."
+    }
+  }
+}
