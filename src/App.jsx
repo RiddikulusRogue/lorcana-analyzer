@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { analyzeDeck } from "./logic/deckAnalyzer";
 import strategyGuides from "./data/strategyGuides.json";
 import cardMeta from "./data/cardMeta.json";
+import ComparisonMode from "./components/ComparisonMode";
 
 export default function App() {
   const [deckText, setDeckText] = useState("");
@@ -10,6 +11,7 @@ export default function App() {
   const [serverEnabled, setServerEnabled] = useState(false);
   const [aiCoaching, setAiCoaching] = useState('');
   const [playStyle, setPlayStyle] = useState('balanced');
+  const [showComparison, setShowComparison] = useState(false);
 
   useEffect(() => {
     try {
@@ -82,10 +84,13 @@ export default function App() {
         onChange={(e) => setDeckText(e.target.value)}
       />
 
-      <div style={{ display: 'flex', gap: 8 }}>
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         <button onClick={handleAnalyze}>Analyze Deck</button>
         <button onClick={handleSave} disabled={!analysis}>Save Deck</button>
         <button onClick={handleDownload} disabled={!analysis}>Download Analysis</button>
+        <button onClick={() => setShowComparison(true)} disabled={!analysis} style={{ backgroundColor: '#007bff', color: 'white' }}>
+          Compare to Meta
+        </button>
         <label style={{ marginLeft: 8 }}><input type="checkbox" checked={serverEnabled} onChange={e=>setServerEnabled(e.target.checked)} /> Use server</label>
         <select value={playStyle} onChange={(e)=>setPlayStyle(e.target.value)} disabled={!analysis} style={{padding:4}}>
           <option value="aggro">Aggro (Fast Win)</option>
@@ -1151,6 +1156,14 @@ export default function App() {
           ))
         )}
       </div>
+
+      {/* Comparison Mode Modal */}
+      {showComparison && analysis && (
+        <ComparisonMode
+          userDeck={analysis}
+          onClose={() => setShowComparison(false)}
+        />
+      )}
     </div>
   );
 }
