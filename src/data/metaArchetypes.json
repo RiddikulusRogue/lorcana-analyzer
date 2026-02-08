@@ -1,0 +1,226 @@
+[
+  {
+    "id": "ruby-amethyst-aggro",
+    "name": "Ruby/Amethyst Aggro",
+    "colors": ["Ruby", "Amethyst"],
+    "metaShare": 28.5,
+    "winRates": {
+      "ruby-amethyst-aggro": 50,
+      "sapphire-steel-control": 35,
+      "emerald-sapphire-midrange": 58,
+      "amber-steel-defense": 62,
+      "ruby-steel-tempo": 48,
+      "sapphire-amethyst-control": 52,
+      "emerald-ruby-midrange": 55,
+      "amber-sapphire-ramp": 60
+    },
+    "keyCards": [
+      { "name": "Moana - Of Motunui", "copies": 4, "priority": "essential" },
+      { "name": "Rapunzel - Gifted with Healing", "copies": 4, "priority": "essential" },
+      { "name": "Gaston - Arrogant Hunter", "copies": 3, "priority": "essential" },
+      { "name": "Lady Tremaine - Imperious Queen", "copies": 3, "priority": "high" },
+      { "name": "Maui - Hero to All", "copies": 3, "priority": "high" },
+      { "name": "Grab Your Sword", "copies": 4, "priority": "high" },
+      { "name": "Be Prepared", "copies": 3, "priority": "medium" }
+    ],
+    "avgCurve": 3.2,
+    "avgSongCount": 2,
+    "typicalInkCount": 24
+  },
+  {
+    "id": "sapphire-steel-control",
+    "name": "Sapphire/Steel Control",
+    "colors": ["Sapphire", "Steel"],
+    "metaShare": 22.3,
+    "winRates": {
+      "ruby-amethyst-aggro": 65,
+      "sapphire-steel-control": 50,
+      "emerald-sapphire-midrange": 48,
+      "amber-steel-defense": 55,
+      "ruby-steel-tempo": 58,
+      "sapphire-amethyst-control": 45,
+      "emerald-ruby-midrange": 52,
+      "amber-sapphire-ramp": 50
+    },
+    "keyCards": [
+      { "name": "Elsa - Spirit of Winter", "copies": 4, "priority": "essential" },
+      { "name": "Maleficent - Uninvited", "copies": 3, "priority": "essential" },
+      { "name": "Beast - Wolfsbane", "copies": 3, "priority": "essential" },
+      { "name": "Aladdin - Heroic Outlaw", "copies": 4, "priority": "high" },
+      { "name": "Freeze", "copies": 4, "priority": "high" },
+      { "name": "Let It Go", "copies": 3, "priority": "high" },
+      { "name": "Tinker Bell - Giant Fairy", "copies": 3, "priority": "medium" }
+    ],
+    "avgCurve": 4.1,
+    "avgSongCount": 3,
+    "typicalInkCount": 26
+  },
+  {
+    "id": "emerald-sapphire-midrange",
+    "name": "Emerald/Sapphire Midrange",
+    "colors": ["Emerald", "Sapphire"],
+    "metaShare": 18.7,
+    "winRates": {
+      "ruby-amethyst-aggro": 42,
+      "sapphire-steel-control": 52,
+      "emerald-sapphire-midrange": 50,
+      "amber-steel-defense": 58,
+      "ruby-steel-tempo": 55,
+      "sapphire-amethyst-control": 48,
+      "emerald-ruby-midrange": 50,
+      "amber-sapphire-ramp": 52
+    },
+    "keyCards": [
+      { "name": "Mufasa - King of Pride Rock", "copies": 4, "priority": "essential" },
+      { "name": "Simba - Protective Cub", "copies": 3, "priority": "essential" },
+      { "name": "Scar - Fiery Usurper", "copies": 3, "priority": "high" },
+      { "name": "Ariel - On Human Legs", "copies": 3, "priority": "high" },
+      { "name": "Baloo - Jungle VIP", "copies": 4, "priority": "high" },
+      { "name": "Mother Knows Best", "copies": 3, "priority": "medium" },
+      { "name": "Hakuna Matata", "copies": 2, "priority": "medium" }
+    ],
+    "avgCurve": 3.8,
+    "avgSongCount": 2,
+    "typicalInkCount": 25
+  },
+  {
+    "id": "amber-steel-defense",
+    "name": "Amber/Steel Defense",
+    "colors": ["Amber", "Steel"],
+    "metaShare": 12.1,
+    "winRates": {
+      "ruby-amethyst-aggro": 38,
+      "sapphire-steel-control": 45,
+      "emerald-sapphire-midrange": 42,
+      "amber-steel-defense": 50,
+      "ruby-steel-tempo": 52,
+      "sapphire-amethyst-control": 48,
+      "emerald-ruby-midrange": 55,
+      "amber-sapphire-ramp": 45
+    },
+    "keyCards": [
+      { "name": "Belle - Strange but Special", "copies": 4, "priority": "essential" },
+      { "name": "Beast - Hardheaded", "copies": 3, "priority": "essential" },
+      { "name": "Maurice - Inventor", "copies": 3, "priority": "high" },
+      { "name": "Simba - Future King", "copies": 4, "priority": "high" },
+      { "name": "Lumiere - Hotheaded", "copies": 3, "priority": "medium" },
+      { "name": "Steel Yourself", "copies": 4, "priority": "high" },
+      { "name": "Be Our Guest", "copies": 2, "priority": "medium" }
+    ],
+    "avgCurve": 3.9,
+    "avgSongCount": 2,
+    "typicalInkCount": 26
+  },
+  {
+    "id": "ruby-steel-tempo",
+    "name": "Ruby/Steel Tempo",
+    "colors": ["Ruby", "Steel"],
+    "metaShare": 9.8,
+    "winRates": {
+      "ruby-amethyst-aggro": 52,
+      "sapphire-steel-control": 42,
+      "emerald-sapphire-midrange": 45,
+      "amber-steel-defense": 48,
+      "ruby-steel-tempo": 50,
+      "sapphire-amethyst-control": 55,
+      "emerald-ruby-midrange": 52,
+      "amber-sapphire-ramp": 58
+    },
+    "keyCards": [
+      { "name": "Maui - Demigod", "copies": 4, "priority": "essential" },
+      { "name": "Gaston - Baritone Bully", "copies": 3, "priority": "essential" },
+      { "name": "Hercules - True Hero", "copies": 3, "priority": "high" },
+      { "name": "Mulan - Imperial Soldier", "copies": 4, "priority": "high" },
+      { "name": "Fan the Flames", "copies": 4, "priority": "high" },
+      { "name": "Dragon Fire", "copies": 3, "priority": "medium" },
+      { "name": "Smash", "copies": 3, "priority": "medium" }
+    ],
+    "avgCurve": 3.5,
+    "avgSongCount": 1,
+    "typicalInkCount": 24
+  },
+  {
+    "id": "sapphire-amethyst-control",
+    "name": "Sapphire/Amethyst Control",
+    "colors": ["Sapphire", "Amethyst"],
+    "metaShare": 4.5,
+    "winRates": {
+      "ruby-amethyst-aggro": 48,
+      "sapphire-steel-control": 55,
+      "emerald-sapphire-midrange": 52,
+      "amber-steel-defense": 52,
+      "ruby-steel-tempo": 45,
+      "sapphire-amethyst-control": 50,
+      "emerald-ruby-midrange": 50,
+      "amber-sapphire-ramp": 48
+    },
+    "keyCards": [
+      { "name": "Ursula - Sea Witch", "copies": 3, "priority": "essential" },
+      { "name": "Elsa - Queen Regent", "copies": 4, "priority": "essential" },
+      { "name": "Jafar - Keeper of Secrets", "copies": 3, "priority": "high" },
+      { "name": "Dr. Facilier - Agent Provocateur", "copies": 3, "priority": "high" },
+      { "name": "Mystic Glacier", "copies": 4, "priority": "high" },
+      { "name": "Friends on the Other Side", "copies": 3, "priority": "medium" },
+      { "name": "Part of Your World", "copies": 2, "priority": "medium" }
+    ],
+    "avgCurve": 4.3,
+    "avgSongCount": 3,
+    "typicalInkCount": 27
+  },
+  {
+    "id": "emerald-ruby-midrange",
+    "name": "Emerald/Ruby Midrange",
+    "colors": ["Emerald", "Ruby"],
+    "metaShare": 2.8,
+    "winRates": {
+      "ruby-amethyst-aggro": 45,
+      "sapphire-steel-control": 48,
+      "emerald-sapphire-midrange": 50,
+      "amber-steel-defense": 45,
+      "ruby-steel-tempo": 48,
+      "sapphire-amethyst-control": 50,
+      "emerald-ruby-midrange": 50,
+      "amber-sapphire-ramp": 52
+    },
+    "keyCards": [
+      { "name": "Tigger - Wonderful Thing", "copies": 4, "priority": "essential" },
+      { "name": "Moana - Born Leader", "copies": 3, "priority": "high" },
+      { "name": "Simba - Rightful Heir", "copies": 3, "priority": "high" },
+      { "name": "Rafiki - Mysterious Sage", "copies": 3, "priority": "high" },
+      { "name": "Pounce", "copies": 4, "priority": "high" },
+      { "name": "Circle of Life", "copies": 2, "priority": "medium" },
+      { "name": "Fire the Cannons", "copies": 3, "priority": "medium" }
+    ],
+    "avgCurve": 3.6,
+    "avgSongCount": 2,
+    "typicalInkCount": 25
+  },
+  {
+    "id": "amber-sapphire-ramp",
+    "name": "Amber/Sapphire Ramp",
+    "colors": ["Amber", "Sapphire"],
+    "metaShare": 1.3,
+    "winRates": {
+      "ruby-amethyst-aggro": 40,
+      "sapphire-steel-control": 50,
+      "emerald-sapphire-midrange": 48,
+      "amber-steel-defense": 55,
+      "ruby-steel-tempo": 42,
+      "sapphire-amethyst-control": 52,
+      "emerald-ruby-midrange": 48,
+      "amber-sapphire-ramp": 50
+    },
+    "keyCards": [
+      { "name": "Stitch - Abomination", "copies": 3, "priority": "essential" },
+      { "name": "Mickey Mouse - Wayward Sorcerer", "copies": 3, "priority": "essential" },
+      { "name": "Genie - Powers Unleashed", "copies": 2, "priority": "high" },
+      { "name": "Cinderella - Ballroom Sensation", "copies": 3, "priority": "high" },
+      { "name": "Fishbone Quill", "copies": 4, "priority": "high" },
+      { "name": "A Whole New World", "copies": 3, "priority": "medium" },
+      { "name": "Rise of the Titans", "copies": 2, "priority": "medium" }
+    ],
+    "avgCurve": 4.8,
+    "avgSongCount": 3,
+    "typicalInkCount": 28
+  }
+]
