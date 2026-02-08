@@ -296,18 +296,20 @@ export function generateCoaching(analysis, playStyle) {
   coaching += `  • Draw creatures: Should be 3-6 copies (depends on archetype)\n`;
   coaching += `  • Threats: Should be 30+ copies (majority)\n`;
   coaching += `  • Answers: Should be 8-15 copies\n`;
-  coaching += `  • Your breakdown: ${cardsByType.songs.length > 0 ? `Has ${cardsByType.songs.length} songs (check Singer ratio)` : 'No songs detected'}\n`;
+  const songsCount = cardsByType.songs?.length || 0;
+  coaching += `  • Your breakdown: ${songsCount > 0 ? `Has ${songsCount} songs (check Singer ratio)` : 'No songs detected'}\n`;
   coaching += `\nMULLIGAN PATTERNS FOR THIS DECK:\n`;
   coaching += `  • KEEP (Good hand): Turn-1 creature + 2-drop + land\n`;
   coaching += `  • MULLIGAN (Weak hand): No creatures OR all spells OR all high-cost\n`;
   coaching += `  • Specific to YOU (${primaryColor}/${secondaryColor}):\n`;
-  if (primaryColorRaw.toLowerCase() === 'ruby') {
+  const primaryLower = primaryColorRaw && primaryColorRaw !== 'None' ? primaryColorRaw.toLowerCase() : '';
+  if (primaryLower === 'ruby') {
     coaching += `    - KEEP: 1-cost Rush creature (Moana/Rapunzel) + any 2-drop\n`;
     coaching += `    - MULLIGAN: No 1-drops, or only high-cost creatures\n`;
-  } else if (primaryColorRaw.toLowerCase() === 'sapphire') {
+  } else if (primaryLower === 'sapphire') {
     coaching += `    - KEEP: Draw creature (Elsa/Olaf) + blocker or threat\n`;
     coaching += `    - MULLIGAN: No draw creatures, hand looks weak\n`;
-  } else if (primaryColorRaw.toLowerCase() === 'emerald') {
+  } else if (primaryLower === 'emerald') {
     coaching += `    - KEEP: Ramp creature (cost 1-2 mana generator) + follows\n`;
     coaching += `    - MULLIGAN: No ramp, all high-cost, looks slow\n`;
   } else {

@@ -1,4 +1,7 @@
-import { TrashIcon } from './Icons';
+function formatDeckDate(dateString) {
+  const date = new Date(dateString);
+  return `${date.toLocaleDateString()} at ${date.toLocaleTimeString()}`;
+}
 
 export default function SavedDecks({ decks, onLoad, onDelete }) {
   if (decks.length === 0) {
@@ -36,10 +39,7 @@ export default function SavedDecks({ decks, onLoad, onDelete }) {
                 {deck.name}
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                {(() => {
-                  const date = new Date(deck.createdAt);
-                  return `${date.toLocaleDateString()} at ${date.toLocaleTimeString()}`;
-                })()}
+                {formatDeckDate(deck.createdAt)}
               </p>
               {deck.analysis && (
                 <div className="flex gap-3 mt-2 text-xs text-gray-600 dark:text-gray-300">

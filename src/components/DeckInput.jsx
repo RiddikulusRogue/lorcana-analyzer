@@ -2,7 +2,7 @@ export default function DeckInput({ value, onChange }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
       <label htmlFor="deck-input" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-        Deck List
+        Enter Your Deck List
       </label>
       <textarea
         id="deck-input"
