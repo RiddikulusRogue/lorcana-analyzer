@@ -296,7 +296,7 @@ export function generateCoaching(analysis, playStyle) {
   coaching += `  • Draw creatures: Should be 3-6 copies (depends on archetype)\n`;
   coaching += `  • Threats: Should be 30+ copies (majority)\n`;
   coaching += `  • Answers: Should be 8-15 copies\n`;
-  coaching += `  • Your breakdown: ${cardsByType.songs.length > 0 ? 'Has songs (check Singer ratio)' : 'No songs detected'}\n`;
+  coaching += `  • Your breakdown: ${cardsByType.songs.length > 0 ? `Has ${cardsByType.songs.length} songs (check Singer ratio)` : 'No songs detected'}\n`;
   coaching += `\nMULLIGAN PATTERNS FOR THIS DECK:\n`;
   coaching += `  • KEEP (Good hand): Turn-1 creature + 2-drop + land\n`;
   coaching += `  • MULLIGAN (Weak hand): No creatures OR all spells OR all high-cost\n`;

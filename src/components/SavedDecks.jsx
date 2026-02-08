@@ -36,7 +36,10 @@ export default function SavedDecks({ decks, onLoad, onDelete }) {
                 {deck.name}
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                {new Date(deck.createdAt).toLocaleDateString()} at {new Date(deck.createdAt).toLocaleTimeString()}
+                {(() => {
+                  const date = new Date(deck.createdAt);
+                  return `${date.toLocaleDateString()} at ${date.toLocaleTimeString()}`;
+                })()}
               </p>
               {deck.analysis && (
                 <div className="flex gap-3 mt-2 text-xs text-gray-600 dark:text-gray-300">
