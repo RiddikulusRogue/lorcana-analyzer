@@ -84,37 +84,146 @@ export function analyzeDeck(deckText) {
   let hasEvasive = false;
   let hasSinger = false;
 
+  // Cost distribution tracking
+  let cost1Count = 0;
+  let cost2Count = 0;
+  let cost3to4Count = 0;
+  let cost5PlusCount = 0;
+  let creatureCount = 0;
+  let actionCount = 0;
+  let itemCount = 0;
+
+  // Keyword tracking
+  let rushCount = 0;
+  let evasiveCount = 0;
+  let bodyguardCount = 0;
+  let resistCount = 0;
+  let challengerCount = 0;
+
   for (const [rawName, count] of Object.entries(cards)) {
     const key = rawName.toLowerCase();
     const meta = cardMeta[key];
     if (meta) {
-      if (meta.ink) inkColors[meta.ink] = (inkColors[meta.ink] || 0) + count;
-      if (typeof meta.cost === 'number') { costSum += meta.cost * count; costKnownCount += count }
-      if (meta.type && meta.type.toLowerCase().includes('song')) songCount += count;
-      const kws = (meta.keywords || []).map(k => k.toLowerCase());
-      if (kws.some(k=>k.includes('shift'))) hasShift = true;
-      if (kws.some(k=>k.includes('evasive'))) hasEvasive = true;
-      if (kws.some(k=>k.includes('singer') || k.includes('sing'))) hasSinger = true;
+      if (meta.ink && typeof meta.ink === 'string') inkColors[meta.ink] = (inkColors[meta.ink] || 0) + count;
+
+      if (typeof meta.cost === 'number') {
+        costSum += meta.cost * count;
+        costKnownCount += count;
+
+        // Track cost distribution
+        if (meta.cost === 1) cost1Count += count;
+        else if (meta.cost === 2) cost2Count += count;
+        else if (meta.cost >= 3 && meta.cost <= 4) cost3to4Count += count;
+        else if (meta.cost >= 5) cost5PlusCount += count;
+      }
+
+      // Track card types
+      if (meta.type) {
+        const type = meta.type.toLowerCase();
+        if (type.includes('character')) creatureCount += count;
+        else if (type.includes('action')) actionCount += count;
+        else if (type.includes('item')) itemCount += count;
+        if (type.includes('song')) songCount += count;
+      }
+
+      const kws = (meta.keywords || []).map(k => String(k).toLowerCase());
+      if (kws.some(k => k.includes('shift'))) hasShift = true;
+      if (kws.some(k => k.includes('evasive'))) { hasEvasive = true; evasiveCount += count; }
+      if (kws.some(k => k.includes('singer') || k.includes('sing'))) hasSinger = true;
+      if (kws.some(k => k.includes('rush'))) rushCount += count;
+      if (kws.some(k => k.includes('bodyguard'))) bodyguardCount += count;
+      if (kws.some(k => k.includes('resist'))) resistCount += count;
+      if (kws.some(k => k.includes('challenger'))) challengerCount += count;
     }
   }
 
   const avgCost = costKnownCount > 0 ? (costSum / costKnownCount) : null;
 
+  // Calculate key percentages upfront
+  const earlyGamePercent = total > 0 ? ((cost1Count + cost2Count) / total) * 100 : 0;
+  const lateGamePercent = total > 0 ? (cost5PlusCount / total) * 100 : 0;
+  const creaturePercent = total > 0 ? (creatureCount / total) * 100 : 0;
+  const actionPercent = total > 0 ? (actionCount / total) * 100 : 0;
+
+  // REVISED ARCHETYPE CLASSIFICATION - More explicit criteria
   let archetype = isValid ? 'Unclassified (ready)' : 'Unclassified (incomplete)';
-  if (avgCost !== null) {
-    if (avgCost < 3.8) archetype = 'Aggro';
-    else if (avgCost < 5.0) archetype = 'Midrange';
-    else archetype = 'Control/Ramp';
+
+  if (avgCost !== null && total >= 30) {
+    // ARCHETYPE DEFINITIONS:
+    // AGGRO: Low curve (< 3.5), 40%+ early game, 6+ rush creatures, few actions
+    // MIDRANGE: Medium curve (3.5-4.5), balanced early/mid/late, mix of threats/answers
+    // CONTROL: High curve (> 4.5), low early game (< 25%), 12+ actions, 12+ cost-5 creatures
+    // TEMPO: Low-medium curve (< 4.0), 30-45% early game, efficiency over power
+
+    const isAggro =
+      avgCost < 3.5 &&
+      earlyGamePercent >= 40 &&
+      rushCount >= 6 &&
+      actionPercent < 15 &&
+      lateGamePercent < 30;
+
+    const isControl =
+      avgCost > 4.5 &&
+      earlyGamePercent < 20 &&
+      actionCount >= 12 &&
+      cost5PlusCount >= 12 &&
+      creaturePercent < 60;
+
+    const isMidrange =
+      avgCost >= 3.5 && avgCost <= 4.5 &&
+      earlyGamePercent >= 20 && earlyGamePercent <= 40 &&
+      creaturePercent >= 55 &&
+      creaturePercent <= 75 &&
+      actionPercent >= 10 && actionPercent <= 30;
+
+    const isTempo =
+      avgCost < 4.0 &&
+      earlyGamePercent >= 30 &&
+      earlyGamePercent <= 45 &&
+      evasiveCount >= 3 &&
+      actionPercent < 20;
+
+    // Assign archetype based on clear criteria
+    if (isAggro) {
+      archetype = 'Aggro';
+    } else if (isControl) {
+      archetype = 'Control';
+    } else if (isTempo) {
+      archetype = 'Tempo';
+    } else if (isMidrange) {
+      archetype = 'Midrange';
+    } else {
+      // Fallback logic with clearer distinctions
+      if (avgCost > 4.5) {
+        archetype = 'Control/Ramp';
+      } else if (avgCost > 4.0) {
+        archetype = 'Midrange/Control';
+      } else if (avgCost < 3.0) {
+        archetype = 'Aggro/Tempo';
+      } else if (avgCost < 3.5) {
+        archetype = 'Tempo/Aggro';
+      } else {
+        archetype = 'Midrange';
+      }
+    }
   }
 
   const synergies = [];
   if (hasSinger && songCount > 0) synergies.push({ type: 'Singer/Song Synergy', strength: 'High', description: 'Deck has singers to play songs for free' });
-  if (hasEvasive && archetype === 'Aggro') synergies.push({ type: 'Evasive Aggro', strength: 'High', description: 'Evasive characters support aggressive strategy' });
+  if (hasEvasive && (archetype.includes('Aggro') || archetype.includes('Tempo'))) synergies.push({ type: 'Evasive Aggro', strength: 'High', description: 'Evasive characters support aggressive strategy' });
   if (hasShift && uniqueCount > 10) synergies.push({ type: 'Shift Value', strength: 'Medium', description: 'Shift characters can generate tempo advantage' });
 
   const weaknesses = [];
   if (total < 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is under 60 cards' });
   if (total > 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is over 60 cards' });
+
+  // Add curve-based weaknesses
+  if (earlyGamePercent < 20 && archetype.includes('Aggro')) {
+    weaknesses.push({ type: 'Curve Gap', severity: 'High', description: 'Not enough early game for an aggressive deck' });
+  }
+  if (cost5PlusCount > 15 && avgCost && avgCost < 4.0) {
+    weaknesses.push({ type: 'Top Heavy', severity: 'Medium', description: 'Too many expensive cards for the average cost' });
+  }
 
   return {
     total,
@@ -127,7 +236,26 @@ export function analyzeDeck(deckText) {
     songCount,
     synergies,
     weaknesses,
-    notes: isValid ? 'Analyzer connected successfully.' : 'Deck is not 60 cards.'
+    notes: isValid ? 'Analyzer connected successfully.' : 'Deck is not 60 cards.',
+    // Additional metrics
+    curveDistribution: {
+      cost1: cost1Count,
+      cost2: cost2Count,
+      cost3to4: cost3to4Count,
+      cost5Plus: cost5PlusCount
+    },
+    cardTypes: {
+      creatures: creatureCount,
+      actions: actionCount,
+      items: itemCount
+    },
+    keywordCounts: {
+      rush: rushCount,
+      evasive: evasiveCount,
+      bodyguard: bodyguardCount,
+      resist: resistCount,
+      challenger: challengerCount
+    }
   };
 }
 

@@ -1,7 +1,7 @@
 # Latest Coaching System Enhancements (Latest Session)
 
 ## Overview
-Added three comprehensive new sections to the Lorcana Deck Analyzer coaching report, bringing total coaching content to **1,156 lines** across all features.
+Added three comprehensive new sections to the Inkweaver coaching report, bringing total coaching content to **1,156 lines** across all features.
 
 ## New Sections Added
 
@@ -62,7 +62,7 @@ Added three comprehensive new sections to the Lorcana Deck Analyzer coaching rep
 
 **Topics Covered**:
 1. **Curve Theory & Consistency**
-   - Ideal mana curve distribution (4/6/6/6)
+   - Ideal ink curve distribution (4/6/6/6)
    - Current deck analysis (average cost evaluated)
    - Smooth vs two-humped curves
    
@@ -173,7 +173,7 @@ The new sections integrate seamlessly with existing content:
 
 ## How to Use
 
-When users analyze a deck in the Lorcana Analyzer:
+When users analyze a deck in Inkweaver:
 1. ✅ Existing sections run first (Deck Composition, Mulligan, Turn-by-turn, etc.)
 2. ✅ New Matchup Analysis section provides ink-specific guidance
 3. ✅ Advanced Trading Strategy teaches resource management

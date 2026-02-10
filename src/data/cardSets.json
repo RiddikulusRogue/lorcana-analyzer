@@ -1,0 +1,5780 @@
+{
+  "description": "Maps card names to their set numbers (as arrays to handle reprints). Automatically generated from Lorcana-api.com database. For Core Constructed, a card is legal if ANY of its sets is in 5-11.",
+  "lastUpdated": "2026-02-10T01:19:27.973Z",
+  "source": "https://api.lorcana-api.com",
+  "totalUniqueCards": 1865,
+  "cardSetMapping": {
+    "rhino - motivational speaker": [
+      7
+    ],
+    "perdita - playful mother": [
+      7
+    ],
+    "king stefan - new father": [
+      7
+    ],
+    "bolt - superdog": [
+      7
+    ],
+    "roger radcliff - dog lover": [
+      7
+    ],
+    "trusty - loyal bloodhound": [
+      7
+    ],
+    "peg - natural performer": [
+      7
+    ],
+    "suzy - master seamstress": [
+      7
+    ],
+    "mittens - sassy street cat": [
+      7
+    ],
+    "tramp - street-smart dog": [
+      7
+    ],
+    "the troubadour - musical narrator": [
+      7
+    ],
+    "wendy darling - pirate queen": [
+      7
+    ],
+    "mirabel madrigal - hopeful dreamer": [
+      7
+    ],
+    "aurora - waking beauty": [
+      7
+    ],
+    "cinderella - the right one": [
+      7
+    ],
+    "mariano guzman - handsome suitor": [
+      7
+    ],
+    "candlehead - dedicated racer": [
+      7
+    ],
+    "bolt - dependable friend": [
+      7
+    ],
+    "pascal - garden chameleon": [
+      7
+    ],
+    "king candy - royal racer": [
+      7
+    ],
+    "penny - bolt's person": [
+      7
+    ],
+    "fix-it felix jr. - pint-sized hero": [
+      7
+    ],
+    "thunderbolt - wonder dog": [
+      7
+    ],
+    "the prince - vigilant suitor": [
+      7
+    ],
+    "isabella madrigal - in the moment": [
+      7
+    ],
+    "calhoun - courageous rescuer": [
+      7
+    ],
+    "wreck-it ralph - hero's duty": [
+      7
+    ],
+    "lady - miss park avenue": [
+      7
+    ],
+    "pongo - dear old dad": [
+      7
+    ],
+    "kenai - protective brother": [
+      7
+    ],
+    "minnie mouse - storyteller": [
+      7
+    ],
+    "perla - nimble seamstress": [
+      7
+    ],
+    "snow white - fairest in the land": [
+      7
+    ],
+    "koda - smallish bear": [
+      7
+    ],
+    "mirabel madrigal - musically talented": [
+      7
+    ],
+    "calhoun - battle-tested": [
+      7
+    ],
+    "pepa madrigal - sensitive sister": [
+      7
+    ],
+    "so much to give": [
+      7
+    ],
+    "restoring the heart": [
+      7
+    ],
+    "the family madrigal": [
+      7
+    ],
+    "amber coil": [
+      7
+    ],
+    "spaghetti dinner": [
+      7
+    ],
+    "kanine krunchies": [
+      7
+    ],
+    "the glass slipper": [
+      7
+    ],
+    "kuzco - temporary whale": [
+      7
+    ],
+    "tanana - tribal elder": [
+      7
+    ],
+    "treasure guardian - foreboding sentry": [
+      7
+    ],
+    "honeymaren - northuldra guide": [
+      7
+    ],
+    "iago - giant spectral parrot": [
+      7
+    ],
+    "chernabog - creature of the night": [
+      7
+    ],
+    "jafar - newly crowned": [
+      7
+    ],
+    "hades - fast talker": [
+      7
+    ],
+    "madame medusa - diamond lover": [
+      7
+    ],
+    "te ka - elemental terror": [
+      7
+    ],
+    "elsa - trusted sister": [
+      7
+    ],
+    "madam mim - cheating spellcaster": [
+      7
+    ],
+    "giant cobra - ghostly serpent": [
+      7
+    ],
+    "te ka - lava monster": [
+      7
+    ],
+    "yzma - transformed kitten": [
+      7
+    ],
+    "bucky - nutty rascal": [
+      7
+    ],
+    "pain - impudent imp": [
+      7
+    ],
+    "rajah - ghostly tiger": [
+      7
+    ],
+    "kronk - laid back": [
+      7
+    ],
+    "mother gothel - vain sorceress": [
+      7
+    ],
+    "sven - keen-eyed reindeer": [
+      7
+    ],
+    "diablo - spiteful raven": [
+      7
+    ],
+    "merlin - clever clairvoyant": [
+      7
+    ],
+    "yzma - above it all": [
+      7
+    ],
+    "elsa - ice maker": [
+      7
+    ],
+    "kenai - magical bear": [
+      7
+    ],
+    "kuzco - panicked llama": [
+      7
+    ],
+    "anna - ice breaker": [
+      7
+    ],
+    "donald duck - flustered sorcerer": [
+      7
+    ],
+    "the queen - jealous beauty": [
+      7
+    ],
+    "panic - high-strung imp": [
+      7
+    ],
+    "archimedes - exceptional owl": [
+      7
+    ],
+    "kashekim - ancient ruler": [
+      7
+    ],
+    "dolores madrigal - within earshot": [
+      7
+    ],
+    "mufasa - among the stars": [
+      7
+    ],
+    "magical maneuvers": [
+      7
+    ],
+    "this is my family": [
+      7
+    ],
+    "show me more!": [
+      7
+    ],
+    "restoring the crown": [
+      7
+    ],
+    "amethyst coil": [
+      7
+    ],
+    "drizella - spoiled stepsister": [
+      7
+    ],
+    "grewnge - cannon expert": [
+      7
+    ],
+    "baymax - low battery": [
+      7
+    ],
+    "thomas o'malley - feline charmer": [
+      7
+    ],
+    "pete - pirate scoundrel": [
+      7
+    ],
+    "hiro hamada - future champion": [
+      7
+    ],
+    "cheshire cat - perplexing feline": [
+      7
+    ],
+    "shere khan - infamous tiger": [
+      7
+    ],
+    "basil - secret informer": [
+      7
+    ],
+    "mad hatter - unruly eccentric": [
+      7
+    ],
+    "queen of hearts - unpredictable bully": [
+      7
+    ],
+    "hiro hamada - armor designer": [
+      7
+    ],
+    "yokai - intellectual schemer": [
+      7
+    ],
+    "donald duck - lively pirate": [
+      7
+    ],
+    "berlioz - mischievous kitten": [
+      7
+    ],
+    "lady - elegant spaniel": [
+      7
+    ],
+    "yzma - exasperated schemer": [
+      7
+    ],
+    "pacha - trekmate": [
+      7
+    ],
+    "tweekdle dee & tweedle dum - strange storytellers": [
+      7
+    ],
+    "baymax - giant robot": [
+      7
+    ],
+    "gizmoduck - suited up": [
+      7
+    ],
+    "fidget - sneaky bat": [
+      7
+    ],
+    "mr. smee - efficient captain": [
+      7
+    ],
+    "daisy duck - multitalented pirate": [
+      7
+    ],
+    "john silver - vengeful pirate": [
+      7
+    ],
+    "tramp - enterprising dog": [
+      7
+    ],
+    "king of hearts - picky ruler": [
+      7
+    ],
+    "duchess - elegany feline": [
+      7
+    ],
+    "anastasia - bossy stepsister": [
+      7
+    ],
+    "pete - space pirate": [
+      7
+    ],
+    "lady tremaine - bitterly jealous": [
+      7
+    ],
+    "wake up, alice!": [
+      7
+    ],
+    "he's a tramp": [
+      7
+    ],
+    "the return of hercules": [
+      7
+    ],
+    "ink geyser": [
+      7
+    ],
+    "emerald coil": [
+      7
+    ],
+    "grandmother fa - spirited elder": [
+      7
+    ],
+    "queen of hearts - losing her temper": [
+      7
+    ],
+    "the matchmaker - unforgiving expert": [
+      7
+    ],
+    "denahi - impatient hunter": [
+      7
+    ],
+    "stabbington brother - without a patch": [
+      7
+    ],
+    "belle - mechanic extraordinaire": [
+      7
+    ],
+    "cy-bug - invasive enemy": [
+      7
+    ],
+    "stabbington brother - with a patch": [
+      7
+    ],
+    "card soldiers - royal troops": [
+      7
+    ],
+    "cogsworth - climbing clock": [
+      7
+    ],
+    "toby - dogged companion": [
+      7
+    ],
+    "beagle boys - small-time crooks": [
+      7
+    ],
+    "li shang - newly promoted": [
+      7
+    ],
+    "moana - island explorer": [
+      7
+    ],
+    "the phantom blot - shadowy figure": [
+      7
+    ],
+    "beast - frustrated designer": [
+      7
+    ],
+    "mushu - majestic dragon": [
+      7
+    ],
+    "maurice - unconventional inventor": [
+      7
+    ],
+    "goofy - extreme athlete": [
+      7
+    ],
+    "lyle tiberius rourke - crystallized mercenary": [
+      7
+    ],
+    "mulan - imperial general": [
+      7
+    ],
+    "baloo - ol' iron paws": [
+      7
+    ],
+    "ratigan - nefarious criminal": [
+      7
+    ],
+    "sir kay, unruly knight": [
+      7
+    ],
+    "milo thatch - undaunted scholar": [
+      7
+    ],
+    "edgar balthazar - ambitious butler": [
+      7
+    ],
+    "we've got company!": [
+      7
+    ],
+    "out of order": [
+      7
+    ],
+    "ruby coil": [
+      7
+    ],
+    "unconventional tool": [
+      7
+    ],
+    "maurice's machine": [
+      7
+    ],
+    "devil's eye diamond": [
+      7
+    ],
+    "clarabelle - news reporter": [
+      7
+    ],
+    "scrooge mcduck - resourceful miser": [
+      7
+    ],
+    "mattias - arendelle general": [
+      7
+    ],
+    "moana - adventurer of land and sea": [
+      7
+    ],
+    "monsieur d'arque - despicable proprietor": [
+      7
+    ],
+    "gaetan moliere - the mole": [
+      7
+    ],
+    "belle - apprentice inventor": [
+      7
+    ],
+    "lucky - runt of the litter": [
+      7
+    ],
+    "dawson - puzzling sleuth": [
+      7
+    ],
+    "tamatoa - happy as a clam": [
+      7
+    ],
+    "heihei - expanded consciousness": [
+      7
+    ],
+    "kida - creative thinker": [
+      7
+    ],
+    "toulouse - artistic kitten": [
+      7
+    ],
+    "marie - favored kitten": [
+      7
+    ],
+    "pepper - quick-thinking puppy": [
+      7
+    ],
+    "freckles - good boy": [
+      7
+    ],
+    "honey lemon - chemistry whiz": [
+      7
+    ],
+    "robin hood - eye for detail": [
+      7
+    ],
+    "penny the orphan - clever child": [
+      7
+    ],
+    "lady click - protective confidant": [
+      7
+    ],
+    "jasmine - inspired researcher": [
+      7
+    ],
+    "jebidiah farnsworth - expedition cook": [
+      7
+    ],
+    "baymax - upgraded robot": [
+      7
+    ],
+    "maid marian - badminton ace": [
+      7
+    ],
+    "water has memory": [
+      7
+    ],
+    "all is found": [
+      7
+    ],
+    "sapphire coil": [
+      7
+    ],
+    "baymax's charging station": [
+      7
+    ],
+    "dr. calico - green-eyed man": [
+      7
+    ],
+    "akela - wolf pack elder": [
+      7
+    ],
+    "helga sinclair - tough as nails": [
+      7
+    ],
+    "bolt - headstrong dog": [
+      7
+    ],
+    "heihei - rambling rooster": [
+      7
+    ],
+    "raya - guidance seeker": [
+      7
+    ],
+    "tuk tuk - disarminaly cute": [
+      7
+    ],
+    "fa zhou - war hero": [
+      7
+    ],
+    "razoul - menacing guard": [
+      7
+    ],
+    "jafar - aspiring ruler": [
+      7
+    ],
+    "tick-tock - relentless crocodile": [
+      7
+    ],
+    "kakamora - band of pirates": [
+      7
+    ],
+    "mulan - disguised soldier": [
+      7
+    ],
+    "orville - albatross air": [
+      7
+    ],
+    "miss bianca - unwavering agent": [
+      7
+    ],
+    "mufasa - respected king": [
+      7
+    ],
+    "aladdin - research assistant": [
+      7
+    ],
+    "bagheera - guardian jaguar": [
+      7
+    ],
+    "gantu - experienced enforcer": [
+      7
+    ],
+    "mickey mouse - inspirational warrior": [
+      7
+    ],
+    "restoring atlantis": [
+      7
+    ],
+    "double trouble": [
+      7
+    ],
+    "steel coil": [
+      7
+    ],
+    "training staff": [
+      7
+    ],
+    "owl - pirate lookout": [
+      6
+    ],
+    "lilo - escape artist": [
+      6
+    ],
+    "winnie the pooh - hunny pirate": [
+      6
+    ],
+    "gopher - ship's carpenter": [
+      6
+    ],
+    "simba - happy-go-lucky": [
+      6
+    ],
+    "chip - friend indeed": [
+      6
+    ],
+    "dale - friend in need": [
+      6
+    ],
+    "david - impressive surfer": [
+      6
+    ],
+    "prince naveen - vigilant first mate": [
+      6
+    ],
+    "prince naveen - carefree explorer": [
+      6
+    ],
+    "chief bogo - gazelle fan": [
+      6
+    ],
+    "chip - ranger leader": [
+      6
+    ],
+    "monterey jack - good-hearted ranger": [
+      6
+    ],
+    "chip 'n' dale - recovery rangers": [
+      6
+    ],
+    "judy hopps - resourceful rabbit": [
+      6
+    ],
+    "tiana - restaurant owner": [
+      6
+    ],
+    "grand councilwoman - federation leader": [
+      6
+    ],
+    "dale - mischievous ranger": [
+      6
+    ],
+    "nani - caring sister": [
+      6
+    ],
+    "simba - pride protector": [
+      6
+    ],
+    "kanga - nurturing mother": [
+      6
+    ],
+    "rabbit - indignant pirate": [
+      6
+    ],
+    "roo - littlest pirate": [
+      6
+    ],
+    "mr. litwak - arcade owner": [
+      6
+    ],
+    "jim hawkins - honorable pirate": [
+      6
+    ],
+    "stitch - little trickster": [
+      6
+    ],
+    "good job!": [
+      6
+    ],
+    "i won't give in": [
+      6
+    ],
+    "rescue rangers away!": [
+      6
+    ],
+    "safe and sound": [
+      6
+    ],
+    "naveen's ukulele": [
+      6
+    ],
+    "pooh pirate ship": [
+      6
+    ],
+    "scrump": [
+      6
+    ],
+    "hundred acre island - pooh's home": [
+      6
+    ],
+    "sugar rush speedway - finish line": [
+      6
+    ],
+    "hades - lord of the dead": [
+      6
+    ],
+    "madam mim - tiny adversary": [
+      6
+    ],
+    "genie - excited shipbuilder": [
+      6
+    ],
+    "sisu - in her element": [
+      6
+    ],
+    "the white rose - jewel of the garden": [
+      6
+    ],
+    "juju - mama odie's companion": [
+      6
+    ],
+    "rafiki - shaman of the savanna": [
+      6
+    ],
+    "tinker bell - fast flier": [
+      6
+    ],
+    "the carpenter - dinner companion": [
+      6
+    ],
+    "iago - reappearing parrot": [
+      6
+    ],
+    "the walrus - greedy gourmand": [
+      6
+    ],
+    "scar - tempestuous lion": [
+      6
+    ],
+    "tinker bell - queen of the azurite fairies": [
+      6
+    ],
+    "diablo - obedient raven": [
+      6
+    ],
+    "march hare - absurd host": [
+      6
+    ],
+    "magic carpet - amazing flier": [
+      6
+    ],
+    "rafiki - ethereal guide": [
+      6
+    ],
+    "genie - wish fulfilled": [
+      6
+    ],
+    "sisu - uniting dragon": [
+      6
+    ],
+    "madam mim - truly marvelous": [
+      6
+    ],
+    "yzma - conniving chemist": [
+      6
+    ],
+    "mama odie - solitary sage": [
+      6
+    ],
+    "peter pan - shadow catcher": [
+      6
+    ],
+    "mad hatter - eccentric host": [
+      6
+    ],
+    "a very merry unbirthday": [
+      6
+    ],
+    "genie - wonderful trickster": [
+      6
+    ],
+    "making magic": [
+      6
+    ],
+    "lose the way": [
+      6
+    ],
+    "seeking the half crown": [
+      6
+    ],
+    "maleficent's staff": [
+      6
+    ],
+    "mad hatter's teapot": [
+      6
+    ],
+    "pixie dust": [
+      6
+    ],
+    "fairy ship - royal vessel": [
+      6
+    ],
+    "mystical tree - mama odie's home": [
+      6
+    ],
+    "jasmine - royal seafarer": [
+      6
+    ],
+    "captain hook - underhanded": [
+      6
+    ],
+    "stitch - alien buccaneer": [
+      6
+    ],
+    "go go tomago - darting dynamo": [
+      6
+    ],
+    "honey lemon - chemical genius": [
+      6
+    ],
+    "fred - mascot by day": [
+      6
+    ],
+    "tootles - lost boy": [
+      6
+    ],
+    "dawson - basil's assistant": [
+      6
+    ],
+    "heathcliff - stoic butler": [
+      6
+    ],
+    "basil - hypnotized mouse": [
+      6
+    ],
+    "donald duck - first mate": [
+      6
+    ],
+    "daisy duck - pirate captain": [
+      6
+    ],
+    "mertle edmonds - lilo's rival": [
+      6
+    ],
+    "prince phillip - royal explorer": [
+      6
+    ],
+    "jasmine - royal commodore": [
+      6
+    ],
+    "peter pan - never land prankster": [
+      6
+    ],
+    "hercules - baby demigod": [
+      6
+    ],
+    "alistair krei - ambitious entrepreneur": [
+      6
+    ],
+    "gazelle - angel with horns": [
+      6
+    ],
+    "goofy - expert shipwright": [
+      6
+    ],
+    "bellwether - assistant mayor": [
+      6
+    ],
+    "basil - disguised detective": [
+      6
+    ],
+    "olivia flaversham - the toymaker's daughter": [
+      6
+    ],
+    "bend to my will": [
+      6
+    ],
+    "prepare to board!": [
+      6
+    ],
+    "heffalumps and woozles": [
+      6
+    ],
+    "mosquito bite": [
+      6
+    ],
+    "you came back": [
+      6
+    ],
+    "megabot": [
+      6
+    ],
+    "galactic communicator": [
+      6
+    ],
+    "transport pod": [
+      6
+    ],
+    "perilous maze - watery labyrinth": [
+      6
+    ],
+    "owl island - secluded entrance": [
+      6
+    ],
+    "mickey mouse - pirate captain": [
+      6
+    ],
+    "kakamora - boarding party": [
+      6
+    ],
+    "kakamora - pirate pitcher": [
+      6
+    ],
+    "jasmine - rebellious princess": [
+      6
+    ],
+    "raya - kumandran rider": [
+      6
+    ],
+    "wendy darling - courageous captain": [
+      6
+    ],
+    "john silver - ferocious friend": [
+      6
+    ],
+    "vanellope von schweetz - gutsy go-getter": [
+      6
+    ],
+    "michael darling - playful swordsman": [
+      6
+    ],
+    "aladdin - fearless navigator": [
+      6
+    ],
+    "markowski - space trooper": [
+      6
+    ],
+    "abu - bold helmsman": [
+      6
+    ],
+    "mickey mouse - courageous sailor": [
+      6
+    ],
+    "adorabeezle winterpop - ice rocket racer": [
+      6
+    ],
+    "moana - self-taught sailor": [
+      6
+    ],
+    "john darling - sophisticated swordsman": [
+      6
+    ],
+    "aladdin - intrepid commander": [
+      6
+    ],
+    "minnie mouse - pirate lookout": [
+      6
+    ],
+    "moana - kakamora leader": [
+      6
+    ],
+    "pete - freebooter": [
+      6
+    ],
+    "goofy - flying goof": [
+      6
+    ],
+    "maui - half-shark": [
+      6
+    ],
+    "hades - strong arm": [
+      6
+    ],
+    "tigger - in the crow's nest": [
+      6
+    ],
+    "scar - heartless hunter": [
+      6
+    ],
+    "thievery": [
+      6
+    ],
+    "lead the way": [
+      6
+    ],
+    "the islands i pulled from the sea": [
+      6
+    ],
+    "energy blast": [
+      6
+    ],
+    "longboat": [
+      6
+    ],
+    "gold coin": [
+      6
+    ],
+    "card soldier's spear": [
+      6
+    ],
+    "flotilla - coconut armada": [
+      6
+    ],
+    "skull rock - isolated fortress": [
+      6
+    ],
+    "b.e.n. - eccentric robot": [
+      6
+    ],
+    "aunt cass - biggest fan": [
+      6
+    ],
+    "gadget hackwrench - creative thinker": [
+      6
+    ],
+    "gadget hackwrench - brilliant bosun": [
+      6
+    ],
+    "zipper - astute decoy": [
+      6
+    ],
+    "oswald - the lucky rabbit": [
+      6
+    ],
+    "yokai - enigmatic inventor": [
+      6
+    ],
+    "pleakley - scientific expert": [
+      6
+    ],
+    "hiro hamada - robotics prodigy": [
+      6
+    ],
+    "heihei - not-so-tricky chicken": [
+      6
+    ],
+    "sour bill - surly henchman": [
+      6
+    ],
+    "nick wilde - soggy fox": [
+      6
+    ],
+    "wasabi - methodical engineer": [
+      6
+    ],
+    "nick wilde - sly fox": [
+      6
+    ],
+    "gadget hackwrench - perceptive mouse": [
+      6
+    ],
+    "dr. delbert doppler - fussy astronomer": [
+      6
+    ],
+    "tadashi hamada - baymax inventor": [
+      6
+    ],
+    "hiro hamada - team leader": [
+      6
+    ],
+    "tadashi hamada - gifted roboticist": [
+      6
+    ],
+    "baymax - personal healthcare companion": [
+      6
+    ],
+    "baymax - armored companion": [
+      6
+    ],
+    "yokai - professor callaghan": [
+      6
+    ],
+    "hiram flaversham - intrigued inventor": [
+      6
+    ],
+    "yokai - scientific supervillain": [
+      6
+    ],
+    "alice - savvy sailor": [
+      6
+    ],
+    "we could be immortals": [
+      6
+    ],
+    "sail the azurite sea": [
+      6
+    ],
+    "helping hand": [
+      6
+    ],
+    "prepare your bot": [
+      6
+    ],
+    "baymax's healthcare chip": [
+      6
+    ],
+    "microbots": [
+      6
+    ],
+    "jumbo pop": [
+      6
+    ],
+    "rescue rangers submarine - mobile headquarters": [
+      6
+    ],
+    "institute of technology - prestigious university": [
+      6
+    ],
+    "kakamora - long-range specialist": [
+      6
+    ],
+    "kakamora - pirate chief": [
+      6
+    ],
+    "jim hawkins - stubborn cabin boy": [
+      6
+    ],
+    "mr. big - shrewd tycoon": [
+      6
+    ],
+    "mr. smee - steadfast mate": [
+      6
+    ],
+    "mr. smee - captain of the jolly roger": [
+      6
+    ],
+    "mullins - seasoned shipmate": [
+      6
+    ],
+    "kohut - trusted marine": [
+      6
+    ],
+    "king hubert - phillip's father": [
+      6
+    ],
+    "hercules - unwavering demigod": [
+      6
+    ],
+    "john silver - ship's cook": [
+      6
+    ],
+    "mr. arrow - legacy's first mate": [
+      6
+    ],
+    "jim hawkins - rigging specialist": [
+      6
+    ],
+    "tuk tuk - big buddy": [
+      6
+    ],
+    "billy bones - space sailor": [
+      6
+    ],
+    "pluto - guard dog": [
+      6
+    ],
+    "mickey mouse - night watch": [
+      6
+    ],
+    "cobra bubbles - former cia": [
+      6
+    ],
+    "gantu - captain crankyhead": [
+      6
+    ],
+    "wreck-it ralph - ham hands": [
+      6
+    ],
+    "calhoun - marine sergeant": [
+      6
+    ],
+    "captain amelia - commander of the legacy": [
+      6
+    ],
+    "jafar - power-hungry vizier": [
+      6
+    ],
+    "john silver - stern captain": [
+      6
+    ],
+    "hot potato": [
+      6
+    ],
+    "i'm still here": [
+      6
+    ],
+    "twin fire": [
+      6
+    ],
+    "ambush!": [
+      6
+    ],
+    "unfortunate situation": [
+      6
+    ],
+    "king's sensor core": [
+      6
+    ],
+    "training dummy": [
+      6
+    ],
+    "sunglasses": [
+      6
+    ],
+    "treasure mountain - azurite sea island": [
+      6
+    ],
+    "galactic council chamber - courtroom": [
+      6
+    ],
+    "bruno madrigal - undetected uncle": [
+      4,
+      9
+    ],
+    "the queen - conceited ruler": [
+      9
+    ],
+    "pongo - determined father": [
+      3,
+      9
+    ],
+    "stitch - rock star": [
+      1,
+      9
+    ],
+    "beast - gracious prince": [
+      9
+    ],
+    "minnie mouse - sweetheart princess": [
+      9
+    ],
+    "aurora - holding court": [
+      9
+    ],
+    "the queen - regal monarch": [
+      2,
+      9
+    ],
+    "rapunzel - sunshine": [
+      2,
+      9
+    ],
+    "stitch - alien dancer": [
+      4,
+      9
+    ],
+    "mulan - free spirit": [
+      2,
+      9
+    ],
+    "daisy duck - musketeer spy": [
+      4,
+      9
+    ],
+    "tinker bell - generous fairy": [
+      3,
+      9
+    ],
+    "mickey mouse - true friend": [
+      1,
+      9
+    ],
+    "pluto - determined defender": [
+      3,
+      9
+    ],
+    "ariel - singing mermaid": [
+      4,
+      9
+    ],
+    "pluto - rescue dog": [
+      4,
+      9
+    ],
+    "nani - protective sister": [
+      3,
+      9
+    ],
+    "julieta madrigal - excellent cook": [
+      4,
+      9
+    ],
+    "cinderella - gentle and kind": [
+      1,
+      9
+    ],
+    "moana - of motunui": [
+      1,
+      9
+    ],
+    "pluto - friendly pooch": [
+      3,
+      9
+    ],
+    "ursula - vanessa": [
+      4,
+      9
+    ],
+    "queen of hearts - wonderland empress": [
+      3,
+      9
+    ],
+    "stitch - carefree surfer": [
+      1,
+      9
+    ],
+    "look at this family": [
+      4,
+      9
+    ],
+    "circle of life": [
+      9
+    ],
+    "heal what has been hurt": [
+      3,
+      9
+    ],
+    "lost in the woods": [
+      4,
+      9
+    ],
+    "bruno's return": [
+      4,
+      9
+    ],
+    "world's greatest criminal mind": [
+      2,
+      9
+    ],
+    "be our guest": [
+      1,
+      9
+    ],
+    "lantern": [
+      1,
+      9
+    ],
+    "ursula's shell necklace": [
+      1,
+      9
+    ],
+    "atlantica - concert hall": [
+      4,
+      9
+    ],
+    "the queen - wicked and vain": [
+      1,
+      9
+    ],
+    "rafiki - mystical fighter": [
+      3,
+      9
+    ],
+    "ursula - sea witch": [
+      3,
+      9
+    ],
+    "jafar - keeper of secrets": [
+      1,
+      9
+    ],
+    "belle - untrained mystic": [
+      4,
+      9
+    ],
+    "belle - accomplished mystic": [
+      4,
+      9
+    ],
+    "winnie the pooh - hunny wizard": [
+      2,
+      9
+    ],
+    "peter pan's shadow - not sewn on": [
+      2,
+      9
+    ],
+    "elsa - spirit of winter": [
+      1,
+      9
+    ],
+    "ursula - voice stealer": [
+      9
+    ],
+    "dumbo - ninth wonder of the universe": [
+      9
+    ],
+    "dumbo - the flying elephant": [
+      9
+    ],
+    "timothy q. mouse - flight instructor": [
+      9
+    ],
+    "elsa - gloves off": [
+      2,
+      9
+    ],
+    "kuzco - wanted llama": [
+      2,
+      9
+    ],
+    "tick-tock - ever-present pursuer": [
+      4,
+      9
+    ],
+    "dolores madrigal - easy listener": [
+      4,
+      9
+    ],
+    "camilo madrigal - prankster": [
+      4,
+      9
+    ],
+    "elsa - snow queen": [
+      1,
+      9
+    ],
+    "genie - supportive friend": [
+      3,
+      9
+    ],
+    "olaf - friendly snowman": [
+      1,
+      9
+    ],
+    "sven - official ice deliverer": [
+      1,
+      9
+    ],
+    "mama odie - voice of wisdom": [
+      3,
+      9
+    ],
+    "luisa madrigal - magically strong one": [
+      4,
+      9
+    ],
+    "jafar - lamp thief": [
+      3,
+      9
+    ],
+    "second star to the right": [
+      4,
+      9
+    ],
+    "poor unfortunate souls": [
+      4,
+      9
+    ],
+    "last-ditch effort": [
+      3,
+      9
+    ],
+    "i'm stuck!": [
+      2,
+      9
+    ],
+    "the magic feather": [
+      9
+    ],
+    "magic mirror": [
+      1,
+      9
+    ],
+    "white rabbit's pocket watch": [
+      1,
+      9
+    ],
+    "rose lantern": [
+      4,
+      9
+    ],
+    "casa madrigal - casita": [
+      4,
+      9
+    ],
+    "kuzco - temperamental emperor": [
+      1,
+      9
+    ],
+    "robin hood - daydreamer": [
+      3,
+      9
+    ],
+    "cursed merfolk - ursula's handiwork": [
+      3,
+      9
+    ],
+    "prince phillip - warden of the woods": [
+      4,
+      9
+    ],
+    "prince phillip - vanquisher of foes": [
+      4,
+      9
+    ],
+    "goofy - set for adventure": [
+      9
+    ],
+    "max goof - rebellious teen": [
+      9
+    ],
+    "genie - of the lamp": [
+      9
+    ],
+    "max goof - chart topper": [
+      9
+    ],
+    "bobby zimuruski - spray cheese kid": [
+      9
+    ],
+    "megara - pulling the strings": [
+      1,
+      9
+    ],
+    "mickey mouse - steamboat pilot": [
+      1,
+      9
+    ],
+    "enchantress - unexpected judge": [
+      2,
+      9
+    ],
+    "virana - fang chief": [
+      2,
+      9
+    ],
+    "donald duck - sleepwalker": [
+      2,
+      9
+    ],
+    "pegasus - gift for hercules": [
+      4,
+      9
+    ],
+    "donald duck - perfect gentleman": [
+      2,
+      9
+    ],
+    "heihei - bumbling rooster": [
+      4,
+      9
+    ],
+    "shenzi - hyena pack leader": [
+      3,
+      9
+    ],
+    "tinker bell - most helpful": [
+      1,
+      9
+    ],
+    "john silver - alien pirate": [
+      1,
+      9
+    ],
+    "ursula - deceiver": [
+      3,
+      9
+    ],
+    "wildcat - mechanic": [
+      3,
+      9
+    ],
+    "aladdin - prince ali": [
+      1,
+      9
+    ],
+    "daisy duck - secret agent": [
+      2,
+      9
+    ],
+    "stand out": [
+      9
+    ],
+    "sudden chill": [
+      1,
+      9
+    ],
+    "improvise": [
+      2,
+      9
+    ],
+    "under the sea": [
+      4,
+      9
+    ],
+    "make the potion": [
+      4,
+      9
+    ],
+    "mother knows best": [
+      1,
+      9
+    ],
+    "family fishing pole": [
+      9
+    ],
+    "signed contract": [
+      4,
+      9
+    ],
+    "hidden cove - tranquil haven": [
+      4,
+      9
+    ],
+    "lefou - instigator": [
+      1,
+      9
+    ],
+    "shere khan - menacing predator": [
+      2,
+      9
+    ],
+    "simba - scrappy cub": [
+      3,
+      9
+    ],
+    "maui - whale": [
+      3,
+      9
+    ],
+    "ariel - adventurous collector": [
+      3,
+      9
+    ],
+    "maleficent - monstrous dragon": [
+      1,
+      9
+    ],
+    "powerline - taking the stage": [
+      9
+    ],
+    "powerline - world's greatest rock star": [
+      9
+    ],
+    "mickey mouse - brave little prince": [
+      9
+    ],
+    "max goof - rockin' teen": [
+      9
+    ],
+    "roxanne - powerline fan": [
+      9
+    ],
+    "p.j. pete - caught up in the music": [
+      9
+    ],
+    "gaston - arrogant hunter": [
+      1,
+      9
+    ],
+    "moana - undeterred voyager": [
+      3,
+      9
+    ],
+    "powerline - musical superstar": [
+      9
+    ],
+    "sisu - emboldened warrior": [
+      4,
+      9
+    ],
+    "sisu - daring visitor": [
+      4,
+      9
+    ],
+    "queen of hearts - sensing weakness": [
+      2,
+      9
+    ],
+    "lumiere - fiery friend": [
+      4,
+      9
+    ],
+    "card soldiers - full deck": [
+      2,
+      9
+    ],
+    "queen of hearts - impulsive ruler": [
+      2,
+      9
+    ],
+    "rapunzel - letting down her hair": [
+      1,
+      9
+    ],
+    "mulan - injured soldier": [
+      4,
+      9
+    ],
+    "mulan - elite archer": [
+      4,
+      9
+    ],
+    "raya - headstrong": [
+      2,
+      9
+    ],
+    "sergeant tibbs - courageous cat": [
+      1,
+      9
+    ],
+    "tuk tuk - lively partner": [
+      4,
+      9
+    ],
+    "i2i": [
+      9
+    ],
+    "you can fly!": [
+      2,
+      9
+    ],
+    "a pirate's life": [
+      4,
+      9
+    ],
+    "be king undisputed": [
+      4,
+      9
+    ],
+    "medallion weights": [
+      4,
+      9
+    ],
+    "dinner bell": [
+      2,
+      9
+    ],
+    "agrabah - marketplace": [
+      3,
+      9
+    ],
+    "anna - true-hearted": [
+      4,
+      9
+    ],
+    "huey - savvy nephew": [
+      3,
+      9
+    ],
+    "dewey - showy nephew": [
+      3,
+      9
+    ],
+    "louie - chill nephew": [
+      3,
+      9
+    ],
+    "alice - accidentally adrift": [
+      9
+    ],
+    "mulan - considerate diplomat": [
+      9
+    ],
+    "cruella de vil - style icon": [
+      9
+    ],
+    "mufasa - king of the pride lands": [
+      1,
+      9
+    ],
+    "cruella de vil - fashionable cruiser": [
+      2,
+      9
+    ],
+    "anna - braving the storm": [
+      4,
+      9
+    ],
+    "flounder - voice of reason": [
+      1,
+      9
+    ],
+    "hans - noble scoundrel": [
+      4,
+      9
+    ],
+    "the queen - mirror seeker": [
+      3,
+      9
+    ],
+    "grand pabbie - oldest and wisest": [
+      2,
+      9
+    ],
+    "hades - infernal schemer": [
+      1,
+      9
+    ],
+    "mama odie - mystical maven": [
+      3,
+      9
+    ],
+    "aurora - dreaming guardian": [
+      1,
+      9
+    ],
+    "aurora - tranquil princess": [
+      4,
+      9
+    ],
+    "jasmine - heir of agrabah": [
+      2,
+      9
+    ],
+    "belle - inventive engineer": [
+      1,
+      9
+    ],
+    "judy hopps - optimistic officer": [
+      2,
+      9
+    ],
+    "maid marian - delightful dreamer": [
+      3,
+      9
+    ],
+    "winnie the pooh - having a think": [
+      2,
+      9
+    ],
+    "alice - growing girl": [
+      2,
+      9
+    ],
+    "aurora - regal princess": [
+      1,
+      9
+    ],
+    "robin hood - unrivaled archer": [
+      1,
+      9
+    ],
+    "develop your brain": [
+      1,
+      9
+    ],
+    "four dozen eggs": [
+      2,
+      9
+    ],
+    "one jump ahead": [
+      1,
+      9
+    ],
+    "dig a little deeper": [
+      4,
+      9
+    ],
+    "aurelian gyrosensor": [
+      3,
+      9
+    ],
+    "heart of te fiti": [
+      3,
+      9
+    ],
+    "coconut basket": [
+      1,
+      9
+    ],
+    "motunui - island paradise": [
+      3,
+      9
+    ],
+    "philoctetes - no-nonsense instructor": [
+      4,
+      9
+    ],
+    "mickey mouse - trumpeter": [
+      3,
+      9
+    ],
+    "nala - undaunted lioness": [
+      9
+    ],
+    "lilo - best explorer ever": [
+      9
+    ],
+    "scar - finally king": [
+      9
+    ],
+    "little john - sir reginald": [
+      9
+    ],
+    "robin hood - champion of sherwood": [
+      3,
+      9
+    ],
+    "jasmine - fearless princess": [
+      9
+    ],
+    "tiana - diligent waitress": [
+      2,
+      9
+    ],
+    "benja - guardian of the dragon gem": [
+      2,
+      9
+    ],
+    "jafar - royal vizier": [
+      2,
+      9
+    ],
+    "prince naveen - penniless royal": [
+      2,
+      9
+    ],
+    "eeyore - overstuffed donkey": [
+      3,
+      9
+    ],
+    "robin hood - capable fighter": [
+      2,
+      9
+    ],
+    "mickey mouse - standard bearer": [
+      4,
+      9
+    ],
+    "hercules - beloved hero": [
+      4,
+      9
+    ],
+    "lawrence - jealous manservant": [
+      2,
+      9
+    ],
+    "tinker bell - giant fairy": [
+      1,
+      9
+    ],
+    "tinker bell - tiny tactician": [
+      1,
+      9
+    ],
+    "captain hook - captain of the jolly roger": [
+      1,
+      9
+    ],
+    "hercules - true hero": [
+      1,
+      9
+    ],
+    "john silver - greedy treasure seeker": [
+      3,
+      9
+    ],
+    "li shang - imperial captain": [
+      4,
+      9
+    ],
+    "prince eric - dashing and brave": [
+      1,
+      9
+    ],
+    "ariel - sonic warrior": [
+      4,
+      9
+    ],
+    "ariel - determined mermaid": [
+      4,
+      9
+    ],
+    "one last hope": [
+      4,
+      9
+    ],
+    "smash": [
+      1,
+      9
+    ],
+    "i find 'em, i flatten 'em": [
+      4,
+      9
+    ],
+    "fire the cannons!": [
+      1,
+      9
+    ],
+    "strength of a raging fire": [
+      2,
+      9
+    ],
+    "the mob song": [
+      4,
+      9
+    ],
+    "beast's mirror": [
+      1,
+      9
+    ],
+    "maui's place of exile - hidden island": [
+      3,
+      9
+    ],
+    "baloo - von bruinwald xiii": [
+      3
+    ],
+    "bernard - brand-new agent": [
+      3
+    ],
+    "chernabog - evildoer": [
+      3
+    ],
+    "dalmatian puppy - tail wagger": [
+      3,
+      8
+    ],
+    "joshua sweet - the doctor": [
+      3
+    ],
+    "kida - atlantean": [
+      3
+    ],
+    "kida - protector of atlantis": [
+      3
+    ],
+    "lucky - the 15th puppy": [
+      3
+    ],
+    "minnie mouse - musical artist": [
+      3
+    ],
+    "miss bianca - rescue aid society agent": [
+      3
+    ],
+    "mr. snoops - inept businessman": [
+      3
+    ],
+    "orville - ace pilot": [
+      3
+    ],
+    "patch - intimidating pup": [
+      3
+    ],
+    "perdita - devoted mother": [
+      3
+    ],
+    "piglet - pooh pirate captain": [
+      3
+    ],
+    "rolly - hungry pup": [
+      3
+    ],
+    "wendy darling - talented sailor": [
+      3
+    ],
+    "99 puppies": [
+      3
+    ],
+    "boss's orders": [
+      3
+    ],
+    "quick patch": [
+      3
+    ],
+    "the bare necessities": [
+      3
+    ],
+    "cleansing rainwater": [
+      3
+    ],
+    "heart of atlantis": [
+      3
+    ],
+    "wildcat's wrench": [
+      3
+    ],
+    "never land - mermaid lagoon": [
+      3
+    ],
+    "pride lands - pride rock": [
+      3
+    ],
+    "tiana's palace - jazz restaurant": [
+      3
+    ],
+    "alice - tea alchemist": [
+      3
+    ],
+    "chernabog's followers - creatures of evil": [
+      3
+    ],
+    "diablo - faithful pet": [
+      3
+    ],
+    "hydros - ice titan": [
+      3
+    ],
+    "iago - pretty polly": [
+      3
+    ],
+    "jafar - striking illusionist": [
+      3
+    ],
+    "lena sabrewing - rebellious teenager": [
+      3
+    ],
+    "magic broom - dancing duster": [
+      3
+    ],
+    "magic broom - swift cleaner": [
+      3
+    ],
+    "magic broom - the big sweeper": [
+      3
+    ],
+    "magic carpet - flying rug": [
+      3
+    ],
+    "magica de spell - ambitious witch": [
+      3
+    ],
+    "magica de spell - the midas touch": [
+      3
+    ],
+    "magica de spell - thieving sorceress": [
+      3
+    ],
+    "maleficent - mistress of all evil": [
+      3
+    ],
+    "pua - potbellied buddy": [
+      3
+    ],
+    "stratos - tornado titan": [
+      3
+    ],
+    "the firebird - force of destruction": [
+      3
+    ],
+    "the queen - hateful rival": [
+      3
+    ],
+    "treasure guardian - protector of the cave": [
+      3
+    ],
+    "bestow a gift": [
+      3
+    ],
+    "it calls me": [
+      3
+    ],
+    "the boss is on a roll": [
+      3
+    ],
+    "the lamp": [
+      3
+    ],
+    "the sorcerer's hat": [
+      3
+    ],
+    "forbidden mountain - maleficent's castle": [
+      3
+    ],
+    "the queen's castle - mirror chamber": [
+      3
+    ],
+    "the sorcerer's tower - wondrous workspace": [
+      3
+    ],
+    "cubby - mighty lost boy": [
+      3
+    ],
+    "don karnage - prince of pirates": [
+      3
+    ],
+    "flotsam - riffraff": [
+      3
+    ],
+    "friar tuck - priest of nottingham": [
+      3
+    ],
+    "helga sinclair - femme fatale": [
+      3
+    ],
+    "helga sinclair - vengeful partner": [
+      3
+    ],
+    "jetsam - riffraff": [
+      3
+    ],
+    "kit cloudkicker - tough guy": [
+      3
+    ],
+    "lyle tiberius rourke - cunning mercenary": [
+      3
+    ],
+    "milo thatch - clever cartographer": [
+      3
+    ],
+    "milo thatch - king of atlantis": [
+      3
+    ],
+    "morph - space goo": [
+      3
+    ],
+    "peter pan - lost boy leader": [
+      3
+    ],
+    "prince john - phony king": [
+      3
+    ],
+    "sir hiss - aggravating asp": [
+      3
+    ],
+    "skippy - energetic rabbit": [
+      3
+    ],
+    "starkey - devious pirate": [
+      3
+    ],
+    "stitch - covert agent": [
+      3
+    ],
+    "ursula - deceiver of all": [
+      3
+    ],
+    "zazu - steward of the pride lands": [
+      3
+    ],
+    "has set my heaaaaaaart . . .": [
+      3
+    ],
+    "i will find my way": [
+      3
+    ],
+    "strike a good match": [
+      3
+    ],
+    "airfoil": [
+      3
+    ],
+    "robin's bow": [
+      3
+    ],
+    "starlight vial": [
+      3
+    ],
+    "de vil manor - cruella's estate": [
+      3
+    ],
+    "fang - river city": [
+      3
+    ],
+    "kuzco's palace - home of the emperor": [
+      3
+    ],
+    "billy bones - keeper of the map": [
+      3
+    ],
+    "captain hook - master swordsman": [
+      3
+    ],
+    "della duck - unstoppable mom": [
+      3
+    ],
+    "heihei - accidental explorer": [
+      3
+    ],
+    "hydra - deadly serpent": [
+      3
+    ],
+    "jim hawkins - space traveler": [
+      3
+    ],
+    "jim hawkins - thrill seeker": [
+      3
+    ],
+    "kakamora - menacing sailor": [
+      3
+    ],
+    "madame medusa - the boss": [
+      3
+    ],
+    "maui - soaring demigod": [
+      3
+    ],
+    "milo thatch - spirited scholar": [
+      3
+    ],
+    "moana - born leader": [
+      3
+    ],
+    "nutsy - vulture henchman": [
+      3
+    ],
+    "peter pan - never land hero": [
+      3
+    ],
+    "peter pan - pirate's bane": [
+      3
+    ],
+    "prince eric - expert helmsman": [
+      3
+    ],
+    "scroop - backstabber": [
+      3
+    ],
+    "slightly - lost boy": [
+      3
+    ],
+    "stitch - little rocket": [
+      3
+    ],
+    "trigger - not-so-sharp shooter": [
+      3
+    ],
+    "webby vanderquack - enthusiastic duck": [
+      3
+    ],
+    "divebomb": [
+      3
+    ],
+    "i've got a dream": [
+      3
+    ],
+    "on your feet! now!": [
+      3
+    ],
+    "voyage": [
+      3
+    ],
+    "maui's fish hook": [
+      3
+    ],
+    "sumerian talisman": [
+      3
+    ],
+    "jolly roger - hook's ship": [
+      3
+    ],
+    "rls legacy - solar galleon": [
+      3
+    ],
+    "audrey ramirez - the engineer": [
+      3
+    ],
+    "captain amelia - first in command": [
+      3
+    ],
+    "flintheart glomgold - lone cheater": [
+      3
+    ],
+    "genie - cramped in the lamp": [
+      3
+    ],
+    "gramma tala - keeper of ancient stories": [
+      3
+    ],
+    "gramma tala - spirit of the ocean": [
+      3
+    ],
+    "gyro gearloose - gadget whiz": [
+      3
+    ],
+    "king louie - bandleader": [
+      3
+    ],
+    "kit cloudkicker - navigator": [
+      3
+    ],
+    "kit cloudkicker - spunky bear cub": [
+      3
+    ],
+    "pluto - mickey's clever friend": [
+      3
+    ],
+    "rufus - orphanage cat": [
+      3
+    ],
+    "scrooge mcduck - richest duck in the world": [
+      3
+    ],
+    "scrooge mcduck - uncle moneybags": [
+      3
+    ],
+    "tinker bell - very clever fairy": [
+      3
+    ],
+    "wendy darling - authority on peter pan": [
+      3
+    ],
+    "distract": [
+      3
+    ],
+    "friend like me": [
+      3
+    ],
+    "how far i'll go": [
+      3
+    ],
+    "repair": [
+      3
+    ],
+    "lucky dime": [
+      3
+    ],
+    "scrooge's top hat": [
+      3
+    ],
+    "vault door": [
+      3
+    ],
+    "belle's house - maurice's workshop": [
+      3
+    ],
+    "mcduck manor - scrooge's mansion": [
+      3
+    ],
+    "chief tui - proud of motunui": [
+      3
+    ],
+    "gustav the giant - terror of the kingdom": [
+      3
+    ],
+    "hades - hotheaded ruler": [
+      3
+    ],
+    "helga sinclair - right-hand woman": [
+      3
+    ],
+    "kida - royal warrior": [
+      3
+    ],
+    "little john - resourceful outlaw": [
+      3
+    ],
+    "little john - robin's pal": [
+      3
+    ],
+    "lythos - rock titan": [
+      3
+    ],
+    "mickey mouse - stalwart explorer": [
+      3
+    ],
+    "minnie mouse - funky spelunker": [
+      3
+    ],
+    "mr. smee - bumbling mate": [
+      3
+    ],
+    "mufasa - champion of the pride lands": [
+      3
+    ],
+    "nala - fierce friend": [
+      3
+    ],
+    "pyros - lava titan": [
+      3
+    ],
+    "razoul - palace guard": [
+      3
+    ],
+    "robin hood - beloved outlaw": [
+      3
+    ],
+    "sheriff of nottingham - corrupt official": [
+      3
+    ],
+    "simba - fighting prince": [
+      3
+    ],
+    "simba - rightful king": [
+      3
+    ],
+    "thaddeus e. klang - metallic leader": [
+      3
+    ],
+    "and then along came zeus": [
+      3
+    ],
+    "ba-boom!": [
+      3
+    ],
+    "olympus would be that way": [
+      3
+    ],
+    "rise of the titans": [
+      3
+    ],
+    "captain hook's rapier": [
+      3
+    ],
+    "gizmosuit": [
+      3
+    ],
+    "map of treasure planet": [
+      3
+    ],
+    "nottingham - prince john's castle": [
+      3
+    ],
+    "the bayou - mysterious swamp": [
+      3
+    ],
+    "bashful - hopeless romantic": [
+      2
+    ],
+    "christopher robin - adventurer": [
+      2
+    ],
+    "cinderella - ballroom sensation": [
+      2
+    ],
+    "cobra bubbles - just a social worker": [
+      2
+    ],
+    "doc - leader of the seven dwarfs": [
+      2
+    ],
+    "dopey - always playful": [
+      2
+    ],
+    "eudora - accomplished seamstress": [
+      2
+    ],
+    "gaston - baritone bully": [
+      2
+    ],
+    "grand duke - advisor to the king": [
+      2
+    ],
+    "grumpy - bad-tempered": [
+      2
+    ],
+    "happy - good-natured": [
+      2
+    ],
+    "king louie - jungle vip": [
+      2
+    ],
+    "mickey mouse - friendly face": [
+      2
+    ],
+    "mufasa - betrayed leader": [
+      2
+    ],
+    "mulan - reflecting": [
+      2
+    ],
+    "nana - darling family pet": [
+      2
+    ],
+    "piglet - very small animal": [
+      2
+    ],
+    "rapunzel - gifted artist": [
+      2
+    ],
+    "sleepy - nodding off": [
+      2
+    ],
+    "sneezy - very allergic": [
+      2
+    ],
+    "snow white - lost in the forest": [
+      2
+    ],
+    "snow white - unexpected houseguest": [
+      2
+    ],
+    "snow white - well wisher": [
+      2
+    ],
+    "the queen - commanding presence": [
+      2
+    ],
+    "hold still": [
+      2
+    ],
+    "last stand": [
+      2
+    ],
+    "painting the roses red": [
+      2
+    ],
+    "zero to hero": [
+      2
+    ],
+    "dragon gem": [
+      2
+    ],
+    "sleepy's flute": [
+      2
+    ],
+    "arthur - wizard's apprentice": [
+      2
+    ],
+    "blue fairy - rewarding good deeds": [
+      2
+    ],
+    "chip the teacup - gentle soul": [
+      2
+    ],
+    "dr. facilier - savvy opportunist": [
+      2
+    ],
+    "fairy godmother - here to help": [
+      2
+    ],
+    "fairy godmother - mystic armorer": [
+      2
+    ],
+    "fairy godmother - pure heart": [
+      2
+    ],
+    "heihei - persistent presence": [
+      2
+    ],
+    "jiminy cricket - pinocchio's conscience": [
+      2
+    ],
+    "madam mim - fox": [
+      2
+    ],
+    "madam mim - purple dragon": [
+      2
+    ],
+    "madam mim - rival of merlin": [
+      2
+    ],
+    "madam mim - snake": [
+      2
+    ],
+    "merlin - crab": [
+      2
+    ],
+    "merlin - goat": [
+      2
+    ],
+    "merlin - rabbit": [
+      2
+    ],
+    "merlin - shapeshifter": [
+      2
+    ],
+    "merlin - squirrel": [
+      2
+    ],
+    "pinocchio - star attraction": [
+      2
+    ],
+    "pinocchio - on the run": [
+      2
+    ],
+    "pinocchio - talkative puppet": [
+      2
+    ],
+    "yzma - scary beyond all reason": [
+      2
+    ],
+    "yzma - without beauty sleep": [
+      2
+    ],
+    "gruesome and grim": [
+      2
+    ],
+    "legend of the sword in the stone": [
+      2
+    ],
+    "binding contract": [
+      2
+    ],
+    "croquet mallet": [
+      2
+    ],
+    "perplexing signposts": [
+      2
+    ],
+    "the sorcerer's spellbook": [
+      2
+    ],
+    "arthur - trained swordsman": [
+      2
+    ],
+    "beast - relentless": [
+      2
+    ],
+    "belle - bookworm": [
+      2
+    ],
+    "belle - hidden archer": [
+      2
+    ],
+    "bucky - squirrel squeak tutor": [
+      2
+    ],
+    "cheshire cat - always grinning": [
+      2
+    ],
+    "cheshire cat - from the shadows": [
+      2
+    ],
+    "dr. facilier - fortune teller": [
+      2
+    ],
+    "flynn rider - confident vagabond": [
+      2
+    ],
+    "flynn rider - his own biggest fan": [
+      2
+    ],
+    "gaston - scheming suitor": [
+      2
+    ],
+    "little john - loyal friend": [
+      2
+    ],
+    "lucifer - cunning cat": [
+      2
+    ],
+    "pain - underworld imp": [
+      2
+    ],
+    "panic - underworld imp": [
+      2
+    ],
+    "pete - bad guy": [
+      2
+    ],
+    "prince john - greediest of all": [
+      2
+    ],
+    "queen of hearts - quick-tempered": [
+      2
+    ],
+    "ratigan - criminal mastermind": [
+      2
+    ],
+    "ray - easygoing firefly": [
+      2
+    ],
+    "the queen - disguised peddler": [
+      2
+    ],
+    "tiana - true princess": [
+      2
+    ],
+    "bibbidi bobbidi boo": [
+      2
+    ],
+    "bounce": [
+      2
+    ],
+    "hypnotize": [
+      2
+    ],
+    "pack tactics": [
+      2
+    ],
+    "ring the bell": [
+      2
+    ],
+    "ratigan's marvelous trap": [
+      2
+    ],
+    "baloo - fun-loving bear": [
+      2
+    ],
+    "boun - precocious entrepreneur": [
+      2
+    ],
+    "donald duck - not again!": [
+      2
+    ],
+    "felicia - always hungry": [
+      2
+    ],
+    "fidget - ratigan's henchman": [
+      2
+    ],
+    "honest john - not that honest": [
+      2
+    ],
+    "lady tremaine - imperious queen": [
+      2
+    ],
+    "lady tremaine - overbearing matriarch": [
+      2
+    ],
+    "lumiere - hotheaded candelabra": [
+      2
+    ],
+    "minnie mouse - stylish surfer": [
+      2
+    ],
+    "minnie mouse - wide-eyed diver": [
+      2
+    ],
+    "minnie mouse - zipping around": [
+      2
+    ],
+    "mother gothel - withered and wicked": [
+      2
+    ],
+    "mulan - soldier in training": [
+      2
+    ],
+    "namaari - nemesis": [
+      2
+    ],
+    "ratigan - very large mouse": [
+      2
+    ],
+    "raya - leader of heart": [
+      2
+    ],
+    "raya - warrior of kumandra": [
+      2
+    ],
+    "scar - vicious cheater": [
+      2
+    ],
+    "tigger - one of a kind": [
+      2
+    ],
+    "tuk tuk - wrecking ball": [
+      2
+    ],
+    "go the distance": [
+      2
+    ],
+    "teeth and ambitions": [
+      2
+    ],
+    "the most diabolical scheme": [
+      2
+    ],
+    "what did you call me?": [
+      2
+    ],
+    "peter pan's dagger": [
+      2
+    ],
+    "sword in the stone": [
+      2
+    ],
+    "basil - great mouse detective": [
+      2
+    ],
+    "basil - of baker street": [
+      2
+    ],
+    "basil - perceptive investigator": [
+      2
+    ],
+    "caterpillar - calm and collected": [
+      2
+    ],
+    "cogsworth - grandfather clock": [
+      2
+    ],
+    "cogsworth - talking clock": [
+      2
+    ],
+    "cruella de vil - perfectly wretched": [
+      2
+    ],
+    "duke weaselton - small-time crook": [
+      2
+    ],
+    "gaston - intellectual powerhouse": [
+      2
+    ],
+    "hiram flaversham - toymaker": [
+      2
+    ],
+    "james - role model": [
+      2
+    ],
+    "mrs. judson - housekeeper": [
+      2
+    ],
+    "nick wilde - wily fox": [
+      2
+    ],
+    "noi - orphaned thief": [
+      2
+    ],
+    "owl - logical lecturer": [
+      2
+    ],
+    "prince charming - heir to the throne": [
+      2
+    ],
+    "rabbit - reluctant host": [
+      2
+    ],
+    "sisu - divine water dragon": [
+      2
+    ],
+    "the nokk - water spirit": [
+      2
+    ],
+    "falling down the rabbit hole": [
+      2
+    ],
+    "launch": [
+      2
+    ],
+    "nothing to hide": [
+      2
+    ],
+    "fang crossbow": [
+      2
+    ],
+    "gumbo pot": [
+      2
+    ],
+    "maurice's workshop": [
+      2
+    ],
+    "pawpsicle": [
+      2
+    ],
+    "sardine can": [
+      2
+    ],
+    "beast - forbidding recluse": [
+      2
+    ],
+    "beast - selfless protector": [
+      2
+    ],
+    "beast - tragic hero": [
+      2
+    ],
+    "chief bogo - respected officer": [
+      2
+    ],
+    "cinderella - knight in training": [
+      2
+    ],
+    "cinderella - stouthearted": [
+      2
+    ],
+    "donald duck - deep-sea diver": [
+      2
+    ],
+    "eli la bouff - big daddy": [
+      2
+    ],
+    "goofy - knight for a day": [
+      2
+    ],
+    "hercules - divine hero": [
+      2
+    ],
+    "hercules - hero in training": [
+      2
+    ],
+    "jafar - dreadnought": [
+      2
+    ],
+    "kronk - junior chipmunk": [
+      2
+    ],
+    "li shang - archery instructor": [
+      2
+    ],
+    "magic broom - industrial model": [
+      2
+    ],
+    "namaari - morning mist": [
+      2
+    ],
+    "pacha - village leader": [
+      2
+    ],
+    "queen of hearts - capricious monarch": [
+      2
+    ],
+    "the huntsman - reluctant enforcer": [
+      2
+    ],
+    "the prince - never gives up": [
+      2
+    ],
+    "tiana - celebrating princess": [
+      2
+    ],
+    "charge!": [
+      2
+    ],
+    "let the storm rage on": [
+      2
+    ],
+    "pick a fight": [
+      2
+    ],
+    "last cannon": [
+      2
+    ],
+    "mouse armor": [
+      2
+    ],
+    "weight set": [
+      2
+    ],
+    "louie - one cool duck": [
+      8
+    ],
+    "dewey - lovable showoff": [
+      8
+    ],
+    "huey - reliable leader": [
+      8
+    ],
+    "goofy - groundbreaking chef": [
+      8
+    ],
+    "antonio madrigal - friend to all": [
+      8
+    ],
+    "minnie mouse - daring defender": [
+      8
+    ],
+    "ludwig von drake - all-around expert": [
+      8
+    ],
+    "charlotte la bouff - mardi gras princess": [
+      8
+    ],
+    "tiana - natural talent": [
+      8
+    ],
+    "mirabel madrigal - curious child": [
+      8
+    ],
+    "lady - family dog": [
+      8
+    ],
+    "jim dear - beloved husband": [
+      8
+    ],
+    "gene - niceland resident": [
+      8
+    ],
+    "perdita - on the lookout": [
+      8
+    ],
+    "rhino - one-sixteenth wolf": [
+      8
+    ],
+    "darling dear - beloved wife": [
+      8
+    ],
+    "the colonel - old sheepdog": [
+      8
+    ],
+    "chief bogo - commanding officer": [
+      8
+    ],
+    "pua - protective pig": [
+      8
+    ],
+    "bruno madrigal - singing seer": [
+      8
+    ],
+    "kaa - hypnotizing python": [
+      8
+    ],
+    "tramp - dapper rascal": [
+      8
+    ],
+    "king candy - sugar rush nightmare": [
+      8
+    ],
+    "wreck-it ralph - big lug": [
+      8
+    ],
+    "patch - playful pup": [
+      8
+    ],
+    "rolly - chubby puppy": [
+      8
+    ],
+    "perdita - determined mother": [
+      8
+    ],
+    "pluto - tried and true": [
+      8
+    ],
+    "bolt - down but not out": [
+      8
+    ],
+    "rhino - power hamster": [
+      8
+    ],
+    "antonio's jaguar - faithful companion": [
+      8
+    ],
+    "calhoun - hard-nosed leader": [
+      8
+    ],
+    "lady - decisive dog": [
+      8
+    ],
+    "alma madrigal - accepting grandmother": [
+      8
+    ],
+    "clawhauser - front desk officer": [
+      8
+    ],
+    "joey - blue pigeon": [
+      8
+    ],
+    "donald duck - coin collector": [
+      8
+    ],
+    "candy drift": [
+      8
+    ],
+    "she's your person": [
+      8
+    ],
+    "only so much room": [
+      8
+    ],
+    "it means no worries": [
+      8
+    ],
+    "trials and tribulations": [
+      8
+    ],
+    "the nephews' piggy bank": [
+      8
+    ],
+    "palace guard - spectral sentry": [
+      8
+    ],
+    "druun - ravenous plague": [
+      8
+    ],
+    "madame medusa - deceiving partner": [
+      8
+    ],
+    "hades - ruthless tyrant": [
+      8
+    ],
+    "lena sabrewing - pure energy": [
+      8
+    ],
+    "abu - illusory pachyderm": [
+      8
+    ],
+    "bruno madrigal - single-minded": [
+      8
+    ],
+    "royal guard - octopus soldier": [
+      8
+    ],
+    "kuzco - bored royal": [
+      8
+    ],
+    "megara - part of the plan": [
+      8
+    ],
+    "yelana - northuldra leader": [
+      8
+    ],
+    "ryder - fleet-footed infiltrator": [
+      8
+    ],
+    "bambi - prince of the forest": [
+      8
+    ],
+    "poe de spell - magica's brother": [
+      8
+    ],
+    "madam mim - up to no good": [
+      8
+    ],
+    "elsa - fierce protector": [
+      8
+    ],
+    "pinocchio - strings attached": [
+      8
+    ],
+    "jiminy cricket - level-headed and wise": [
+      8
+    ],
+    "bambi - little prince": [
+      8
+    ],
+    "monstro - infamous whale": [
+      8
+    ],
+    "nero - fearsome crocodile": [
+      8
+    ],
+    "magica de spell - shadow form": [
+      8
+    ],
+    "kuzco - impulsive llama": [
+      8
+    ],
+    "yzma - on edge": [
+      8
+    ],
+    "madam mim - rhino": [
+      8
+    ],
+    "mother gothel - knows what's best": [
+      8
+    ],
+    "blue fairy - guiding light": [
+      8
+    ],
+    "anna - magical mission": [
+      8
+    ],
+    "the sultan - royal apparition": [
+      8
+    ],
+    "jafar - high sultan of lorcana": [
+      8
+    ],
+    "camilo madrigal - center stage": [
+      8
+    ],
+    "flower - shy skunk": [
+      8
+    ],
+    "forest duel": [
+      8
+    ],
+    "they never come back": [
+      8
+    ],
+    "fantastical and magical": [
+      8
+    ],
+    "pull the lever!": [
+      8
+    ],
+    "into the unknown": [
+      8
+    ],
+    "everybody's got a weakness": [
+      8
+    ],
+    "scarab": [
+      8
+    ],
+    "ice spikes": [
+      8
+    ],
+    "wilhelmina packard - the radio operator": [
+      8
+    ],
+    "basil - undercover detective": [
+      8
+    ],
+    "tramp - observant guardian": [
+      8
+    ],
+    "chaca - junior chipmunk": [
+      8
+    ],
+    "tipo - junior chipmunk": [
+      8
+    ],
+    "bill the lizard - chimney sweep": [
+      8
+    ],
+    "march hare - hare-brained eccentric": [
+      8
+    ],
+    "fred - major science enthusiast": [
+      8
+    ],
+    "mad dog - karnage's first mate": [
+      8
+    ],
+    "dale - bumbler": [
+      8
+    ],
+    "louis - endearing alligator": [
+      8
+    ],
+    "napoleon - clever bloodhound": [
+      8
+    ],
+    "chip - quick thinker": [
+      8
+    ],
+    "fred - giant-sized": [
+      8
+    ],
+    "gadget hackwrench - quirky scientist": [
+      8
+    ],
+    "raya - infiltration expert": [
+      8
+    ],
+    "rapunzel - high climber": [
+      8
+    ],
+    "flynn rider - breaking and entering": [
+      8
+    ],
+    "dormouse - easily agitated": [
+      8
+    ],
+    "alice - clumsy as can be": [
+      8
+    ],
+    "queen of hearts - haughty monarch": [
+      8
+    ],
+    "hiro hamada - intuitive thinker": [
+      8
+    ],
+    "go go tomago - cutting edge": [
+      8
+    ],
+    "don karnage - air pirate leader": [
+      8
+    ],
+    "captain hook - the pirate king": [
+      8
+    ],
+    "maui - stubborn trickster": [
+      8
+    ],
+    "honey lemon - costumed catalyst": [
+      8
+    ],
+    "jock - attentive uncle": [
+      8
+    ],
+    "archimedes - resourceful owl": [
+      8
+    ],
+    "he who steals and runs away": [
+      8
+    ],
+    "stopped chaos in its tracks": [
+      8
+    ],
+    "wrong lever!": [
+      8
+    ],
+    "undermine": [
+      8
+    ],
+    "walk the plank!": [
+      8
+    ],
+    "chem purse": [
+      8
+    ],
+    "jeweled collar": [
+      8
+    ],
+    "gloyd orangeboar - fierce competitor": [
+      8
+    ],
+    "honest john - shameless schemer": [
+      8
+    ],
+    "gyro gearloose - eccentric inventor": [
+      8
+    ],
+    "vanellope von schweetz - spunky speedster": [
+      8
+    ],
+    "brutus - fearsome crocodile": [
+      8
+    ],
+    "the dodo - outlandish storyteller": [
+      8
+    ],
+    "alice - courageous keyholder": [
+      8
+    ],
+    "lumiere - nimble candelabra": [
+      8
+    ],
+    "gaston - arrogant showoff": [
+      8
+    ],
+    "mushu - fast-talking dragon": [
+      8
+    ],
+    "cri-kee - part of the team": [
+      8
+    ],
+    "lafayette - sleepy basset hound": [
+      8
+    ],
+    "figaro - tuxedo cat": [
+      8
+    ],
+    "thumper - young bunny": [
+      8
+    ],
+    "wreck-it ralph - back seat driver": [
+      8
+    ],
+    "tinker bell - insistent fairy": [
+      8
+    ],
+    "lilo - causing an uproar": [
+      8
+    ],
+    "lefou - cake thief": [
+      8
+    ],
+    "lumiere - fired up": [
+      8
+    ],
+    "the coachman - greedy deceiver": [
+      8
+    ],
+    "mulan - charging ahead": [
+      8
+    ],
+    "mushu - your worst nightmare": [
+      8
+    ],
+    "mr. snoops - betrayed partner": [
+      8
+    ],
+    "friend owl - cantankerous neighbor": [
+      8
+    ],
+    "faline - playful fawn": [
+      8
+    ],
+    "prince john - fraidy-cat": [
+      8
+    ],
+    "nothing we won't do": [
+      8
+    ],
+    "get out!": [
+      8
+    ],
+    "light the fuse": [
+      8
+    ],
+    "twitterpated": [
+      8
+    ],
+    "most everyone's mad here": [
+      8
+    ],
+    "the sword of shan-yu": [
+      8
+    ],
+    "the mouse queen - ruler of mousedom": [
+      8
+    ],
+    "sir pellinore - seasoned knight": [
+      8
+    ],
+    "anita radcliffe - dog lover": [
+      8
+    ],
+    "olaf - recapping the story": [
+      8
+    ],
+    "anna - trusting sister": [
+      8
+    ],
+    "wasabi - always prepared": [
+      8
+    ],
+    "go go tomago - mechanical engineer": [
+      8
+    ],
+    "the wardrobe - perceptive friend": [
+      8
+    ],
+    "mrs. potts - head housekeeper": [
+      8
+    ],
+    "jasmine - resourceful infiltrator": [
+      8
+    ],
+    "little sister - responsible rabbit": [
+      8
+    ],
+    "adelaide bonfamille - patron of the arts": [
+      8
+    ],
+    "nani - heist mastermind": [
+      8
+    ],
+    "stitch - experiment 626": [
+      8
+    ],
+    "ratigan - greedy genius": [
+      8
+    ],
+    "arthur - determined squire": [
+      8
+    ],
+    "bernard - over-prepared": [
+      8
+    ],
+    "aladdin - vigilant guard": [
+      8
+    ],
+    "jasmine - steady strategist": [
+      8
+    ],
+    "roquefort - lock expert": [
+      8
+    ],
+    "jumba jookiba - critical scientist": [
+      8
+    ],
+    "geppetto - skilled craftsman": [
+      8
+    ],
+    "heads held high": [
+      8
+    ],
+    "pouncing practice": [
+      8
+    ],
+    "down in new orleans": [
+      8
+    ],
+    "television set": [
+      8
+    ],
+    "belle's favorite book": [
+      8
+    ],
+    "atlantean crystal": [
+      8
+    ],
+    "atitaya - fang general": [
+      8
+    ],
+    "bobby - purple pigeon": [
+      8
+    ],
+    "magic carpet - phantom rug": [
+      8
+    ],
+    "prince achmed - rival suitor": [
+      8
+    ],
+    "dumptruck - karnage's second mate": [
+      8
+    ],
+    "captain hook - forceful duelist": [
+      1,
+      8
+    ],
+    "general li - head of the imperial army": [
+      8
+    ],
+    "monterey jack - defiant protector": [
+      8
+    ],
+    "genie - satisfied dragon": [
+      8
+    ],
+    "toby turtle - wary friend": [
+      8
+    ],
+    "arianna - queen of corona": [
+      8
+    ],
+    "zipper - flying ranger": [
+      8
+    ],
+    "khan - war horse": [
+      8
+    ],
+    "vinnie - green pigeon": [
+      8
+    ],
+    "iago - out of reach": [
+      8
+    ],
+    "nathaniel flint - notorious pirate": [
+      8
+    ],
+    "vincenzo santorini - the explosives expert": [
+      8
+    ],
+    "namaari - single-minded rival": [
+      8
+    ],
+    "mickey mouse - giant mouse": [
+      8
+    ],
+    "stitch - alien troublemaker": [
+      8
+    ],
+    "desperate plan": [
+      8
+    ],
+    "beyond the horizon": [
+      8
+    ],
+    "quick shot": [
+      8
+    ],
+    "hamster ball": [
+      8
+    ],
+    "koda - talkative cub": [
+      5
+    ],
+    "nala - mischievous cub": [
+      5
+    ],
+    "prince naveen - ukulele player": [
+      5
+    ],
+    "rutt - northern moose": [
+      5
+    ],
+    "kenai - big brother": [
+      5
+    ],
+    "vanellope von schweetz - sugar rush champ": [
+      5
+    ],
+    "tuke - northern moose": [
+      5
+    ],
+    "lilo - junior cake decorator": [
+      5
+    ],
+    "vanellope von schweetz - candy mechanic": [
+      5
+    ],
+    "fix-it felix, jr. - trusty builder": [
+      5
+    ],
+    "gazelle - pop star": [
+      5
+    ],
+    "fix-it felix, jr. - niceland steward": [
+      5
+    ],
+    "kristoff - reindeer keeper": [
+      5
+    ],
+    "mirabel madrigal - family gatherer": [
+      5
+    ],
+    "minnie mouse - drum major": [
+      5
+    ],
+    "daisy duck - donald's date": [
+      5
+    ],
+    "fix-it felix, jr. - delighted sightseer": [
+      5
+    ],
+    "moana - determined explorer": [
+      5
+    ],
+    "vanellope von schweetz - sugar rush princess": [
+      5
+    ],
+    "alan-a-dale - rockin' rooster": [
+      5
+    ],
+    "wreck-it ralph - admiral underpants": [
+      5
+    ],
+    "maid marian - lady of the lists": [
+      5
+    ],
+    "sven - reindeer steed": [
+      5
+    ],
+    "minnie mouse - compassionate friend": [
+      5
+    ],
+    "try everything": [
+      5
+    ],
+    "healing touch": [
+      5
+    ],
+    "revive": [
+      5
+    ],
+    "blast from your past": [
+      5
+    ],
+    "invited to the ball": [
+      5
+    ],
+    "healing decanter": [
+      5
+    ],
+    "queen's sensor core": [
+      5
+    ],
+    "amber chromicon": [
+      5
+    ],
+    "rapunzel's tower - secluded prison": [
+      5
+    ],
+    "pride lands - jungle oasis": [
+      5
+    ],
+    "maleficent - formidable queen": [
+      5
+    ],
+    "the nokk - mythical spirit": [
+      5
+    ],
+    "cogsworth - illuminary watchman": [
+      5
+    ],
+    "merlin - turtle": [
+      5
+    ],
+    "archimedes - exasperated owl": [
+      5
+    ],
+    "bruni - fire salamander": [
+      5
+    ],
+    "earth giant - living mountain": [
+      5
+    ],
+    "gale - wind spirit": [
+      5
+    ],
+    "white rabbit - royal herald": [
+      5
+    ],
+    "madam mim - elephant": [
+      5
+    ],
+    "luisa madrigal - entertaining muscle": [
+      5
+    ],
+    "anna - mystical majesty": [
+      5
+    ],
+    "archimedes - electrified owl": [
+      5
+    ],
+    "elsa - the fifth spirit": [
+      5
+    ],
+    "genie - main attraction": [
+      5
+    ],
+    "olaf - happy passenger": [
+      5
+    ],
+    "maleficent - vexed partygoer": [
+      5
+    ],
+    "monstro - whale of a whale": [
+      5
+    ],
+    "magica de spell - cruel sorceress": [
+      5
+    ],
+    "maleficent - vengeful sorceress": [
+      5
+    ],
+    "rafiki - shaman duelist": [
+      5
+    ],
+    "anna - eager acolyte": [
+      5
+    ],
+    "king of hearts - monarch of wonderland": [
+      5
+    ],
+    "camilo madrigal - family copycat": [
+      5
+    ],
+    "hypnotic strength": [
+      5
+    ],
+    "finders keepers": [
+      5
+    ],
+    "we know the way": [
+      5
+    ],
+    "gathering knowledge and wisdom": [
+      5
+    ],
+    "magical aid": [
+      5
+    ],
+    "retrosphere": [
+      5
+    ],
+    "half hexwell crown": [
+      5
+    ],
+    "amethyst chromicon": [
+      5
+    ],
+    "elsa's ice palace - place of solitude": [
+      5
+    ],
+    "the library - a gift for belle": [
+      5
+    ],
+    "robin hood - timely contestant": [
+      5
+    ],
+    "shenzi - scar's accomplice": [
+      5
+    ],
+    "little john - camp cook": [
+      5
+    ],
+    "zazu - advisor to mufasa": [
+      5
+    ],
+    "ulf - mime": [
+      5
+    ],
+    "ed - laughing hyena": [
+      5
+    ],
+    "flora - good fairy": [
+      5
+    ],
+    "merryweather - good fairy": [
+      5
+    ],
+    "robin hood - archery contestant": [
+      5
+    ],
+    "fauna - good fairy": [
+      5
+    ],
+    "iago - fake flamingo": [
+      5
+    ],
+    "banzai - gluttonous predator": [
+      5
+    ],
+    "ed - hysterical partygoer": [
+      5
+    ],
+    "scroop - odious mutineer": [
+      5
+    ],
+    "prince phillip - swordsman of the realm": [
+      5
+    ],
+    "clarabelle - light on her hooves": [
+      5
+    ],
+    "anna - diplomatic queen": [
+      5
+    ],
+    "clarabelle - clumsy guest": [
+      5
+    ],
+    "banzai - taunting hyena": [
+      5
+    ],
+    "robin hood - sneaky sleuth": [
+      5
+    ],
+    "mother gothel - conceited manipulator": [
+      5
+    ],
+    "clarabelle - contented wallflower": [
+      5
+    ],
+    "shenzi - head hyena": [
+      5
+    ],
+    "mother gothel - unwavering schemer": [
+      5
+    ],
+    "scar - vengeful lion": [
+      5
+    ],
+    "hypnotic deduction": [
+      5
+    ],
+    "night howler rage": [
+      5
+    ],
+    "you're welcome": [
+      5
+    ],
+    "remember who you are": [
+      5
+    ],
+    "prince john's mirror": [
+      5
+    ],
+    "obscurosphere": [
+      5
+    ],
+    "emerald chromicon": [
+      5
+    ],
+    "sherwood forest - outlaw hideaway": [
+      5
+    ],
+    "tropical rainforest - jaguar lair": [
+      5
+    ],
+    "taffyta muttonfudge - ruthless rival": [
+      5
+    ],
+    "wreck-it ralph - demolition dude": [
+      5
+    ],
+    "maximus - team champion": [
+      5
+    ],
+    "turbo - royal hack": [
+      5
+    ],
+    "donald duck - pie slinger": [
+      5
+    ],
+    "rancis fluggerbutter - chocolate charger": [
+      5
+    ],
+    "scar - betrayer": [
+      5
+    ],
+    "snowanna rainbeau": [
+      5
+    ],
+    "daisy duck - spotless food-fighter": [
+      5
+    ],
+    "mickey mouse - enthusiastic dancer": [
+      5
+    ],
+    "ratigan - raging rat": [
+      5
+    ],
+    "taffyta muttonfudge - crowd favorite": [
+      5
+    ],
+    "denahi - avenging brother": [
+      5
+    ],
+    "pete - steamboat rival": [
+      5
+    ],
+    "taffyta muttonfudge - sour speedster": [
+      5
+    ],
+    "robin hood - sharpshooter": [
+      5
+    ],
+    "gaston - pure paragon": [
+      5
+    ],
+    "pete - pastry chomper": [
+      5
+    ],
+    "arthur - novice sparrow": [
+      5
+    ],
+    "donald duck - daisy's date": [
+      5
+    ],
+    "ratigan - party crasher": [
+      5
+    ],
+    "vanellope von schweetz - random roster racer": [
+      5
+    ],
+    "simba - adventurous successor": [
+      5
+    ],
+    "minnie mouse - dazzling dancer": [
+      5
+    ],
+    "break free": [
+      5
+    ],
+    "evil comes prepared": [
+      5
+    ],
+    "don't let the frostbite bite": [
+      5
+    ],
+    "glimmer vs glimmer": [
+      5
+    ],
+    "who's with me?": [
+      5
+    ],
+    "potion of might": [
+      5
+    ],
+    "the sword released": [
+      5
+    ],
+    "ruby chromicon": [
+      5
+    ],
+    "sugar rush speedway - starting line": [
+      5
+    ],
+    "ratigan's party - seedy back room": [
+      5
+    ],
+    "king candy - sovereign of sugar": [
+      5
+    ],
+    "chaca - impressive daughter": [
+      5
+    ],
+    "the queen - cruelest of all": [
+      5
+    ],
+    "scrooge mcduck - afficionado of antiquities": [
+      5
+    ],
+    "prince john - opportunistic briber": [
+      5
+    ],
+    "merlin - back from bermuda": [
+      5
+    ],
+    "pacha - emperor's guide": [
+      5
+    ],
+    "the queen - fairest of all": [
+      5
+    ],
+    "sheriff of nottingham - bushel britches": [
+      5
+    ],
+    "chicha - dedicated mother": [
+      5
+    ],
+    "prince john - gold lover": [
+      5
+    ],
+    "the queen - crown of the council": [
+      5
+    ],
+    "kuzco - selfish emperor": [
+      5
+    ],
+    "mufasa - ruler of pride rock": [
+      5
+    ],
+    "ludwig von drake - self-proclaimed genius": [
+      5
+    ],
+    "minnie mouse - quick-thinking inventor": [
+      5
+    ],
+    "basil - practiced detective": [
+      5
+    ],
+    "king candy - sweet abomination": [
+      5
+    ],
+    "donald duck - focused flatfoot": [
+      5
+    ],
+    "tanana - wise woman": [
+      5
+    ],
+    "tipo - growing son": [
+      5
+    ],
+    "belle - of the ball": [
+      5
+    ],
+    "merlin - intellectual visionary": [
+      5
+    ],
+    "vision of the future": [
+      5
+    ],
+    "royal tantrum": [
+      5
+    ],
+    "ever as before": [
+      5
+    ],
+    "hide away": [
+      5
+    ],
+    "all funned out": [
+      5
+    ],
+    "medal of heroes": [
+      5
+    ],
+    "basil's magnifying glass": [
+      5
+    ],
+    "merlin's carpetbag": [
+      5
+    ],
+    "sapphire chromicon": [
+      5
+    ],
+    "the great illuminary - radiant ballroom": [
+      5
+    ],
+    "merlin's cottage": [
+      5
+    ],
+    "stitch - team underdog": [
+      5
+    ],
+    "jafar - tyrannical hypnotist": [
+      5
+    ],
+    "simba - lost prince": [
+      5
+    ],
+    "rudy - groove disrupter": [
+      5
+    ],
+    "royal guard - bovine protector": [
+      5
+    ],
+    "mickey mouse - food fight defender": [
+      5
+    ],
+    "sleepy - sluggish knight": [
+      5
+    ],
+    "kronk - unlicensed investigator": [
+      5
+    ],
+    "heihei - protective rooster": [
+      5
+    ],
+    "sneezy - noisy knight": [
+      5
+    ],
+    "dopey - knight apprentice": [
+      5
+    ],
+    "namaari - resolute daughter": [
+      5
+    ],
+    "snow white - fair-hearted": [
+      5
+    ],
+    "yzma - unjustly treated": [
+      5
+    ],
+    "kronk - head of security": [
+      5
+    ],
+    "grumpy - skeptical knight": [
+      5
+    ],
+    "pete - wrestling champ": [
+      5
+    ],
+    "sir ector - castle lord": [
+      5
+    ],
+    "bashful - adoring knight": [
+      5
+    ],
+    "arthur - wart": [
+      5
+    ],
+    "happy - lively knight": [
+      5
+    ],
+    "simba - son of mufasa": [
+      5
+    ],
+    "doc - bold knight": [
+      5
+    ],
+    "arthur - king victorius": [
+      5
+    ],
+    "pete - games referee": [
+      5
+    ],
+    "tug-of-war": [
+      5
+    ],
+    "when will my life begin?": [
+      5
+    ],
+    "duck for cover!": [
+      5
+    ],
+    "food fight!": [
+      5
+    ],
+    "shield of arendelle": [
+      5
+    ],
+    "plate armor": [
+      5
+    ],
+    "steel chromicon": [
+      5
+    ],
+    "bad-anon - villain support center": [
+      5
+    ],
+    "seven dwarfs' mine - secure fortress": [
+      5
+    ],
+    "ariel - on human legs": [
+      1
+    ],
+    "ariel - spectacular singer": [
+      1
+    ],
+    "goofy - musketeer": [
+      1
+    ],
+    "hades - king of olympus": [
+      1
+    ],
+    "hades - lord of the underworld": [
+      1
+    ],
+    "heihei - boat snack": [
+      1
+    ],
+    "lefou - bumbler": [
+      1
+    ],
+    "lilo - making a wish": [
+      1
+    ],
+    "maximus - palace horse": [
+      1
+    ],
+    "maximus - relentless pursuer": [
+      1
+    ],
+    "minnie mouse - beloved princess": [
+      1
+    ],
+    "mr. smee - loyal first mate": [
+      1
+    ],
+    "prince phillip - dragonslayer": [
+      1
+    ],
+    "pumbaa - friendly warthog": [
+      1
+    ],
+    "rapunzel - gifted with healing": [
+      1
+    ],
+    "sebastian - court composer": [
+      1
+    ],
+    "simba - protective cub": [
+      1
+    ],
+    "stitch - new dog": [
+      1
+    ],
+    "timon - grub rustler": [
+      1
+    ],
+    "control your temper!": [
+      1
+    ],
+    "hakuna matata": [
+      1
+    ],
+    "healing glow": [
+      1
+    ],
+    "just in time": [
+      1
+    ],
+    "part of your world": [
+      1
+    ],
+    "you have forgotten me": [
+      1
+    ],
+    "dinglehopper": [
+      1
+    ],
+    "anna - heir to arendelle": [
+      1
+    ],
+    "archimedes - highly educated owl": [
+      1
+    ],
+    "dr. facilier - agent provocateur": [
+      1
+    ],
+    "dr. facilier - charlatan": [
+      1
+    ],
+    "dr. facilier - remarkable gentleman": [
+      1
+    ],
+    "elsa - queen regent": [
+      1
+    ],
+    "flotsam - ursula's spy": [
+      1
+    ],
+    "jafar - wicked sorcerer": [
+      1
+    ],
+    "jetsam - ursula's spy": [
+      1
+    ],
+    "magic broom - bucket brigade": [
+      1
+    ],
+    "maleficent - biding her time": [
+      1
+    ],
+    "maleficent - sorceress": [
+      1
+    ],
+    "marshmallow - persistent guardian": [
+      1
+    ],
+    "mickey mouse - wayward sorcerer": [
+      1
+    ],
+    "pascal - rapunzel's companion": [
+      1
+    ],
+    "rafiki - mysterious sage": [
+      1
+    ],
+    "the wardrobe - belle's confidant": [
+      1
+    ],
+    "tinker bell - peter pan's ally": [
+      1
+    ],
+    "ursula - power hungry": [
+      1
+    ],
+    "yzma - alchemist": [
+      1
+    ],
+    "zeus - god of lightning": [
+      1
+    ],
+    "befuddle": [
+      1
+    ],
+    "freeze": [
+      1
+    ],
+    "friends on the other side": [
+      1
+    ],
+    "reflection": [
+      1
+    ],
+    "ursula's cauldron": [
+      1
+    ],
+    "beast - wolfsbane": [
+      1
+    ],
+    "cheshire cat - not all there": [
+      1
+    ],
+    "cruella de vil - miserable as usual": [
+      1
+    ],
+    "duke of weselton - opportunistic official": [
+      1
+    ],
+    "flynn rider - charming rogue": [
+      1
+    ],
+    "genie - on the job": [
+      1
+    ],
+    "genie - powers unleashed": [
+      1
+    ],
+    "genie - the ever impressive": [
+      1
+    ],
+    "hans - scheming prince": [
+      1
+    ],
+    "horace - no-good scoundrel": [
+      1
+    ],
+    "iago - loud-mouthed parrot": [
+      1
+    ],
+    "jasper - common crook": [
+      1
+    ],
+    "jumba jookiba - renegade scientist": [
+      1
+    ],
+    "lady tremaine - wicked stepmother": [
+      1
+    ],
+    "mad hatter - gracious host": [
+      1
+    ],
+    "mickey mouse - artful rogue": [
+      1
+    ],
+    "mother gothel - selfish manipulator": [
+      1
+    ],
+    "peter pan - never landing": [
+      1
+    ],
+    "tamatoa - drab little crab": [
+      1
+    ],
+    "do it again!": [
+      1
+    ],
+    "stampede": [
+      1
+    ],
+    "steal from the rich": [
+      1
+    ],
+    "the beast is mine!": [
+      1
+    ],
+    "vicious betrayal": [
+      1
+    ],
+    "dr. facilier's cards": [
+      1
+    ],
+    "stolen scimitar": [
+      1
+    ],
+    "abu - mischievous monkey": [
+      1
+    ],
+    "aladdin - heroic outlaw": [
+      1
+    ],
+    "aladdin - street rat": [
+      1
+    ],
+    "captain - colonel's lieutenant": [
+      1
+    ],
+    "captain hook - ruthless pirate": [
+      1
+    ],
+    "donald duck - boisterous fowl": [
+      1
+    ],
+    "elsa - ice surfer": [
+      1
+    ],
+    "goofy - daredevil": [
+      1
+    ],
+    "maui - hero to all": [
+      1
+    ],
+    "mickey mouse - brave little tailor": [
+      1
+    ],
+    "minnie mouse - always classy": [
+      1
+    ],
+    "moana - chosen by the ocean": [
+      1
+    ],
+    "mulan - imperial soldier": [
+      1
+    ],
+    "peter pan - fearless fighter": [
+      1
+    ],
+    "pongo - ol' rascal": [
+      1
+    ],
+    "scar - fiery usurper": [
+      1
+    ],
+    "scar - shameless firebrand": [
+      1
+    ],
+    "stitch - abomination": [
+      1
+    ],
+    "te ka - the burning one": [
+      1
+    ],
+    "tigger - wonderful thing": [
+      1
+    ],
+    "be prepared": [
+      1
+    ],
+    "cut to the chase": [
+      1
+    ],
+    "dragon fire": [
+      1,
+      10
+    ],
+    "fan the flames": [
+      1
+    ],
+    "he's got a sword!": [
+      1
+    ],
+    "tangle": [
+      1
+    ],
+    "poisoned apple": [
+      1
+    ],
+    "shield of virtue": [
+      1
+    ],
+    "sword of truth": [
+      1
+    ],
+    "ariel - whoseit collector": [
+      1
+    ],
+    "aurora - briar rose": [
+      1
+    ],
+    "belle - strange but special": [
+      1
+    ],
+    "chief tui - respected leader": [
+      1
+    ],
+    "donald duck - strutting his stuff": [
+      1
+    ],
+    "gramma tala - storyteller": [
+      1
+    ],
+    "jasmine - disguised": [
+      1
+    ],
+    "jasmine - queen of agrabah": [
+      1
+    ],
+    "maleficent - sinister visitor": [
+      1
+    ],
+    "maleficent - uninvited": [
+      1
+    ],
+    "maurice - world-famous inventor": [
+      1
+    ],
+    "merlin - self-appointed mentor": [
+      1
+    ],
+    "mickey mouse - detective": [
+      1,
+      10
+    ],
+    "philoctetes - trainer of heroes": [
+      1
+    ],
+    "scar - mastermind": [
+      1
+    ],
+    "tamatoa - so shiny!": [
+      1
+    ],
+    "triton - the sea king": [
+      1
+    ],
+    "if it's not baroque": [
+      1
+    ],
+    "let it go": [
+      1
+    ],
+    "work together": [
+      1
+    ],
+    "eye of the fates": [
+      1
+    ],
+    "fishbone quill": [
+      1
+    ],
+    "magic golden flower": [
+      1
+    ],
+    "scepter of arendelle": [
+      1
+    ],
+    "aladdin - cornered swordsman": [
+      1
+    ],
+    "beast - hardheaded": [
+      1
+    ],
+    "captain hook - thinking a happy thought": [
+      1
+    ],
+    "cerberus - three-headed dog": [
+      1
+    ],
+    "donald duck - musketeer": [
+      1
+    ],
+    "gantu - galactic federation captain": [
+      1
+    ],
+    "goons - maleficent's underlings": [
+      1
+    ],
+    "hans - thirteenth in line": [
+      1
+    ],
+    "kristoff - offical ice master": [
+      1
+    ],
+    "kronk - right-hand man": [
+      1
+    ],
+    "lilo - galactic hero": [
+      1
+    ],
+    "maui - demigod": [
+      1
+    ],
+    "mickey mouse - musketeer": [
+      1
+    ],
+    "simba - future king": [
+      1
+    ],
+    "simba - returned king": [
+      1
+    ],
+    "simba - rightful heir": [
+      1
+    ],
+    "starkey - hook's henchman": [
+      1
+    ],
+    "te ka - heartless": [
+      1
+    ],
+    "a whole new world": [
+      1
+    ],
+    "break": [
+      1
+    ],
+    "grab your sword": [
+      1
+    ],
+    "ransack": [
+      1
+    ],
+    "frying pan": [
+      1
+    ],
+    "musketeer tabard": [
+      1
+    ],
+    "plasma blaster": [
+      1
+    ],
+    "agustin madrigal - clumsy dad": [
+      4
+    ],
+    "alma madrigal - family matriarch": [
+      4
+    ],
+    "cinderella - melody weaver": [
+      4
+    ],
+    "cogsworth - majordomo": [
+      4
+    ],
+    "daisy duck - lovely lady": [
+      4
+    ],
+    "donald duck - musketeer soldier": [
+      4
+    ],
+    "felix madrigal - fun-loving family man": [
+      4
+    ],
+    "gaston - despicable dealer": [
+      4
+    ],
+    "golden harp - enchanter of the land": [
+      4
+    ],
+    "goofy - musketeer swordsman": [
+      4
+    ],
+    "max - loyal sheepdog": [
+      4
+    ],
+    "mickey mouse - leader of the band": [
+      4
+    ],
+    "mickey mouse - musketeer captain": [
+      4
+    ],
+    "minnie mouse - musketeer champion": [
+      4
+    ],
+    "mirabel madrigal - gift of the family": [
+      4
+    ],
+    "mirabel madrigal - prophecy finder": [
+      4
+    ],
+    "prince eric - seafaring prince": [
+      4
+    ],
+    "prince eric - ursula's groom": [
+      4
+    ],
+    "ursula - eric's bride": [
+      4
+    ],
+    "first aid": [
+      4
+    ],
+    "sign the scroll": [
+      4
+    ],
+    "miracle candle": [
+      4
+    ],
+    "record player": [
+      4
+    ],
+    "the underworld - river styx": [
+      4
+    ],
+    "antonio madrigal - animal expert": [
+      4
+    ],
+    "bruno madrigal - out of the shadows": [
+      4
+    ],
+    "elsa - storm chaser": [
+      4
+    ],
+    "flotsam - ursula's \"baby\"": [
+      4
+    ],
+    "flotsam & jetsam - entangling eels": [
+      4
+    ],
+    "isabela madrigal - golden child": [
+      4
+    ],
+    "jetsam - ursula's \"baby\"": [
+      4
+    ],
+    "magic broom - illuminary keeper": [
+      4
+    ],
+    "magic broom - lively sweeper": [
+      4
+    ],
+    "magical maid - feather duster": [
+      4
+    ],
+    "marshmallow - terrifying snowman": [
+      4
+    ],
+    "mrs. potts - enchanted teapot": [
+      4
+    ],
+    "pepa madrigal - weather maker": [
+      4
+    ],
+    "peter pan - shadow finder": [
+      4
+    ],
+    "pico - helpful toucan": [
+      4
+    ],
+    "ursula - mad sea witch": [
+      4
+    ],
+    "ursula - sea witch queen": [
+      4
+    ],
+    "yen sid - powerful sorcerer": [
+      4
+    ],
+    "swing into action": [
+      4
+    ],
+    "ursula's plan": [
+      4
+    ],
+    "mystical rose": [
+      4
+    ],
+    "triton's trident": [
+      4
+    ],
+    "ursula's lair - eye of the storm": [
+      4
+    ],
+    "cri-kee - lucky cricket": [
+      4
+    ],
+    "diablo - devoted herald": [
+      4
+    ],
+    "diablo - maleficent's spy": [
+      4
+    ],
+    "gunther - interior designer": [
+      4
+    ],
+    "gus - champion of cheese": [
+      4
+    ],
+    "hades - double dealer": [
+      4
+    ],
+    "hera - queen of the gods": [
+      4
+    ],
+    "jaq - connoisseur of climbing": [
+      4
+    ],
+    "jasmine - desert warrior": [
+      4
+    ],
+    "megara - captivating cynic": [
+      4
+    ],
+    "megara - liberated one": [
+      4
+    ],
+    "pain - immortal sidekick": [
+      4
+    ],
+    "panic - immortal sidekick": [
+      4
+    ],
+    "pegasus - cloud racer": [
+      4
+    ],
+    "pete - born to cheat": [
+      4
+    ],
+    "pete - rotten guy": [
+      4
+    ],
+    "the fates - only one eye": [
+      4
+    ],
+    "the muses - proclaimers of heroes": [
+      4
+    ],
+    "tor - florist": [
+      4
+    ],
+    "zeus - mr. lightning bolts": [
+      4
+    ],
+    "dodge!": [
+      4
+    ],
+    "ursula's trickery": [
+      4
+    ],
+    "we don't talk about bruno": [
+      4
+    ],
+    "hidden inkcaster": [
+      4
+    ],
+    "vision slab": [
+      4
+    ],
+    "ursula's garden - full of the unfortunate": [
+      4
+    ],
+    "beast - wounded": [
+      4
+    ],
+    "benja - bold united": [
+      4
+    ],
+    "fa zhou - mulan's father": [
+      4
+    ],
+    "flynn rider - frenemy": [
+      4
+    ],
+    "goofy - super goof": [
+      4
+    ],
+    "hercules - clumsy kid": [
+      4
+    ],
+    "hercules - daring demigod": [
+      4
+    ],
+    "khan - beloved steed": [
+      4
+    ],
+    "li shang - general's son": [
+      4
+    ],
+    "li shang - valorous general": [
+      4
+    ],
+    "mulan - enemy of entanglement": [
+      4
+    ],
+    "namaari - heir of fang": [
+      4
+    ],
+    "nessus - river guardian": [
+      4
+    ],
+    "noi - acrobatic baby": [
+      4
+    ],
+    "pegasus - flying steed": [
+      4
+    ],
+    "raya - fierce protector": [
+      4
+    ],
+    "raya - guardian of the dragon gem": [
+      4
+    ],
+    "sisu - empowered sibling": [
+      4
+    ],
+    "tong - survivor": [
+      4
+    ],
+    "brawl": [
+      4
+    ],
+    "imperial proclamation": [
+      4
+    ],
+    "the plank": [
+      4
+    ],
+    "vitalisphere": [
+      4
+    ],
+    "snuggly duckling - disreputable pub": [
+      4
+    ],
+    "training grounds - impossible pillar": [
+      4
+    ],
+    "ariel - treasure collector": [
+      4
+    ],
+    "aurora - lore guardian": [
+      4
+    ],
+    "dang hu - talon chief": [
+      4
+    ],
+    "fa li - mulan's mother": [
+      4
+    ],
+    "flounder - collector's companion": [
+      4
+    ],
+    "hades - meticulous plotter": [
+      4
+    ],
+    "iduna - caring mother": [
+      4
+    ],
+    "john silver - terror of the realm": [
+      4
+    ],
+    "olaf - carrot enthusiast": [
+      4
+    ],
+    "olaf - trusting companion": [
+      4
+    ],
+    "pascal - inquisitive pet": [
+      4
+    ],
+    "prince phillip - gallant defender": [
+      4
+    ],
+    "rapunzel - appreciative artist": [
+      4
+    ],
+    "scuttle - expert on humans": [
+      4
+    ],
+    "sisu - wise friend": [
+      4
+    ],
+    "the queen - diviner": [
+      4
+    ],
+    "transformed chef - castle stove": [
+      4
+    ],
+    "triton - champion of atlantica": [
+      4
+    ],
+    "triton - discerning king": [
+      4
+    ],
+    "triton - young prince": [
+      4
+    ],
+    "tuk tuk - curious partner": [
+      4
+    ],
+    "glean": [
+      4
+    ],
+    "seldom all they seem": [
+      4
+    ],
+    "treasures untold": [
+      4
+    ],
+    "field of ice": [
+      4
+    ],
+    "great stone dragon": [
+      4
+    ],
+    "ice block": [
+      4
+    ],
+    "ariel's grotto - a secret place": [
+      4
+    ],
+    "winter camp - medical tent": [
+      4
+    ],
+    "aladdin - brave rescuer": [
+      4
+    ],
+    "aladdin - resolute swordsman": [
+      4
+    ],
+    "arges - the cyclops": [
+      4
+    ],
+    "beast - thick-skinned": [
+      4
+    ],
+    "chi-fu - imperial advisor": [
+      4
+    ],
+    "chien-po - imperial soldier": [
+      4
+    ],
+    "donald duck - buccaneer": [
+      4
+    ],
+    "lefou - opportunistic flunky": [
+      4
+    ],
+    "ling - imperial soldier": [
+      4
+    ],
+    "luisa madrigal - rock of the family": [
+      4
+    ],
+    "magic broom - aerial cleaner": [
+      4
+    ],
+    "magic broom - brigade commander": [
+      4
+    ],
+    "mickey mouse - playful sorcerer": [
+      4
+    ],
+    "mulan - armored fighter": [
+      4
+    ],
+    "piglet - sturdy swordsman": [
+      4
+    ],
+    "rajah - royal protector": [
+      4
+    ],
+    "raya - unstoppable force": [
+      4
+    ],
+    "yao - imperial soldier": [
+      4
+    ],
+    "avalanche": [
+      4
+    ],
+    "triton's decree": [
+      4
+    ],
+    "fortisphere": [
+      4
+    ],
+    "imperial bow": [
+      4
+    ],
+    "rls legacy's cannon": [
+      4
+    ],
+    "the wall - border fortress": [
+      4
+    ],
+    "thebes - the big olive": [
+      4
+    ],
+    "baloo - friend and guardian": [
+      10
+    ],
+    "gaston - frightful bully": [
+      10
+    ],
+    "rapunzel - ready for adventure": [
+      10
+    ],
+    "headless manhorse - manny": [
+      10
+    ],
+    "higgins - undercover officer": [
+      10
+    ],
+    "rajah - devoted protector": [
+      10
+    ],
+    "eilonwy - princess of llyr": [
+      10
+    ],
+    "scrooge mcduck - on the right track": [
+      10
+    ],
+    "webby vanderquack - knowledge seeker": [
+      10
+    ],
+    "gurgi - apple lover": [
+      10
+    ],
+    "mrs. beakley - former s.h.u.s.h. agent": [
+      10
+    ],
+    "bagheera - cautious explorer": [
+      10
+    ],
+    "shanti - village girl": [
+      10
+    ],
+    "flash - records specialist": [
+      10
+    ],
+    "taran - pig keeper": [
+      10
+    ],
+    "sebastian - loyal crab": [
+      10
+    ],
+    "ariel - ethereal voice": [
+      10
+    ],
+    "scrooge mcduck - cavern prospector": [
+      10
+    ],
+    "mowgli - man cub": [
+      10
+    ],
+    "simba - king in the making": [
+      10
+    ],
+    "goofy - ghost hunter": [
+      10
+    ],
+    "della duck - returning mother": [
+      10
+    ],
+    "mickey mouse - amber champion": [
+      10
+    ],
+    "goofy - galumphing gumshoe": [
+      10
+    ],
+    "gazelle - ballad singer": [
+      10
+    ],
+    "search for clues": [
+      10
+    ],
+    "or rewrite history!": [
+      10
+    ],
+    "della's moon lullaby": [
+      10
+    ],
+    "the horseman strikes!": [
+      10
+    ],
+    "recovered page": [
+      10
+    ],
+    "webby's diary": [
+      10
+    ],
+    "the black cauldron": [
+      10
+    ],
+    "munchings and crunchings": [
+      10
+    ],
+    "duckburg - funso's funzone": [
+      10
+    ],
+    "minnie mouse - amethyst champion": [
+      10
+    ],
+    "the horned king - wicked ruler": [
+      10
+    ],
+    "gwythaint - savage hunter": [
+      10
+    ],
+    "the horned king - heartless devil": [
+      10
+    ],
+    "cauldron born - mindless horde": [
+      10
+    ],
+    "demona - betrayer of the clan": [
+      10
+    ],
+    "magica de spell - shadowy and sinister": [
+      10
+    ],
+    "lena sabrewing - mysterious duck": [
+      10
+    ],
+    "iago - stompin' mad": [
+      10
+    ],
+    "violet sabrewing - senior junior woodchuck": [
+      10
+    ],
+    "elsa - exploring the unknown": [
+      10
+    ],
+    "mushu - braggin' dragon": [
+      10
+    ],
+    "duckworth - ghost butler": [
+      10
+    ],
+    "nibs - lost boy": [
+      10
+    ],
+    "the horned king - triumphant ghoul": [
+      10
+    ],
+    "creeper - loyal lackey": [
+      10
+    ],
+    "coldstone - reincarnated cyborg": [
+      10
+    ],
+    "magica de spell - spiteful sorceress": [
+      10
+    ],
+    "nana - canine caregiver": [
+      10
+    ],
+    "magica de spell - conniving sorceress": [
+      10
+    ],
+    "demona - scourge of the wyvern clan": [
+      10
+    ],
+    "hades - looking for a deal": [
+      10
+    ],
+    "olaf - helping hand": [
+      10
+    ],
+    "merlin - completing his research": [
+      10
+    ],
+    "ursula - whisper of vanessa": [
+      10
+    ],
+    "cheshire cat - inexplicable": [
+      10
+    ],
+    "begone!": [
+      10
+    ],
+    "can't hold it back anymore": [
+      10
+    ],
+    "swooping strike": [
+      10
+    ],
+    "performance review": [
+      10
+    ],
+    "fragile as a flower": [
+      10
+    ],
+    "junior woodchuck guidebook": [
+      10
+    ],
+    "grimorum arcanorum": [
+      10
+    ],
+    "the great illuminary - abandoned laboratory": [
+      10
+    ],
+    "baloo - laid-back bear": [
+      10
+    ],
+    "big nose - lovesick poet": [
+      10
+    ],
+    "flotsam - slippery as an eel": [
+      10
+    ],
+    "kaa - suspicious serpent": [
+      10
+    ],
+    "webby vanderquack - mystery enthusiast": [
+      10
+    ],
+    "finnick - tiny terror": [
+      10
+    ],
+    "vladimir - ceramic unicorn fan": [
+      10
+    ],
+    "flintheart glomgold - scheming billionaire": [
+      10
+    ],
+    "jetsam - opportunistic eel": [
+      10
+    ],
+    "hook hand - unexpectedly friendly": [
+      10
+    ],
+    "kaa - secretive snake": [
+      10
+    ],
+    "emily quackfaster - level-headed librarian": [
+      10
+    ],
+    "flynn rider - spectral scoundrel": [
+      10
+    ],
+    "bellwether - master manipulator": [
+      10
+    ],
+    "launchpad - exceptional pilot": [
+      10
+    ],
+    "penumbra - moon alien": [
+      10
+    ],
+    "baloo - carefree bear": [
+      10
+    ],
+    "megara - secret keeper": [
+      10
+    ],
+    "goldie o'gilt - cunning prospector": [
+      10
+    ],
+    "shere khan - fearsome tiger": [
+      10
+    ],
+    "scrooge mcduck - s.h.u.s.h. agent": [
+      10
+    ],
+    "akela - forest runner": [
+      10
+    ],
+    "goofy - emerald champion": [
+      10
+    ],
+    "little john - impermanent outlaw": [
+      10
+    ],
+    "webby vanderquack - junior prospector": [
+      10
+    ],
+    "so be it!": [
+      10
+    ],
+    "trust in me": [
+      10
+    ],
+    "chomp!": [
+      10
+    ],
+    "malicious, mean, and scary": [
+      10
+    ],
+    "potion of malice": [
+      10
+    ],
+    "inscrutable map": [
+      10
+    ],
+    "enigmatic inkcaster": [
+      10
+    ],
+    "blessed bagpipes": [
+      10
+    ],
+    "white agony plains - golden lagoon": [
+      10
+    ],
+    "diablo - watchful raven": [
+      10
+    ],
+    "ares - god of war": [
+      10
+    ],
+    "peter pan - high flyer": [
+      10
+    ],
+    "tinker bell - fancy footwork": [
+      10
+    ],
+    "raksha - fearless mother": [
+      10
+    ],
+    "shere khan - keen-eyed hunter": [
+      10
+    ],
+    "rama - vigilant father": [
+      10
+    ],
+    "mother gothel - underhanded schemer": [
+      10
+    ],
+    "katrina van tassel - rosy-cheeked lass": [
+      10
+    ],
+    "hermes - harried messenger": [
+      10
+    ],
+    "beast - aggressive lord": [
+      10
+    ],
+    "bronx - ferocious beast": [
+      10
+    ],
+    "tinker bell - temperamental fairy": [
+      10
+    ],
+    "david xanatos - charismatic leader": [
+      10
+    ],
+    "hans - brazen manipulator": [
+      10
+    ],
+    "hercules - mighty leader": [
+      10
+    ],
+    "goliath - guardian of castle wyvern": [
+      10
+    ],
+    "brooklyn - second in command": [
+      10
+    ],
+    "donald duck - ruby champion": [
+      10
+    ],
+    "elisa maza - intrepid investigator": [
+      10
+    ],
+    "aladdin - barreling through": [
+      10
+    ],
+    "lady tremaine - sinister socialite": [
+      10
+    ],
+    "the headless horseman - terror of sleepy hollow": [
+      10
+    ],
+    "mulan - standing her ground": [
+      10
+    ],
+    "brom bones - burly bully": [
+      10
+    ],
+    "shere khan - fierce and furious": [
+      10
+    ],
+    "next stop, olympus": [
+      10
+    ],
+    "get to safety!": [
+      10
+    ],
+    "time to go!": [
+      10
+    ],
+    "ghostly tale": [
+      10
+    ],
+    "mushu's rocket": [
+      10
+    ],
+    "the bitterwood - underground forest": [
+      10
+    ],
+    "sleepy hollow - the bridge": [
+      10
+    ],
+    "judy hopps - on the case": [
+      10
+    ],
+    "hen wen - prophetic pig": [
+      10
+    ],
+    "anna - making snow plans": [
+      10
+    ],
+    "chef louis - in over his head": [
+      10
+    ],
+    "daisy duck - ghost finder": [
+      10
+    ],
+    "cri-kee - good luck charm": [
+      10
+    ],
+    "rapunzel - creative captor": [
+      10
+    ],
+    "fergus mcduck - scrooge's father": [
+      10
+    ],
+    "li shang - seasoned strategist": [
+      10
+    ],
+    "genie - investigative mind": [
+      10
+    ],
+    "scuttle - birdbrained": [
+      10
+    ],
+    "ichabod crane - bookish schoolmaster": [
+      10
+    ],
+    "jasmine - soothing princess": [
+      10
+    ],
+    "judy hopps - lead detective": [
+      10
+    ],
+    "the sultan - playful monarch": [
+      10
+    ],
+    "ichabod crane - scared out of his mind": [
+      10
+    ],
+    "scar - eerily prepared": [
+      10
+    ],
+    "daisy duck - paranormal investigator": [
+      10
+    ],
+    "cinderella - dream come true": [
+      10
+    ],
+    "judy hopps - uncovering clues": [
+      10
+    ],
+    "pluto - clever cluefinder": [
+      10
+    ],
+    "daisy duck - sapphire champion": [
+      10
+    ],
+    "kristoff - mining the ruins": [
+      10
+    ],
+    "hen wen's visions": [
+      10
+    ],
+    "promising lead": [
+      10
+    ],
+    "might solve a mystery": [
+      10
+    ],
+    "sudden scare": [
+      10
+    ],
+    "spooky sight": [
+      10
+    ],
+    "detective's badge": [
+      10
+    ],
+    "ink amplifier": [
+      10
+    ],
+    "fairy godmother's wand": [
+      10
+    ],
+    "inkrunner": [
+      10
+    ],
+    "castle of the horned king - bastion of evil": [
+      10
+    ],
+    "robin hood - ephemeral archer": [
+      10
+    ],
+    "donald duck - ghost hunter": [
+      10
+    ],
+    "goliath - clan leader": [
+      10
+    ],
+    "the headless horseman - cursed rider": [
+      10
+    ],
+    "clawhauser - donut detective": [
+      10
+    ],
+    "francine - eyeing the evidence": [
+      10
+    ],
+    "inspector tezuka - resolute officer": [
+      10
+    ],
+    "nick wilde - sly fox sleuth": [
+      10
+    ],
+    "basil - tenacious mouse": [
+      10
+    ],
+    "hudson - determined reader": [
+      10
+    ],
+    "minnie mouse - ghost hunter": [
+      10
+    ],
+    "black heron - real bad egg": [
+      10
+    ],
+    "lexington - small in stature": [
+      10
+    ],
+    "david xanatos - steel clan leader": [
+      10
+    ],
+    "chief bogo - calling the shots": [
+      10
+    ],
+    "the twins - lost boys": [
+      10
+    ],
+    "nick wilde - persistent investigator": [
+      10
+    ],
+    "mayor winddancer - actor-turned-politician": [
+      10
+    ],
+    "prince charming - protector of the realm": [
+      10
+    ],
+    "broadway - sturdy and strong": [
+      10
+    ],
+    "pluto - steel champion": [
+      10
+    ],
+    "fairy godmother - magical benefactor": [
+      10
+    ],
+    "zeus - missing his spark": [
+      10
+    ],
+    "the headless horseman - relentless spirit": [
+      10
+    ],
+    "but i'm much faster": [
+      10
+    ],
+    "putting it all together": [
+      10
+    ],
+    "he hurled his thunderbolt": [
+      10
+    ],
+    "the game's afoot!": [
+      10
+    ],
+    "the robot queen": [
+      10
+    ],
+    "the sword of hercules": [
+      10
+    ],
+    "ingenious device": [
+      10
+    ],
+    "illuminary tunnels - linked caverns": [
+      10
+    ],
+    "zootopia - police headquarters": [
+      10
+    ],
+    "castle wyvern - above the clouds": [
+      10
+    ]
+  },
+  "notes": "This file was auto-generated. To refresh with latest card data, run: npm run generate-cards. Each card now stores an array of sets it appears in, supporting reprints."
+}

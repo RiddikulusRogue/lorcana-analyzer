@@ -1,6 +1,6 @@
-# Lorcana Analyzer
+# Inkweaver
 
-Minimal Vite + React scaffold for the Lorcana Analyzer.
+Minimal Vite + React scaffold for Inkweaver - the Lorcana deck analyzer.
 
 Run locally:
 
