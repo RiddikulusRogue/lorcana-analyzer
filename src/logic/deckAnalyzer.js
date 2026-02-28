@@ -44,10 +44,14 @@ function findBestMatch(rawName) {
   return null
 }
 
-export function analyzeDeck(deckText) {
+export function analyzeDeck(deckText, format = 'infinity') {
   if (!deckText || deckText.trim() === "") {
     return { error: "No deck provided" };
   }
+
+  // Determine required deck size based on format
+  const requiredSize = format === 'sealed' ? 40 : 60;
+  const isSealed = format === 'sealed';
 
   const lines = deckText
     .split("\n")
@@ -73,7 +77,7 @@ export function analyzeDeck(deckText) {
   }
 
   const uniqueCount = Object.keys(cards).length;
-  const isValid = total === 60;
+  const isValid = format === 'sealed' ? total >= 40 : total === 60;
 
   // Gather metadata-driven stats
   const inkColors = {};
@@ -214,8 +218,13 @@ export function analyzeDeck(deckText) {
   if (hasShift && uniqueCount > 10) synergies.push({ type: 'Shift Value', strength: 'Medium', description: 'Shift characters can generate tempo advantage' });
 
   const weaknesses = [];
-  if (total < 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is under 60 cards' });
-  if (total > 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is over 60 cards' });
+  if (format === 'sealed') {
+    if (total < 40) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Sealed deck is under 40 cards minimum' });
+    if (total > 60) weaknesses.push({ type: 'Deck Size', severity: 'Medium', description: 'Sealed deck is quite large - consider trimming to 40-45 cards' });
+  } else {
+    if (total < 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is under 60 cards' });
+    if (total > 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is over 60 cards' });
+  }
 
   // Add curve-based weaknesses
   if (earlyGamePercent < 20 && archetype.includes('Aggro')) {
@@ -236,7 +245,8 @@ export function analyzeDeck(deckText) {
     songCount,
     synergies,
     weaknesses,
-    notes: isValid ? 'Analyzer connected successfully.' : 'Deck is not 60 cards.',
+    notes: isValid ? 'Analyzer connected successfully.' : (format === 'sealed' ? 'Deck must be at least 40 cards.' : 'Deck is not 60 cards.'),
+    format: format,
     // Additional metrics
     curveDistribution: {
       cost1: cost1Count,

@@ -346,93 +346,87 @@
   "currentMeta": {
     "dominantArchetypes": {
       "rubyAmethyst": {
-        "archetype": "Ruby/Amethyst Aggro-Control",
-        "description": "Aggressive opening with Rush abilities combined with hand manipulation and control. Currently the most consistent tournament performer.",
+        "archetype": "Emerald/Sapphire Control",
+        "description": "Current DLC benchmark deck. Ink acceleration plus card flow into high-impact finishers.",
         "strengths": [
-          "Turn 1-3 tempo pressure via Rush creatures",
-          "Hand disruption (Amethyst) slows opponent setup",
-          "Shift mechanics enable mid-game transitions",
-          "Can pivot to control with Amethyst spells",
-          "Evasive creatures dodge removal"
+          "Excellent card advantage loops",
+          "Strong inevitability in longer games",
+          "Flexible answers across multiple matchups",
+          "Reliable post-Winterspell conversion rate"
         ],
         "weaknesses": [
-          "Vulnerable to early board wipes and Resist abilities",
-          "Hand manipulation can be disrupted by card draw engines",
-          "Falls behind to value-based decks in long games"
+          "Can stumble under very fast openers",
+          "Requires disciplined mulligans to avoid slow hands",
+          "Targeted hand disruption can delay setup"
         ],
         "howToCounter": [
-          "Pack Steel-based defensive structures with Resist",
-          "Use Amber recovery effects to stabilize after hand pressure",
-          "Build in early blockers to slow Rush pressure",
-          "Include Sapphire draw to rebuild after hand disruption",
-          "Run creature-based removal that trades well with early threats"
+          "Pressure hard on turns 1-3 before acceleration engines stick",
+          "Force awkward defensive lines with evasive or challenger threats",
+          "Hold premium interaction for Clarabelle/Basil turns",
+          "Avoid overextending into swing turns; keep reload in hand"
         ]
       },
       "sapphireSteel": {
-        "archetype": "Sapphire/Steel Control",
-        "description": "Resource management and card draw engine paired with powerful defensive characters. Consistent top finisher in regional events.",
+        "archetype": "Ruby/Steel Winterspell Tempo",
+        "description": "Winterspell-era tempo deck that converts efficient 2-4 drops into consistent pressure and favorable trades.",
         "strengths": [
-          "Superior card draw and ink smoothing via Sapphire",
-          "Steel provides powerful high-willpower creatures with Resist",
-          "Can stabilize board quickly with defensive creatures",
-          "Answers library enables tech flexibility",
-          "Outvalues opponents in long games"
+          "Strong curve pressure with flexible interaction",
+          "Excellent at punishing slow starts",
+          "Efficient challenge math in mid-game turns",
+          "Winterspell cards add tempo-positive utility"
         ],
         "weaknesses": [
-          "Can be outpaced by faster aggro in early game",
-          "Sometimes mana-flooded in control mirror matchups",
-          "Slow to establish board presence turn 1-2"
+          "Can run out of gas if first wave is answered",
+          "Less favored into heavy removal control mirrors",
+          "Needs proactive sequencing to maintain momentum"
         ],
         "howToCounter": [
-          "Build consistent early pressure with Ruby/Amethyst tempo",
-          "Deploy threats faster than they can establish answers",
-          "Use hand disruption (Amethyst) to prevent drawing key answers",
-          "Include creatures with Evasive to bypass Steel blockers",
-          "Push damage before they stabilize with draw engine"
+          "Use resilient blockers and removal to blunt early curve",
+          "Force value trades that break tempo chains",
+          "Stabilize around turns 4-5 and pivot to card advantage",
+          "Prioritize answers to Winterspell tempo payoffs"
         ]
       },
       "emeraldSapphire": {
-        "archetype": "Emerald/Sapphire Midrange",
-        "description": "Gameplay manipulation and control effects paired with resource generation. Flexible adaptation to metagame shifts.",
+        "archetype": "Amethyst/Sapphire Value",
+        "description": "Card flow and acceleration shell that goes over creature mirrors while maintaining interaction density.",
         "strengths": [
-          "Emerald manipulation answers almost any threat",
-          "Sapphire provides resource smoothing and draw",
-          "Efficient mid-cost creatures with abilities",
-          "Can control game while building board presence"
+          "High consistency through draw and filtering",
+          "Strong late-game inevitability",
+          "Good matchup into fair midrange decks",
+          "Flexible threat-answer balance"
         ],
         "weaknesses": [
-          "Relies on having answers in hand (vulnerable to resource denial)",
-          "Can struggle against consistent threats that snowball",
-          "Slower setup than pure aggro decks"
+          "Can be pressured by hyper-aggro openings",
+          "Requires careful resource planning",
+          "Vulnerable to concentrated hand disruption"
         ],
         "howToCounter": [
-          "Deploy multiple threats simultaneously to overwhelm answers",
-          "Use hand pressure (Amethyst discard) to deny answers",
-          "Build aggressive curve that applies pressure before they answer",
-          "Include creatures with Rush to punch through before blockers",
-          "Use Amber recovery to stabilize if they DO answer your threats"
+          "Apply early pressure before draw engines turn on",
+          "Attack ink acceleration pieces when possible",
+          "Sequence threats to tax answers over multiple turns",
+          "Leverage haste/tempo windows to close before inevitability"
         ]
       },
       "amberSteel": {
-        "archetype": "Amber/Steel Defensive Ramp",
-        "description": "Early defense and resource recovery paired with late-game power plays. Specifically counters aggressive strategies.",
+        "archetype": "Amber/Emerald Dogs",
+        "description": "Fast proactive aggro line that keeps punishing greedy setups in DLC-level play.",
         "strengths": [
-          "Early defensive creatures with Resist abilities",
-          "Amber recovery mechanics stabilize quickly",
-          "Steel provides powerful creatures as ramp payoff",
-          "Can execute powerful threats once stabilized"
+          "Explosive early board presence",
+          "Strong conversion of cheap bodies into lore pressure",
+          "Punishes slow mulligans and clunky curves",
+          "Maintains threat density with low-cost synergy pieces"
         ],
         "weaknesses": [
-          "Slower setup allows aggressive decks to build momentum",
-          "Recovery mechanics can create card disadvantage situations",
-          "Vulnerable to disruption before stabilizing"
+          "Can lose to concentrated board wipes",
+          "Lower top-end staying power in drawn-out games",
+          "Requires tight sequencing to maximize damage"
         ],
         "howToCounter": [
-          "Prevent stabilization with consistent early pressure",
-          "Use hand disruption to prevent recovery setup",
-          "Deploy multiple threats so they can't trade efficiently",
-          "Use Sapphire tempo threats to apply pressure faster",
-          "Include evasion so they can't block everything"
+          "Prioritize cheap removal and efficient blockers",
+          "Force low-value trades early to reduce snowball potential",
+          "Stabilize life/lore race before committing finishers",
+          "Keep one reset option for their widest board turns"
         ]
       }
     },
@@ -507,9 +501,9 @@
     "recentSetImpact": {
       "winterspell_february2026": {
         "set": "Winterspell (Latest - Feb 13-20, 2026)",
-        "impact": "New character pool with Pixar set integration. Meta still stabilizing.",
-        "keyCards": "New Pixar characters being explored for builds. Evaluate for your archetype.",
-        "advice": "Test against Winterspell decks. Identify emerging strategies early."
+        "impact": "Winterspell cards are now integrated into established DLC lists, especially tempo and control shells.",
+        "keyCards": "Darkwing Duck - Dashing Gadgeteer, Launchpad - Trusty Sidekick, Winterspell are frequent inclusions.",
+        "advice": "Tune for efficient 2-4 cost interaction while preserving late-game card advantage."
       },
       "whispers_november2025": {
         "set": "Whispers in the Well (Nov 2025)",
@@ -531,11 +525,11 @@
       }
     },
     "metaShiftWarnings": [
-      "Ruby/Amethyst is HIGHEST threat - build specific counters if you see multiple at events",
-      "Sapphire/Steel on the rise - if you lose to control, pack tempo pressure",
-      "Dual-ink cards (from Archazia) enabled more flexibility - expect less color-predictability",
-      "Resist abilities are extremely strong against aggressive decks right now",
-      "Shift mechanics are enabling smoother mana in meta decks - don't ignore Shift synergy"
+      "Emerald/Sapphire remains the primary benchmark in current DLC fields",
+      "Winterspell-era Ruby/Steel tempo shells punish slow openings",
+      "Card-advantage mirrors are common - plan for longer games",
+      "Efficient interaction on turns 2-4 is increasingly important",
+      "Keep flexible slots for fast aggro and grindy control matchups"
     ],
     "flexSlotRecommendations": {
       "against_currentMeta": [
@@ -554,10 +548,10 @@
       ]
     },
     "tieringGuide": {
-      "tier_s": "Ruby/Amethyst Aggro-Control - Most consistent winner. Play it or counter it.",
-      "tier_1a": "Sapphire/Steel Control - Rising popularity. Strong matchup-based deck.",
-      "tier_1b": "Emerald/Sapphire Midrange - Flexible. Adapts to metagame.",
-      "tier_2": "Amber/Steel Defensive Ramp, Ruby/Steel Tempo - Solid performers with good matchups",
+      "tier_s": "Emerald/Sapphire Control - Most consistent top-table performer.",
+      "tier_1a": "Ruby/Steel Winterspell Tempo - High conversion in recent DLC events.",
+      "tier_1b": "Amethyst/Sapphire Value - Strong in midrange and control fields.",
+      "tier_2": "Amber/Emerald Dogs, Sapphire/Steel Control - Solid performers with favorable pairings",
       "tier_3": "Rogue strategies, Mono-color decks - Can steal games but less consistent",
       "advice": "Tier placement changes based on local metagame. Play what you understand."
     }

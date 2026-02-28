@@ -1,0 +1,432 @@
+{
+    "lastUpdated": "2026-02-28",
+    "source": "DLC Circuit Results (Richmond + February Winterspell events)",
+    "dlcEvents": [
+        {
+            "name": "DLC Richmond",
+            "date": "2026-01-13",
+            "highlights": [
+                "Emerald/Sapphire Control remained the most represented top-cut strategy",
+                "Amber/Emerald pressure decks converted strongly into day-2 finishes"
+            ]
+        },
+        {
+            "name": "DLC Winterspell Launch Events",
+            "dateRange": "2026-02-13 to 2026-02-28",
+            "highlights": [
+                "Winterspell-era Sapphire and Steel lists gained traction",
+                "Tempo shells with efficient 2-4 cost threats increased in representation",
+                "Decks that could pressure early while preserving card advantage performed best"
+            ]
+        }
+    ],
+    "topDecks": [
+        {
+            "name": "Emerald/Sapphire Control",
+            "tier": "S",
+            "colors": [
+                "Emerald",
+                "Sapphire"
+            ],
+            "archetype": "Control/Ramp",
+            "winRate": "~26%",
+            "description": "Still the deck to beat across recent DLC events.",
+            "keyCards": [
+                "Tipo - Growing Son",
+                "Sail the Azurite Sea",
+                "Clarabelle - Light on Her Hooves",
+                "Basil - Undercover Detective"
+            ]
+        },
+        {
+            "name": "Ruby/Steel Winterspell Tempo",
+            "tier": "A",
+            "colors": [
+                "Ruby",
+                "Steel"
+            ],
+            "archetype": "Tempo/Midrange",
+            "winRate": "~18%",
+            "description": "Winterspell-season tempo pressure backed by efficient interaction.",
+            "keyCards": [
+                "Darkwing Duck - Dashing Gadgeteer",
+                "Launchpad - Trusty Sidekick",
+                "Strength of a Raging Fire",
+                "Winterspell"
+            ]
+        },
+        {
+            "name": "Amethyst/Sapphire Value",
+            "tier": "A",
+            "colors": [
+                "Amethyst",
+                "Sapphire"
+            ],
+            "archetype": "Midrange/Control",
+            "winRate": "~16%",
+            "description": "Strong card flow and resilient curve into late-game finishers.",
+            "keyCards": [
+                "Demona - Scourge of Clan Wyvern",
+                "Hades - Infernal Schemer",
+                "Into the Unknown",
+                "Junior Woodchuck Guidebook"
+            ]
+        },
+        {
+            "name": "Amber/Emerald Dogs",
+            "tier": "A",
+            "colors": [
+                "Amber",
+                "Emerald"
+            ],
+            "archetype": "Aggro",
+            "winRate": "~14%",
+            "description": "Fast proactive lines continue to punish slow setups.",
+            "keyCards": [
+                "Lady - Decisive Dog",
+                "Tramp - Enterprising Dog",
+                "Tramp - Street-Smart Dog",
+                "Bobby Zimuruski - Spray Cheese Kid"
+            ]
+        },
+        {
+            "name": "Sapphire/Steel Control",
+            "tier": "B",
+            "colors": [
+                "Sapphire",
+                "Steel"
+            ],
+            "archetype": "Control",
+            "winRate": "~10%",
+            "description": "Stabilization-heavy shell that performs well into creature-centric fields.",
+            "keyCards": [
+                "Basil - Undercover Detective",
+                "Clarabelle - Light on Her Hooves",
+                "Giant Cobra - Ghostly Serpent",
+                "Winterspell"
+            ]
+        }
+    ],
+    "playTips": [
+        "Expect Emerald/Sapphire to remain highly represented; plan for long games",
+        "Winterspell-era tempo lists reward tight curve and efficient interaction",
+        "Prioritize flexible removal that can answer both early aggro and late finishers",
+        "Card advantage engines still define top-table mirror matches",
+        "Core Constructed and Infinity are converging around the same top archetypes"
+    ],
+    "formats": {
+        "infinity": {
+            "topDecks": [
+                {
+                    "name": "Emerald/Sapphire Control",
+                    "tier": "S",
+                    "colors": [
+                        "Emerald",
+                        "Sapphire"
+                    ],
+                    "archetype": "Control/Ramp",
+                    "winRate": "~26%",
+                    "description": "Tournament-winning deck. Accelerates ink then slams haymakers.",
+                    "keyCards": [
+                        "Tipo - Growing Son",
+                        "Sail the Azurite Sea",
+                        "Clarabelle - Light on Her Hooves",
+                        "Basil - Undercover Detective",
+                        "Prince Phillip - Vanquisher of Foes",
+                        "Malicious Mean and Scary"
+                    ],
+                    "gameplan": "Accelerate ink with Tipo/Sail, draw cards with Clarabelle, control board with removal, close with big threats.",
+                    "strengths": [
+                        "Card advantage",
+                        "Late game power",
+                        "Flexible answers"
+                    ],
+                    "weaknesses": [
+                        "Vulnerable early game",
+                        "Loses to fast aggro",
+                        "Hand disruption hurts"
+                    ],
+                    "mulligan": "Keep Tipo, Sail the Azurite Sea, or Donald Duck - Perfect Gentleman"
+                },
+                {
+                    "name": "Amber/Emerald Dogs",
+                    "tier": "A",
+                    "colors": [
+                        "Amber",
+                        "Emerald"
+                    ],
+                    "archetype": "Aggro",
+                    "winRate": "~14%",
+                    "description": "Fast aggressive deck with high skill ceiling. Floods board early.",
+                    "keyCards": [
+                        "Lady - Decisive Dog",
+                        "Tramp - Enterprising Dog",
+                        "Tramp - Street-Smart Dog",
+                        "Under the Sea",
+                        "Bobby Zimuruski - Spray Cheese Kid"
+                    ],
+                    "gameplan": "Flood board with cheap dogs, score early lore, fuel Tramp - Street-Smart Dog. Pressure until opponent falls over.",
+                    "strengths": [
+                        "Strong vs Emerald Sapphire",
+                        "Very fast",
+                        "Budget-friendly"
+                    ],
+                    "weaknesses": [
+                        "Weak to Amethyst Steel",
+                        "Runs out of gas",
+                        "Board wipes destroy it"
+                    ],
+                    "mulligan": "Keep 1-2 cost dogs, especially Lady or Tramp - Enterprising Dog"
+                },
+                {
+                    "name": "Amethyst/Sapphire",
+                    "tier": "A",
+                    "colors": [
+                        "Amethyst",
+                        "Sapphire"
+                    ],
+                    "archetype": "Midrange/Control",
+                    "winRate": "~16%",
+                    "description": "Goes over top of Amethyst Steel with Sapphire acceleration.",
+                    "keyCards": [
+                        "Demona - Scourge of Clan Wyvern",
+                        "Hades - Infernal Schemer",
+                        "Into the Unknown",
+                        "Basil - Practiced Detective",
+                        "Junior Woodchuck Guidebook"
+                    ],
+                    "gameplan": "Accelerate ink, deploy big threats early, generate card advantage.",
+                    "strengths": [
+                        "Beats Amethyst Steel",
+                        "Card advantage",
+                        "Pressure + answers"
+                    ],
+                    "weaknesses": [
+                        "Slower than aggro",
+                        "Hand disruption",
+                        "Needs ink acceleration"
+                    ],
+                    "mulligan": "Keep Basil - Practiced Detective, ink acceleration, or 2-cost blockers"
+                },
+                {
+                    "name": "Amethyst/Steel",
+                    "tier": "A",
+                    "colors": [
+                        "Amethyst",
+                        "Steel"
+                    ],
+                    "archetype": "Midrange",
+                    "winRate": "~13%",
+                    "description": "Best positioned against aggro. Strong removal suite.",
+                    "keyCards": [
+                        "Calhoun - Bold Knight",
+                        "Captain Hook - Forceful Duelist",
+                        "Strength of a Raging Fire",
+                        "Doc - Bold Knight",
+                        "Giant Cobra - Ghostly Serpent"
+                    ],
+                    "gameplan": "Curve out 1-2-3-4, Strength of a Raging Fire to stabilize, generate value with Doc/Yzma/Dumbo.",
+                    "strengths": [
+                        "Crushes Amber Emerald",
+                        "Good curve",
+                        "Consistent"
+                    ],
+                    "weaknesses": [
+                        "Loses to Amethyst Sapphire",
+                        "No late game haymakers",
+                        "Clarabelle hurts"
+                    ],
+                    "mulligan": "Keep cheap creatures to empty hand, or Calhoun/Captain Hook"
+                },
+                {
+                    "name": "Amber/Amethyst Lantern",
+                    "tier": "B",
+                    "colors": [
+                        "Amber",
+                        "Amethyst"
+                    ],
+                    "archetype": "Midrange",
+                    "winRate": "~11%",
+                    "description": "Off-meta breakout. Combines best of Sapphire/Steel/Emerald through Amber tools.",
+                    "keyCards": [
+                        "Lantern",
+                        "The Horseman Strikes!",
+                        "Mowgli - Man Cub",
+                        "World's Greatest Criminal Mind",
+                        "Eilonwy - Princess of Llyr"
+                    ],
+                    "gameplan": "Accelerate with Lantern, targeted removal with Amber tools, Amethyst threats.",
+                    "strengths": [
+                        "Flexible",
+                        "Good removal",
+                        "Unexpected"
+                    ],
+                    "weaknesses": [
+                        "Slower than pure Emerald",
+                        "Lantern dependent",
+                        "Can stumble"
+                    ],
+                    "mulligan": "Keep Lantern, early characters, or removal"
+                },
+                {
+                    "name": "Amethyst/Emerald Aggro",
+                    "tier": "B",
+                    "colors": [
+                        "Amethyst",
+                        "Emerald"
+                    ],
+                    "archetype": "Aggro",
+                    "winRate": "~8%",
+                    "description": "Ultra-budget ($21) hyper-aggro. 28 one-cost characters, closes with Enigmatic Inkcaster.",
+                    "keyCards": [
+                        "Enigmatic Inkcaster",
+                        "Amethyst Chromicon",
+                        "Show Me More!",
+                        "They Never Come Back",
+                        "Wisdom The White Rose - Jewel of the Garden"
+                    ],
+                    "gameplan": "Flood with 1-cost creatures, trigger Enigmatic Inkcaster twice per turn, close with lore generation.",
+                    "strengths": [
+                        "Ultra fast",
+                        "Extremely cheap",
+                        "Beats Sapphire decks"
+                    ],
+                    "weaknesses": [
+                        "Destroyed by Amethyst Steel",
+                        "Runs out of gas",
+                        "No plan B"
+                    ],
+                    "mulligan": "Keep any 1-cost creatures, mulligan everything else"
+                }
+            ],
+            "playTips": [
+                "Emerald/Sapphire remains the primary benchmark deck in DLC fields",
+                "Winterspell additions increased the value of efficient tempo interaction",
+                "Strong turn-2 and turn-3 plays are critical against current top archetypes",
+                "Card advantage engines remain central in mirrors and grindy matchups",
+                "Prepare side plans for both fast Amber/Emerald and slower Sapphire control shells"
+            ]
+        },
+        "coreConstructed": {
+            "topDecks": [
+                {
+                    "name": "Emerald/Sapphire Control",
+                    "tier": "S",
+                    "colors": [
+                        "Emerald",
+                        "Sapphire"
+                    ],
+                    "archetype": "Control/Ramp",
+                    "description": "Same as Infinity - still the best deck in Core Constructed",
+                    "coreSetLegality": "Sets 5-11 legal",
+                    "keyCards": [
+                        "Tipo - Growing Son",
+                        "Sail the Azurite Sea",
+                        "Clarabelle - Light on Her Hooves",
+                        "Basil - Undercover Detective"
+                    ],
+                    "gameplan": "Identical to Infinity strategy"
+                }
+            ],
+            "notes": "Core Constructed follows the same broad DLC meta as Infinity in late February 2026, with Winterspell now fully integrated into sets 5-11 legality.",
+            "playTips": [
+                "Check all card legality - only Sets 5-11 are legal",
+                "Many staples from early sets are banned - don't rely on old strategies",
+                "Same tier decks as Infinity apply here"
+            ]
+        },
+        "sealed": {
+            "strategy": {
+                "priorities": [
+                    {
+                        "rank": 1,
+                        "category": "Removal",
+                        "description": "ANY card that removes creatures is premium. Keep all removal.",
+                        "examples": [
+                            "Banish effects",
+                            "Return to hand",
+                            "Challenge creatures with high power"
+                        ]
+                    },
+                    {
+                        "rank": 2,
+                        "category": "Curve",
+                        "description": "Curve is EVERYTHING. Must have plays turns 2, 3, and 4.",
+                        "idealDistribution": "2-3 cost-1, 5-7 cost-2, 8-10 cost-3-4, 4-6 cost-5+"
+                    },
+                    {
+                        "rank": 3,
+                        "category": "Bombs",
+                        "description": "Build around your 2-3 best cards. Splash colors for them.",
+                        "examples": [
+                            "Legendary characters",
+                            "High lore creatures",
+                            "Evasive threats"
+                        ]
+                    },
+                    {
+                        "rank": 4,
+                        "category": "Card Advantage",
+                        "description": "Any card that draws cards or generates value is important.",
+                        "examples": [
+                            "Draw effects",
+                            "Replacement effects",
+                            "Double-value cards"
+                        ]
+                    },
+                    {
+                        "rank": 5,
+                        "category": "Synergies",
+                        "description": "Nice-to-haves, not build-arounds. Only if cards are already good.",
+                        "tip": "Don't force bad cards for synergy in limited"
+                    }
+                ],
+                "deckSize": {
+                    "minimum": 40,
+                    "optimal": "40-42",
+                    "maximum": "Don't exceed 45 if possible"
+                },
+                "colorStrategy": {
+                    "approach": "Play your best cards regardless of color",
+                    "maxColors": "4-5 colors is acceptable if cards are strong",
+                    "priority": "Quality > Consistency"
+                },
+                "commonMistakes": [
+                    "Playing 43+ cards (dilutes your bombs)",
+                    "Forcing synergies over powerful cards",
+                    "Not splashing for removal",
+                    "Not playing enough 2-3 cost creatures"
+                ]
+            },
+            "playTips": [
+                "In sealed, curve beats everything else",
+                "Don't be afraid to splash 4-5 colors for your best cards",
+                "Always play your removal - every single piece",
+                "Challenge creatures are removal on a body - automatic includes",
+                "Most games are won by the player who curves out consistently"
+            ]
+        }
+    },
+    "universalTips": {
+        "mulligan": [
+            "Always mulligan hands with no 1-2 cost plays",
+            "Keep hands that can play on curve",
+            "Against aggro: Keep early blockers",
+            "Against control: Keep threats + card draw"
+        ],
+        "gameplay": [
+            "Figure out who's the beatdown each game",
+            "Trade up when possible (1-for-2 value)",
+            "Don't overextend into board wipes",
+            "Sequence ink carefully - plan ahead 2-3 turns",
+            "Challenge math: Always calculate before committing"
+        ],
+        "deckBuilding": [
+            "60 cards exactly for constructed (40+ for sealed)",
+            "Stick to 2-3 colors maximum (unless sealed)",
+            "Average cost should be 3.5-4.5 for most decks",
+            "Include 6-8 removal spells",
+            "12-16 early creatures (cost 1-2)"
+        ]
+    }
+}
