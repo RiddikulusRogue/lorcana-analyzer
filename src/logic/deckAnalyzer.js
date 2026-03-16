@@ -161,31 +161,30 @@ export function analyzeDeck(deckText, format = 'infinity') {
 
     const isAggro =
       avgCost < 3.5 &&
-      earlyGamePercent >= 40 &&
-      rushCount >= 6 &&
-      actionPercent < 15 &&
+      earlyGamePercent >= 35 &&
+      (rushCount >= 4 || cost1Count >= 8 || earlyGamePercent >= 45) &&
+      actionPercent < 20 &&
       lateGamePercent < 30;
 
     const isControl =
-      avgCost > 4.5 &&
-      earlyGamePercent < 20 &&
-      actionCount >= 12 &&
-      cost5PlusCount >= 12 &&
-      creaturePercent < 60;
+      avgCost > 4.3 &&
+      earlyGamePercent < 22 &&
+      (actionCount >= 10 || cost5PlusCount >= 10) &&
+      creaturePercent < 65;
 
     const isMidrange =
-      avgCost >= 3.5 && avgCost <= 4.5 &&
-      earlyGamePercent >= 20 && earlyGamePercent <= 40 &&
-      creaturePercent >= 55 &&
-      creaturePercent <= 75 &&
-      actionPercent >= 10 && actionPercent <= 30;
+      avgCost >= 3.3 && avgCost <= 4.8 &&
+      earlyGamePercent >= 15 && earlyGamePercent <= 48 &&
+      creaturePercent >= 45 &&
+      creaturePercent <= 82 &&
+      actionPercent >= 8;
 
     const isTempo =
       avgCost < 4.0 &&
-      earlyGamePercent >= 30 &&
-      earlyGamePercent <= 45 &&
-      evasiveCount >= 3 &&
-      actionPercent < 20;
+      earlyGamePercent >= 28 &&
+      earlyGamePercent <= 48 &&
+      (evasiveCount >= 2 || challengerCount >= 4) &&
+      actionPercent < 22;
 
     // Assign archetype based on clear criteria
     if (isAggro) {
