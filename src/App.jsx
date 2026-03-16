@@ -831,23 +831,22 @@ export default function App() {
       return cost >= 1 && cost <= 5 && (keywords.length > 0 || ability.length > 0);
     };
 
-    const buildCandidates = (enforceArchetype, enforceCost) => {
-          // Build set of meta key card names for score boosting
-          const metaKeyCardNames = new Set();
-          const allTopDecks = [
-            ...(Array.isArray(competitiveMeta?.topDecks) ? competitiveMeta.topDecks : []),
-            ...(Array.isArray(competitiveMeta?.formats?.infinity?.topDecks) ? competitiveMeta.formats.infinity.topDecks : []),
-            ...(Array.isArray(competitiveMeta?.formats?.coreConstructed?.topDecks) ? competitiveMeta.formats.coreConstructed.topDecks : []),
-          ];
-          allTopDecks.forEach(deck => {
-            if (Array.isArray(deck.keyCards)) {
-              deck.keyCards.forEach(cardName => {
-                metaKeyCardNames.add(String(cardName || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim());
-              });
-            }
-          });
+    // Build set of meta key card names for score boosting
+    const metaKeyCardNames = new Set();
+    const allTopDecks = [
+      ...(Array.isArray(competitiveMeta?.topDecks) ? competitiveMeta.topDecks : []),
+      ...(Array.isArray(competitiveMeta?.formats?.infinity?.topDecks) ? competitiveMeta.formats.infinity.topDecks : []),
+      ...(Array.isArray(competitiveMeta?.formats?.coreConstructed?.topDecks) ? competitiveMeta.formats.coreConstructed.topDecks : []),
+    ];
+    allTopDecks.forEach(deck => {
+      if (Array.isArray(deck.keyCards)) {
+        deck.keyCards.forEach(cardName => {
+          metaKeyCardNames.add(String(cardName || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim());
+        });
+      }
+    });
 
-          const buildCandidates = (enforceArchetype, enforceCost) => {
+    const buildCandidates = (enforceArchetype, enforceCost) => {
       const scored = allCards
         .filter(card => {
           // STRICT ink color matching - card must have a valid ink color string that matches deck
@@ -3162,6 +3161,3 @@ export default function App() {
     </div>
   );
 }
-
-}
-
