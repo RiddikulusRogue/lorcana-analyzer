@@ -873,6 +873,7 @@ export default function App() {
         .map(card => {
           // Score cards based on keywords, abilities, and lore
           let score = 0;
+          const type = (card.type || '').toLowerCase();
           const keywords = (card.keywords || []).map(k => String(k).toLowerCase());
           const ability = (card.ability || '').toLowerCase();
           const setCodeNumber = parseInt(card.setCode, 10);
