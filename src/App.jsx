@@ -161,6 +161,7 @@ export default function App() {
   const [customQuery, setCustomQuery] = useState("");
   const [promptDeckQuery, setPromptDeckQuery] = useState("");
   const [strictPromptLock, setStrictPromptLock] = useState(false);
+  const [strictPromptTarget, setStrictPromptTarget] = useState(24);
   const [mode, setMode] = useState("overview"); // overview | coaching | deckbuilding | meta
 
   const cardMetaInkMap = useMemo(() => {
@@ -1882,7 +1883,7 @@ export default function App() {
   const getPromptCompetitiveDeck = () => {
     try {
       const promptText = String(promptDeckQuery || '').trim();
-      const strictTargetMatches = 24;
+      const strictTargetMatches = Math.max(8, Math.min(60, parseInt(strictPromptTarget, 10) || 24));
       if (!promptText) {
         alert('Enter a deck prompt first (example: princesses tempo).');
         return;
@@ -2190,6 +2191,7 @@ export default function App() {
       output += `Profile: ${desiredPlaystyle}\n`;
       output += `Colors: ${chosenColors.join(' + ')}\n`;
       output += `Strict Tribal Lock: ${strictPromptLock ? 'ON' : 'OFF'}\n`;
+      output += `Strict Target: ${strictTargetMatches} prompt-matching cards\n`;
       output += `Prompt Match Count: ${matchedCopyCount} cards\n`;
       if (anchorDeck) {
         output += `Meta Anchor: ${anchorDeck.name} (${anchorDeck.winRate || 'N/A'} WR)\n`;
@@ -3535,8 +3537,29 @@ export default function App() {
               checked={strictPromptLock}
               onChange={(e) => setStrictPromptLock(e.target.checked)}
             />
-            Strict Tribal Lock (target at least 24 prompt-matching cards)
+            Strict Tribal Lock
           </label>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "8px", fontSize: "13px" }}>
+            <span>Target Matches:</span>
+            <input
+              type="number"
+              min={8}
+              max={60}
+              step={1}
+              value={strictPromptTarget}
+              onChange={(e) => setStrictPromptTarget(e.target.value)}
+              style={{
+                width: "84px",
+                padding: "6px",
+                backgroundColor: "rgba(30, 20, 60, 0.8)",
+                border: "2px solid rgba(251, 191, 36, 0.5)",
+                color: "#fff",
+                borderRadius: "6px",
+                fontSize: "13px"
+              }}
+            />
+            <span style={{ color: "#ddd" }}>cards (8-60)</span>
+          </div>
         </div>
 
         {/* Coaching Output */}
