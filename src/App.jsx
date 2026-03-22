@@ -160,6 +160,7 @@ export default function App() {
   const [coaching, setCoaching] = useState("");
   const [customQuery, setCustomQuery] = useState("");
   const [promptDeckQuery, setPromptDeckQuery] = useState("");
+  const [promptFormat, setPromptFormat] = useState("infinity");
   const [strictPromptLock, setStrictPromptLock] = useState(false);
   const [strictPromptTarget, setStrictPromptTarget] = useState(24);
   const [mode, setMode] = useState("overview"); // overview | coaching | deckbuilding | meta
@@ -1884,6 +1885,7 @@ export default function App() {
     try {
       const promptText = String(promptDeckQuery || '').trim();
       const strictTargetMatches = Math.max(8, Math.min(60, parseInt(strictPromptTarget, 10) || 24));
+      const selectedPromptFormat = promptFormat === 'core' ? 'core' : 'infinity';
       if (!promptText) {
         alert('Enter a deck prompt first (example: princesses tempo).');
         return;
@@ -1896,7 +1898,7 @@ export default function App() {
 
       const promptLower = promptText.toLowerCase();
       const desiredPlaystyle = inferDesiredPlaystyle(promptText) || 'Midrange';
-      const metaContext = resolveMetaForFormat(format);
+      const metaContext = resolveMetaForFormat(selectedPromptFormat);
       const topDecks = Array.isArray(metaContext?.topDecks) ? metaContext.topDecks : [];
 
       const stopWords = new Set([
@@ -1973,7 +1975,7 @@ export default function App() {
       const colorSet = new Set(chosenColors.map((c) => String(c || '').toLowerCase()));
 
       const coreLegalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [];
-      const activeFormatKey = format === 'core' ? 'Core' : 'Infinity';
+      const activeFormatKey = selectedPromptFormat === 'core' ? 'Core' : 'Infinity';
       const legalCards = allCardsData.cards.filter((card) => {
         const cardColor = String(card?.color || '').toLowerCase();
         if (!colorSet.has(cardColor)) return false;
@@ -1981,7 +1983,7 @@ export default function App() {
         const formatInfo = card?.allowedInFormats?.[activeFormatKey];
         if (formatInfo && formatInfo.allowed === false) return false;
 
-        if (format === 'core' && coreLegalSets.length > 0) {
+        if (selectedPromptFormat === 'core' && coreLegalSets.length > 0) {
           const setNum = parseInt(card?.setCode, 10);
           if (!Number.isFinite(setNum) || !coreLegalSets.includes(setNum)) return false;
         }
@@ -2187,7 +2189,7 @@ export default function App() {
       let output = `🏆 PROMPT-BASED COMPETITIVE DECK\n`;
       output += `═══════════════════════════════════════════════════════\n\n`;
       output += `Prompt: "${promptText}"\n`;
-      output += `Format: ${format.toUpperCase()}\n`;
+      output += `Format: ${selectedPromptFormat.toUpperCase()}\n`;
       output += `Profile: ${desiredPlaystyle}\n`;
       output += `Colors: ${chosenColors.join(' + ')}\n`;
       output += `Strict Tribal Lock: ${strictPromptLock ? 'ON' : 'OFF'}\n`;
@@ -3504,6 +3506,41 @@ export default function App() {
           }}
         >
           <p style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>Build Competitive Deck From Prompt:</p>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+            <span style={{ fontSize: "13px" }}>Prompt Format:</span>
+            <button
+              onClick={() => setPromptFormat("infinity")}
+              style={{
+                padding: "6px 12px",
+                background: promptFormat === "infinity"
+                  ? "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+                  : "rgba(245, 158, 11, 0.2)",
+                border: promptFormat === "infinity" ? "2px solid #fbbf24" : "2px solid rgba(251, 191, 36, 0.5)",
+                color: "#fff",
+                borderRadius: "6px",
+                cursor: "pointer",
+                fontWeight: promptFormat === "infinity" ? "bold" : "normal"
+              }}
+            >
+              Infinity
+            </button>
+            <button
+              onClick={() => setPromptFormat("core")}
+              style={{
+                padding: "6px 12px",
+                background: promptFormat === "core"
+                  ? "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+                  : "rgba(245, 158, 11, 0.2)",
+                border: promptFormat === "core" ? "2px solid #fbbf24" : "2px solid rgba(251, 191, 36, 0.5)",
+                color: "#fff",
+                borderRadius: "6px",
+                cursor: "pointer",
+                fontWeight: promptFormat === "core" ? "bold" : "normal"
+              }}
+            >
+              Core Constructed
+            </button>
+          </div>
           <div style={{ display: "flex", gap: "8px" }}>
             <input
               type="text"
