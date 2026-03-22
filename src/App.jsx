@@ -159,6 +159,7 @@ export default function App() {
   const [onlineMetaData, setOnlineMetaData] = useState(null);
   const [coaching, setCoaching] = useState("");
   const [customQuery, setCustomQuery] = useState("");
+  const [promptDeckQuery, setPromptDeckQuery] = useState("");
   const [mode, setMode] = useState("overview"); // overview | coaching | deckbuilding | meta
 
   const cardMetaInkMap = useMemo(() => {
@@ -1877,6 +1878,317 @@ export default function App() {
     }
   };
 
+  const getPromptCompetitiveDeck = () => {
+    try {
+      const promptText = String(promptDeckQuery || '').trim();
+      if (!promptText) {
+        alert('Enter a deck prompt first (example: princesses tempo).');
+        return;
+      }
+
+      if (!allCardsData || !Array.isArray(allCardsData.cards) || allCardsData.cards.length === 0) {
+        setCoaching('Card database is still loading. Please try again in a moment.');
+        return;
+      }
+
+      const promptLower = promptText.toLowerCase();
+      const desiredPlaystyle = inferDesiredPlaystyle(promptText) || 'Midrange';
+      const metaContext = resolveMetaForFormat(format);
+      const topDecks = Array.isArray(metaContext?.topDecks) ? metaContext.topDecks : [];
+
+      const stopWords = new Set([
+        'a', 'an', 'and', 'the', 'deck', 'build', 'for', 'with', 'using', 'that', 'this', 'cards',
+        'card', 'centered', 'around', 'make', 'me', 'to', 'competitive', 'meta', 'style', 'playstyle',
+        'please', 'want', 'like', 'on', 'of', 'in', 'my', 'based'
+      ]);
+
+      const tokens = promptLower
+        .split(/[^a-z0-9]+/)
+        .filter((token) => token.length >= 3)
+        .filter((token) => !stopWords.has(token));
+
+      const normalizeName = (value) => String(value || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, ' ')
+        .trim();
+
+      const getPromptColors = () => {
+        const aliases = {
+          amber: 'Amber',
+          amethyst: 'Amethyst',
+          emerald: 'Emerald',
+          ruby: 'Ruby',
+          sapphire: 'Sapphire',
+          steel: 'Steel',
+        };
+        const found = [];
+        Object.entries(aliases).forEach(([key, color]) => {
+          if (promptLower.includes(key)) {
+            found.push(color);
+          }
+        });
+        return Array.from(new Set(found));
+      };
+
+      const scoredTopDecks = topDecks
+        .map((deck) => {
+          const textBlob = String([
+            deck?.name,
+            deck?.archetype,
+            deck?.description,
+            ...(Array.isArray(deck?.keyCards) ? deck.keyCards : []),
+          ].join(' ')).toLowerCase();
+
+          let score = 0;
+          tokens.forEach((token) => {
+            if (textBlob.includes(token)) score += 2;
+          });
+
+          if (desiredPlaystyle && String(deck?.archetype || '').toLowerCase().includes(desiredPlaystyle.toLowerCase())) {
+            score += 5;
+          }
+
+          return { deck, score };
+        })
+        .sort((a, b) => b.score - a.score);
+
+      const anchorDeck = scoredTopDecks.length > 0 ? scoredTopDecks[0].deck : null;
+
+      const playstyleDefaultColors = {
+        aggro: ['Amber', 'Emerald'],
+        tempo: ['Ruby', 'Amethyst'],
+        control: ['Sapphire', 'Steel'],
+        'control/ramp': ['Sapphire', 'Steel'],
+        midrange: ['Amber', 'Steel'],
+        combo: ['Amethyst', 'Sapphire'],
+      };
+
+      const forcedColors = getPromptColors();
+      const anchorColors = Array.isArray(anchorDeck?.colors) ? anchorDeck.colors : [];
+      const playstyleColors = playstyleDefaultColors[String(desiredPlaystyle || '').toLowerCase()] || ['Amber', 'Steel'];
+      const chosenColors = (forcedColors.length > 0 ? forcedColors : (anchorColors.length > 0 ? anchorColors : playstyleColors)).slice(0, 2);
+      const colorSet = new Set(chosenColors.map((c) => String(c || '').toLowerCase()));
+
+      const coreLegalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [];
+      const activeFormatKey = format === 'core' ? 'Core' : 'Infinity';
+      const legalCards = allCardsData.cards.filter((card) => {
+        const cardColor = String(card?.color || '').toLowerCase();
+        if (!colorSet.has(cardColor)) return false;
+
+        const formatInfo = card?.allowedInFormats?.[activeFormatKey];
+        if (formatInfo && formatInfo.allowed === false) return false;
+
+        if (format === 'core' && coreLegalSets.length > 0) {
+          const setNum = parseInt(card?.setCode, 10);
+          if (!Number.isFinite(setNum) || !coreLegalSets.includes(setNum)) return false;
+        }
+
+        return true;
+      });
+
+      const latestPrintByName = new Map();
+      legalCards.forEach((card) => {
+        const key = normalizeName(card.simpleName || card.fullName || card.name);
+        if (!key) return;
+        const current = latestPrintByName.get(key);
+        if (!current) {
+          latestPrintByName.set(key, card);
+          return;
+        }
+        const currentSet = parseInt(current?.setCode, 10);
+        const nextSet = parseInt(card?.setCode, 10);
+        if (Number.isFinite(nextSet) && (!Number.isFinite(currentSet) || nextSet > currentSet)) {
+          latestPrintByName.set(key, card);
+        }
+      });
+
+      const uniqueCards = Array.from(latestPrintByName.values());
+      const anchorKeyCards = new Set((Array.isArray(anchorDeck?.keyCards) ? anchorDeck.keyCards : []).map(normalizeName));
+
+      const scorePromptFit = (card) => {
+        const subtypeText = Array.isArray(card.subtypes) ? card.subtypes.join(' ') : (card.subtypesText || '');
+        const abilityText = Array.isArray(card.abilities)
+          ? card.abilities.map((a) => a?.fullText || a?.effect || a?.name || '').join(' ')
+          : '';
+        const textBlob = String([
+          card.fullName,
+          card.name,
+          card.version,
+          card.type,
+          subtypeText,
+          card.story,
+          card.fullText,
+          abilityText,
+        ].join(' ')).toLowerCase();
+
+        let score = 0;
+        tokens.forEach((token) => {
+          if (textBlob.includes(token)) score += 3;
+        });
+
+        if (promptLower.includes('character') && String(card.type || '').toLowerCase().includes('character')) score += 2;
+        if (promptLower.includes('action') && String(card.type || '').toLowerCase().includes('action')) score += 2;
+        if (promptLower.includes('song') && textBlob.includes('song')) score += 3;
+
+        return score;
+      };
+
+      const scoreArchetypeFit = (card) => {
+        const archetypeLower = String(desiredPlaystyle || '').toLowerCase();
+        const type = String(card.type || '').toLowerCase();
+        const ability = String(card.fullText || '').toLowerCase();
+        const cost = card.cost || 0;
+        const keywordText = Array.isArray(card.keywordAbilities)
+          ? card.keywordAbilities.join(' ').toLowerCase()
+          : '';
+
+        if (archetypeLower.includes('aggro')) {
+          if (cost <= 2) return 5;
+          if (cost <= 4 && (keywordText.includes('rush') || keywordText.includes('evasive'))) return 4;
+          return cost <= 4 ? 2 : -2;
+        }
+
+        if (archetypeLower.includes('tempo')) {
+          if (cost >= 2 && cost <= 4) return 4;
+          if (ability.includes('draw') || ability.includes('return') || ability.includes('ready')) return 3;
+          return 1;
+        }
+
+        if (archetypeLower.includes('control')) {
+          if (ability.includes('banish') || ability.includes('return') || ability.includes('draw')) return 5;
+          if (cost >= 5 && type.includes('character')) return 3;
+          return cost <= 2 ? -1 : 1;
+        }
+
+        if (archetypeLower.includes('midrange')) {
+          if (cost >= 2 && cost <= 5) return 4;
+          return 1;
+        }
+
+        return cost >= 2 && cost <= 5 ? 2 : 0;
+      };
+
+      const scoredCards = uniqueCards
+        .map((card) => {
+          const normalizedName = normalizeName(card.simpleName || card.fullName || card.name);
+          const promptScore = scorePromptFit(card);
+          const archetypeScore = scoreArchetypeFit(card);
+          const metaScore = anchorKeyCards.has(normalizedName) ? 6 : 0;
+          const cost = card.cost || 0;
+
+          let curveScore = 0;
+          if (cost <= 2) curveScore += 1.5;
+          else if (cost <= 4) curveScore += 1;
+          else if (cost >= 7) curveScore -= 0.5;
+
+          return {
+            card,
+            promptScore,
+            score: promptScore + archetypeScore + metaScore + curveScore,
+          };
+        })
+        .sort((a, b) => b.score - a.score);
+
+      const deckEntries = [];
+      const entryIndex = new Map();
+      let totalCards = 0;
+
+      const addCopies = (card, requestedCopies) => {
+        if (!card || totalCards >= 60) return;
+        const key = normalizeName(card.simpleName || card.fullName || card.name);
+        if (!key) return;
+
+        const canAdd = Math.max(0, Math.min(4, requestedCopies));
+        if (canAdd === 0) return;
+
+        const existingPos = entryIndex.get(key);
+        if (existingPos === undefined) {
+          const count = Math.min(canAdd, 60 - totalCards);
+          if (count <= 0) return;
+          deckEntries.push({ card, count });
+          entryIndex.set(key, deckEntries.length - 1);
+          totalCards += count;
+          return;
+        }
+
+        const existing = deckEntries[existingPos];
+        const roomInSlot = 4 - existing.count;
+        const count = Math.min(roomInSlot, canAdd, 60 - totalCards);
+        if (count <= 0) return;
+        existing.count += count;
+        totalCards += count;
+      };
+
+      const promptFocused = scoredCards.filter((item) => item.promptScore > 0);
+      promptFocused.slice(0, 10).forEach((item) => addCopies(item.card, 3));
+
+      (Array.isArray(anchorDeck?.keyCards) ? anchorDeck.keyCards : []).forEach((keyName) => {
+        const keyNormalized = normalizeName(keyName);
+        const match = scoredCards.find((item) => normalizeName(item.card.simpleName || item.card.fullName || item.card.name) === keyNormalized);
+        if (match) addCopies(match.card, 3);
+      });
+
+      scoredCards.slice(0, 90).forEach((item) => {
+        const cost = item.card.cost || 0;
+        const copies = cost <= 2 ? 4 : (cost <= 4 ? 3 : (cost <= 6 ? 2 : 1));
+        addCopies(item.card, copies);
+      });
+
+      if (totalCards < 60) {
+        scoredCards.slice(0, 40).forEach((item) => addCopies(item.card, 1));
+      }
+
+      const sortedDeck = deckEntries
+        .slice()
+        .sort((a, b) => {
+          const costA = a.card.cost || 0;
+          const costB = b.card.cost || 0;
+          if (costA !== costB) return costA - costB;
+          return String(a.card.fullName || a.card.name || '').localeCompare(String(b.card.fullName || b.card.name || ''));
+        });
+
+      const totalFinal = sortedDeck.reduce((sum, entry) => sum + entry.count, 0);
+      const topMatches = promptFocused.slice(0, 8).map((item) => item.card.fullName || item.card.name);
+
+      let output = `🏆 PROMPT-BASED COMPETITIVE DECK\n`;
+      output += `═══════════════════════════════════════════════════════\n\n`;
+      output += `Prompt: "${promptText}"\n`;
+      output += `Format: ${format.toUpperCase()}\n`;
+      output += `Profile: ${desiredPlaystyle}\n`;
+      output += `Colors: ${chosenColors.join(' + ')}\n`;
+      if (anchorDeck) {
+        output += `Meta Anchor: ${anchorDeck.name} (${anchorDeck.winRate || 'N/A'} WR)\n`;
+      }
+      output += `\n`;
+
+      if (topMatches.length > 0) {
+        output += `Prompt-Matching Core Cards:\n`;
+        topMatches.forEach((name) => {
+          output += `• ${name}\n`;
+        });
+        output += `\n`;
+      } else {
+        output += `No exact prompt card matches found in the selected colors, so this list is meta-tuned around your requested style.\n\n`;
+      }
+
+      output += `60-CARD DECK LIST (${totalFinal} cards generated)\n`;
+      output += `───────────────────────────────────────────────────────\n`;
+      sortedDeck.forEach((entry) => {
+        const cardName = entry.card.fullName || entry.card.name || 'Unknown Card';
+        const type = entry.card.type || 'Card';
+        const cost = entry.card.cost ?? '?';
+        output += `${entry.count}x ${cardName} (Cost ${cost}, ${type})\n`;
+      });
+
+      output += `\n═══════════════════════════════════════════════════════`;
+      setCoaching(output);
+      setPromptDeckQuery('');
+    } catch (error) {
+      console.error('Error in getPromptCompetitiveDeck:', error);
+      setCoaching(`Error generating prompt-based competitive deck: ${error.message}`);
+    }
+  };
+
   const getMatchupAdvice = () => {
     try {
       if (!analysis) return "No analysis available";
@@ -3136,6 +3448,46 @@ export default function App() {
               }}
             >
               Ask
+            </button>
+          </div>
+        </div>
+
+        {/* Prompt-Based Deck Builder */}
+        <div
+          style={{
+            background: "rgba(30, 20, 60, 0.8)",
+            border: "2px solid rgba(251, 191, 36, 0.5)",
+            borderRadius: "6px",
+            padding: "1rem",
+            marginBottom: "1rem"
+          }}
+        >
+          <p style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>Build Competitive Deck From Prompt:</p>
+          <div style={{ display: "flex", gap: "8px" }}>
+            <input
+              type="text"
+              value={promptDeckQuery}
+              onChange={(e) => setPromptDeckQuery(e.target.value)}
+              onKeyPress={(e) => e.key === "Enter" && getPromptCompetitiveDeck()}
+              placeholder="e.g., 'princesses', 'hero aggro', 'songs control', 'evasive tempo'"
+              style={{
+                flex: 1,
+                padding: "10px",
+                backgroundColor: "rgba(30, 20, 60, 0.8)",
+                border: "2px solid rgba(251, 191, 36, 0.5)",
+                color: "#fff",
+                borderRadius: "6px",
+                fontSize: "14px"
+              }}
+            />
+            <button
+              onClick={getPromptCompetitiveDeck}
+              style={{
+                ...buttonStyle,
+                background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+              }}
+            >
+              Build Competitive Deck
             </button>
           </div>
         </div>
