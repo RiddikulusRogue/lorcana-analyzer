@@ -160,6 +160,7 @@ export default function App() {
   const [coaching, setCoaching] = useState("");
   const [customQuery, setCustomQuery] = useState("");
   const [promptDeckQuery, setPromptDeckQuery] = useState("");
+  const [strictPromptLock, setStrictPromptLock] = useState(false);
   const [mode, setMode] = useState("overview"); // overview | coaching | deckbuilding | meta
 
   const cardMetaInkMap = useMemo(() => {
@@ -1881,6 +1882,7 @@ export default function App() {
   const getPromptCompetitiveDeck = () => {
     try {
       const promptText = String(promptDeckQuery || '').trim();
+      const strictTargetMatches = 24;
       if (!promptText) {
         alert('Enter a deck prompt first (example: princesses tempo).');
         return;
@@ -2089,6 +2091,12 @@ export default function App() {
         })
         .sort((a, b) => b.score - a.score);
 
+      const promptMatchNameSet = new Set(
+        scoredCards
+          .filter((item) => item.promptScore > 0)
+          .map((item) => normalizeName(item.card.simpleName || item.card.fullName || item.card.name))
+      );
+
       const deckEntries = [];
       const entryIndex = new Map();
       let totalCards = 0;
@@ -2119,8 +2127,21 @@ export default function App() {
         totalCards += count;
       };
 
+      const getPromptMatchedCopies = () => deckEntries.reduce((sum, entry) => {
+        const nameKey = normalizeName(entry.card.simpleName || entry.card.fullName || entry.card.name);
+        return sum + (promptMatchNameSet.has(nameKey) ? entry.count : 0);
+      }, 0);
+
       const promptFocused = scoredCards.filter((item) => item.promptScore > 0);
       promptFocused.slice(0, 10).forEach((item) => addCopies(item.card, 3));
+
+      if (strictPromptLock && promptFocused.length > 0) {
+        let safety = 0;
+        while (getPromptMatchedCopies() < strictTargetMatches && totalCards < 60 && safety < 8) {
+          promptFocused.forEach((item) => addCopies(item.card, 1));
+          safety += 1;
+        }
+      }
 
       (Array.isArray(anchorDeck?.keyCards) ? anchorDeck.keyCards : []).forEach((keyName) => {
         const keyNormalized = normalizeName(keyName);
@@ -2131,6 +2152,14 @@ export default function App() {
       scoredCards.slice(0, 90).forEach((item) => {
         const cost = item.card.cost || 0;
         const copies = cost <= 2 ? 4 : (cost <= 4 ? 3 : (cost <= 6 ? 2 : 1));
+
+        if (strictPromptLock && promptFocused.length > 0) {
+          const needsMoreMatches = getPromptMatchedCopies() < strictTargetMatches;
+          if (needsMoreMatches && item.promptScore <= 0) {
+            return;
+          }
+        }
+
         addCopies(item.card, copies);
       });
 
@@ -2149,6 +2178,10 @@ export default function App() {
 
       const totalFinal = sortedDeck.reduce((sum, entry) => sum + entry.count, 0);
       const topMatches = promptFocused.slice(0, 8).map((item) => item.card.fullName || item.card.name);
+      const matchedCopyCount = sortedDeck.reduce((sum, entry) => {
+        const nameKey = normalizeName(entry.card.simpleName || entry.card.fullName || entry.card.name);
+        return sum + (promptMatchNameSet.has(nameKey) ? entry.count : 0);
+      }, 0);
 
       let output = `🏆 PROMPT-BASED COMPETITIVE DECK\n`;
       output += `═══════════════════════════════════════════════════════\n\n`;
@@ -2156,10 +2189,16 @@ export default function App() {
       output += `Format: ${format.toUpperCase()}\n`;
       output += `Profile: ${desiredPlaystyle}\n`;
       output += `Colors: ${chosenColors.join(' + ')}\n`;
+      output += `Strict Tribal Lock: ${strictPromptLock ? 'ON' : 'OFF'}\n`;
+      output += `Prompt Match Count: ${matchedCopyCount} cards\n`;
       if (anchorDeck) {
         output += `Meta Anchor: ${anchorDeck.name} (${anchorDeck.winRate || 'N/A'} WR)\n`;
       }
       output += `\n`;
+
+      if (strictPromptLock && promptFocused.length > 0 && matchedCopyCount < strictTargetMatches) {
+        output += `⚠ Could only reach ${matchedCopyCount}/${strictTargetMatches} prompt-matching cards with current color and format legality constraints.\n\n`;
+      }
 
       if (topMatches.length > 0) {
         output += `Prompt-Matching Core Cards:\n`;
@@ -3490,6 +3529,14 @@ export default function App() {
               Build Competitive Deck
             </button>
           </div>
+          <label style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "10px", fontSize: "13px" }}>
+            <input
+              type="checkbox"
+              checked={strictPromptLock}
+              onChange={(e) => setStrictPromptLock(e.target.checked)}
+            />
+            Strict Tribal Lock (target at least 24 prompt-matching cards)
+          </label>
         </div>
 
         {/* Coaching Output */}
