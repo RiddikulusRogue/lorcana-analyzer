@@ -558,7 +558,7 @@ export default function App() {
   };
 
   // Smart card search based on ink colors, archetype, and cost
-  const findCardRecommendations = (inkColors, archetype, targetCost, count = 5, gameFormat = 'infinity') => {
+  const findCardRecommendations = (inkColors, archetype, targetCost, count = 5, gameFormat = 'infinity', excludedCardNames = []) => {
     const hasAllCards = allCardsData && Array.isArray(allCardsData.cards);
     if (!cardMeta && !hasAllCards) return [];
 
@@ -669,6 +669,12 @@ export default function App() {
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, ' ')
       .trim();
+
+    const excludedNameSet = new Set(
+      (Array.isArray(excludedCardNames) ? excludedCardNames : [])
+        .map(name => normalizeCardName(name))
+        .filter(Boolean)
+    );
 
     // Filter by format legality
     if (gameFormat === 'core') {
@@ -853,6 +859,9 @@ export default function App() {
     const buildCandidates = (enforceArchetype, enforceCost) => {
       const scored = allCards
         .filter(card => {
+          const normalizedCardName = normalizeCardName(card.simpleName || card.name || '');
+          if (excludedNameSet.has(normalizedCardName)) return false;
+
           // STRICT ink color matching - card must have a valid ink color string that matches deck
           const cardInk = card.ink;
 
@@ -1430,7 +1439,7 @@ export default function App() {
         advice += `WHY THIS MATTERS: Early plays establish board presence and tempo.\n\n`;
 
         advice += `SUGGESTED CARD SWAPS:\n`;
-        const earlyDrops = findCardRecommendations(deckColors, recommendationArchetype, 1, 3, format);
+        const earlyDrops = findCardRecommendations(deckColors, recommendationArchetype, 1, 3, format, Object.keys(cards || {}));
         if (earlyDrops.length > 0 && expensiveCardsFinal.length > 0) {
           const swapCount = Math.min(earlyDrops.length, expensiveCardsFinal.length);
           for (let i = 0; i < swapCount; i++) {
@@ -1482,7 +1491,7 @@ export default function App() {
         advice += `WHY THIS MATTERS: Close-out cards take over mid-to-late game.\n\n`;
 
         advice += `SUGGESTED CARD SWAPS:\n`;
-        const finishers = findCardRecommendations(deckColors, recommendationArchetype, 5, 3, format);
+        const finishers = findCardRecommendations(deckColors, recommendationArchetype, 5, 3, format, Object.keys(cards || {}));
         if (finishers.length > 0 && lowCostCards.length > 0) {
           const swapCount = Math.min(finishers.length, lowCostCards.length);
           for (let i = 0; i < swapCount; i++) {
@@ -1540,7 +1549,7 @@ export default function App() {
           .slice(0, 3);
 
         advice += `SUGGESTED CARD SWAPS:\n`;
-        const midCards = findCardRecommendations(deckColors, recommendationArchetype, 3, 3, format);
+        const midCards = findCardRecommendations(deckColors, recommendationArchetype, 3, 3, format, Object.keys(cards || {}));
         if (midCards.length > 0 && slowCards.length > 0) {
           const swapCount = Math.min(midCards.length, slowCards.length);
           for (let i = 0; i < swapCount; i++) {
@@ -1650,7 +1659,7 @@ export default function App() {
       }
 
       // Get general recommendations across all costs
-      const topCards = findCardRecommendations(deckColors, recommendationArchetype, null, 8, format);
+      const topCards = findCardRecommendations(deckColors, recommendationArchetype, null, 8, format, Object.keys(cards || {}));
       if (topCards.length > 0) {
         topCards.slice(0, 5).forEach((card, i) => {
           const isLatestSet = parseInt(card.setCode, 10) === latestCompetitiveSet;
@@ -2651,8 +2660,8 @@ export default function App() {
         ...analysis.inkColors,
       };
       const roleTarget = archetypeLower.includes('aggro') ? 1 : archetypeLower.includes('control') ? 5 : 3;
-      const roleCards = findCardRecommendations(strategyCardPool, archetype, roleTarget, 3, format);
-      const flexCards = findCardRecommendations(strategyCardPool, archetype, null, 5, format);
+      const roleCards = findCardRecommendations(strategyCardPool, archetype, roleTarget, 3, format, cardNames);
+      const flexCards = findCardRecommendations(strategyCardPool, archetype, null, 5, format, cardNames);
       const seen = new Set();
       const mergedCards = [...roleCards, ...flexCards]
         .filter((card) => {

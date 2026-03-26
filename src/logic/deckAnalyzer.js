@@ -27,10 +27,9 @@ const metaKeys = Object.keys(cardMeta || {})
 function findBestMatch(rawName) {
   const n = normalizeName(rawName)
   if (!n) return null
-  // exact or prefix
+  // exact normalized name only
   for (const k of metaKeys) {
     if (k === n) return k
-    if (k.startsWith(n) || n.startsWith(k)) return k
   }
   // allow short/partial matching
   let best = null
