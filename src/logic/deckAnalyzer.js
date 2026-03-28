@@ -3,7 +3,7 @@
 import cardMeta from '../data/cardMeta.json'
 
 function normalizeName(s) {
-  return (s || '').toLowerCase().replace(/[^a-z0-9 ]+/g, '').replace(/\s+/g, ' ').trim()
+  return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
 function levenshtein(a, b) {
@@ -23,23 +23,42 @@ function levenshtein(a, b) {
 }
 
 const metaKeys = Object.keys(cardMeta || {})
+const normalizedMetaKeyToKey = new Map()
+
+for (const key of metaKeys) {
+  const normalized = normalizeName(key)
+  if (!normalized) continue
+  if (!normalizedMetaKeyToKey.has(normalized)) {
+    normalizedMetaKeyToKey.set(normalized, key)
+  }
+}
+
+const normalizedMetaKeys = Array.from(normalizedMetaKeyToKey.keys())
 
 function findBestMatch(rawName) {
   const n = normalizeName(rawName)
   if (!n) return null
-  // exact normalized name only
-  for (const k of metaKeys) {
-    if (k === n) return k
+
+  const exact = normalizedMetaKeyToKey.get(n)
+  if (exact) return exact
+
+  // Fall back to compact form for entries where punctuation was removed without spaces.
+  const compact = n.replace(/\s+/g, '')
+  for (const normalized of normalizedMetaKeys) {
+    if (normalized.replace(/\s+/g, '') === compact) {
+      return normalizedMetaKeyToKey.get(normalized)
+    }
   }
+
   // allow short/partial matching
   let best = null
   let bestDist = Infinity
-  for (const k of metaKeys) {
-    const d = levenshtein(n, k)
-    if (d < bestDist) { bestDist = d; best = k }
+  for (const normalized of normalizedMetaKeys) {
+    const d = levenshtein(n, normalized)
+    if (d < bestDist) { bestDist = d; best = normalized }
   }
   // accept if reasonably close (<=30% of length)
-  if (best && bestDist <= Math.max(1, Math.floor(best.length * 0.3))) return best
+  if (best && bestDist <= Math.max(1, Math.floor(best.length * 0.3))) return normalizedMetaKeyToKey.get(best)
   return null
 }
 

@@ -212,7 +212,7 @@ export default function App() {
   }, [allCardsData]);
 
   const applyInkColorFallback = (analysisToUpdate) => {
-    if (!analysisToUpdate || !analysisToUpdate.cards || !allCardsColorMap) {
+    if (!analysisToUpdate || !analysisToUpdate.cards || (!allCardsColorsMap && !allCardsColorMap)) {
       return { analysis: analysisToUpdate, applied: false };
     }
 
@@ -222,7 +222,10 @@ export default function App() {
       const normalized = normalizeCardKey(cardName);
       if (!normalized) return;
       const metaColor = cardMetaInkMap ? cardMetaInkMap.get(normalized) : null;
-      const color = metaColor || allCardsColorMap.get(normalized);
+      const fallbackColors = allCardsColorsMap ? allCardsColorsMap.get(normalized) : null;
+      const color = metaColor
+        || (Array.isArray(fallbackColors) && fallbackColors.length > 0 ? fallbackColors[0] : null)
+        || (allCardsColorMap ? allCardsColorMap.get(normalized) : null);
       if (!color) return;
       updatedInkColors[color] = (updatedInkColors[color] || 0) + count;
     });
@@ -370,7 +373,7 @@ export default function App() {
     if (fallbackResult.applied) {
       setAnalysis(fallbackResult.analysis);
     }
-  }, [analysis, allCardsColorMap, cardMetaInkMap]);
+  }, [analysis, allCardsColorMap, allCardsColorsMap, cardMetaInkMap]);
 
   // Enrich deck color data by fetching from external API
   const enrichDeckColors = async (analysis) => {

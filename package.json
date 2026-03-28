@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.js",
-    "generate-cards": "node scripts/generateCardSets.js"
+    "generate-cards": "node scripts/generateCardSets.js",
+    "test:cards": "node scripts/testCardRecognition.js"
   },
   "dependencies": {
     "react": "^18.2.0",
