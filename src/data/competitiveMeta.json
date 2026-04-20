@@ -1,26 +1,62 @@
 {
-    "lastUpdated": "2026-03-14",
-    "source": "DLC Circuit Results (Richmond + Winterspell + March Qualifier + Mid-March DLC Circuit)",
+    "lastUpdated": "2026-04-19",
+    "source": "DLC Circuit Results (Melbourne + Ghent + Taipei + Winterspell Set Championships + CCS $25k Invitational Qualifier)",
     "internetStrategySources": [
         {
-            "name": "TCGplayer - The Best Decks From DLC Ghent",
+            "name": "TCGplayer - The Best Decks From DLC Ghent & CCS $25k Invitational Qualifier",
             "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-From-DLC-Ghent-And-The-CCS-25-000-Invitational-Qualifier/81cc791d-e63b-48bf-9b7e-44f6003e0e39/",
-            "lastChecked": "2026-03-14",
-            "notes": "Highlights Dogs pressure, Sapphire value shells, and triangle metagame dynamics."
+            "lastChecked": "2026-04-19",
+            "notes": "Amber/Emerald Dogs dominated (22 copies in top cut, won both brackets). Amber/Steel emerged as a counter. Triangle metagame: Dogs vs Sapphire vs Steel. Published Mar 13, 2026."
         },
         {
             "name": "TCGplayer - The Best Decks From DLC Melbourne",
             "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-From-DLC-Melbourne/c4b5a66f-0246-4937-921b-86e7560f49ab/",
-            "lastChecked": "2026-03-14",
-            "notes": "Confirms low-curve flood plans, early lore pressure, and adaptation patterns around Winterspell cards."
+            "lastChecked": "2026-04-19",
+            "notes": "Confirmed Dogs and Amethyst dominance. Winterspell cards (Grandmother Willow, Nani - Stage Manager, Emerald Chromicon) fueled key upgrades. Published Feb 25, 2026."
         },
         {
-            "name": "InkDecks - Lorcana Meta Report Core Constructed March 2026",
-            "url": "https://inkdecks.com/lorcana-metagame",
-            "lastChecked": "2026-03-14",
-            "notes": "Provides metashare and archetype prevalence signals for tiering and matchup prioritization."
+            "name": "TCGplayer - The Best Decks From DLC Taipei",
+            "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-from-DLC-Taipei/cbbe3d0f-fe1c-470a-91a7-a00966ba9d0e/",
+            "lastChecked": "2026-04-19",
+            "notes": "Emerald/Sapphire won (Edmond Chiu, 2-time DLC Champion). Dogs didn't reach top 4. Sapphire/Steel rising. Swordplay + Demona tech for Amethyst/Sapphire confirmed. Published Mar 19, 2026."
+        },
+        {
+            "name": "Dreamborn.ink - Winterspell Set Championship results (March-April 2026)",
+            "url": "https://dreamborn.ink/decks",
+            "lastChecked": "2026-04-19",
+            "notes": "Multiple Set Champs won by Sapphire/Steel, Amethyst/Emerald, Amber/Steel (Steelsong), Amber/Ruby, and Amethyst/Steel. Format diversifying heading into Wilds Unknown."
+        },
+        {
+            "name": "TCGplayer - The Bestselling Cards in Disney Lorcana March 2026",
+            "url": "https://www.tcgplayer.com/content/article/The-Bestselling-Cards-in-Disney-Lorcana-March-2026/3c632f5b-bfd2-4fe5-93bd-251d856393f7/",
+            "lastChecked": "2026-04-19",
+            "notes": "Grandmother Willow - Ancient Advisor #1 bestseller. Akood Et Emuti, Stitch - Carefree Snowboarder, Angel - Experiment 624 confirm Amber/Steel dominance. Hiram Flaversham - Toymaker banned. Published Apr 1, 2026."
         }
     ],
+    "banList": {
+        "lastUpdated": "2026-04-01",
+        "banned": [
+            {
+                "name": "Hiram Flaversham - Toymaker",
+                "reason": "Re-banned; previously taken out of Sapphire/Steel and other control shells due to consistent overpowered Fortisphere enabling. Removed from Core Constructed."
+            }
+        ]
+    },
+    "upcomingEvents": {
+        "note": "DLC Indianapolis and DLC Dortmund upcoming — both featuring Infinity format as main event. Wilds Unknown (Set 12, featuring Pixar IPs: The Incredibles, Toy Story, Brave) releasing before these events.",
+        "events": [
+            {
+                "name": "DLC Indianapolis",
+                "format": "Infinity",
+                "status": "upcoming"
+            },
+            {
+                "name": "DLC Dortmund",
+                "format": "Infinity",
+                "status": "upcoming"
+            }
+        ]
+    },
     "dlcEvents": [
         {
             "name": "DLC Richmond",
@@ -31,313 +67,497 @@
             ]
         },
         {
-            "name": "DLC Winterspell Launch Events",
-            "dateRange": "2026-02-13 to 2026-02-28",
+            "name": "DLC Melbourne",
+            "date": "2026-02-22",
             "highlights": [
-                "Winterspell-era Sapphire and Steel lists gained traction",
-                "Tempo shells with efficient 2-4 cost threats increased in representation",
-                "Decks that could pressure early while preserving card advantage performed best"
+                "400+ players; Amber/Emerald Dogs won the event (Dillon LeDuc)",
+                "Amethyst variants dominated top 32 — only 3 non-Amethyst/Dogs decks in top 32",
+                "Grandmother Willow - Ancient Advisor and Nani - Stage Manager debuted as key Winterspell additions to Dogs",
+                "Amethyst/Steel Location archetype emerged (CordedConch, under $50 budget)",
+                "Ruby/Amethyst refueled by Beast's Castle - Winter Gardens",
+                "Emerald/Sapphire placed two copies in top 8"
             ]
         },
         {
-            "name": "DLC March Qualifier Weekend",
-            "dateRange": "2026-03-06 to 2026-03-10",
+            "name": "DLC Ghent + CCS $25,000 Invitational Qualifier",
+            "dateRange": "2026-03-07 to 2026-03-08",
             "highlights": [
-                "Ruby/Steel tempo converted more top-16 finishes than previous month",
-                "Amethyst/Sapphire value shells improved against midrange fields",
-                "Amber/Emerald remained the best punisher for slow mulligans"
+                "Amber/Emerald Dogs: 1st Place both brackets (Zan Syed won overall, undefeated run)",
+                "22 Dogs copies in top cut across both Ghent brackets",
+                "Amber/Steel: 3rd Place DLC Ghent Saturday bracket (Level9001); 1st Place CCS $25k (Schuyler Duntz - Amber Steelsong)",
+                "Amethyst/Sapphire: 2nd Place DLC Ghent Friday bracket ([EC] Aymx)",
+                "Amber/Sapphire Mufasa Control: 13th Place (Ecko Legend) — new emerging archetype",
+                "Angel - Experiment 624 confirmed as key card in Amber/Steel vs aggressive matchups",
+                "Triangle metagame crystallized: Dogs beats Steel, Steel beats Sapphire, Sapphire beats Dogs (roughly)"
             ]
         },
         {
-            "name": "DLC Mid-March Circuit",
-            "dateRange": "2026-03-11 to 2026-03-14",
+            "name": "DLC Taipei",
+            "date": "2026-03-15",
             "highlights": [
-                "Ruby/Steel Winterspell Tempo cemented as the second-best deck behind Emerald/Sapphire Control",
-                "Amethyst/Steel continued as the premier aggro-hate option in the metagame",
-                "Sapphire/Steel Control picked up popularity as a clean answer to Ruby/Steel tempo builds",
-                "Amber/Emerald Dogs showing slight decline as pilots tuned against it more aggressively",
-                "Amethyst/Emerald hyper-aggro spiked a Top 8 at a regional, putting it back on the radar"
+                "Emerald/Sapphire Control won the event (Edmond Chiu, 2-time DLC Champion & World Championship Finalist)",
+                "NOT A SINGLE Dogs deck reached top 4 despite Dogs being most-played archetype",
+                "Amethyst/Sapphire: 2nd Place, featuring Swordplay and Demona - Betrayer of the Clan tech",
+                "Sapphire/Steel rising — 'No Angel' list by LorcanTito BJ featured Jasmine - Steady Strategist",
+                "Ink Geyser + Prince Phillip - Vanquisher of Foes combo confirmed as a key Emerald/Sapphire play vs Dogs",
+                "Under the Sea + Malicious, Mean and Scary cited as the critical pivot in Emerald/Sapphire vs Dogs",
+                "Community rallied post-Ghent to solve the Dogs matchup heading into this event"
+            ]
+        },
+        {
+            "name": "Winterspell Set Championships",
+            "dateRange": "2026-03-20 to 2026-04-13",
+            "highlights": [
+                "Sapphire/Steel: Won a Set Champs (Inkborn Heroes - 'Winterspell Set Champs' list)",
+                "Amethyst/Emerald: Won a Set Champs (Inkborn Heroes - hyper-aggro variant)",
+                "Amber/Steel (Steelsong): Won a Set Champs (GinaHolger - 'Set champ winner. Steelsong, with spice')",
+                "Amber/Ruby: 1st Place Set Champs - Black Dragon Games (Okan92)",
+                "Amethyst/Steel (P/S/L Spice): 1st Place Set Champs (LoL_Sean L.A.B.)",
+                "Amethyst/Ruby Control: Won a Set Champs (Camp Quest)",
+                "Format diversifying — multiple color combinations winning high-level events",
+                "Amber/Ruby gaining traction as a Dogs-counter and off-meta threat"
             ]
         }
     ],
     "topDecks": [
         {
+            "name": "Amber/Emerald Dogs",
+            "tier": "S",
+            "colors": [
+                "Amber",
+                "Emerald"
+            ],
+            "archetype": "Aggro",
+            "winRate": "~27%",
+            "description": "The deck to beat. Won DLC Ghent (both brackets), placed 22 copies in top cut. Winterspell additions Grandmother Willow and Nani - Stage Manager turbocharge the already fast game plan. Under the Sea enables explosive cost reduction turns.",
+            "keyCards": [
+                "Lady - Decisive Dog",
+                "Tramp - Enterprising Dog",
+                "Tramp - Street-Smart Dog",
+                "Grandmother Willow - Ancient Advisor",
+                "Nani - Stage Manager",
+                "Emerald Chromicon",
+                "Lady - Miss Park Avenue",
+                "Lilo - Escape Artist",
+                "Ursula - Deceiver",
+                "Mowgli - Man Cub",
+                "Under the Sea",
+                "Mickey Mouse - Amber Champion",
+                "Della's Moon Lullaby",
+                "Rhino - One-Sixteenth Wolf",
+                "Finnick - Tiny Terror"
+            ],
+            "gameplan": "Flood board turns 1-3 with cheap dogs. Use Grandmother Willow to dump hand and cheat Tramp - Street-Smart Dog on turn 3. Generate lore with Tramp synergies, use Under the Sea to close with a singer discount. Lady - Miss Park Avenue and Emerald Chromicon refuel, Ursula/Mowgli strip opponent answers.",
+            "strengths": [
+                "Explosive turn 3-4 closes",
+                "Card advantage through synergies",
+                "Hard to interact with due to cost reduction",
+                "Many redundant win conditions"
+            ],
+            "weaknesses": [
+                "Weak to Amber/Steel (Angel - Experiment 624 hard counters)",
+                "Vulnerable to well-timed board sweeps",
+                "Amethyst/Steel has favored matchup"
+            ],
+            "mulligan": "Keep Grandmother Willow, any 1-2 cost dogs, or Tramp - Enterprising Dog. Mulligan all hands without a turn-1 or turn-2 play."
+        },
+        {
+            "name": "Amethyst/Sapphire Control",
+            "tier": "S",
+            "colors": [
+                "Amethyst",
+                "Sapphire"
+            ],
+            "archetype": "Midrange/Control",
+            "winRate": "~23%",
+            "description": "Highest raw power in a vacuum. Tipo + Sail ramp into Genie - Wish Fulfilled, Dumbo, Demona, and Hades. Now features Swordplay for extra +3 challenge math vs Dogs, and Demona - Betrayer of the Clan as a 4-of for stability.",
+            "keyCards": [
+                "Tipo - Growing Son",
+                "Sail the Azurite Sea",
+                "Genie - Wish Fulfilled",
+                "Dumbo - Ninth Wonder of the Universe",
+                "Demona - Scourge of the Wyvern Clan",
+                "Demona - Betrayer of the Clan",
+                "Hades - Infernal Schemer",
+                "Into the Unknown",
+                "Belle - Accomplished Mystic",
+                "Cheshire Cat - Inexplicable",
+                "Let it Go",
+                "Swordplay",
+                "Junior Woodchuck Guidebook",
+                "Elsa - The Fifth Spirit",
+                "Rafiki - Mystical Fighter"
+            ],
+            "gameplan": "Turn 1-2: Ramp with Tipo/Sail. Turn 3-5: Chain Genie/Dumbo card advantage. Turn 4+: Deploy Demona for stats + stabilize. Turn 6+: Hades, Into the Unknown, and finishers close the door.",
+            "strengths": [
+                "Highest card quality in format",
+                "Multiple card advantage engines",
+                "Flexible removal suite (Let it Go, Hades, Into the Unknown)",
+                "Almost no hard dead draws"
+            ],
+            "weaknesses": [
+                "Slightly soft to Dogs pre-stabilization (Under the Sea takes key pieces)",
+                "Mirror match skill-intensive",
+                "Requires careful ink management"
+            ],
+            "mulligan": "Keep Tipo or Sail the Azurite Sea. Any hand with a turn-2 ramp piece and a follow-up is keepable."
+        },
+        {
             "name": "Emerald/Sapphire Control",
             "tier": "S",
-            "colors": ["Emerald", "Sapphire"],
+            "colors": [
+                "Emerald",
+                "Sapphire"
+            ],
             "archetype": "Control/Ramp",
-            "winRate": "~26%",
-            "description": "The deck to beat. Accelerates ink, draws cards, then slams haymakers.",
+            "winRate": "~22%",
+            "description": "Won DLC Taipei (Edmond Chiu). Accelerates ink, draws cards with Clarabelle, then slams haymakers. The Under the Sea + Malicious, Mean and Scary pivot vs Dogs — combined with Ink Geyser after a shifted Prince Phillip — is the key adaptation from Winterspell.",
             "keyCards": [
                 "Tipo - Growing Son",
                 "Sail the Azurite Sea",
                 "Clarabelle - Light on Her Hooves",
                 "Basil - Undercover Detective",
                 "Prince Phillip - Vanquisher of Foes",
-                "Malicious Mean and Scary"
+                "Malicious Mean and Scary",
+                "John Silver - Alien Pirate",
+                "Under the Sea",
+                "Ink Geyser",
+                "Develop Your Brain",
+                "Visions of the Future",
+                "Pete - Ghost of Christmas Past"
             ],
-            "gameplan": "Turn 1-2: Ramp with Tipo/Sail. Turn 3: Clarabelle for card flow. Turn 5+: Removal + big finishers.",
-            "strengths": ["Card advantage", "Late game power", "Flexible answers"],
-            "weaknesses": ["Vulnerable early", "Fast aggro can steal games", "Hand disruption hurts"],
-            "mulligan": "Keep Tipo, Sail the Azurite Sea, or Donald Duck - Perfect Gentleman. Mulligan all hands with no turn-1 or turn-2 play."
-        },
-        {
-            "name": "Ruby/Steel Winterspell Tempo",
-            "tier": "A",
-            "colors": ["Ruby", "Steel"],
-            "archetype": "Tempo/Midrange",
-            "winRate": "~19%",
-            "description": "Currently the strongest aggro-tempo deck. Efficient pressure with removal backup.",
-            "keyCards": [
-                "Darkwing Duck - Dashing Gadgeteer",
-                "Launchpad - Trusty Sidekick",
-                "Strength of a Raging Fire",
-                "Winterspell",
-                "Calhoun - Bold Knight"
+            "gameplan": "Turn 1-2: Ramp with Tipo/Sail. Turn 3: Clarabelle or tempo piece. Turn 4+: John Silver to deny lore then under the sea sweep. Turn 5+: Prince Phillip shifted in + Ink Geyser for full lock.",
+            "strengths": [
+                "Card advantage engine with Clarabelle",
+                "Late game inevitability",
+                "Under the Sea + Prince Phillip package beats Dogs",
+                "Ink Geyser post-shift is backbreaking"
             ],
-            "gameplan": "Turn 1-2: Cheap threats. Turn 3-4: Pressure + Winterspell interaction. Turn 5+: Finish with burn or evasion.",
-            "strengths": ["Consistent curve", "Removal + threats combo", "Beats slower control"],
-            "weaknesses": ["Loses to Sapphire/Steel", "Struggles vs wide boards", "Burns out in long games"],
-            "mulligan": "Keep any 2-cost threat + Strength of a Raging Fire. Mulligan slow hands with no plays until turn 3."
+            "weaknesses": [
+                "Vulnerable early if ramp is disrupted",
+                "Slightly weaker mirror into Amethyst/Sapphire",
+                "Set up turns are critical"
+            ],
+            "mulligan": "Keep Tipo, Sail the Azurite Sea, or John Silver. Must have a turn-2 play."
         },
         {
-            "name": "Amethyst/Sapphire Value",
-            "tier": "A",
-            "colors": ["Amethyst", "Sapphire"],
-            "archetype": "Midrange/Control",
-            "winRate": "~16%",
-            "description": "Strong card flow and resilient curve into late-game finishers.",
-            "keyCards": [
-                "Demona - Scourge of Clan Wyvern",
-                "Hades - Infernal Schemer",
-                "Into the Unknown",
-                "Junior Woodchuck Guidebook"
-            ]
-        },
-        {
-            "name": "Amber/Emerald Dogs",
+            "name": "Amber/Steel",
             "tier": "A",
             "colors": [
                 "Amber",
-                "Emerald"
+                "Steel"
             ],
-            "archetype": "Aggro",
-            "winRate": "~14%",
-            "description": "Fast proactive lines continue to punish slow setups.",
+            "archetype": "Aggro/Tempo",
+            "winRate": "~18%",
+            "description": "Emerged at DLC Ghent as a Dogs counter and won the CCS $25k Invitational Qualifier. Two variants: Steelsong (Ariel - Ethereal Voice engine) and Goliath-focus (Goliath - Clan Leader). Angel - Experiment 624 is a hard counter to Dogs, and Akood Et Emuti enables explosive early shifts.",
             "keyCards": [
-                "Lady - Decisive Dog",
-                "Tramp - Enterprising Dog",
-                "Tramp - Street-Smart Dog",
-                "Bobby Zimuruski - Spray Cheese Kid",
-                "Under the Sea"
+                "Angel - Experiment 624",
+                "Angel - Siren Singer",
+                "Goliath - Clan Leader",
+                "Stitch - Carefree Snowboarder",
+                "Nani - Stage Manager",
+                "Doc - Bold Knight",
+                "Rhino - Power Hamster",
+                "Grandmother Willow - Ancient Advisor",
+                "Akood Et Emuti",
+                "Chief Powhatan - Protective Leader",
+                "Lilo - Bundled Up",
+                "Cinderella - Dream Come True"
             ],
-            "gameplan": "Flood board with cheap dogs turns 1-3, generate lore with Tramp, close before control stabilizes.",
-            "strengths": ["Very fast", "Punishes slow mulligans", "Budget-friendly"],
-            "weaknesses": ["Weak to Amethyst/Steel", "Runs out of gas", "Board wipes are devastating"],
-            "mulligan": "Keep any 1-2 cost dogs. Mulligan hands with no turn-1 play."
+            "gameplan": "Turn 2: Angel - Experiment 624 via Akood Et Emuti / Angel - Siren Singer. Angel discards and removes cheap Dogs threats. Grandmother Willow dodges Under the Sea for key threats. Goliath counters Clarabelle; mid-game threats recoup hand with Nani/Doc.",
+            "strengths": [
+                "Angel - Experiment 624 hard-counters Dogs",
+                "Ignores Under the Sea via Grandmother Willow",
+                "Goliath disrupts Clarabelle card advantage",
+                "Good threat density at multiple curve points"
+            ],
+            "weaknesses": [
+                "Weaker in Amethyst-heavy fields",
+                "Less resilient without Angel on board",
+                "Runs out of gas in very long games"
+            ],
+            "mulligan": "Keep Angel - Siren Singer or Cinderella - Dream Come True. Ideal: Singer/Cinderella + Akood Et Emuti for turn-2 Angel."
         },
         {
             "name": "Amethyst/Steel Midrange",
             "tier": "A",
-            "colors": ["Amethyst", "Steel"],
+            "colors": [
+                "Amethyst",
+                "Steel"
+            ],
             "archetype": "Midrange",
-            "winRate": "~13%",
-            "description": "Best positioned against aggro. Strong removal suite and consistent curve.",
+            "winRate": "~15%",
+            "description": "Best positioned against aggro. Strong removal suite and consistent curve. Two sub-variants: traditional midrange and location-based aggro (Fairy Ship, Castle Wyvern). Genie - Magical Researcher and Sven - Leaping Reindeer as new Winterspell additions.",
             "keyCards": [
-                "Calhoun - Bold Knight",
+                "Calhoun - Marine Sergeant",
                 "Captain Hook - Forceful Duelist",
                 "Strength of a Raging Fire",
                 "Doc - Bold Knight",
-                "Giant Cobra - Ghostly Serpent"
+                "Giant Cobra - Ghostly Serpent",
+                "Genie - Magical Researcher",
+                "Sven - Leaping Reindeer",
+                "Pocahontas - Following the Wind",
+                "Violet Sabrewing - Senior Junior Woodchuck"
             ],
-            "gameplan": "Curve out 1-2-3-4, use Strength of a Raging Fire to stabilize, generate value with Doc/Yzma/Dumbo.",
-            "strengths": ["Crushes Amber/Emerald", "Consistent curve", "Good removal"],
-            "weaknesses": ["Loses to Amethyst/Sapphire", "No late-game haymakers", "Clarabelle hurts"],
+            "gameplan": "Curve out 1-2-3-4, use Strength of a Raging Fire to stabilize against aggro, generate value with Doc/Genie. Giant Cobra provides late reach. Genie - Magical Researcher wins slow games.",
+            "strengths": [
+                "Crushes Amber/Emerald Dogs",
+                "Consistent removal curve",
+                "Genie - Magical Researcher wins attrition"
+            ],
+            "weaknesses": [
+                "Loses to Amethyst/Sapphire card advantage engine",
+                "Slower to establish than Amber/Steel vs aggro",
+                "Clarabelle is hard to answer"
+            ],
             "mulligan": "Keep cheap creatures or Calhoun/Captain Hook. Ideal: 1-drop, 2-drop, removal."
         },
         {
-            "name": "Amber/Amethyst Lantern",
-            "tier": "B",
-            "colors": ["Amber", "Amethyst"],
-            "archetype": "Midrange",
-            "winRate": "~11%",
-            "description": "Off-meta breakout. Uses Lantern for acceleration and Amber tools for targeted removal.",
-            "keyCards": [
-                "Lantern",
-                "The Horseman Strikes!",
-                "Mowgli - Man Cub",
-                "World's Greatest Criminal Mind",
-                "Eilonwy - Princess of Llyr"
+            "name": "Sapphire/Steel",
+            "tier": "A",
+            "colors": [
+                "Sapphire",
+                "Steel"
             ],
-            "gameplan": "Accelerate with Lantern, use targeted removal, deploy Amethyst threats with Amber tempo.",
-            "strengths": ["Flexible", "Good removal", "Unexpected game plans"],
-            "weaknesses": ["Slower than pure Emerald", "Lantern-dependent", "Can stumble without Lantern"],
-            "mulligan": "Keep Lantern, early characters, or removal. Mulligan for a Lantern if absent."
+            "archetype": "Midrange/Control",
+            "winRate": "~14%",
+            "description": "Rising archetype — won a Winterspell Set Champs. Uses Tipo/Sail ramp into Doc - Bold Knight and Goliath - Clan Leader for card recovery. Jasmine - Steady Strategist (enabled by Pete - Ghost of Christmas Past) provides consistent 4-cost targets. Strength of a Raging Fire and He Hurled His Thunderbolt handle board pressure.",
+            "keyCards": [
+                "Tipo - Growing Son",
+                "Sail the Azurite Sea",
+                "Doc - Bold Knight",
+                "Goliath - Clan Leader",
+                "Jasmine - Steady Strategist",
+                "Pete - Ghost of Christmas Past",
+                "Vincenzo Santorini - The Explosives Expert",
+                "Tinker Bell - Giant Fairy",
+                "Strength of a Raging Fire",
+                "He Hurled His Thunderbolt"
+            ],
+            "gameplan": "Ramp with Tipo/Sail. Turn 3: Pete or Jasmine as blocker/singer. Turn 4+: Shift Jasmine into He Hurled His Thunderbolt. Goliath counters Clarabelle. Close with Vincenzo/Tinker Bell.",
+            "strengths": [
+                "Goliath disrupts Clarabelle-based decks",
+                "Jasmine is removal-resistant",
+                "Strong top end threats",
+                "Good removal depth"
+            ],
+            "weaknesses": [
+                "Slightly slower than Emerald/Sapphire",
+                "Fewer answers to Dogs early curve than Amber/Steel",
+                "Less raw card advantage than Amethyst lines"
+            ],
+            "mulligan": "Keep early blockers + Tipo or Sail. Ideal: Ramp piece + Pete or Jasmine."
         },
         {
-            "name": "Sapphire/Steel Control",
+            "name": "Amber/Sapphire Mufasa Control",
             "tier": "B",
-            "colors": ["Sapphire", "Steel"],
-            "archetype": "Control",
+            "colors": [
+                "Amber",
+                "Sapphire"
+            ],
+            "archetype": "Control/Midrange",
             "winRate": "~10%",
-            "description": "Stabilization-heavy shell that performs well into creature-centric fields. Rising in popularity as a Ruby/Steel counter.",
+            "description": "Emerging archetype that turned heads at DLC Ghent (top 16). Features Mufasa - Ruler of Pride Rock as a dominant threat alongside Ohana Means Family for burst card draw. Nakoma - Waiting Out the Storm as a resilient midgame blocker. Won a Set Champs (Princess Power! variant).",
             "keyCards": [
-                "Basil - Undercover Detective",
-                "Clarabelle - Light on Her Hooves",
-                "Giant Cobra - Ghostly Serpent",
-                "Winterspell",
-                "Calhoun - Bold Knight"
+                "Mufasa - Ruler of Pride Rock",
+                "Nakoma - Waiting Out the Storm",
+                "Scuttle - Birdbrained",
+                "Hades - Infernal Schemer",
+                "Stitch - Carefree Surfer",
+                "Ohana Means Family",
+                "Raging Storm",
+                "Belle - Snowfield Strategist"
             ],
-            "gameplan": "Establish defensive bodies early, answer threats with Steel removal, close game with Sapphire card advantage and finishers.",
-            "strengths": ["Clean answers to Ruby/Steel", "Good in creature-heavy metas", "Card advantage engine"],
-            "weaknesses": ["Slower than Emerald/Sapphire", "Fewer ramp options", "Loses to fast aggro"],
-            "mulligan": "Keep early blockers + Basil or Clarabelle. Mulligan hands with no defensive plays."
+            "gameplan": "Midgame: Deploy Nakoma to threaten and contest anything the opponent has played. Pivot into Mufasa to dominate the board with stats. Ohana Means Family for burst draw. Scuttle/Stitch quest while Mufasa wins challenges.",
+            "strengths": [
+                "Mufasa dominates board when unchecked",
+                "Nakoma is hard to remove efficiently",
+                "Ohana Means Family generates game-winning card advantage",
+                "Unexpected game plans confuse opponents"
+            ],
+            "weaknesses": [
+                "Dogs can go under it if Nakoma doesn't arrive on time",
+                "Less consistent than dedicated Sapphire ramp decks",
+                "Still being refined"
+            ],
+            "mulligan": "Keep Nakoma, any early tempo piece, Hades. Ideal: Turn-3 Nakoma + follow-up plan."
         },
         {
-            "name": "Amethyst/Emerald Aggro",
+            "name": "Amber/Ruby Boost Control",
             "tier": "B",
-            "colors": ["Amethyst", "Emerald"],
+            "colors": [
+                "Amber",
+                "Ruby"
+            ],
+            "archetype": "Control/Midrange",
+            "winRate": "~9%",
+            "description": "Off-meta success — won a Set Champs (Black Dragon Games). Raging Storm provides no-questions-asked board reset. Works around the Dogs and Sapphire triangle with flexible removal and midrange threats. Lilo - Escape Artist and Rampking-style combo lines.",
+            "keyCards": [
+                "Raging Storm",
+                "Lilo - Escape Artist",
+                "Amber Champion threats",
+                "Ruby tempo engine"
+            ],
+            "gameplan": "Control early board with Ruby tempo, deploy midrange threats, Raging Storm when behind. Close with Amber card advantage engines.",
+            "strengths": [
+                "Raging Storm is a clean answer to Dogs flood",
+                "Unexpected deck — opponents rarely know the lines",
+                "Flexible removal suite"
+            ],
+            "weaknesses": [
+                "Less powerful than top meta decks in fair fights",
+                "Inconsistent without Raging Storm",
+                "Slower tempo than dedicated aggro"
+            ],
+            "mulligan": "Keep early Ruby plays + any removal. Raging Storm is the most important singleton to find."
+        },
+        {
+            "name": "Amethyst/Emerald Hyper Aggro",
+            "tier": "B",
+            "colors": [
+                "Amethyst",
+                "Emerald"
+            ],
             "archetype": "Aggro",
             "winRate": "~8%",
-            "description": "Hyper-aggro. 28 one-cost characters, closes with Enigmatic Inkcaster. Spiked a Top 8 at a March regional.",
+            "description": "Won a Winterspell Set Champs. 28+ one-cost characters, closes with Enigmatic Inkcaster. Extremely fast but fragile. Amethyst Chromicon fuels refill. Mulan burn variant also active.",
             "keyCards": [
                 "Enigmatic Inkcaster",
                 "Amethyst Chromicon",
                 "Show Me More!",
                 "They Never Come Back",
-                "Wisdom The White Rose - Jewel of the Garden"
+                "The White Rose - Jewel of the Garden"
             ],
             "gameplan": "Flood with 1-cost creatures every turn, trigger Enigmatic Inkcaster twice, close with lore generation before opponent stabilizes.",
-            "strengths": ["Ultra fast", "Extremely cheap", "Beats most Sapphire decks"],
-            "weaknesses": ["Destroyed by Amethyst/Steel", "Runs out of gas", "No plan B"],
+            "strengths": [
+                "Ultra fast",
+                "Beats most Sapphire ramp decks",
+                "Won a Set Champs"
+            ],
+            "weaknesses": [
+                "Destroyed by Amethyst/Steel",
+                "No plan B if Inkcaster is removed",
+                "Dogs can race it"
+            ],
             "mulligan": "Keep any 1-cost creatures, mulligan everything else."
+        },
+        {
+            "name": "Amethyst/Ruby Control",
+            "tier": "B",
+            "colors": [
+                "Amethyst",
+                "Ruby"
+            ],
+            "archetype": "Control/Midrange",
+            "winRate": "~8%",
+            "description": "Won a Winterspell Set Champs. Diablo - Watchful Raven and Peter Pan - High Flyer provide aggressive evasive threats. Beast's Castle - Winter Gardens as a powerful new location that doubles lore and protects characters.",
+            "keyCards": [
+                "Diablo - Watchful Raven",
+                "Peter Pan - High Flyer",
+                "Beast's Castle - Winter Gardens",
+                "Hercules - Mighty Leader",
+                "Beast - Snowfield Troublemaker",
+                "Lumiere - Fiery Friend"
+            ],
+            "gameplan": "Establish Beast's Castle early, deploy evasive threats that challenge freely while generating lore. Diablo into Beast's Castle turns any challenge into free lore gains.",
+            "strengths": [
+                "Diablo + Beast's Castle is unfair",
+                "Resists taking damage when challenging",
+                "Unexpected in most metas"
+            ],
+            "weaknesses": [
+                "Location-heavy strategy loses to targeted removal",
+                "Slower setup than pure aggro",
+                "Weaker in no-location metas"
+            ],
+            "mulligan": "Keep Beast's Castle and any 2-drop. Ideal: Location + evasive threat."
         }
     ],
     "playTips": [
-        "Ruby/Steel Winterspell Tempo is now the second most-converted deck — build to beat it",
-        "Expect Emerald/Sapphire Control at every top table; plan ink acceleration countermeasures",
-        "Winterspell-era tempo lists reward tight curve and efficient interaction in turns 2-4",
-        "Prioritize flexible removal that answers both early aggro and late finishers",
-        "Card advantage engines still define top-table mirror matches",
-        "Amethyst/Steel is the go-to aggro punisher — expect opponents to run it against dog strategies",
-        "Sapphire/Steel Control is rising as a Ruby/Steel counter; adapt tempo plans accordingly",
-        "Amethyst/Emerald hyper-aggro spiked a Top 8 this week — have a plan against 1-cost flooding"
+        "Amber/Emerald Dogs is public enemy #1 — know how to beat it or play it yourself",
+        "Emerald/Sapphire wins by mastering the Under the Sea + Malicious, Mean and Scary pivot against Dogs — don't skip that line",
+        "Amber/Steel's Angel - Experiment 624 is the hardest counter to Dogs; consider it in any Steel shell",
+        "Akood Et Emuti enables turn-2 4-drops or 3-drops; sequence your singers carefully for this effect",
+        "Grandmother Willow - Ancient Advisor enables characters to dodge Under the Sea — sequence her before key threats",
+        "Sapphire/Steel is underrated and rising — Jasmine - Steady Strategist on turn 2 via ramp is undervalued",
+        "Amethyst/Sapphire is still the most powerful deck in a vacuum but Dogs was adapted around at Taipei — the meta shifts are ongoing",
+        "Set Championship season has diversified the format — Amber/Ruby, Sapphire/Steel, and Amethyst/Ruby now all win high-level events",
+        "Hiram Flaversham - Toymaker is banned — update all Steel decks that relied on Fortisphere enabling",
+        "Wilds Unknown (Set 12, Pixar) expected before DLC Indianapolis/Dortmund — format may shift dramatically with Incredibles/Toy Story cards"
     ],
     "metaPairings": [
         {
             "deck": "Emerald/Sapphire Control",
             "against": "Amber/Emerald Dogs",
-            "assessment": "Slightly unfavored pre-stabilization, favored post-turn 5",
-            "winRate": "~48%",
-            "plan": "Mulligan for Tipo/Sail plus early interaction; stabilize before wide lore turns. Key: don't let Tramp - Street-Smart Dog snowball."
+            "assessment": "Even to slightly favored post-Taipei tech",
+            "winRate": "~51%",
+            "plan": "Mulligan for Tipo/Sail + John Silver. Look for Under the Sea + Malicious, Mean and Scary pivot. Ink Geyser after a shifted Prince Phillip - Vanquisher of Foes is usually a win."
         },
         {
             "deck": "Emerald/Sapphire Control",
-            "against": "Ruby/Steel Winterspell Tempo",
-            "assessment": "Unfavored",
-            "winRate": "~44%",
-            "plan": "Respect tempo pivots turns 3-4 and preserve removal for evasive threats. Hold Clarabelle safe until tempo is neutralized."
-        },
-        {
-            "deck": "Emerald/Sapphire Control",
-            "against": "Amethyst/Steel Midrange",
-            "assessment": "Favored",
-            "winRate": "~58%",
-            "plan": "Ramp through their removal windows; Clarabelle outvalue their midrange threats in long games."
-        },
-        {
-            "deck": "Emerald/Sapphire Control",
-            "against": "Amethyst/Sapphire Value",
-            "assessment": "Slightly favored",
-            "winRate": "~54%",
-            "plan": "Prioritize ramp efficiency; both decks want long games — having more ink acceleration wins."
-        },
-        {
-            "deck": "Ruby/Steel Winterspell Tempo",
-            "against": "Emerald/Sapphire Control",
-            "assessment": "Favored",
-            "winRate": "~56%",
-            "plan": "Apply pressure turns 2-3 before ramp comes online. Hold Winterspell removal for Tipo/Clarabelle."
-        },
-        {
-            "deck": "Ruby/Steel Winterspell Tempo",
-            "against": "Amethyst/Sapphire Value",
-            "assessment": "Slightly favored",
-            "winRate": "~53%",
-            "plan": "Pressure their ramp turns and hold burn for card-engine characters."
-        },
-        {
-            "deck": "Ruby/Steel Winterspell Tempo",
-            "against": "Sapphire/Steel Control",
-            "assessment": "Unfavored",
-            "winRate": "~43%",
-            "plan": "Overcommit on pressure before they establish defensive bodies. Avoid running into Winterspell blowouts."
-        },
-        {
-            "deck": "Ruby/Steel Winterspell Tempo",
-            "against": "Amber/Emerald Dogs",
-            "assessment": "Favored",
-            "winRate": "~60%",
-            "plan": "Your removal package outpaces their flooding strategy. Sequence removal on lore-burst threats."
+            "against": "Amethyst/Sapphire Control",
+            "assessment": "Slightly unfavored",
+            "winRate": "~46%",
+            "plan": "Prioritize ramp leads and don't let their Demona - Betrayer of the Clan snowball. Clarabelle needs to fire before their Demona turns."
         },
         {
             "deck": "Amber/Emerald Dogs",
-            "against": "Emerald/Sapphire Control",
-            "assessment": "Favored game 1",
-            "winRate": "~55%",
-            "plan": "Force awkward removal with wide starts and close before board resets. Be wary of Clarabelle stabilization."
+            "against": "Amber/Steel",
+            "assessment": "Unfavored",
+            "winRate": "~40%",
+            "plan": "Force Angel - Experiment 624 off board early. Use Mowgli - Man Cub to strip Angel or cost pieces to prevent her landing. Grandmother Willow shrinks opponent's hand so they cannot reload Angel."
         },
         {
             "deck": "Amber/Emerald Dogs",
             "against": "Amethyst/Steel Midrange",
             "assessment": "Unfavored",
             "winRate": "~42%",
-            "plan": "Sequence threats to bait removal before deploying lore-burst pieces. Avoid wide boards into Strength of a Raging Fire."
+            "plan": "Sequence threats to bait removal before deploying Tramp - Street-Smart Dog and Under the Sea turns. Avoid wide boards into Strength of a Raging Fire."
+        },
+        {
+            "deck": "Amber/Steel",
+            "against": "Amber/Emerald Dogs",
+            "assessment": "Favored",
+            "winRate": "~60%",
+            "plan": "Turn-2 Angel - Experiment 624 via Akood Et Emuti or Angel - Siren Singer. Use Angel to systematically discard and remove cheap dogs. Grandmother Willow lets key threats dodge Under the Sea."
+        },
+        {
+            "deck": "Amber/Steel",
+            "against": "Emerald/Sapphire Control",
+            "assessment": "Slightly favored",
+            "winRate": "~54%",
+            "plan": "Apply pressure before Clarabelle. Goliath - Clan Leader ruins any profitable Clarabelle activation. Dodge Under the Sea with Grandmother Willow on key threats."
+        },
+        {
+            "deck": "Amethyst/Sapphire Control",
+            "against": "Amber/Emerald Dogs",
+            "assessment": "Even to slightly unfavored",
+            "winRate": "~49%",
+            "plan": "Include Swordplay for +3 challenge math. Run Demona - Betrayer of the Clan as 4-of. Limit Genie - Wish Fulfilled copies to reduce Under the Sea blowout potential. Isis Vanderchill can be played to exert key bodies and buy time."
+        },
+        {
+            "deck": "Sapphire/Steel",
+            "against": "Amber/Emerald Dogs",
+            "assessment": "Slightly unfavored",
+            "winRate": "~47%",
+            "plan": "Goliath - Clan Leader is the key: deny Dogs' card advantage engine. Jasmine - Steady Strategist dodges He Hurled His Thunderbolt. Sequence removal efficiently on lore-burst threats."
         },
         {
             "deck": "Amethyst/Steel Midrange",
             "against": "Amber/Emerald Dogs",
             "assessment": "Favored",
             "winRate": "~58%",
-            "plan": "Trade aggressively early and convert with mid-cost value engines. Keep removal for Tramp - Street-Smart Dog."
+            "plan": "Trade aggressively early and stack removal. Keep Strength of a Raging Fire for Tramp - Street-Smart Dog or wide boards. Genie - Magical Researcher wins any long game."
         },
         {
-            "deck": "Amethyst/Steel Midrange",
-            "against": "Amethyst/Sapphire Value",
-            "assessment": "Unfavored",
-            "winRate": "~44%",
-            "plan": "Contest their early ramp with removal; if they hit Clarabelle + Demona, you likely lose the long game."
-        },
-        {
-            "deck": "Amethyst/Sapphire Value",
-            "against": "Amethyst/Steel Midrange",
-            "assessment": "Favored",
-            "winRate": "~56%",
-            "plan": "Ramp proactively, then sequence two-for-one plays to win the long game. Demona punishes their value."
-        },
-        {
-            "deck": "Amethyst/Sapphire Value",
-            "against": "Ruby/Steel Winterspell Tempo",
-            "assessment": "Slightly unfavored",
-            "winRate": "~47%",
-            "plan": "Contest early tempo with cheap blockers; preserve Basil/Demona until board is stabilized."
-        },
-        {
-            "deck": "Sapphire/Steel Control",
-            "against": "Ruby/Steel Winterspell Tempo",
-            "assessment": "Favored",
-            "winRate": "~57%",
-            "plan": "Establish early blockers and deny their board stickiness. Giant Cobra and Winterspell punish overextension."
-        },
-        {
-            "deck": "Amethyst/Emerald Aggro",
+            "deck": "Amethyst/Emerald Hyper Aggro",
             "against": "Emerald/Sapphire Control",
             "assessment": "Favored",
             "winRate": "~62%",
             "plan": "Race to lore 20 before their stabilization lands. Turn 5 close-out is required — if you don't win by then, you likely lose."
         },
         {
-            "deck": "Amethyst/Emerald Aggro",
+            "deck": "Amethyst/Emerald Hyper Aggro",
             "against": "Amethyst/Steel Midrange",
             "assessment": "Strongly unfavored",
             "winRate": "~30%",
@@ -346,68 +566,85 @@
     ],
     "comboPackages": [
         {
-            "name": "Ink Ramp Into Clarabelle Engine",
+            "name": "Ink Geyser + Prince Phillip Lock",
             "archetype": "Emerald/Sapphire Control",
             "cards": [
-                "Tipo - Growing Son",
-                "Sail the Azurite Sea",
-                "Clarabelle - Light on Her Hooves",
-                "Basil - Undercover Detective"
+                "Prince Phillip - Vanquisher of Foes",
+                "Ink Geyser",
+                "Under the Sea",
+                "Malicious Mean and Scary"
             ],
-            "whyItMatters": "Converts early ink acceleration into sustained card advantage and inevitability.",
-            "counterplay": "Disrupt ramp pieces early and pressure lore before Clarabelle turns stabilize the game."
+            "whyItMatters": "Shift Prince Phillip then cast Ink Geyser to deplete opponent's ink. Combined with a board sweep, this usually ends the game. The key Dogs-beating sequence confirmed at DLC Taipei.",
+            "counterplay": "Counter by preventing Prince Phillip from shifting or keeping enough ink to respond. Some Dog lists run Mowgli to strip the Ink Geyser from hand."
         },
         {
-            "name": "Winterspell Tempo Pressure Loop",
-            "archetype": "Ruby/Steel Winterspell Tempo",
-            "cards": [
-                "Darkwing Duck - Dashing Gadgeteer",
-                "Launchpad - Trusty Sidekick",
-                "Strength of a Raging Fire",
-                "Winterspell"
-            ],
-            "whyItMatters": "Creates repeated tempo swings by pairing efficient pressure with removal windows.",
-            "counterplay": "Deny board stickiness with cheap removal and avoid exposing key threats into open burn turns."
-        },
-        {
-            "name": "Street-Smart Dog Lore Burst",
+            "name": "Grandmother Willow Into Under the Sea",
             "archetype": "Amber/Emerald Dogs",
             "cards": [
-                "Lady - Decisive Dog",
-                "Tramp - Enterprising Dog",
+                "Grandmother Willow - Ancient Advisor",
                 "Tramp - Street-Smart Dog",
-                "Bobby Zimuruski - Spray Cheese Kid"
+                "Under the Sea",
+                "Mickey Mouse - Amber Champion",
+                "Lilo - Escape Artist"
             ],
-            "whyItMatters": "Stacks low-cost dog synergies for rapid lore acceleration before control decks recover.",
-            "counterplay": "Prioritize challenge math and sequence removal on Tramp payoff turns."
+            "whyItMatters": "Turn 3 Grandmother Willow dumps hand perfectly, enables consistent Turn 3 Tramp - Street-Smart Dog and finds Lilo - Escape Artist for Under the Sea. Rhino - One-Sixteenth Wolf shrinks targets into Under the Sea range.",
+            "counterplay": "Destroy Grandmother Willow immediately. Without her the deck loses its consistency engine. Cards that discard (Mowgli, Ursula - Deceiver) can strip Under the Sea before it fires."
+        },
+        {
+            "name": "Akood Et Emuti Shift Engine",
+            "archetype": "Amber/Steel",
+            "cards": [
+                "Akood Et Emuti",
+                "Angel - Siren Singer",
+                "Cinderella - Ballroom Sensation",
+                "Angel - Experiment 624",
+                "Stitch - Carefree Snowboarder"
+            ],
+            "whyItMatters": "Sing Akood Et Emuti on turn 2 via Cinderella or Angel - Siren Singer. Enables turn-2 Angel - Experiment 624 or turn-3 Stitch - Carefree Snowboarder. Dramatically accelerates tempo in the early game.",
+            "counterplay": "Deny the singers before Akood Et Emuti resolves. Once Angel - Experiment 624 lands on turn 2, it is very hard to remove efficiently."
         },
         {
             "name": "Guidebook Value Chain",
-            "archetype": "Amethyst/Sapphire Value",
+            "archetype": "Amethyst/Sapphire Control",
             "cards": [
                 "Junior Woodchuck Guidebook",
-                "Basil - Practiced Detective",
-                "Demona - Scourge of Clan Wyvern",
-                "Into the Unknown"
+                "Genie - Wish Fulfilled",
+                "Dumbo - Ninth Wonder of the Universe",
+                "Demona - Betrayer of the Clan",
+                "Hades - Infernal Schemer"
             ],
-            "whyItMatters": "Maintains card flow while deploying resilient midgame threats.",
-            "counterplay": "Pressure their setup turns and remove repeat value bodies on sight."
+            "whyItMatters": "Maintains card flow while deploying resilient midgame threats. Demona - Betrayer of the Clan now run as a 4-of for maximum Dogs resistance.",
+            "counterplay": "Pressure their setup turns. Under the Sea on Genie/Dumbo is crippling. Mowgli strips Guidebook from hand."
+        },
+        {
+            "name": "Beast's Castle Diablo Engine",
+            "archetype": "Amethyst/Ruby Control",
+            "cards": [
+                "Beast's Castle - Winter Gardens",
+                "Diablo - Watchful Raven",
+                "Diablo - Obedient Raven",
+                "Hercules - Mighty Leader",
+                "Beast - Snowfield Troublemaker"
+            ],
+            "whyItMatters": "Beast's Castle enables characters to quest AND challenge without choosing. Diablo into Beast's Castle turns any challenge into free lore. Hercules/Beast resist taking damage when challenging parked in the location.",
+            "counterplay": "Target the location — destroy Beast's Castle and the deck loses its primary engine. The archetype has few answers to dedicated location removal."
         },
         {
             "name": "Amethyst/Steel Fighter Chain",
             "archetype": "Amethyst/Steel Midrange",
             "cards": [
-                "Calhoun - Bold Knight",
+                "Calhoun - Marine Sergeant",
                 "Captain Hook - Forceful Duelist",
                 "Strength of a Raging Fire",
-                "Giant Cobra - Ghostly Serpent"
+                "Giant Cobra - Ghostly Serpent",
+                "Genie - Magical Researcher"
             ],
-            "whyItMatters": "Establishes efficient trading board that denies aggro strategies lore-scoring windows.",
-            "counterplay": "Play around Strength of a Raging Fire timing by deploying threats one at a time."
+            "whyItMatters": "Establishes efficient trading board that denies aggro strategies lore-scoring windows. Genie - Magical Researcher steals games if not immediately removed.",
+            "counterplay": "Play around Strength of a Raging Fire timing by deploying threats one at a time. Remove Genie - Magical Researcher immediately."
         },
         {
             "name": "Enigmatic Inkcaster Flood",
-            "archetype": "Amethyst/Emerald Aggro",
+            "archetype": "Amethyst/Emerald Hyper Aggro",
             "cards": [
                 "Enigmatic Inkcaster",
                 "Amethyst Chromicon",
@@ -416,725 +653,92 @@
             ],
             "whyItMatters": "Triggers Enigmatic Inkcaster twice per turn with a flood of 1-costs for explosive lore generation.",
             "counterplay": "Remove Enigmatic Inkcaster immediately — the deck has no backup win condition without it."
-        },
-        {
-            "name": "Sapphire/Steel Defensive Core",
-            "archetype": "Sapphire/Steel Control",
-            "cards": [
-                "Clarabelle - Light on Her Hooves",
-                "Giant Cobra - Ghostly Serpent",
-                "Basil - Undercover Detective",
-                "Winterspell"
-            ],
-            "whyItMatters": "Creates a defensive shell that denies Ruby/Steel tempo while Sapphire draws into finishers.",
-            "counterplay": "Flood the board before Giant Cobra and Winterspell can stabilize — tempo must be seized by turn 4."
         }
     ],
     "formats": {
         "infinity": {
+            "note": "Infinity format featured as main event at upcoming DLC Indianapolis and DLC Dortmund. Hiram Flaversham - Toymaker recently banned affects Infinity builds.",
             "topDecks": [
                 {
-                    "name": "Emerald/Sapphire Control",
-                    "tier": "S",
-                    "colors": ["Emerald", "Sapphire"],
-                    "archetype": "Control/Ramp",
-                    "winRate": "~26%",
-                    "description": "The undisputed Tier 1 deck for March 2026. Ramps into card advantage then closes with high-cost threats.",
-                    "keyCards": [
-                        "Tipo - Growing Son",
-                        "Sail the Azurite Sea",
-                        "Clarabelle - Light on Her Hooves",
-                        "Basil - Undercover Detective",
-                        "Prince Phillip - Vanquisher of Foes",
-                        "Malicious Mean and Scary"
-                    ],
-                    "gameplan": "Accelerate ink with Tipo/Sail, draw cards with Clarabelle, control board with removal, close with big threats.",
-                    "strengths": ["Card advantage engine", "Late game inevitability", "Flexible answers"],
-                    "weaknesses": ["Vulnerable turns 1-3", "Loses to fast aggro with poor hand", "Hand disruption hurts"],
-                    "mulligan": "Keep Tipo, Sail the Azurite Sea, or Donald Duck - Perfect Gentleman. Must have a turn-2 play."
-                },
-                {
-                    "name": "Ruby/Steel Winterspell Tempo",
-                    "tier": "A",
-                    "colors": ["Ruby", "Steel"],
-                    "archetype": "Tempo/Midrange",
-                    "winRate": "~19%",
-                    "description": "The #2 deck in March 2026 DLC fields. Efficient threats backed by Winterspell removal package.",
-                    "keyCards": [
-                        "Darkwing Duck - Dashing Gadgeteer",
-                        "Launchpad - Trusty Sidekick",
-                        "Strength of a Raging Fire",
-                        "Winterspell",
-                        "Calhoun - Bold Knight"
-                    ],
-                    "gameplan": "Curve out with efficient 2-3 cost threats, use Strength of a Raging Fire and Winterspell to preserve board, close before control stabilizes.",
-                    "strengths": ["Consistent curve", "Removal + threats in one plan", "Beats most control shells"],
-                    "weaknesses": ["Weak to Sapphire/Steel defensive shell", "Struggles vs wide board strategies", "Burns out in 10+ turn games"],
-                    "mulligan": "Keep any 2-cost threat + Strength of a Raging Fire. Mulligan hands with first play on turn 3 or later."
-                },
-                {
-                    "name": "Amethyst/Sapphire Value",
-                    "tier": "A",
-                    "colors": ["Amethyst", "Sapphire"],
-                    "archetype": "Midrange/Control",
-                    "winRate": "~16%",
-                    "description": "Strong card flow and resilient curve. Goes over the top of Amethyst/Steel with Sapphire acceleration.",
-                    "keyCards": [
-                        "Demona - Scourge of Clan Wyvern",
-                        "Hades - Infernal Schemer",
-                        "Into the Unknown",
-                        "Basil - Practiced Detective",
-                        "Junior Woodchuck Guidebook"
-                    ],
-                    "gameplan": "Ramp ink, deploy resilient midrange threats, generate card flow with Guidebook/Basil, close with Demona/Hades.",
-                    "strengths": ["Beats Amethyst/Steel", "Strong card advantage", "Pressure + answers"],
-                    "weaknesses": ["Slower than aggro", "Loses tempo to Ruby/Steel pressure", "Needs ink acceleration to function"],
-                    "mulligan": "Keep Basil - Practiced Detective, any ink acceleration, or 2-cost blockers. Mulligan hands without a play until turn 3."
-                },
-                {
                     "name": "Amber/Emerald Dogs",
-                    "tier": "A",
-                    "colors": ["Amber", "Emerald"],
+                    "tier": "S",
+                    "colors": [
+                        "Amber",
+                        "Emerald"
+                    ],
                     "archetype": "Aggro",
-                    "winRate": "~14%",
-                    "description": "Fast aggressive deck that punishes slow mulligans. Slowly declining as meta adapts with broader Amethyst/Steel adoption.",
+                    "winRate": "~27%",
+                    "description": "Same dominant threat as Core Constructed but with access to all previous Amber/Emerald tools from sets 1-10.",
                     "keyCards": [
                         "Lady - Decisive Dog",
                         "Tramp - Enterprising Dog",
-                        "Tramp - Street-Smart Dog",
-                        "Under the Sea",
-                        "Bobby Zimuruski - Spray Cheese Kid"
-                    ],
-                    "gameplan": "Flood board with cheap dogs turns 1-3, generate lore with Tramp - Street-Smart Dog, close before opponent stabilizes.",
-                    "strengths": ["Very fast", "Punishes slow mulligans", "Budget-friendly and accessible"],
-                    "weaknesses": ["Weak to Amethyst/Steel removal package", "Runs out of gas", "Board wipes are devastating"],
-                    "mulligan": "Keep any 1-2 cost dogs. Always mulligan hands with no turn-1 play."
-                },
-                {
-                    "name": "Amethyst/Steel Midrange",
-                    "tier": "A",
-                    "colors": ["Amethyst", "Steel"],
-                    "archetype": "Midrange",
-                    "winRate": "~13%",
-                    "description": "The premier aggro-hate option. Consistent curve with efficient removal suite.",
-                    "keyCards": [
-                        "Calhoun - Bold Knight",
-                        "Captain Hook - Forceful Duelist",
-                        "Strength of a Raging Fire",
-                        "Doc - Bold Knight",
-                        "Giant Cobra - Ghostly Serpent"
-                    ],
-                    "gameplan": "Curve out 1-2-3-4, stabilize with Strength of a Raging Fire, generate value with Doc/Yzma/Dumbo in mid-to-late game.",
-                    "strengths": ["Hard counters Amber/Emerald Dogs", "Consistent curve", "Strong removal suite"],
-                    "weaknesses": ["Loses long games to Amethyst/Sapphire", "No late game haymakers", "Clarabelle value engine outpaces it"],
-                    "mulligan": "Keep cheap creatures or Calhoun/Captain Hook. Ideal hand: 1-drop, 2-drop, removal spell."
-                },
-                {
-                    "name": "Amber/Amethyst Lantern",
-                    "tier": "B",
-                    "colors": ["Amber", "Amethyst"],
-                    "archetype": "Midrange",
-                    "winRate": "~11%",
-                    "description": "Off-meta breakout. Uses Lantern for acceleration with Amber targeted removal. Unexpected game plans punish unprepared opponents.",
-                    "keyCards": [
-                        "Lantern",
-                        "The Horseman Strikes!",
-                        "Mowgli - Man Cub",
-                        "World's Greatest Criminal Mind",
-                        "Eilonwy - Princess of Llyr"
-                    ],
-                    "gameplan": "Accelerate with Lantern, use targeted removal with Amber tools, back it up with Amethyst midrange threats.",
-                    "strengths": ["Flexible game plan", "Good targeted removal", "Unexpected angles"],
-                    "weaknesses": ["Lantern-dependent draw", "Slower than pure Emerald ramp", "Can stumble without Lantern"],
-                    "mulligan": "Keep Lantern, early characters, or removal. Mulligan aggressively for Lantern if absent."
-                },
-                {
-                    "name": "Sapphire/Steel Control",
-                    "tier": "B",
-                    "colors": ["Sapphire", "Steel"],
-                    "archetype": "Control",
-                    "winRate": "~10%",
-                    "description": "Rising in mid-March 2026 as a clean Ruby/Steel counter. Stabilization-heavy with Steel removal and Sapphire card draw.",
-                    "keyCards": [
-                        "Basil - Undercover Detective",
-                        "Clarabelle - Light on Her Hooves",
-                        "Giant Cobra - Ghostly Serpent",
-                        "Winterspell",
-                        "Calhoun - Bold Knight"
-                    ],
-                    "gameplan": "Establish defensive bodies early, answer threats with Steel/Winterspell, close game with Sapphire card advantage and finishers.",
-                    "strengths": ["Hard counter to Ruby/Steel Tempo", "Good in creature-heavy metas", "Card advantage engine"],
-                    "weaknesses": ["Lacks Emerald ramp speed", "Worse than E/S Control in mirrors", "Loses to fast aggro with no early defenders"],
-                    "mulligan": "Keep early blocker + Basil or Clarabelle. Mulligan hands with no defensive play by turn 2."
-                },
-                {
-                    "name": "Amethyst/Emerald Aggro",
-                    "tier": "B",
-                    "colors": ["Amethyst", "Emerald"],
-                    "archetype": "Aggro",
-                    "winRate": "~8%",
-                    "description": "Hyper-aggro with all 1-cost characters. Spiked a Top 8 in mid-March 2026. All-in strategy with no plan B.",
-                    "keyCards": [
-                        "Enigmatic Inkcaster",
-                        "Amethyst Chromicon",
-                        "Show Me More!",
-                        "They Never Come Back",
-                        "Wisdom The White Rose - Jewel of the Garden"
-                    ],
-                    "gameplan": "Flood with 1-cost creatures every turn, trigger Enigmatic Inkcaster twice per turn for free lore, close by turn 5-6 before opponent stabilizes.",
-                    "strengths": ["Ultra fast lore generation", "Extremely cheap", "Crushes most Sapphire/Emerald control decks"],
-                    "weaknesses": ["Destroyed by Amethyst/Steel removal", "No late game presence", "Enigmatic Inkcaster is must-remove or you lose"],
-                    "mulligan": "Keep any 1-cost creatures, mulligan everything else. Keep Enigmatic Inkcaster always."
-                }
-            ],
-            "playTips": [
-                "Ruby/Steel Winterspell Tempo is the #2 deck — your plan must address both E/S Control and Ruby/Steel simultaneously",
-                "Emerald/Sapphire Control remains the primary benchmark deck; plan for long games against it",
-                "Sapphire/Steel Control is rising as a clean counter to Ruby/Steel; adjust tempo plans accordingly",
-                "Amethyst/Emerald Aggro spiked a Top 8 this week — have a plan against 1-cost flooding",
-                "Strong turn-2 and turn-3 plays are critical against all current top archetypes",
-                "Card advantage engines still define top-table mirror matches",
-                "Amethyst/Steel is the premier aggro punisher — if you're on Amber/Emerald Dogs, prepare for it"
-            ],
-            "metaPairings": [
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Ruby/Steel Winterspell Tempo",
-                    "assessment": "Unfavored",
-                    "winRate": "~44%",
-                    "plan": "Hold interaction for tempo spikes and protect your draw turns. Clarabelle must survive to turn the game around."
-                },
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Amber/Emerald Dogs",
-                    "assessment": "Nearly even, slight edge post-turn 5",
-                    "winRate": "~49%",
-                    "plan": "Prioritize turn-2 blockers and avoid taking early lore snowball damage from Tramp - Street-Smart Dog."
-                },
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Amethyst/Steel Midrange",
-                    "assessment": "Favored",
-                    "winRate": "~58%",
-                    "plan": "Ramp through their removal windows. Clarabelle out-values midrange threats in long games."
-                },
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Amethyst/Sapphire Value",
-                    "assessment": "Slightly favored",
-                    "winRate": "~54%",
-                    "plan": "Both decks want long games. Win by having more ink acceleration online sooner."
-                },
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Amethyst/Emerald Aggro",
-                    "assessment": "Unfavored game 1",
-                    "winRate": "~38%",
-                    "plan": "Must have a turn-2 blocker or you fall too far behind. Prioritize boardwipe effects as answers."
-                },
-                {
-                    "deck": "Ruby/Steel Winterspell Tempo",
-                    "against": "Emerald/Sapphire Control",
-                    "assessment": "Favored",
-                    "winRate": "~56%",
-                    "plan": "Apply pressure turns 2-3 before ramp comes online. Hold Winterspell removal for Tipo/Clarabelle."
-                },
-                {
-                    "deck": "Ruby/Steel Winterspell Tempo",
-                    "against": "Amethyst/Sapphire Value",
-                    "assessment": "Slightly favored",
-                    "winRate": "~53%",
-                    "plan": "Pressure their ramp windows and target card-engine characters with burn."
-                },
-                {
-                    "deck": "Ruby/Steel Winterspell Tempo",
-                    "against": "Sapphire/Steel Control",
-                    "assessment": "Unfavored",
-                    "winRate": "~43%",
-                    "plan": "Must overcommit before their defensive shell stabilizes. Avoid walking into Winterspell blowouts."
-                },
-                {
-                    "deck": "Ruby/Steel Winterspell Tempo",
-                    "against": "Amber/Emerald Dogs",
-                    "assessment": "Favored",
-                    "winRate": "~60%",
-                    "plan": "Your removal package outpaces their flooding. Sequence removal on lore-burst threats not tokens."
-                },
-                {
-                    "deck": "Amber/Emerald Dogs",
-                    "against": "Emerald/Sapphire Control",
-                    "assessment": "Favored game 1",
-                    "winRate": "~55%",
-                    "plan": "Force awkward removal with wide starts and close before board resets. Note: E/S adapting sideboards."
-                },
-                {
-                    "deck": "Amber/Emerald Dogs",
-                    "against": "Amethyst/Steel Midrange",
-                    "assessment": "Unfavored",
-                    "winRate": "~42%",
-                    "plan": "Bait removal by deploying threats one at a time. Avoid wide boards into Strength of a Raging Fire."
-                },
-                {
-                    "deck": "Amethyst/Steel Midrange",
-                    "against": "Amber/Emerald Dogs",
-                    "assessment": "Favored",
-                    "winRate": "~58%",
-                    "plan": "Trade aggressively early, convert with value engines. Keep Strength of a Raging Fire for Tramp - Street-Smart Dog."
-                },
-                {
-                    "deck": "Amethyst/Steel Midrange",
-                    "against": "Amethyst/Sapphire Value",
-                    "assessment": "Unfavored",
-                    "winRate": "~44%",
-                    "plan": "Contest early ramp with removal; if they resolve Clarabelle + Demona, you likely lose the long game."
-                },
-                {
-                    "deck": "Amethyst/Sapphire Value",
-                    "against": "Amethyst/Steel Midrange",
-                    "assessment": "Favored",
-                    "winRate": "~56%",
-                    "plan": "Ramp proactively, sequence two-for-one plays. Demona punishes their value in mid-game."
-                },
-                {
-                    "deck": "Amethyst/Sapphire Value",
-                    "against": "Ruby/Steel Winterspell Tempo",
-                    "assessment": "Slightly unfavored",
-                    "winRate": "~47%",
-                    "plan": "Contest early tempo with cheap blockers. Hold Basil/Demona safe until board pressure is neutralized."
-                },
-                {
-                    "deck": "Sapphire/Steel Control",
-                    "against": "Ruby/Steel Winterspell Tempo",
-                    "assessment": "Favored",
-                    "winRate": "~57%",
-                    "plan": "Establish early blockers, deny board stickiness. Giant Cobra and Winterspell punish their overextension."
-                },
-                {
-                    "deck": "Amethyst/Emerald Aggro",
-                    "against": "Emerald/Sapphire Control",
-                    "assessment": "Favored",
-                    "winRate": "~62%",
-                    "plan": "Race to lore 20 before their stabilization. Turn 5-6 close-out is mandatory — if you don't win by then, you lose."
-                },
-                {
-                    "deck": "Amethyst/Emerald Aggro",
-                    "against": "Amethyst/Steel Midrange",
-                    "assessment": "Strongly unfavored",
-                    "winRate": "~30%",
-                    "plan": "No reliable line against efficient trading — avoid this matchup if possible in Swiss."
-                }
-            ],
-            "comboPackages": [
-                {
-                    "name": "Sail-Into-Clarabelle Core",
-                    "archetype": "Control/Ramp",
-                    "cards": [
-                        "Tipo - Growing Son",
-                        "Sail the Azurite Sea",
-                        "Clarabelle - Light on Her Hooves",
-                        "Basil - Undercover Detective"
-                    ],
-                    "whyItMatters": "Best-performing value package in Infinity mirrors. Wins arms races against any slower deck.",
-                    "counterplay": "Attack ramp enablers early and stop Clarabelle from untapping. Remove Tipo/Sail before they chain into draw."
-                },
-                {
-                    "name": "Winterspell Removal Pivot",
-                    "archetype": "Ruby/Steel Winterspell Tempo",
-                    "cards": [
-                        "Darkwing Duck - Dashing Gadgeteer",
-                        "Launchpad - Trusty Sidekick",
-                        "Strength of a Raging Fire",
-                        "Winterspell"
-                    ],
-                    "whyItMatters": "The current #2 engine in Infinity. Lets tempo lists maintain pressure while clearing blockers.",
-                    "counterplay": "Preserve interaction for the first pressure threat and recover board immediately. Defensive bodies before turn 3 neutralize the package."
-                },
-                {
-                    "name": "Dog Curve Compression",
-                    "archetype": "Amber/Emerald Aggro",
-                    "cards": [
-                        "Lady - Decisive Dog",
-                        "Tramp - Enterprising Dog",
-                        "Tramp - Street-Smart Dog",
+                        "Grandmother Willow - Ancient Advisor",
+                        "Nani - Stage Manager",
                         "Under the Sea"
                     ],
-                    "whyItMatters": "Converts 1-3 cost curve into immediate lore race pressure. Very hard to interact with on curve.",
-                    "counterplay": "Force challenges early and remove Tramp - Street-Smart Dog before it accumulates lore."
+                    "gameplan": "Same as Core Constructed — flood cheaply, use Grandmother Willow and Under the Sea to close.",
+                    "strengths": [
+                        "Same dominance as Core Constructed but wider card pool"
+                    ],
+                    "weaknesses": [
+                        "Infinity counter-decks can run older removal suites"
+                    ],
+                    "mulligan": "Same as Core Constructed Dogs — keep Grandmother Willow and cheap dogs."
                 },
                 {
-                    "name": "Guidebook Value Chain",
-                    "archetype": "Amethyst/Sapphire Value",
-                    "cards": [
-                        "Junior Woodchuck Guidebook",
-                        "Basil - Practiced Detective",
-                        "Demona - Scourge of Clan Wyvern",
-                        "Into the Unknown"
-                    ],
-                    "whyItMatters": "Maintains card flow while deploying resilient midgame threats. Outpaces fair midrange decks.",
-                    "counterplay": "Pressure their setup turns and remove value bodies on sight before they snowball."
-                },
-                {
-                    "name": "Amethyst/Steel Fighter Chain",
-                    "archetype": "Amethyst/Steel Midrange",
-                    "cards": [
-                        "Calhoun - Bold Knight",
-                        "Captain Hook - Forceful Duelist",
-                        "Strength of a Raging Fire",
-                        "Giant Cobra - Ghostly Serpent"
-                    ],
-                    "whyItMatters": "Establishes efficient trading board that denies aggro strategies any lore-scoring windows.",
-                    "counterplay": "Deploy threats one at a time to stagger around Strength of a Raging Fire timing."
-                },
-                {
-                    "name": "Enigmatic Inkcaster Flood",
-                    "archetype": "Amethyst/Emerald Aggro",
-                    "cards": [
-                        "Enigmatic Inkcaster",
-                        "Amethyst Chromicon",
-                        "Show Me More!",
-                        "They Never Come Back"
-                    ],
-                    "whyItMatters": "Triggers Enigmatic Inkcaster twice per turn with 1-costs for explosive free lore generation. Spiked a Top 8 in March 2026.",
-                    "counterplay": "Remove Enigmatic Inkcaster immediately on sight — the deck has no meaningful backup win condition without it."
-                },
-                {
-                    "name": "Sapphire/Steel Defensive Shell",
-                    "archetype": "Sapphire/Steel Control",
-                    "cards": [
-                        "Clarabelle - Light on Her Hooves",
-                        "Giant Cobra - Ghostly Serpent",
-                        "Basil - Undercover Detective",
-                        "Winterspell"
-                    ],
-                    "whyItMatters": "Rising in March 2026 as a clean answer to Ruby/Steel Winterspell Tempo. Creates a defensive shell that draws into finishers.",
-                    "counterplay": "Must establish board by turn 3 before Giant Cobra and Winterspell lock down tempo. Do not give them free defensive turns."
-                }
-            ]
-        },
-        "coreConstructed": {
-            "topDecks": [
-                {
-                    "name": "Emerald/Sapphire Control",
+                    "name": "Amethyst/Sapphire Control",
                     "tier": "S",
-                    "colors": ["Emerald", "Sapphire"],
-                    "archetype": "Control/Ramp",
-                    "winRate": "~25%",
-                    "description": "The dominant Core Constructed deck in Sets 5-11. Same strategy as Infinity — all key pieces are sets 5-11 legal.",
-                    "coreSetLegality": "Sets 5-11 legal",
-                    "keyCards": [
-                        "Tipo - Growing Son",
-                        "Sail the Azurite Sea",
-                        "Clarabelle - Light on Her Hooves",
-                        "Basil - Undercover Detective",
-                        "Prince Phillip - Vanquisher of Foes"
+                    "colors": [
+                        "Amethyst",
+                        "Sapphire"
                     ],
-                    "gameplan": "Ramp with Tipo/Sail, draw with Clarabelle, control with removal, close with finishers.",
-                    "strengths": ["Best card advantage engine in Core", "Consistent ramp lines", "Flexible answers"],
-                    "weaknesses": ["Slow turn 1-2", "Loses to fast aggro hands", "Fewer top-end options vs Infinity"],
-                    "mulligan": "Keep Tipo, Sail the Azurite Sea, or any turn-2 blocker. Mulligan hands with no play before turn 3."
-                },
-                {
-                    "name": "Ruby/Steel Winterspell Tempo",
-                    "tier": "A",
-                    "colors": ["Ruby", "Steel"],
-                    "archetype": "Tempo/Midrange",
-                    "winRate": "~20%",
-                    "description": "All key Winterspell pieces are Sets 5-11 legal. The premier tempo threat in Core Constructed as of March 2026.",
-                    "coreSetLegality": "Sets 5-11 legal",
-                    "keyCards": [
-                        "Darkwing Duck - Dashing Gadgeteer",
-                        "Launchpad - Trusty Sidekick",
-                        "Strength of a Raging Fire",
-                        "Winterspell",
-                        "Calhoun - Bold Knight"
-                    ],
-                    "gameplan": "Curve out with efficient threats, use removal to protect them, close before control stabilizes.",
-                    "strengths": ["Consistent curve", "Strong vs control", "Removal + threats in one plan"],
-                    "weaknesses": ["Loses to Sapphire/Steel defensive shell", "Struggles vs wide boards"],
-                    "mulligan": "Keep a 2-cost threat + Strength of a Raging Fire. Mulligan any hand that doesn't play until turn 3."
-                },
-                {
-                    "name": "Amethyst/Sapphire Value",
-                    "tier": "A",
-                    "colors": ["Amethyst", "Sapphire"],
                     "archetype": "Midrange/Control",
-                    "winRate": "~15%",
-                    "description": "Goes over the top of Amethyst/Steel. All key cards legal in Sets 5-11.",
-                    "coreSetLegality": "Sets 5-11 legal",
+                    "winRate": "~24%",
+                    "description": "The most powerful deck in the game in a vacuum. Access to full Whispers/Winterspell card pool.",
                     "keyCards": [
-                        "Demona - Scourge of Clan Wyvern",
-                        "Hades - Infernal Schemer",
-                        "Into the Unknown",
-                        "Basil - Practiced Detective",
-                        "Junior Woodchuck Guidebook"
-                    ],
-                    "gameplan": "Ramp, deploy resilient mid-threats, generate card flow, close with Demona/Hades.",
-                    "strengths": ["Beats Amethyst/Steel", "Strong card advantage", "Flexible"],
-                    "weaknesses": ["Slower than aggro", "Ruby/Steel pressures your ramp turns"],
-                    "mulligan": "Keep Basil - Practiced Detective, ink acceleration, or 2-cost blockers."
-                },
-                {
-                    "name": "Amethyst/Steel Midrange",
-                    "tier": "A",
-                    "colors": ["Amethyst", "Steel"],
-                    "archetype": "Midrange",
-                    "winRate": "~13%",
-                    "description": "Premier aggro-hate option in Core Constructed. Consistent curve with strong removal.",
-                    "coreSetLegality": "Sets 5-11 legal",
-                    "keyCards": [
-                        "Calhoun - Bold Knight",
-                        "Captain Hook - Forceful Duelist",
-                        "Strength of a Raging Fire",
-                        "Doc - Bold Knight",
-                        "Giant Cobra - Ghostly Serpent"
-                    ],
-                    "gameplan": "Curve out 1-2-3-4, use Strength of a Raging Fire to stabilize, generate value in mid-game.",
-                    "strengths": ["Hard counters aggro", "Consistent curve", "Good removal"],
-                    "weaknesses": ["Loses long games to Amethyst/Sapphire", "No late game haymakers"],
-                    "mulligan": "Keep cheap creatures + removal. Ideal: 1-drop, 2-drop, removal spell."
-                },
-                {
-                    "name": "Amber/Emerald Dogs",
-                    "tier": "B",
-                    "colors": ["Amber", "Emerald"],
-                    "archetype": "Aggro",
-                    "winRate": "~12%",
-                    "description": "All dog cards legal in Sets 5-11. Slightly more vulnerable in Core Constructed where fewer answers are banned.",
-                    "coreSetLegality": "Sets 5-11 legal",
-                    "keyCards": [
-                        "Lady - Decisive Dog",
-                        "Tramp - Enterprising Dog",
-                        "Tramp - Street-Smart Dog",
-                        "Under the Sea",
-                        "Bobby Zimuruski - Spray Cheese Kid"
-                    ],
-                    "gameplan": "Flood board with cheap dogs turns 1-3, generate lore with Tramp, close before opponent stabilizes.",
-                    "strengths": ["Fast", "Punishes slow starts", "Budget-friendly"],
-                    "weaknesses": ["Weak to Amethyst/Steel", "Runs out of gas", "Board wipes destroy it"],
-                    "mulligan": "Keep any 1-2 cost dogs. Always mulligan hands with no turn-1 play."
-                },
-                {
-                    "name": "Sapphire/Steel Control",
-                    "tier": "B",
-                    "colors": ["Sapphire", "Steel"],
-                    "archetype": "Control",
-                    "winRate": "~9%",
-                    "description": "Rising as a Ruby/Steel counter in Core Constructed. All key pieces are Sets 5-11 legal.",
-                    "coreSetLegality": "Sets 5-11 legal",
-                    "keyCards": [
-                        "Basil - Undercover Detective",
-                        "Clarabelle - Light on Her Hooves",
-                        "Giant Cobra - Ghostly Serpent",
-                        "Winterspell"
-                    ],
-                    "gameplan": "Establish defensive bodies, answer threats with Steel/Winterspell, close with Sapphire card draw and finishers.",
-                    "strengths": ["Counters Ruby/Steel Tempo", "Good in creature-heavy fields"],
-                    "weaknesses": ["Lacks Emerald ramp", "Slower than E/S Control"],
-                    "mulligan": "Keep early blocker + Basil or Clarabelle."
-                }
-            ],
-            "notes": "Core Constructed (Sets 5-11) mirrors the Infinity meta closely as of March 2026. All major archetypes have legal builds in the 5-11 window. Winterspell is fully integrated. No significant bans restrict the top strategies.",
-            "playTips": [
-                "All top Infinity decks have legal Core Constructed builds in Sets 5-11",
-                "Winterspell tempo package is fully legal and highly competitive in Core",
-                "Verify your entire list is Sets 5-11 only — early set staples are not legal",
-                "Dog cards (Lady, Tramp, Bobby) are all legal in Core Constructed",
-                "Enigmatic Inkcaster hyper-aggro is a viable budget option in Core"
-            ],
-            "metaPairings": [
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Ruby/Steel Winterspell Tempo",
-                    "assessment": "Unfavored",
-                    "winRate": "~44%",
-                    "plan": "Hold interaction for tempo spikes. Clarabelle must stabilize or you lose the game."
-                },
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Amber/Emerald Dogs",
-                    "assessment": "Even to slightly unfavored",
-                    "winRate": "~49%",
-                    "plan": "Respect early lore pressure and preserve premium stabilization cards. Must survive to turn 5."
-                },
-                {
-                    "deck": "Emerald/Sapphire Control",
-                    "against": "Amethyst/Steel Midrange",
-                    "assessment": "Favored",
-                    "winRate": "~57%",
-                    "plan": "Ramp through removal windows; Clarabelle outvalues midrange threats in long games."
-                },
-                {
-                    "deck": "Ruby/Steel Winterspell Tempo",
-                    "against": "Emerald/Sapphire Control",
-                    "assessment": "Favored",
-                    "winRate": "~56%",
-                    "plan": "Pressure turns 2-3 before ramp online. Hold Winterspell for Tipo/Clarabelle."
-                },
-                {
-                    "deck": "Ruby/Steel Winterspell Tempo",
-                    "against": "Amber/Emerald Dogs",
-                    "assessment": "Favored",
-                    "winRate": "~59%",
-                    "plan": "Removal package outpaces their flooding. Sequence removal on lore-burst threats."
-                },
-                {
-                    "deck": "Amethyst/Sapphire Value",
-                    "against": "Amethyst/Steel Midrange",
-                    "assessment": "Favored",
-                    "winRate": "~55%",
-                    "plan": "Leverage card flow to out-resource fair midrange builds. Demona punishes their value."
-                },
-                {
-                    "deck": "Amethyst/Steel Midrange",
-                    "against": "Amber/Emerald Dogs",
-                    "assessment": "Strongly favored",
-                    "winRate": "~60%",
-                    "plan": "Trade early and preserve removal for lore-burst characters. Strength of a Raging Fire walls them."
-                }
-            ],
-            "comboPackages": [
-                {
-                    "name": "Core Ramp Value Shell",
-                    "archetype": "Control/Ramp",
-                    "cards": [
                         "Tipo - Growing Son",
                         "Sail the Azurite Sea",
-                        "Clarabelle - Light on Her Hooves",
-                        "Basil - Undercover Detective"
+                        "Genie - Wish Fulfilled",
+                        "Demona - Scourge of the Wyvern Clan",
+                        "Hades - Infernal Schemer"
                     ],
-                    "whyItMatters": "The most reliable long-game package in Sets 5-11. Identical to Infinity — fully legal.",
-                    "counterplay": "Pressure lore total quickly and force awkward resource trades before Clarabelle comes online."
+                    "gameplan": "Ramp → card advantage → finishers. Standard Amethyst/Sapphire plan with deeper card pool.",
+                    "strengths": [
+                        "Deepest card pool",
+                        "Multiple redundant engines"
+                    ],
+                    "weaknesses": [
+                        "Dogs still a concern in Infinity"
+                    ],
+                    "mulligan": "Keep Tipo or Sail the Azurite Sea."
                 },
                 {
-                    "name": "Winterspell Tempo Core",
-                    "archetype": "Tempo/Midrange",
-                    "cards": [
-                        "Darkwing Duck - Dashing Gadgeteer",
-                        "Launchpad - Trusty Sidekick",
-                        "Strength of a Raging Fire",
-                        "Winterspell"
+                    "name": "Amber/Steel",
+                    "tier": "A",
+                    "colors": [
+                        "Amber",
+                        "Steel"
                     ],
-                    "whyItMatters": "Fully legal in Sets 5-11. Maintains initiative while preserving removal density.",
-                    "counterplay": "Trade early and avoid exposing key characters into open burn windows."
-                },
-                {
-                    "name": "Core Dog Curve",
-                    "archetype": "Aggro",
-                    "cards": [
-                        "Lady - Decisive Dog",
-                        "Tramp - Enterprising Dog",
-                        "Tramp - Street-Smart Dog",
-                        "Bobby Zimuruski - Spray Cheese Kid"
+                    "archetype": "Aggro/Tempo",
+                    "winRate": "~18%",
+                    "description": "Lilo - Bundled Up has won an Infinity local tournament. Akood Et Emuti and Angel - Experiment 624 are as powerful here as in Core Constructed.",
+                    "keyCards": [
+                        "Angel - Experiment 624",
+                        "Akood Et Emuti",
+                        "Lilo - Bundled Up",
+                        "Cinderella - Stouthearted"
                     ],
-                    "whyItMatters": "All fully legal in Core. Still the fastest aggro option in the format.",
-                    "counterplay": "Remove Tramp - Street-Smart Dog immediately and force challenges before snowball."
-                },
-                {
-                    "name": "Amethyst/Steel Removal Chain",
-                    "archetype": "Midrange",
-                    "cards": [
-                        "Calhoun - Bold Knight",
-                        "Strength of a Raging Fire",
-                        "Giant Cobra - Ghostly Serpent",
-                        "Captain Hook - Forceful Duelist"
+                    "gameplan": "Same as Core Constructed Amber/Steel — accelerate into Angel or Stitch, outpace opponent.",
+                    "strengths": [
+                        "Lilo - Bundled Up resilience",
+                        "Angel still hard-counters Dogs"
                     ],
-                    "whyItMatters": "Most efficient midrange trading package in Core Sets 5-11. Hard stop against any flooding strategy.",
-                    "counterplay": "Deploy threats one at a time around Strength of a Raging Fire. Never overextend into open mana."
+                    "weaknesses": [
+                        "Infinity field has wider access to answers"
+                    ],
+                    "mulligan": "Keep Angel - Siren Singer and Akood Et Emuti."
                 }
-            ]
-        },
-        "sealed": {
-            "strategy": {
-                "priorities": [
-                    {
-                        "rank": 1,
-                        "category": "Removal",
-                        "description": "ANY card that removes creatures is premium. Keep all removal.",
-                        "examples": [
-                            "Banish effects",
-                            "Return to hand",
-                            "Challenge creatures with high power"
-                        ]
-                    },
-                    {
-                        "rank": 2,
-                        "category": "Curve",
-                        "description": "Curve is EVERYTHING. Must have plays turns 2, 3, and 4.",
-                        "idealDistribution": "2-3 cost-1, 5-7 cost-2, 8-10 cost-3-4, 4-6 cost-5+"
-                    },
-                    {
-                        "rank": 3,
-                        "category": "Bombs",
-                        "description": "Build around your 2-3 best cards. Splash colors for them.",
-                        "examples": [
-                            "Legendary characters",
-                            "High lore creatures",
-                            "Evasive threats"
-                        ]
-                    },
-                    {
-                        "rank": 4,
-                        "category": "Card Advantage",
-                        "description": "Any card that draws cards or generates value is important.",
-                        "examples": [
-                            "Draw effects",
-                            "Replacement effects",
-                            "Double-value cards"
-                        ]
-                    },
-                    {
-                        "rank": 5,
-                        "category": "Synergies",
-                        "description": "Nice-to-haves, not build-arounds. Only if cards are already good.",
-                        "tip": "Don't force bad cards for synergy in limited"
-                    }
-                ],
-                "deckSize": {
-                    "minimum": 40,
-                    "optimal": "40-42",
-                    "maximum": "Don't exceed 45 if possible"
-                },
-                "colorStrategy": {
-                    "approach": "Play your best cards regardless of color",
-                    "maxColors": "4-5 colors is acceptable if cards are strong",
-                    "priority": "Quality > Consistency"
-                },
-                "commonMistakes": [
-                    "Playing 43+ cards (dilutes your bombs)",
-                    "Forcing synergies over powerful cards",
-                    "Not splashing for removal",
-                    "Not playing enough 2-3 cost creatures"
-                ]
-            },
-            "playTips": [
-                "In sealed, curve beats everything else",
-                "Don't be afraid to splash 4-5 colors for your best cards",
-                "Always play your removal - every single piece",
-                "Challenge creatures are removal on a body - automatic includes",
-                "Most games are won by the player who curves out consistently"
             ]
         }
-    },
-    "universalTips": {
-        "mulligan": [
-            "Always mulligan hands with no 1-2 cost plays",
-            "Keep hands that can play on curve",
-            "Against aggro: Keep early blockers",
-            "Against control: Keep threats + card draw"
-        ],
-        "gameplay": [
-            "Figure out who's the beatdown each game",
-            "Trade up when possible (1-for-2 value)",
-            "Don't overextend into board wipes",
-            "Sequence ink carefully - plan ahead 2-3 turns",
-            "Challenge math: Always calculate before committing"
-        ],
-        "deckBuilding": [
-            "60 cards exactly for constructed (40+ for sealed)",
-            "Stick to 2-3 colors maximum (unless sealed)",
-            "Average cost should be 3.5-4.5 for most decks",
-            "Include 6-8 removal spells",
-            "12-16 early creatures (cost 1-2)"
-        ]
     }
 }
