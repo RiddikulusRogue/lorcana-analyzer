@@ -1,8 +1,8 @@
 {
-  "description": "Maps card names to their set numbers (as arrays to handle reprints). Generated from local allCards data when available, with API fallback. For Core Constructed, a card is legal if ANY of its sets is in 5-11.",
-  "lastUpdated": "2026-02-28T21:00:13.893Z",
+  "description": "Maps card names to their set numbers (as arrays to handle reprints). Generated from local allCards data when available, with API fallback. For Core Constructed, a card is legal if ANY of its sets is in the current legal set window (currently 5-12).",
+  "lastUpdated": "2026-05-12T20:20:35.110Z",
   "source": "local:src/data/allCards.json",
-  "totalUniqueCards": 4373,
+  "totalUniqueCards": 4803,
   "cardSetMapping": {
     "99 puppies": [
       3
@@ -80,13 +80,20 @@
       9
     ],
     "agustin madrigal": [
-      4
+      4,
+      12
     ],
     "agustin madrigal - clumsy dad": [
       4
     ],
+    "agustin madrigal - exceptionally kind": [
+      12
+    ],
     "agustin madrigal clumsy dad": [
       4
+    ],
+    "agustin madrigal exceptionally kind": [
+      12
     ],
     "airfoil": [
       3
@@ -195,10 +202,17 @@
       8
     ],
     "alan-a-dale": [
-      5
+      5,
+      12
+    ],
+    "alan-a-dale - loyal bard": [
+      12
     ],
     "alan-a-dale - rockin' rooster": [
       5
+    ],
+    "alan-a-dale loyal bard": [
+      12
     ],
     "alan-a-dale rockin' rooster": [
       5
@@ -255,6 +269,15 @@
     "alice well-read whisper": [
       11
     ],
+    "alien": [
+      12
+    ],
+    "alien - true believer": [
+      12
+    ],
+    "alien true believer": [
+      12
+    ],
     "alistair krei": [
       6
     ],
@@ -272,7 +295,8 @@
     ],
     "alma madrigal": [
       4,
-      8
+      8,
+      12
     ],
     "alma madrigal - accepting grandmother": [
       8
@@ -280,11 +304,32 @@
     "alma madrigal - family matriarch": [
       4
     ],
+    "alma madrigal - heart of the family": [
+      12
+    ],
+    "alma madrigal - keeper of the flame": [
+      12
+    ],
+    "alma madrigal - leading the way": [
+      12
+    ],
     "alma madrigal accepting grandmother": [
       8
     ],
     "alma madrigal family matriarch": [
       4
+    ],
+    "alma madrigal heart of the family": [
+      12
+    ],
+    "alma madrigal keeper of the flame": [
+      12
+    ],
+    "alma madrigal leading the way": [
+      12
+    ],
+    "amazu's inkcaster": [
+      12
     ],
     "amber chromicon": [
       5
@@ -325,6 +370,15 @@
     "and then along came zeus": [
       3
     ],
+    "andy's room": [
+      12
+    ],
+    "andy's room - home base": [
+      12
+    ],
+    "andy's room home base": [
+      12
+    ],
     "angel": [
       11
     ],
@@ -348,6 +402,15 @@
     ],
     "angela night warrior": [
       11
+    ],
+    "angus": [
+      12
+    ],
+    "angus - mighty horse": [
+      12
+    ],
+    "angus mighty horse": [
+      12
     ],
     "anita radcliffe": [
       8
@@ -537,11 +600,15 @@
       3,
       4,
       9,
-      10
+      10,
+      12
     ],
     "ariel - adventurous collector": [
       3,
       9
+    ],
+    "ariel - curious traveler": [
+      12
     ],
     "ariel - determined mermaid": [
       4,
@@ -573,6 +640,9 @@
     "ariel adventurous collector": [
       3,
       9
+    ],
+    "ariel curious traveler": [
+      12
     ],
     "ariel determined mermaid": [
       4,
@@ -676,10 +746,17 @@
       9
     ],
     "audrey ramirez": [
-      3
+      3,
+      12
+    ],
+    "audrey ramirez - gutsy mechanic": [
+      12
     ],
     "audrey ramirez - the engineer": [
       3
+    ],
+    "audrey ramirez gutsy mechanic": [
+      12
     ],
     "audrey ramirez the engineer": [
       3
@@ -765,6 +842,15 @@
     ],
     "ba-boom!": [
       3
+    ],
+    "babyhead": [
+      12
+    ],
+    "babyhead - leader of sid's toys": [
+      12
+    ],
+    "babyhead leader of sid's toys": [
+      12
     ],
     "bad-anon": [
       5
@@ -872,7 +958,8 @@
     ],
     "bashful": [
       2,
-      5
+      5,
+      12
     ],
     "bashful - adoring knight": [
       5
@@ -880,11 +967,17 @@
     "bashful - hopeless romantic": [
       2
     ],
+    "bashful - riding the rails": [
+      12
+    ],
     "bashful adoring knight": [
       5
     ],
     "bashful hopeless romantic": [
       2
+    ],
+    "bashful riding the rails": [
+      12
     ],
     "basil": [
       2,
@@ -1359,6 +1452,15 @@
     "blue smoke": [
       11
     ],
+    "bo peep": [
+      12
+    ],
+    "bo peep - caring shepherd": [
+      12
+    ],
+    "bo peep caring shepherd": [
+      12
+    ],
     "bobby": [
       8
     ],
@@ -1429,6 +1531,15 @@
     "bounce": [
       2
     ],
+    "bouncing ducky": [
+      12
+    ],
+    "bouncing ducky - sid's toy": [
+      12
+    ],
+    "bouncing ducky sid's toy": [
+      12
+    ],
     "brawl": [
       4
     ],
@@ -1486,10 +1597,17 @@
     "bruno madrigal": [
       4,
       8,
-      9
+      9,
+      12
+    ],
+    "bruno madrigal - oasis oracle": [
+      12
     ],
     "bruno madrigal - out of the shadows": [
       4
+    ],
+    "bruno madrigal - seeing the future": [
+      12
     ],
     "bruno madrigal - singing seer": [
       8
@@ -1501,8 +1619,14 @@
       4,
       9
     ],
+    "bruno madrigal oasis oracle": [
+      12
+    ],
     "bruno madrigal out of the shadows": [
       4
+    ],
+    "bruno madrigal seeing the future": [
+      12
     ],
     "bruno madrigal singing seer": [
       8
@@ -1543,8 +1667,41 @@
     "bucky squirrel squeak tutor": [
       2
     ],
+    "bullseye": [
+      12
+    ],
+    "bullseye - loyal horse": [
+      12
+    ],
+    "bullseye loyal horse": [
+      12
+    ],
     "but i'm much faster": [
       10
+    ],
+    "buzz lightyear": [
+      12
+    ],
+    "buzz lightyear - jungle ranger": [
+      12
+    ],
+    "buzz lightyear - on the way": [
+      12
+    ],
+    "buzz lightyear - space ranger": [
+      12
+    ],
+    "buzz lightyear jungle ranger": [
+      12
+    ],
+    "buzz lightyear on the way": [
+      12
+    ],
+    "buzz lightyear space ranger": [
+      12
+    ],
+    "buzz's arm": [
+      12
     ],
     "calhoun": [
       6,
@@ -1697,6 +1854,9 @@
     "captain hook's rapier": [
       3
     ],
+    "card advantage": [
+      12
+    ],
     "card soldier's spear": [
       6
     ],
@@ -1721,15 +1881,22 @@
     ],
     "casa madrigal": [
       4,
-      9
+      9,
+      12
     ],
     "casa madrigal - casita": [
       4,
       9
     ],
+    "casa madrigal - courtyard": [
+      12
+    ],
     "casa madrigal casita": [
       4,
       9
+    ],
+    "casa madrigal courtyard": [
+      12
     ],
     "castle of the horned king": [
       10
@@ -1994,7 +2161,8 @@
     ],
     "chip": [
       6,
-      8
+      8,
+      12
     ],
     "chip - friend indeed": [
       6
@@ -2004,6 +2172,12 @@
     ],
     "chip - ranger leader": [
       6
+    ],
+    "chip - retrieval expert": [
+      12
+    ],
+    "chip - team player": [
+      12
     ],
     "chip 'n' dale": [
       6
@@ -2022,6 +2196,12 @@
     ],
     "chip ranger leader": [
       6
+    ],
+    "chip retrieval expert": [
+      12
+    ],
+    "chip team player": [
+      12
     ],
     "chip the teacup": [
       2
@@ -2060,7 +2240,8 @@
       4,
       7,
       9,
-      10
+      10,
+      12
     ],
     "cinderella - ballroom sensation": [
       2
@@ -2077,6 +2258,9 @@
     ],
     "cinderella - melody weaver": [
       4
+    ],
+    "cinderella - resourceful traveler": [
+      12
     ],
     "cinderella - stouthearted": [
       2
@@ -2099,6 +2283,9 @@
     ],
     "cinderella melody weaver": [
       4
+    ],
+    "cinderella resourceful traveler": [
+      12
     ],
     "cinderella stouthearted": [
       2
@@ -2155,6 +2342,9 @@
     ],
     "cleansing rainwater": [
       3
+    ],
+    "club door": [
+      12
     ],
     "cobra bubbles": [
       2,
@@ -2247,7 +2437,11 @@
       1
     ],
     "copper": [
-      11
+      11,
+      12
+    ],
+    "copper - big dog": [
+      12
     ],
     "copper - champion of the forest": [
       11
@@ -2257,6 +2451,9 @@
     ],
     "copper - on the scent": [
       11
+    ],
+    "copper big dog": [
+      12
     ],
     "copper champion of the forest": [
       11
@@ -2305,11 +2502,15 @@
     "cruella de vil": [
       1,
       2,
-      9
+      9,
+      12
     ],
     "cruella de vil - fashionable cruiser": [
       2,
       9
+    ],
+    "cruella de vil - judgmental traveler": [
+      12
     ],
     "cruella de vil - miserable as usual": [
       1
@@ -2323,6 +2524,9 @@
     "cruella de vil fashionable cruiser": [
       2,
       9
+    ],
+    "cruella de vil judgmental traveler": [
+      12
     ],
     "cruella de vil miserable as usual": [
       1
@@ -2374,7 +2578,8 @@
       7,
       9,
       10,
-      11
+      11,
+      12
     ],
     "daisy duck - donald's date": [
       5
@@ -2411,6 +2616,9 @@
     "daisy duck - spotless food-fighter": [
       5
     ],
+    "daisy duck - trendy traveler": [
+      12
+    ],
     "daisy duck donald's date": [
       5
     ],
@@ -2446,12 +2654,19 @@
     "daisy duck spotless food-fighter": [
       5
     ],
+    "daisy duck trendy traveler": [
+      12
+    ],
     "dale": [
       6,
-      8
+      8,
+      12
     ],
     "dale - bumbler": [
       8
+    ],
+    "dale - excited friend": [
+      12
     ],
     "dale - friend in need": [
       6
@@ -2459,14 +2674,23 @@
     "dale - mischievous ranger": [
       6
     ],
+    "dale - ready for his shot": [
+      12
+    ],
     "dale bumbler": [
       8
+    ],
+    "dale excited friend": [
+      12
     ],
     "dale friend in need": [
       6
     ],
     "dale mischievous ranger": [
       6
+    ],
+    "dale ready for his shot": [
+      12
     ],
     "dalmatian puppy": [
       3,
@@ -2488,6 +2712,9 @@
     ],
     "dang hu talon chief": [
       4
+    ],
+    "dangerous plan": [
+      12
     ],
     "darkwing duck": [
       11
@@ -2551,6 +2778,21 @@
     ],
     "darling dear beloved wife": [
       8
+    ],
+    "dash parr": [
+      12
+    ],
+    "dash parr - lava runner": [
+      12
+    ],
+    "dash parr - super speedy": [
+      12
+    ],
+    "dash parr lava runner": [
+      12
+    ],
+    "dash parr super speedy": [
+      12
     ],
     "david": [
       6,
@@ -2695,7 +2937,8 @@
       4,
       6,
       7,
-      10
+      10,
+      12
     ],
     "diablo - devoted herald": [
       4
@@ -2711,6 +2954,9 @@
     ],
     "diablo - spiteful raven": [
       7
+    ],
+    "diablo - stone servant": [
+      12
     ],
     "diablo - watchful raven": [
       10
@@ -2729,6 +2975,9 @@
     ],
     "diablo spiteful raven": [
       7
+    ],
+    "diablo stone servant": [
+      12
     ],
     "diablo watchful raven": [
       10
@@ -2774,7 +3023,8 @@
     ],
     "doc": [
       2,
-      5
+      5,
+      12
     ],
     "doc - bold knight": [
       5
@@ -2782,11 +3032,17 @@
     "doc - leader of the seven dwarfs": [
       2
     ],
+    "doc - taking notes": [
+      12
+    ],
     "doc bold knight": [
       5
     ],
     "doc leader of the seven dwarfs": [
       2
+    ],
+    "doc taking notes": [
+      12
     ],
     "dodge": [
       4
@@ -2797,11 +3053,15 @@
     "dolores madrigal": [
       4,
       7,
-      9
+      9,
+      12
     ],
     "dolores madrigal - easy listener": [
       4,
       9
+    ],
+    "dolores madrigal - hears everything": [
+      12
     ],
     "dolores madrigal - within earshot": [
       7
@@ -2809,6 +3069,9 @@
     "dolores madrigal easy listener": [
       4,
       9
+    ],
+    "dolores madrigal hears everything": [
+      12
     ],
     "dolores madrigal within earshot": [
       7
@@ -2829,6 +3092,9 @@
     "don karnage prince of pirates": [
       3
     ],
+    "don't be nervous": [
+      12
+    ],
     "don't let the frostbite bite": [
       5
     ],
@@ -2842,7 +3108,8 @@
       8,
       9,
       10,
-      11
+      11,
+      12
     ],
     "donald duck - along for the ride": [
       11
@@ -2861,6 +3128,9 @@
     ],
     "donald duck - deep-sea diver": [
       2
+    ],
+    "donald duck - distracted traveler": [
+      12
     ],
     "donald duck - first mate": [
       6
@@ -2927,6 +3197,9 @@
     "donald duck deep-sea diver": [
       2
     ],
+    "donald duck distracted traveler": [
+      12
+    ],
     "donald duck first mate": [
       6
     ],
@@ -2976,16 +3249,23 @@
     ],
     "dopey": [
       2,
-      5
+      5,
+      12
     ],
     "dopey - always playful": [
       2
+    ],
+    "dopey - drawn to music": [
+      12
     ],
     "dopey - knight apprentice": [
       5
     ],
     "dopey always playful": [
       2
+    ],
+    "dopey drawn to music": [
+      12
     ],
     "dopey knight apprentice": [
       5
@@ -3032,6 +3312,9 @@
     "dr hamsterviel infamous scientist": [
       11
     ],
+    "dr sara bellum head of research": [
+      12
+    ],
     "dr. calico": [
       7
     ],
@@ -3071,6 +3354,12 @@
     ],
     "dr. hamsterviel - infamous scientist": [
       11
+    ],
+    "dr. sara bellum": [
+      12
+    ],
+    "dr. sara bellum - head of research": [
+      12
     ],
     "dragon fire": [
       1,
@@ -3179,6 +3468,9 @@
     "dumptruck karnage's second mate": [
       8
     ],
+    "dunbroch family tapestry": [
+      12
+    ],
     "earth giant": [
       5
     ],
@@ -3211,6 +3503,21 @@
     ],
     "edgar balthazar ambitious butler": [
       7
+    ],
+    "edna mode": [
+      12
+    ],
+    "edna mode - fashion designer": [
+      12
+    ],
+    "edna mode - super suit designer": [
+      12
+    ],
+    "edna mode fashion designer": [
+      12
+    ],
+    "edna mode super suit designer": [
+      12
     ],
     "education or elimination": [
       11
@@ -3251,6 +3558,21 @@
     ],
     "eli la bouff big daddy": [
       2
+    ],
+    "elinor": [
+      12
+    ],
+    "elinor - bespelled queen": [
+      12
+    ],
+    "elinor - renowned diplomat": [
+      12
+    ],
+    "elinor bespelled queen": [
+      12
+    ],
+    "elinor renowned diplomat": [
+      12
     ],
     "elisa maza": [
       10,
@@ -3405,6 +3727,9 @@
     "enigmatic inkcaster": [
       10
     ],
+    "escape plan": [
+      12
+    ],
     "eudora": [
       2
     ],
@@ -3540,14 +3865,45 @@
     "fantastical and magical": [
       8
     ],
+    "fat cat": [
+      12
+    ],
+    "fat cat - criminal businessman": [
+      12
+    ],
+    "fat cat - felonious feline": [
+      12
+    ],
+    "fat cat criminal businessman": [
+      12
+    ],
+    "fat cat felonious feline": [
+      12
+    ],
+    "fat cat's club": [
+      12
+    ],
+    "fat cat's club - seedy headquarters": [
+      12
+    ],
+    "fat cat's club seedy headquarters": [
+      12
+    ],
     "fauna": [
-      5
+      5,
+      12
     ],
     "fauna - good fairy": [
       5
     ],
+    "fauna - good-natured fairy": [
+      12
+    ],
     "fauna good fairy": [
       5
+    ],
+    "fauna good-natured fairy": [
+      12
     ],
     "felicia": [
       2
@@ -3567,6 +3923,18 @@
     "felix madrigal fun-loving family man": [
       4
     ],
+    "fergus": [
+      12
+    ],
+    "fergus - king of dunbroch": [
+      12
+    ],
+    "fergus - outpost builder": [
+      12
+    ],
+    "fergus king of dunbroch": [
+      12
+    ],
     "fergus mcduck": [
       10
     ],
@@ -3575,6 +3943,9 @@
     ],
     "fergus mcduck scrooge's father": [
       10
+    ],
+    "fergus outpost builder": [
+      12
     ],
     "fidget": [
       2,
@@ -3623,6 +3994,9 @@
     "fire the cannons!": [
       1,
       9
+    ],
+    "firefly swarm": [
+      12
     ],
     "first aid": [
       4
@@ -3693,13 +4067,20 @@
       11
     ],
     "flora": [
-      5
+      5,
+      12
     ],
     "flora - good fairy": [
       5
     ],
+    "flora - strong-willed fairy": [
+      12
+    ],
     "flora good fairy": [
       5
+    ],
+    "flora strong-willed fairy": [
+      12
     ],
     "flotilla": [
       6
@@ -3921,12 +4302,28 @@
     "friends on the other side": [
       1
     ],
+    "frozone": [
+      12
+    ],
+    "frozone - super cool": [
+      12
+    ],
+    "frozone - super slick": [
+      12
+    ],
+    "frozone super cool": [
+      12
+    ],
+    "frozone super slick": [
+      12
+    ],
     "frying pan": [
       1
     ],
     "gadget hackwrench": [
       6,
-      8
+      8,
+      12
     ],
     "gadget hackwrench - brilliant bosun": [
       6
@@ -3934,11 +4331,17 @@
     "gadget hackwrench - creative thinker": [
       6
     ],
+    "gadget hackwrench - finder of lost parts": [
+      12
+    ],
     "gadget hackwrench - perceptive mouse": [
       6
     ],
     "gadget hackwrench - quirky scientist": [
       8
+    ],
+    "gadget hackwrench - resourceful mechanic": [
+      12
     ],
     "gadget hackwrench brilliant bosun": [
       6
@@ -3946,17 +4349,33 @@
     "gadget hackwrench creative thinker": [
       6
     ],
+    "gadget hackwrench finder of lost parts": [
+      12
+    ],
     "gadget hackwrench perceptive mouse": [
       6
     ],
     "gadget hackwrench quirky scientist": [
       8
     ],
+    "gadget hackwrench resourceful mechanic": [
+      12
+    ],
+    "gadget's goggles": [
+      12
+    ],
     "gaetan moliere": [
-      7
+      7,
+      12
+    ],
+    "gaetan moliere - clever burrower": [
+      12
     ],
     "gaetan moliere - the mole": [
       7
+    ],
+    "gaetan moliere clever burrower": [
+      12
     ],
     "gaetan moliere the mole": [
       7
@@ -4257,10 +4676,17 @@
       11
     ],
     "gizmoduck": [
-      7
+      7,
+      12
+    ],
+    "gizmoduck - duckburg defender": [
+      12
     ],
     "gizmoduck - suited up": [
       7
+    ],
+    "gizmoduck duckburg defender": [
+      12
     ],
     "gizmoduck suited up": [
       7
@@ -4359,10 +4785,14 @@
       8,
       9,
       10,
-      11
+      11,
+      12
     ],
     "goofy - daredevil": [
       1
+    ],
+    "goofy - determined traveler": [
+      12
     ],
     "goofy - emerald champion": [
       10
@@ -4411,6 +4841,9 @@
     ],
     "goofy daredevil": [
       1
+    ],
+    "goofy determined traveler": [
+      12
     ],
     "goofy emerald champion": [
       10
@@ -4476,13 +4909,20 @@
       6
     ],
     "gosalyn mallard": [
-      11
+      11,
+      12
     ],
     "gosalyn mallard - curious child": [
       11
     ],
+    "gosalyn mallard - the quiverwing quack": [
+      12
+    ],
     "gosalyn mallard curious child": [
       11
+    ],
+    "gosalyn mallard the quiverwing quack": [
+      12
     ],
     "grab your bow": [
       11
@@ -4603,7 +5043,8 @@
     ],
     "grumpy": [
       2,
-      5
+      5,
+      12
     ],
     "grumpy - bad-tempered": [
       2
@@ -4611,11 +5052,17 @@
     "grumpy - skeptical knight": [
       5
     ],
+    "grumpy - soreheaded miner": [
+      12
+    ],
     "grumpy bad-tempered": [
       2
     ],
     "grumpy skeptical knight": [
       5
+    ],
+    "grumpy soreheaded miner": [
+      12
     ],
     "gumbo pot": [
       2
@@ -4680,6 +5127,9 @@
     ],
     "gyro gearloose gadget whiz": [
       3
+    ],
+    "gyro-evac": [
+      12
     ],
     "hades": [
       1,
@@ -4765,8 +5215,41 @@
     "half hexwell crown": [
       5
     ],
+    "hamish hubert & harris making mischief": [
+      12
+    ],
+    "hamish hubert & harris troublemaking triplets": [
+      12
+    ],
+    "hamish, hubert & harris": [
+      12
+    ],
+    "hamish, hubert & harris - making mischief": [
+      12
+    ],
+    "hamish, hubert & harris - troublemaking triplets": [
+      12
+    ],
+    "hamm": [
+      12
+    ],
+    "hamm - piggy bank": [
+      12
+    ],
+    "hamm piggy bank": [
+      12
+    ],
     "hamster ball": [
       8
+    ],
+    "hand-in-the-box": [
+      12
+    ],
+    "hand-in-the-box - sid's toy": [
+      12
+    ],
+    "hand-in-the-box sid's toy": [
+      12
     ],
     "hans": [
       1,
@@ -4802,16 +5285,23 @@
     ],
     "happy": [
       2,
-      5
+      5,
+      12
     ],
     "happy - good-natured": [
       2
+    ],
+    "happy - joyful adventurer": [
+      12
     ],
     "happy - lively knight": [
       5
     ],
     "happy good-natured": [
       2
+    ],
+    "happy joyful adventurer": [
+      12
     ],
     "happy lively knight": [
       5
@@ -4946,10 +5436,17 @@
     ],
     "helga sinclair": [
       3,
-      7
+      7,
+      12
     ],
     "helga sinclair - femme fatale": [
       3
+    ],
+    "helga sinclair - no backup needed": [
+      12
+    ],
+    "helga sinclair - prepared for anything": [
+      12
     ],
     "helga sinclair - right-hand woman": [
       3
@@ -4962,6 +5459,12 @@
     ],
     "helga sinclair femme fatale": [
       3
+    ],
+    "helga sinclair no backup needed": [
+      12
+    ],
+    "helga sinclair prepared for anything": [
+      12
     ],
     "helga sinclair right-hand woman": [
       3
@@ -5003,7 +5506,8 @@
       6,
       9,
       10,
-      11
+      11,
+      12
     ],
     "hercules - baby demigod": [
       6
@@ -5037,6 +5541,9 @@
     "hercules - unwavering demigod": [
       6
     ],
+    "hercules - young rescuer": [
+      12
+    ],
     "hercules baby demigod": [
       6
     ],
@@ -5069,6 +5576,9 @@
     "hercules unwavering demigod": [
       6
     ],
+    "hercules young rescuer": [
+      12
+    ],
     "hermes": [
       10
     ],
@@ -5077,6 +5587,9 @@
     ],
     "hermes harried messenger": [
       10
+    ],
+    "hero work": [
+      12
     ],
     "hidden cove": [
       4,
@@ -5448,6 +5961,15 @@
       2,
       9
     ],
+    "incrediboy": [
+      12
+    ],
+    "incrediboy - buddy pine": [
+      12
+    ],
+    "incrediboy buddy pine": [
+      12
+    ],
     "infra-pink ultra scan specs": [
       11
     ],
@@ -5462,6 +5984,9 @@
     ],
     "inkrunner": [
       10
+    ],
+    "inner strength": [
+      12
     ],
     "inscrutable map": [
       10
@@ -5492,7 +6017,11 @@
     ],
     "isabela madrigal": [
       4,
-      7
+      7,
+      12
+    ],
+    "isabela madrigal - caring cultivator": [
+      12
     ],
     "isabela madrigal - golden child": [
       4
@@ -5500,11 +6029,26 @@
     "isabela madrigal - in the moment": [
       7
     ],
+    "isabela madrigal - perfectly in control": [
+      12
+    ],
+    "isabela madrigal - such a lovely voice": [
+      12
+    ],
+    "isabela madrigal caring cultivator": [
+      12
+    ],
     "isabela madrigal golden child": [
       4
     ],
     "isabela madrigal in the moment": [
       7
+    ],
+    "isabela madrigal perfectly in control": [
+      12
+    ],
+    "isabela madrigal such a lovely voice": [
+      12
     ],
     "isis vanderchill": [
       11
@@ -5520,6 +6064,15 @@
     ],
     "it means no worries": [
       8
+    ],
+    "jack-jack parr": [
+      12
+    ],
+    "jack-jack parr - incredible potential": [
+      12
+    ],
+    "jack-jack parr incredible potential": [
+      12
     ],
     "jafar": [
       1,
@@ -5715,13 +6268,29 @@
       1
     ],
     "jebidiah farnsworth": [
-      7
+      7,
+      12
+    ],
+    "jebidiah farnsworth - cookie": [
+      12
     ],
     "jebidiah farnsworth - expedition cook": [
       7
     ],
+    "jebidiah farnsworth cookie": [
+      12
+    ],
     "jebidiah farnsworth expedition cook": [
       7
+    ],
+    "jessie": [
+      12
+    ],
+    "jessie - lively cowgirl": [
+      12
+    ],
+    "jessie lively cowgirl": [
+      12
     ],
     "jetsam": [
       1,
@@ -5822,6 +6391,15 @@
     "jiminy cricket pinocchio's conscience": [
       2
     ],
+    "jingle joe": [
+      12
+    ],
+    "jingle joe - sid's toy": [
+      12
+    ],
+    "jingle joe sid's toy": [
+      12
+    ],
     "jock": [
       8
     ],
@@ -5904,13 +6482,20 @@
       7
     ],
     "john smith": [
-      11
+      11,
+      12
+    ],
+    "john smith - skillful explorer": [
+      12
     ],
     "john smith - snow tracker": [
       11
     ],
     "john smith - undaunted protector": [
       11
+    ],
+    "john smith skillful explorer": [
+      12
     ],
     "john smith snow tracker": [
       11
@@ -5931,10 +6516,17 @@
       3
     ],
     "joshua sweet": [
-      3
+      3,
+      12
+    ],
+    "joshua sweet - field surgeon": [
+      12
     ],
     "joshua sweet - the doctor": [
       3
+    ],
+    "joshua sweet field surgeon": [
+      12
     ],
     "joshua sweet the doctor": [
       3
@@ -5995,15 +6587,25 @@
     ],
     "julieta madrigal": [
       4,
-      9
+      9,
+      12
+    ],
+    "julieta madrigal - caring baker": [
+      12
     ],
     "julieta madrigal - excellent cook": [
       4,
       9
     ],
+    "julieta madrigal caring baker": [
+      12
+    ],
     "julieta madrigal excellent cook": [
       4,
       9
+    ],
+    "julieta's arepas": [
+      12
     ],
     "jumba jookiba": [
       1,
@@ -6120,13 +6722,20 @@
       7
     ],
     "kashekim": [
-      7
+      7,
+      12
     ],
     "kashekim - ancient ruler": [
       7
     ],
+    "kashekim - wise king": [
+      12
+    ],
     "kashekim ancient ruler": [
       7
+    ],
+    "kashekim wise king": [
+      12
     ],
     "katrina van tassel": [
       10
@@ -6180,13 +6789,23 @@
     ],
     "kida": [
       3,
-      7
+      7,
+      12
     ],
     "kida - atlantean": [
       3
     ],
     "kida - creative thinker": [
       7
+    ],
+    "kida - crystal scion": [
+      12
+    ],
+    "kida - discovering the unknown": [
+      12
+    ],
+    "kida - guardian of the path": [
+      12
     ],
     "kida - protector of atlantis": [
       3
@@ -6199,6 +6818,15 @@
     ],
     "kida creative thinker": [
       7
+    ],
+    "kida crystal scion": [
+      12
+    ],
+    "kida discovering the unknown": [
+      12
+    ],
+    "kida guardian of the path": [
+      12
     ],
     "kida protector of atlantis": [
       3
@@ -6660,6 +7288,15 @@
     "lena sabrewing rebellious teenager": [
       3
     ],
+    "lenny": [
+      12
+    ],
+    "lenny - toy binoculars": [
+      12
+    ],
+    "lenny toy binoculars": [
+      12
+    ],
     "let it go": [
       1,
       11
@@ -6669,6 +7306,15 @@
     ],
     "let's get dangerous": [
       11
+    ],
+    "leviathan's lair": [
+      12
+    ],
+    "leviathan's lair - dangerous ground": [
+      12
+    ],
+    "leviathan's lair dangerous ground": [
+      12
     ],
     "lexington": [
       10
@@ -6739,6 +7385,9 @@
     ],
     "light the fuse": [
       8
+    ],
+    "like a bird in the sky": [
+      12
     ],
     "lilo": [
       1,
@@ -6889,6 +7538,33 @@
       4,
       9
     ],
+    "lord dingwall": [
+      12
+    ],
+    "lord dingwall - bullheaded": [
+      12
+    ],
+    "lord dingwall bullheaded": [
+      12
+    ],
+    "lord macguffin": [
+      12
+    ],
+    "lord macguffin - clever swordsman": [
+      12
+    ],
+    "lord macguffin clever swordsman": [
+      12
+    ],
+    "lord macintosh": [
+      12
+    ],
+    "lord macintosh - wiry and high-strung": [
+      12
+    ],
+    "lord macintosh wiry and high-strung": [
+      12
+    ],
     "lose the way": [
       6
     ],
@@ -6971,7 +7647,11 @@
     "luisa madrigal": [
       4,
       5,
-      9
+      9,
+      12
+    ],
+    "luisa madrigal - confident climber": [
+      12
     ],
     "luisa madrigal - entertaining muscle": [
       5
@@ -6980,8 +7660,17 @@
       4,
       9
     ],
+    "luisa madrigal - no pressure": [
+      12
+    ],
+    "luisa madrigal - pushing through": [
+      12
+    ],
     "luisa madrigal - rock of the family": [
       4
+    ],
+    "luisa madrigal confident climber": [
+      12
     ],
     "luisa madrigal entertaining muscle": [
       5
@@ -6989,6 +7678,12 @@
     "luisa madrigal magically strong one": [
       4,
       9
+    ],
+    "luisa madrigal no pressure": [
+      12
+    ],
+    "luisa madrigal pushing through": [
+      12
     ],
     "luisa madrigal rock of the family": [
       4
@@ -7036,7 +7731,14 @@
     ],
     "lyle tiberius rourke": [
       3,
-      7
+      7,
+      12
+    ],
+    "lyle tiberius rourke - adventurer for hire": [
+      12
+    ],
+    "lyle tiberius rourke - crystallized commander": [
+      12
     ],
     "lyle tiberius rourke - crystallized mercenary": [
       7
@@ -7044,11 +7746,23 @@
     "lyle tiberius rourke - cunning mercenary": [
       3
     ],
+    "lyle tiberius rourke - looking for his moment": [
+      12
+    ],
+    "lyle tiberius rourke adventurer for hire": [
+      12
+    ],
+    "lyle tiberius rourke crystallized commander": [
+      12
+    ],
     "lyle tiberius rourke crystallized mercenary": [
       7
     ],
     "lyle tiberius rourke cunning mercenary": [
       3
+    ],
+    "lyle tiberius rourke looking for his moment": [
+      12
     ],
     "lythos": [
       3
@@ -7380,13 +8094,17 @@
       1,
       3,
       5,
-      9
+      9,
+      12
     ],
     "maleficent - biding her time": [
       1
     ],
     "maleficent - formidable queen": [
       5
+    ],
+    "maleficent - imperious traveler": [
+      12
     ],
     "maleficent - mistress of all evil": [
       3
@@ -7415,6 +8133,9 @@
     ],
     "maleficent formidable queen": [
       5
+    ],
+    "maleficent imperious traveler": [
+      12
     ],
     "maleficent mistress of all evil": [
       3
@@ -7554,6 +8275,15 @@
     ],
     "mattias arendelle general": [
       7
+    ],
+    "maudie": [
+      12
+    ],
+    "maudie - exasperated nursemaid": [
+      12
+    ],
+    "maudie exasperated nursemaid": [
+      12
     ],
     "maui": [
       1,
@@ -7781,6 +8511,30 @@
     "megara secret keeper": [
       10
     ],
+    "merida": [
+      12
+    ],
+    "merida - defiant daughter": [
+      12
+    ],
+    "merida - formidable archer": [
+      12
+    ],
+    "merida - gifted archer": [
+      12
+    ],
+    "merida defiant daughter": [
+      12
+    ],
+    "merida formidable archer": [
+      12
+    ],
+    "merida gifted archer": [
+      12
+    ],
+    "merida's bow": [
+      12
+    ],
     "merlin": [
       1,
       2,
@@ -7867,10 +8621,17 @@
       5
     ],
     "merryweather": [
-      5
+      5,
+      12
+    ],
+    "merryweather - feisty fairy": [
+      12
     ],
     "merryweather - good fairy": [
       5
+    ],
+    "merryweather feisty fairy": [
+      12
     ],
     "merryweather good fairy": [
       5
@@ -7883,6 +8644,9 @@
     ],
     "mertle edmonds lilo's rival": [
       6
+    ],
+    "metamorphosis": [
+      12
     ],
     "michael darling": [
       6
@@ -7904,7 +8668,8 @@
       8,
       9,
       10,
-      11
+      11,
+      12
     ],
     "mickey mouse - amber champion": [
       10
@@ -7930,6 +8695,12 @@
     ],
     "mickey mouse - enthusiastic dancer": [
       5
+    ],
+    "mickey mouse - expedition leader": [
+      12
+    ],
+    "mickey mouse - experienced traveler": [
+      12
     ],
     "mickey mouse - food fight defender": [
       5
@@ -8014,6 +8785,12 @@
     "mickey mouse enthusiastic dancer": [
       5
     ],
+    "mickey mouse expedition leader": [
+      12
+    ],
+    "mickey mouse experienced traveler": [
+      12
+    ],
     "mickey mouse food fight defender": [
       5
     ],
@@ -8080,10 +8857,17 @@
     ],
     "milo thatch": [
       3,
-      7
+      7,
+      12
     ],
     "milo thatch - clever cartographer": [
       3
+    ],
+    "milo thatch - courageous explorer": [
+      12
+    ],
+    "milo thatch - getting his hands dirty": [
+      12
     ],
     "milo thatch - king of atlantis": [
       3
@@ -8096,6 +8880,12 @@
     ],
     "milo thatch clever cartographer": [
       3
+    ],
+    "milo thatch courageous explorer": [
+      12
+    ],
+    "milo thatch getting his hands dirty": [
+      12
     ],
     "milo thatch king of atlantis": [
       3
@@ -8117,7 +8907,8 @@
       8,
       9,
       10,
-      11
+      11,
+      12
     ],
     "minnie mouse - always classy": [
       1
@@ -8157,6 +8948,9 @@
     ],
     "minnie mouse - pirate lookout": [
       6
+    ],
+    "minnie mouse - practical traveler": [
+      12
     ],
     "minnie mouse - quick-thinking inventor": [
       5
@@ -8221,6 +9015,9 @@
     "minnie mouse pirate lookout": [
       6
     ],
+    "minnie mouse practical traveler": [
+      12
+    ],
     "minnie mouse quick-thinking inventor": [
       5
     ],
@@ -8249,7 +9046,8 @@
       4,
       5,
       7,
-      8
+      8,
+      12
     ],
     "mirabel madrigal - curious child": [
       8
@@ -8269,6 +9067,9 @@
     "mirabel madrigal - prophecy finder": [
       4
     ],
+    "mirabel madrigal - resourceful daughter": [
+      12
+    ],
     "mirabel madrigal curious child": [
       8
     ],
@@ -8287,8 +9088,20 @@
     "mirabel madrigal prophecy finder": [
       4
     ],
+    "mirabel madrigal resourceful daughter": [
+      12
+    ],
     "miracle candle": [
       4
+    ],
+    "mirage": [
+      12
+    ],
+    "mirage - super recruiter": [
+      12
+    ],
+    "mirage super recruiter": [
+      12
     ],
     "miss bianca": [
       3,
@@ -8415,7 +9228,8 @@
     ],
     "monterey jack": [
       6,
-      8
+      8,
+      12
     ],
     "monterey jack - defiant protector": [
       8
@@ -8423,11 +9237,38 @@
     "monterey jack - good-hearted ranger": [
       6
     ],
+    "monterey jack - hypnotized by cheese": [
+      12
+    ],
+    "monterey jack - watchful ranger": [
+      12
+    ],
     "monterey jack defiant protector": [
       8
     ],
     "monterey jack good-hearted ranger": [
       6
+    ],
+    "monterey jack hypnotized by cheese": [
+      12
+    ],
+    "monterey jack watchful ranger": [
+      12
+    ],
+    "mor'du": [
+      12
+    ],
+    "mor'du - savage cursed prince": [
+      12
+    ],
+    "mor'du - wicked with pride": [
+      12
+    ],
+    "mor'du savage cursed prince": [
+      12
+    ],
+    "mor'du wicked with pride": [
+      12
     ],
     "morgana macawber": [
       11
@@ -8558,6 +9399,15 @@
     "mr big shrewd tycoon": [
       6
     ],
+    "mr incredible bob parr": [
+      12
+    ],
+    "mr incredible super strong": [
+      12
+    ],
+    "mr incredible taking out the trash": [
+      12
+    ],
     "mr litwak arcade owner": [
       6
     ],
@@ -8593,6 +9443,18 @@
     ],
     "mr. big - shrewd tycoon": [
       6
+    ],
+    "mr. incredible": [
+      12
+    ],
+    "mr. incredible - bob parr": [
+      12
+    ],
+    "mr. incredible - super strong": [
+      12
+    ],
+    "mr. incredible - taking out the trash": [
+      12
     ],
     "mr. litwak": [
       6
@@ -8634,6 +9496,15 @@
     "mrs beakley former shush agent": [
       10
     ],
+    "mrs incredible determined rescuer": [
+      12
+    ],
+    "mrs incredible helen parr": [
+      12
+    ],
+    "mrs incredible super stretchy": [
+      12
+    ],
     "mrs judson housekeeper": [
       2
     ],
@@ -8648,6 +9519,18 @@
     ],
     "mrs. beakley - former s.h.u.s.h. agent": [
       10
+    ],
+    "mrs. incredible": [
+      12
+    ],
+    "mrs. incredible - determined rescuer": [
+      12
+    ],
+    "mrs. incredible - helen parr": [
+      12
+    ],
+    "mrs. incredible - super stretchy": [
+      12
     ],
     "mrs. judson": [
       2
@@ -9154,6 +10037,15 @@
     "noi orphaned thief": [
       2
     ],
+    "norton nimnul": [
+      12
+    ],
+    "norton nimnul - misanthropic genius": [
+      12
+    ],
+    "norton nimnul misanthropic genius": [
+      12
+    ],
     "nothing to hide": [
       2
     ],
@@ -9248,6 +10140,27 @@
     ],
     "olympus would be that way": [
       3
+    ],
+    "omnidroid": [
+      12
+    ],
+    "omnidroid - v.10": [
+      12
+    ],
+    "omnidroid - v.8": [
+      12
+    ],
+    "omnidroid - v.9": [
+      12
+    ],
+    "omnidroid v10": [
+      12
+    ],
+    "omnidroid v8": [
+      12
+    ],
+    "omnidroid v9": [
+      12
     ],
     "on your feet now": [
       3
@@ -9460,6 +10373,15 @@
     "pawpsicle": [
       2
     ],
+    "pedro madrigal": [
+      12
+    ],
+    "pedro madrigal - family patriarch": [
+      12
+    ],
+    "pedro madrigal family patriarch": [
+      12
+    ],
     "peg": [
       7
     ],
@@ -9471,7 +10393,8 @@
     ],
     "pegasus": [
       4,
-      9
+      9,
+      12
     ],
     "pegasus - cloud racer": [
       4
@@ -9483,6 +10406,9 @@
       4,
       9
     ],
+    "pegasus - searching high and low": [
+      12
+    ],
     "pegasus cloud racer": [
       4
     ],
@@ -9492,6 +10418,9 @@
     "pegasus gift for hercules": [
       4,
       9
+    ],
+    "pegasus searching high and low": [
+      12
     ],
     "penny": [
       7
@@ -9522,13 +10451,20 @@
     ],
     "pepa madrigal": [
       4,
-      7
+      7,
+      12
+    ],
+    "pepa madrigal - calm before the storm": [
+      12
     ],
     "pepa madrigal - sensitive sister": [
       7
     ],
     "pepa madrigal - weather maker": [
       4
+    ],
+    "pepa madrigal calm before the storm": [
+      12
     ],
     "pepa madrigal sensitive sister": [
       7
@@ -9686,7 +10622,8 @@
       3,
       4,
       6,
-      10
+      10,
+      12
     ],
     "peter pan - fearless fighter": [
       1
@@ -9708,6 +10645,9 @@
     ],
     "peter pan - pirate's bane": [
       3
+    ],
+    "peter pan - searching far and wide": [
+      12
     ],
     "peter pan - shadow catcher": [
       6
@@ -9735,6 +10675,9 @@
     ],
     "peter pan pirate's bane": [
       3
+    ],
+    "peter pan searching far and wide": [
+      12
     ],
     "peter pan shadow catcher": [
       6
@@ -9855,6 +10798,15 @@
     "pixie dust": [
       6
     ],
+    "pizza planet": [
+      12
+    ],
+    "pizza planet - spaceport": [
+      12
+    ],
+    "pizza planet spaceport": [
+      12
+    ],
     "pj pete caught up in the music": [
       9
     ],
@@ -9880,13 +10832,17 @@
     "pleakley scientific expert": [
       6
     ],
+    "plunger crossbow": [
+      12
+    ],
     "pluto": [
       3,
       4,
       6,
       8,
       9,
-      10
+      10,
+      12
     ],
     "pluto - clever cluefinder": [
       10
@@ -9915,6 +10871,9 @@
     "pluto - tried and true": [
       8
     ],
+    "pluto - vigilant traveler": [
+      12
+    ],
     "pluto clever cluefinder": [
       10
     ],
@@ -9942,8 +10901,12 @@
     "pluto tried and true": [
       8
     ],
+    "pluto vigilant traveler": [
+      12
+    ],
     "pocahontas": [
-      11
+      11,
+      12
     ],
     "pocahontas - finding the way": [
       11
@@ -9954,6 +10917,9 @@
     "pocahontas - peacekeeper": [
       11
     ],
+    "pocahontas - steadfast traveler": [
+      12
+    ],
     "pocahontas finding the way": [
       11
     ],
@@ -9962,6 +10928,9 @@
     ],
     "pocahontas peacekeeper": [
       11
+    ],
+    "pocahontas steadfast traveler": [
+      12
     ],
     "poe de spell": [
       8
@@ -10050,6 +11019,15 @@
     "prepare your bot": [
       6
     ],
+    "preston whitmore": [
+      12
+    ],
+    "preston whitmore - expedition financier": [
+      12
+    ],
+    "preston whitmore expedition financier": [
+      12
+    ],
     "pride lands": [
       3,
       5
@@ -10077,7 +11055,8 @@
     ],
     "prince charming": [
       2,
-      10
+      10,
+      12
     ],
     "prince charming - heir to the throne": [
       2
@@ -10085,17 +11064,24 @@
     "prince charming - protector of the realm": [
       10
     ],
+    "prince charming - searching for answers": [
+      12
+    ],
     "prince charming heir to the throne": [
       2
     ],
     "prince charming protector of the realm": [
       10
     ],
+    "prince charming searching for answers": [
+      12
+    ],
     "prince eric": [
       1,
       3,
       4,
-      9
+      9,
+      12
     ],
     "prince eric - dashing and brave": [
       1,
@@ -10103,6 +11089,9 @@
     ],
     "prince eric - expert helmsman": [
       3
+    ],
+    "prince eric - noble swordsman": [
+      12
     ],
     "prince eric - seafaring prince": [
       4
@@ -10116,6 +11105,9 @@
     ],
     "prince eric expert helmsman": [
       3
+    ],
+    "prince eric noble swordsman": [
+      12
     ],
     "prince eric seafaring prince": [
       4
@@ -10251,6 +11243,15 @@
     "promising lead": [
       10
     ],
+    "pterodactyl janie doll": [
+      12
+    ],
+    "pterodactyl janie doll - sid's toy": [
+      12
+    ],
+    "pterodactyl janie doll sid's toy": [
+      12
+    ],
     "pua": [
       3,
       8,
@@ -10322,13 +11323,17 @@
       3,
       7,
       8,
-      9
+      9,
+      12
     ],
     "queen of hearts - capricious monarch": [
       2
     ],
     "queen of hearts - haughty monarch": [
       8
+    ],
+    "queen of hearts - impatient traveler": [
+      12
     ],
     "queen of hearts - impulsive ruler": [
       2,
@@ -10356,6 +11361,9 @@
     ],
     "queen of hearts haughty monarch": [
       8
+    ],
+    "queen of hearts impatient traveler": [
+      12
     ],
     "queen of hearts impulsive ruler": [
       2,
@@ -10505,6 +11513,12 @@
     "rancis fluggerbutter chocolate charger": [
       5
     ],
+    "ranger plane": [
+      12
+    ],
+    "ranger team-up": [
+      12
+    ],
     "ransack": [
       1
     ],
@@ -10583,6 +11597,15 @@
     ],
     "rapunzel's tower secluded prison": [
       5
+    ],
+    "rat capone": [
+      12
+    ],
+    "rat capone - rodent gangster": [
+      12
+    ],
+    "rat capone rodent gangster": [
+      12
     ],
     "ratigan": [
       2,
@@ -10727,6 +11750,15 @@
     "razoul palace guard": [
       3
     ],
+    "rc": [
+      12
+    ],
+    "rc - remote-controlled car": [
+      12
+    ],
+    "rc remote-controlled car": [
+      12
+    ],
     "record player": [
       4
     ],
@@ -10738,6 +11770,15 @@
     ],
     "remember who you are": [
       5
+    ],
+    "remote inklands": [
+      12
+    ],
+    "remote inklands - desert ruins": [
+      12
+    ],
+    "remote inklands desert ruins": [
+      12
     ],
     "repair": [
       3
@@ -10784,6 +11825,15 @@
     "revive": [
       5
     ],
+    "rex": [
+      12
+    ],
+    "rex - protective dinosaur": [
+      12
+    ],
+    "rex protective dinosaur": [
+      12
+    ],
     "rhino": [
       7,
       8
@@ -10805,6 +11855,18 @@
     ],
     "rhino power hamster": [
       8
+    ],
+    "right behind you": [
+      12
+    ],
+    "ring of stones": [
+      12
+    ],
+    "ring of stones - place of legends": [
+      12
+    ],
+    "ring of stones place of legends": [
+      12
     ],
     "ring the bell": [
       2
@@ -10831,7 +11893,8 @@
       5,
       7,
       9,
-      10
+      10,
+      12
     ],
     "robin hood - archery contestant": [
       5
@@ -10850,6 +11913,9 @@
     "robin hood - daydreamer": [
       3,
       9
+    ],
+    "robin hood - desert wanderer": [
+      12
     ],
     "robin hood - ephemeral archer": [
       10
@@ -10888,6 +11954,9 @@
       3,
       9
     ],
+    "robin hood desert wanderer": [
+      12
+    ],
     "robin hood ephemeral archer": [
       10
     ],
@@ -10918,6 +11987,15 @@
     ],
     "roger radcliffe dog lover": [
       7
+    ],
+    "roller bob": [
+      12
+    ],
+    "roller bob - sid's toy": [
+      12
+    ],
+    "roller bob sid's toy": [
+      12
     ],
     "rolly": [
       3,
@@ -11034,11 +12112,20 @@
     "ryder fleet-footed infiltrator": [
       8
     ],
+    "sabotage": [
+      12
+    ],
     "safe and sound": [
       6
     ],
+    "safety rope": [
+      12
+    ],
     "sail the azurite sea": [
       6
+    ],
+    "salvage operation": [
+      12
     ],
     "sapphire chromicon": [
       5
@@ -11339,6 +12426,9 @@
     "shenzi scar's accomplice": [
       5
     ],
+    "shepherd's journal": [
+      12
+    ],
     "shere khan": [
       2,
       7,
@@ -11413,6 +12503,15 @@
     ],
     "show me more!": [
       7
+    ],
+    "sid phillips": [
+      12
+    ],
+    "sid phillips - toy surgeon": [
+      12
+    ],
+    "sid phillips toy surgeon": [
+      12
     ],
     "sign the scroll": [
       4
@@ -11633,13 +12732,20 @@
     ],
     "sleepy": [
       2,
-      5
+      5,
+      12
+    ],
+    "sleepy - deep sleeper": [
+      12
     ],
     "sleepy - nodding off": [
       2
     ],
     "sleepy - sluggish knight": [
       5
+    ],
+    "sleepy deep sleeper": [
+      12
     ],
     "sleepy hollow": [
       10
@@ -11683,16 +12789,23 @@
     ],
     "sneezy": [
       2,
-      5
+      5,
+      12
     ],
     "sneezy - noisy knight": [
       5
+    ],
+    "sneezy - startlingly loud": [
+      12
     ],
     "sneezy - very allergic": [
       2
     ],
     "sneezy noisy knight": [
       5
+    ],
+    "sneezy startlingly loud": [
+      12
     ],
     "sneezy very allergic": [
       2
@@ -11703,7 +12816,8 @@
     "snow white": [
       2,
       5,
-      7
+      7,
+      12
     ],
     "snow white - fair-hearted": [
       5
@@ -11713,6 +12827,9 @@
     ],
     "snow white - lost in the forest": [
       2
+    ],
+    "snow white - merry as the morning": [
+      12
     ],
     "snow white - unexpected houseguest": [
       2
@@ -11728,6 +12845,9 @@
     ],
     "snow white lost in the forest": [
       2
+    ],
+    "snow white merry as the morning": [
+      12
     ],
     "snow white unexpected houseguest": [
       2
@@ -11764,6 +12884,9 @@
     ],
     "so much to give": [
       7
+    ],
+    "someone will lose his head": [
+      12
     ],
     "sour bill": [
       6
@@ -11979,6 +13102,9 @@
     "stopped chaos in its tracks": [
       8
     ],
+    "strange things": [
+      12
+    ],
     "stratos": [
       3
     ],
@@ -12024,6 +13150,12 @@
     ],
     "sunglasses": [
       6
+    ],
+    "super relocation program": [
+      12
+    ],
+    "super suit": [
+      12
     ],
     "suzy": [
       7
@@ -12081,6 +13213,24 @@
     ],
     "swordplay": [
       11
+    ],
+    "syndrome": [
+      12
+    ],
+    "syndrome - evil inventor": [
+      12
+    ],
+    "syndrome - out for revenge": [
+      12
+    ],
+    "syndrome evil inventor": [
+      12
+    ],
+    "syndrome out for revenge": [
+      12
+    ],
+    "syndrome's remote": [
+      12
     ],
     "tadashi hamada": [
       6
@@ -12276,6 +13426,9 @@
     "the carpenter dinner companion": [
       6
     ],
+    "the claw": [
+      12
+    ],
     "the coachman": [
       8
     ],
@@ -12308,6 +13461,9 @@
     ],
     "the family madrigal": [
       7
+    ],
+    "the family scattered": [
+      12
     ],
     "the fates": [
       4
@@ -12410,19 +13566,44 @@
       10
     ],
     "the huntsman": [
-      2
+      2,
+      12
+    ],
+    "the huntsman - on the queen's orders": [
+      12
     ],
     "the huntsman - reluctant enforcer": [
       2
     ],
+    "the huntsman on the queen's orders": [
+      12
+    ],
     "the huntsman reluctant enforcer": [
       2
+    ],
+    "the island of nomanisan": [
+      12
+    ],
+    "the island of nomanisan - syndrome's headquarters": [
+      12
+    ],
+    "the island of nomanisan syndrome's headquarters": [
+      12
     ],
     "the islands i pulled from the sea": [
       6
     ],
     "the lamp": [
       3
+    ],
+    "the leviathan": [
+      12
+    ],
+    "the leviathan - guardian of atlantis": [
+      12
+    ],
+    "the leviathan guardian of atlantis": [
+      12
     ],
     "the library": [
       5
@@ -12503,16 +13684,23 @@
     ],
     "the prince": [
       2,
-      7
+      7,
+      12
     ],
     "the prince - never gives up": [
       2
+    ],
+    "the prince - searching for his love": [
+      12
     ],
     "the prince - vigilant suitor": [
       7
     ],
     "the prince never gives up": [
       2
+    ],
+    "the prince searching for his love": [
+      12
     ],
     "the prince vigilant suitor": [
       7
@@ -12524,7 +13712,8 @@
       4,
       5,
       7,
-      9
+      9,
+      12
     ],
     "the queen - commanding presence": [
       2
@@ -12538,11 +13727,17 @@
     "the queen - cruelest of all": [
       5
     ],
+    "the queen - devious disguise": [
+      12
+    ],
     "the queen - disguised peddler": [
       2
     ],
     "the queen - diviner": [
       4
+    ],
+    "the queen - evil ruler": [
+      12
     ],
     "the queen - fairest of all": [
       5
@@ -12577,11 +13772,17 @@
     "the queen cruelest of all": [
       5
     ],
+    "the queen devious disguise": [
+      12
+    ],
     "the queen disguised peddler": [
       2
     ],
     "the queen diviner": [
       4
+    ],
+    "the queen evil ruler": [
+      12
     ],
     "the queen fairest of all": [
       5
@@ -12735,6 +13936,15 @@
     "the white rose jewel of the garden": [
       6
     ],
+    "the witch": [
+      12
+    ],
+    "the witch - wily woodcarver": [
+      12
+    ],
+    "the witch wily woodcarver": [
+      12
+    ],
     "thebes": [
       4
     ],
@@ -12749,6 +13959,9 @@
     ],
     "thievery": [
       6
+    ],
+    "this growing pressure": [
+      12
     ],
     "this is my family": [
       7
@@ -12770,6 +13983,9 @@
     ],
     "thomas wide-eyed recruit": [
       11
+    ],
+    "three arrows": [
+      12
     ],
     "thumper": [
       8
@@ -13050,13 +14266,17 @@
       8
     ],
     "tod": [
-      11
+      11,
+      12
     ],
     "tod - all alone": [
       11
     ],
     "tod - knows all the tricks": [
       11
+    ],
+    "tod - nimble fox": [
+      12
     ],
     "tod - playful kit": [
       11
@@ -13066,6 +14286,9 @@
     ],
     "tod knows all the tricks": [
       11
+    ],
+    "tod nimble fox": [
+      12
     ],
     "tod playful kit": [
       11
@@ -13096,6 +14319,9 @@
     ],
     "tor florist": [
       4
+    ],
+    "touch the sky": [
+      12
     ],
     "toulouse": [
       7
@@ -13319,13 +14545,13 @@
     "turbo royal hack": [
       5
     ],
-    "tweedle dee & tweedle dum": [
+    "tweedledee & tweedledum": [
       7
     ],
-    "tweedle dee & tweedle dum - strange storytellers": [
+    "tweedledee & tweedledum - strange storytellers": [
       7
     ],
-    "tweedle dee & tweedle dum strange storytellers": [
+    "tweedledee & tweedledum strange storytellers": [
       7
     ],
     "twin fire": [
@@ -13361,7 +14587,11 @@
       3,
       4,
       9,
-      10
+      10,
+      12
+    ],
+    "ursula - deal maker": [
+      12
     ],
     "ursula - deceiver": [
       3,
@@ -13395,6 +14625,9 @@
     ],
     "ursula - whisper of vanessa": [
       10
+    ],
+    "ursula deal maker": [
+      12
     ],
     "ursula deceiver": [
       3,
@@ -13517,10 +14750,17 @@
       1
     ],
     "vincenzo santorini": [
-      8
+      8,
+      12
+    ],
+    "vincenzo santorini - on the run": [
+      12
     ],
     "vincenzo santorini - the explosives expert": [
       8
+    ],
+    "vincenzo santorini on the run": [
+      12
     ],
     "vincenzo santorini the explosives expert": [
       8
@@ -13533,6 +14773,21 @@
     ],
     "vinnie green pigeon": [
       8
+    ],
+    "violet parr": [
+      12
+    ],
+    "violet parr - at wits' end": [
+      12
+    ],
+    "violet parr - learning new powers": [
+      12
+    ],
+    "violet parr at wits' end": [
+      12
+    ],
+    "violet parr learning new powers": [
+      12
     ],
     "violet sabrewing": [
       10
@@ -13665,6 +14920,15 @@
     "webby's diary": [
       10
     ],
+    "wee dingwall": [
+      12
+    ],
+    "wee dingwall - scrappy lad": [
+      12
+    ],
+    "wee dingwall scrappy lad": [
+      12
+    ],
     "weight set": [
       2
     ],
@@ -13703,11 +14967,23 @@
     "what did you call me?": [
       2
     ],
+    "what else can i do": [
+      12
+    ],
+    "what else can i do?": [
+      12
+    ],
     "when will my life begin": [
       5
     ],
     "when will my life begin?": [
       5
+    ],
+    "when you need help just call": [
+      12
+    ],
+    "when you need help, just call": [
+      12
     ],
     "white agony plains": [
       10
@@ -13777,6 +15053,15 @@
     "wilhelmina packard the radio operator": [
       8
     ],
+    "will o' the wisp": [
+      12
+    ],
+    "will o' the wisp - forest spirit": [
+      12
+    ],
+    "will o' the wisp forest spirit": [
+      12
+    ],
     "willie the giant": [
       11
     ],
@@ -13785,6 +15070,15 @@
     ],
     "willie the giant ghost of christmas present": [
       11
+    ],
+    "wind-up frog": [
+      12
+    ],
+    "wind-up frog - sid's toy": [
+      12
+    ],
+    "wind-up frog sid's toy": [
+      12
     ],
     "winnie the pooh": [
       2,
@@ -13849,6 +15143,27 @@
     ],
     "witches of morva orddu orwen and orgoch": [
       11
+    ],
+    "woody": [
+      12
+    ],
+    "woody - jungle guide": [
+      12
+    ],
+    "woody - leader of the toys": [
+      12
+    ],
+    "woody - waiting for a friend": [
+      12
+    ],
+    "woody jungle guide": [
+      12
+    ],
+    "woody leader of the toys": [
+      12
+    ],
+    "woody waiting for a friend": [
+      12
     ],
     "work together": [
       1
@@ -13991,6 +15306,27 @@
     "you're welcome": [
       5
     ],
+    "you've got a friend in me": [
+      12
+    ],
+    "young macguffin": [
+      12
+    ],
+    "young macguffin - soft-spoken son": [
+      12
+    ],
+    "young macguffin soft-spoken son": [
+      12
+    ],
+    "young macintosh": [
+      12
+    ],
+    "young macintosh - proud son": [
+      12
+    ],
+    "young macintosh proud son": [
+      12
+    ],
     "yzma": [
       1,
       2,
@@ -14075,7 +15411,11 @@
     "zeus": [
       1,
       4,
-      10
+      10,
+      12
+    ],
+    "zeus - defiant god": [
+      12
     ],
     "zeus - god of lightning": [
       1
@@ -14085,6 +15425,9 @@
     ],
     "zeus - mr. lightning bolts": [
       4
+    ],
+    "zeus defiant god": [
+      12
     ],
     "zeus god of lightning": [
       1
@@ -14097,19 +15440,32 @@
     ],
     "zipper": [
       6,
-      8
+      8,
+      12
     ],
     "zipper - astute decoy": [
       6
     ],
+    "zipper - big helper": [
+      12
+    ],
     "zipper - flying ranger": [
       8
+    ],
+    "zipper - tiny helper": [
+      12
     ],
     "zipper astute decoy": [
       6
     ],
+    "zipper big helper": [
+      12
+    ],
     "zipper flying ranger": [
       8
+    ],
+    "zipper tiny helper": [
+      12
     ],
     "zootopia": [
       10,

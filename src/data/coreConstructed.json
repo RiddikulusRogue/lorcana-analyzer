@@ -6,10 +6,11 @@
         8,
         9,
         10,
-        11
+        11,
+        12
     ],
-    "description": "Core Constructed format - legal sets are 5-11. Update 'legalSets' array when format changes. Include all cards from these sets in 'legalCards'.",
-    "lastUpdated": "2026-02-09",
+    "description": "Core Constructed format - legal sets are 5-12. Update 'legalSets' array when format changes. Include all cards from these sets in 'legalCards'.",
+    "lastUpdated": "2026-05-12",
     "legalCards": [
         "moana of motunui",
         "rapunzel gifted with healing",
@@ -131,5 +132,5 @@
         "strange world searcher",
         "strange world ethan explorer"
     ],
-    "notes": "Cards from sets 5-11 only. Update 'legalSets' when format rotation occurs. All cards in 'legalCards' must be from the specified sets."
+    "notes": "Cards from sets 5-12 only. Update 'legalSets' when format rotation occurs. All cards in 'legalCards' must be from the specified sets."
 }

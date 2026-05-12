@@ -652,10 +652,12 @@ export default function App() {
           name: card.fullName || card.name || card.simpleName || 'Unknown',
           simpleName: card.simpleName || (card.fullName || card.name || '').toLowerCase(),
           ink: card.color,
+          inkwell: typeof card.inkwell === 'boolean' ? card.inkwell : null,
           cost: card.cost,
           lore: card.lore,
           type: card.type,
           setCode: card.setCode,
+          subtypes: Array.isArray(card.subtypes) ? card.subtypes : [],
           keywords: keywordList,
           ability: abilityText,
           allowedInFormats: card.allowedInFormats || null
@@ -890,9 +892,32 @@ export default function App() {
           // Score cards based on keywords, abilities, and lore
           let score = 0;
           const type = (card.type || '').toLowerCase();
+          const subtypes = Array.isArray(card.subtypes) ? card.subtypes.map(s => String(s).toLowerCase()) : [];
           const keywords = (card.keywords || []).map(k => String(k).toLowerCase());
           const ability = (card.ability || '').toLowerCase();
           const setCodeNumber = parseInt(card.setCode, 10);
+          const cost = typeof card.cost === 'number' ? card.cost : 0;
+          const lore = typeof card.lore === 'number' ? card.lore : 0;
+          const isInkable = card.inkwell === true;
+
+          // Baseline playability: cards that are easy to deploy on curve are more reliable.
+          if (typeof card.cost === 'number') {
+            if (targetCost !== null) {
+              const diff = Math.abs(cost - targetCost);
+              if (diff === 0) score += 4;
+              else if (diff === 1) score += 2;
+              else score -= 1;
+            } else {
+              if (cost >= 2 && cost <= 4) score += 1.5;
+              if (cost >= 7) score -= 1;
+            }
+          }
+
+          if (isInkable) {
+            score += archetypeLower.includes('control') ? 1.5 : 2.5;
+          } else {
+            score -= archetypeLower.includes('aggro') ? 2.5 : 1.5;
+          }
 
           // Keyword scoring
           if (keywords.some(k => k.includes('rush'))) score += 3;
@@ -927,24 +952,48 @@ export default function App() {
           }
 
           // Lore value (higher is better for racing)
-          score += (card.lore || 0) * 0.5;
+          score += lore * 0.5;
 
           // Cost efficiency (prefer cards that give value)
-          if (card.cost && card.lore) {
-            const efficiency = card.lore / card.cost;
+          if (cost > 0 && lore > 0) {
+            const efficiency = lore / cost;
             if (efficiency > 0.5) score += 2;
+          }
+
+          // Archetype-tuned playability nudges.
+          if (archetypeLower.includes('aggro')) {
+            if (type.includes('character') && cost <= 3) score += 2;
+            if (lore >= 2 && cost <= 4) score += 2;
+            if (ability.includes('ready')) score += 1;
+          } else if (archetypeLower.includes('tempo')) {
+            if (type.includes('character') && cost >= 2 && cost <= 4) score += 2;
+            if (keywords.some(k => k.includes('evasive') || k.includes('challenger'))) score += 1.5;
+            if (ability.includes('exert') || ability.includes("can't ready")) score += 1.5;
+          } else if (archetypeLower.includes('control')) {
+            if (type.includes('action') && (ability.includes('banish') || ability.includes('return'))) score += 2.5;
+            if (ability.includes('draw') || ability.includes('look at')) score += 2;
+            if (cost >= 5 && type.includes('character')) score += 1.5;
+          } else if (archetypeLower.includes('midrange')) {
+            if (type.includes('character') && cost >= 3 && cost <= 5) score += 2;
+            if (keywords.some(k => k.includes('resist') || k.includes('bodyguard'))) score += 1.5;
+            if (ability.includes('when you play')) score += 1.25;
+          }
+
+          // Universal role helpers that improve real game playability.
+          if (subtypes.some(s => s.includes('location')) || type.includes('location')) {
+            if (archetypeLower.includes('aggro')) score -= 1;
+            if (archetypeLower.includes('control')) score += 0.5;
           }
 
           // Slightly prioritize latest competitive printings
           if (Number.isFinite(setCodeNumber)) {
             if (setCodeNumber === preferredCompetitiveSet) score += 2.5;
             else if (setCodeNumber === preferredCompetitiveSet - 1) score += 1;
-
-                    // Bonus for meta key cards listed in top competitive decks
-                    const normalizedName = String(card.simpleName || card.name || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-                    if (metaKeyCardNames.has(normalizedName)) score += 4;
-
           }
+
+          // Bonus for cards appearing as key cards in current top lists.
+          const normalizedName = String(card.simpleName || card.name || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+          if (metaKeyCardNames.has(normalizedName)) score += 4;
 
           return { ...card, score };
         })
@@ -2795,7 +2844,10 @@ export default function App() {
 
       // Format-specific
       if (format === "core") {
-        text += `📋 CORE CONSTRUCTED (Sets 5-11 only)\n`;
+        const coreLegalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [5, 6, 7, 8, 9, 10, 11, 12];
+        const coreMinSet = Math.min(...coreLegalSets);
+        const coreMaxSet = Math.max(...coreLegalSets);
+        text += `📋 CORE CONSTRUCTED (Sets ${coreMinSet}-${coreMaxSet})\n`;
         text += `Make sure all your cards are from the legal sets!\n\n`;
       }
 

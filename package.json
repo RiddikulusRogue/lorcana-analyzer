@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.js",
+    "refresh-cards": "node scripts/refreshAllCards.js",
     "generate-cards": "node scripts/generateCardSets.js",
+    "build-card-meta": "node scripts/buildCardMeta.js",
+    "update-card-db": "npm run refresh-cards ; npm run generate-cards ; npm run build-card-meta",
     "test:cards": "node scripts/testCardRecognition.js"
   },
   "dependencies": {
