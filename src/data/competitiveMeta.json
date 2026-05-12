@@ -1,36 +1,42 @@
 {
-    "lastUpdated": "2026-04-19",
-    "source": "DLC Circuit Results (Melbourne + Ghent + Taipei + Winterspell Set Championships + CCS $25k Invitational Qualifier)",
+    "lastUpdated": "2026-05-12",
+    "source": "Latest verified tournament window: DLC Circuit (Melbourne + Ghent + Taipei) plus Winterspell Set Championship season and CCS $25k; Wilds Unknown (Set 12) released and still in early adaptation.",
     "internetStrategySources": [
         {
             "name": "TCGplayer - The Best Decks From DLC Ghent & CCS $25k Invitational Qualifier",
             "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-From-DLC-Ghent-And-The-CCS-25-000-Invitational-Qualifier/81cc791d-e63b-48bf-9b7e-44f6003e0e39/",
-            "lastChecked": "2026-04-19",
+            "lastChecked": "2026-05-12",
             "notes": "Amber/Emerald Dogs dominated (22 copies in top cut, won both brackets). Amber/Steel emerged as a counter. Triangle metagame: Dogs vs Sapphire vs Steel. Published Mar 13, 2026."
         },
         {
             "name": "TCGplayer - The Best Decks From DLC Melbourne",
             "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-From-DLC-Melbourne/c4b5a66f-0246-4937-921b-86e7560f49ab/",
-            "lastChecked": "2026-04-19",
+            "lastChecked": "2026-05-12",
             "notes": "Confirmed Dogs and Amethyst dominance. Winterspell cards (Grandmother Willow, Nani - Stage Manager, Emerald Chromicon) fueled key upgrades. Published Feb 25, 2026."
         },
         {
             "name": "TCGplayer - The Best Decks From DLC Taipei",
             "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-from-DLC-Taipei/cbbe3d0f-fe1c-470a-91a7-a00966ba9d0e/",
-            "lastChecked": "2026-04-19",
+            "lastChecked": "2026-05-12",
             "notes": "Emerald/Sapphire won (Edmond Chiu, 2-time DLC Champion). Dogs didn't reach top 4. Sapphire/Steel rising. Swordplay + Demona tech for Amethyst/Sapphire confirmed. Published Mar 19, 2026."
         },
         {
             "name": "Dreamborn.ink - Winterspell Set Championship results (March-April 2026)",
             "url": "https://dreamborn.ink/decks",
-            "lastChecked": "2026-04-19",
+            "lastChecked": "2026-05-12",
             "notes": "Multiple Set Champs won by Sapphire/Steel, Amethyst/Emerald, Amber/Steel (Steelsong), Amber/Ruby, and Amethyst/Steel. Format diversifying heading into Wilds Unknown."
         },
         {
             "name": "TCGplayer - The Bestselling Cards in Disney Lorcana March 2026",
             "url": "https://www.tcgplayer.com/content/article/The-Bestselling-Cards-in-Disney-Lorcana-March-2026/3c632f5b-bfd2-4fe5-93bd-251d856393f7/",
-            "lastChecked": "2026-04-19",
+            "lastChecked": "2026-05-12",
             "notes": "Grandmother Willow - Ancient Advisor #1 bestseller. Akood Et Emuti, Stitch - Carefree Snowboarder, Angel - Experiment 624 confirm Amber/Steel dominance. Hiram Flaversham - Toymaker banned. Published Apr 1, 2026."
+        },
+        {
+            "name": "TCGplayer - Wilds Unknown Launch Coverage",
+            "url": "https://www.tcgplayer.com/content/disney-lorcana/articles",
+            "lastChecked": "2026-05-12",
+            "notes": "Set 12 Wilds Unknown coverage is now live (May 2026). Competitive constructed data is still maturing, so strategic recommendations remain anchored to latest completed open-event results until post-release events conclude."
         }
     ],
     "banList": {
@@ -43,7 +49,7 @@
         ]
     },
     "upcomingEvents": {
-        "note": "DLC Indianapolis and DLC Dortmund upcoming — both featuring Infinity format as main event. Wilds Unknown (Set 12, featuring Pixar IPs: The Incredibles, Toy Story, Brave) releasing before these events.",
+        "note": "DLC Indianapolis and DLC Dortmund upcoming, both featuring Infinity format as main event. Wilds Unknown (Set 12, featuring Pixar IPs including The Incredibles, Toy Story, and Brave) is now released and expected to reshape those events.",
         "events": [
             {
                 "name": "DLC Indianapolis",
@@ -483,7 +489,7 @@
         "Amethyst/Sapphire is still the most powerful deck in a vacuum but Dogs was adapted around at Taipei — the meta shifts are ongoing",
         "Set Championship season has diversified the format — Amber/Ruby, Sapphire/Steel, and Amethyst/Ruby now all win high-level events",
         "Hiram Flaversham - Toymaker is banned — update all Steel decks that relied on Fortisphere enabling",
-        "Wilds Unknown (Set 12, Pixar) expected before DLC Indianapolis/Dortmund — format may shift dramatically with Incredibles/Toy Story cards"
+        "Wilds Unknown (Set 12, Pixar) is now legal before DLC Indianapolis/Dortmund, and early testing suggests meaningful shifts from Incredibles/Toy Story cards"
     ],
     "metaPairings": [
         {

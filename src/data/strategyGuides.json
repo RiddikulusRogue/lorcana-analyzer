@@ -344,216 +344,252 @@
     }
   },
   "currentMeta": {
+    "snapshotDate": "2026-05-12",
+    "snapshotScope": "Most recent major open-event signal: DLC Ghent + DLC Taipei + Winterspell Set Championship season + CCS $25k. Wilds Unknown is newly released and still in adaptation phase.",
     "dominantArchetypes": {
-      "rubyAmethyst": {
+      "amberEmeraldDogs": {
+        "archetype": "Amber/Emerald Dogs",
+        "description": "Most represented proactive strategy across recent open events. Still the baseline deck every lineup must respect.",
+        "strengths": [
+          "Explosive early curve and lore pressure",
+          "Strong hand sculpting via Grandmother Willow lines",
+          "Punishes slow mulligans and setup-heavy control hands",
+          "Can convert board pressure into hard resets with Under the Sea"
+        ],
+        "weaknesses": [
+          "Falls off if early pressure is contained efficiently",
+          "Vulnerable to repeated efficient challenges and Steel removal chains",
+          "Can struggle versus decks built specifically to trade early and stabilize"
+        ],
+        "howToCounter": [
+          "Mulligan aggressively for early interaction and blockers",
+          "Prioritize removing card-flow pieces over random attackers",
+          "Avoid wide overcommitment into their reset turns",
+          "Use resilient midgame threats that survive damage-based sweep sequences"
+        ]
+      },
+      "emeraldSapphireControl": {
         "archetype": "Emerald/Sapphire Control",
-        "description": "Current DLC benchmark deck. Ink acceleration plus card flow into high-impact finishers.",
+        "description": "Top-end control deck with acceleration, hand refuel, and game-ending tempo swings. A tournament winner when piloted cleanly.",
         "strengths": [
-          "Excellent card advantage loops",
-          "Strong inevitability in longer games",
-          "Flexible answers across multiple matchups",
-          "Reliable post-Winterspell conversion rate"
+          "High consistency from ramp plus draw/filter packages",
+          "Elite comeback potential with board-reset pivot turns",
+          "Excellent inevitability in slower pairings",
+          "Flexible answer density against both aggro and midrange"
         ],
         "weaknesses": [
-          "Can stumble under very fast openers",
-          "Requires disciplined mulligans to avoid slow hands",
-          "Targeted hand disruption can delay setup"
+          "Can be run over by perfect aggro starts",
+          "Needs precise sequencing to avoid dead setup turns",
+          "Relies on key stabilizing cards in the Dogs matchup"
         ],
         "howToCounter": [
-          "Pressure hard on turns 1-3 before acceleration engines stick",
-          "Force awkward defensive lines with evasive or challenger threats",
-          "Hold premium interaction for Clarabelle/Basil turns",
-          "Avoid overextending into swing turns; keep reload in hand"
+          "Pressure turns 1-4 to force defensive sequencing",
+          "Tax their ink/ramp progression where possible",
+          "Split threats across turns instead of committing all at once",
+          "Hold premium interaction for their true stabilizers and finishers"
         ]
       },
-      "sapphireSteel": {
-        "archetype": "Ruby/Steel Winterspell Tempo",
-        "description": "Winterspell-era tempo deck that converts efficient 2-4 drops into consistent pressure and favorable trades.",
+      "amethystSapphireControl": {
+        "archetype": "Amethyst/Sapphire Control",
+        "description": "Most powerful value shell in a vacuum. Strong card quality and scaling make it a constant top-table contender.",
         "strengths": [
-          "Strong curve pressure with flexible interaction",
-          "Excellent at punishing slow starts",
-          "Efficient challenge math in mid-game turns",
-          "Winterspell cards add tempo-positive utility"
+          "Best-in-class long-game card advantage",
+          "Reliable access to premium removal and utility effects",
+          "Strong adaptability through small card-count tuning",
+          "Good conversion when lists are tuned for expected aggro"
         ],
         "weaknesses": [
-          "Can run out of gas if first wave is answered",
-          "Less favored into heavy removal control mirrors",
-          "Needs proactive sequencing to maintain momentum"
+          "Can be exposed by very fast lore starts",
+          "Deck slots become strained when hedging too many matchups",
+          "Heavy setup hands can lose to tempo snowball"
         ],
         "howToCounter": [
-          "Use resilient blockers and removal to blunt early curve",
-          "Force value trades that break tempo chains",
-          "Stabilize around turns 4-5 and pivot to card advantage",
-          "Prioritize answers to Winterspell tempo payoffs"
-        ]
-      },
-      "emeraldSapphire": {
-        "archetype": "Amethyst/Sapphire Value",
-        "description": "Card flow and acceleration shell that goes over creature mirrors while maintaining interaction density.",
-        "strengths": [
-          "High consistency through draw and filtering",
-          "Strong late-game inevitability",
-          "Good matchup into fair midrange decks",
-          "Flexible threat-answer balance"
-        ],
-        "weaknesses": [
-          "Can be pressured by hyper-aggro openings",
-          "Requires careful resource planning",
-          "Vulnerable to concentrated hand disruption"
-        ],
-        "howToCounter": [
-          "Apply early pressure before draw engines turn on",
-          "Attack ink acceleration pieces when possible",
-          "Sequence threats to tax answers over multiple turns",
-          "Leverage haste/tempo windows to close before inevitability"
+          "Force early tempo decisions before their engines take over",
+          "Attack resource turns with proactive pressure",
+          "Present diverse threat types to strain one-for-one answers",
+          "Close quickly once they spend key stabilizing effects"
         ]
       },
       "amberSteel": {
-        "archetype": "Amber/Emerald Dogs",
-        "description": "Fast proactive aggro line that keeps punishing greedy setups in DLC-level play.",
+        "archetype": "Amber/Steel",
+        "description": "Resurgent anti-aggro tempo shell that improved substantially in post-Winterspell events. Strong Dogs matchup is a major reason to register it.",
         "strengths": [
-          "Explosive early board presence",
-          "Strong conversion of cheap bodies into lore pressure",
-          "Punishes slow mulligans and clunky curves",
-          "Maintains threat density with low-cost synergy pieces"
+          "Excellent challenge math into cheap aggro boards",
+          "Can deploy high-impact shifted threats ahead of schedule",
+          "Good ability to punish Clarabelle-centered card advantage lines",
+          "Multiple build variants with real tournament finishes"
         ],
         "weaknesses": [
-          "Can lose to concentrated board wipes",
-          "Lower top-end staying power in drawn-out games",
-          "Requires tight sequencing to maximize damage"
+          "Can lose traction if first tempo wave is answered cleanly",
+          "Less inevitable than Sapphire control mirrors",
+          "Requires careful sequencing of songs/singers to maximize openings"
         ],
         "howToCounter": [
-          "Prioritize cheap removal and efficient blockers",
-          "Force low-value trades early to reduce snowball potential",
-          "Stabilize life/lore race before committing finishers",
-          "Keep one reset option for their widest board turns"
+          "Disrupt early singers and curve enablers",
+          "Avoid low-value challenges into their efficient trades",
+          "Hold removal for the few cards that generate repeat value",
+          "If controlling, plan for a longer game and stabilize above tempo breakpoints"
+        ]
+      },
+      "sapphireSteel": {
+        "archetype": "Sapphire/Steel",
+        "description": "Rising midrange-control option with strong removal and card-recoup threats. Often chosen as a metagame call against creature-heavy fields.",
+        "strengths": [
+          "Efficient interaction from turns 2-5",
+          "Good bridge from ramp turns into board control",
+          "Strong top-end closers once stabilized",
+          "Capable of grinding through midrange mirrors"
+        ],
+        "weaknesses": [
+          "Can stumble if ramp hands lack interaction",
+          "Slightly slower at closing than dedicated aggro",
+          "Can be pressured by decks that go under and reload"
+        ],
+        "howToCounter": [
+          "Force them to spend removal on low-cost threats early",
+          "Maintain staggered pressure to overload single-turn answers",
+          "Respect their swing turns and avoid donating free challenge value",
+          "Win before top-end recoup engines fully stabilize"
         ]
       }
     },
     "inkColorMetaRoles": {
       "ruby": {
-        "role": "Aggressive Tempo",
-        "description": "Rush and Evasive abilities enable early pressure",
-        "metaPosition": "Staple in aggro and tempo decks. Strong against control.",
-        "currentTrend": "Rising in popularity post-Fabled, especially in Ruby/Steel variants"
+        "role": "Tempo and reach",
+        "description": "Provides efficient challenge pressure, reach damage, and proactive race tools.",
+        "metaPosition": "Best when paired with draw/consistency support from Sapphire or Amethyst.",
+        "currentTrend": "Stable but less central than Sapphire/Emerald packages in the latest open-event results."
       },
       "sapphire": {
-        "role": "Card Draw & Control",
-        "description": "Ink management and resource generation enable consistent play",
-        "metaPosition": "Essential for control decks. Strong in midrange.",
-        "currentTrend": "Dominant in Sapphire/Steel control, which is tier-1"
+        "role": "Acceleration and card flow",
+        "description": "Enables turn-advantage play patterns through ramp and hand refuel.",
+        "metaPosition": "Core engine color for most top control and value decks.",
+        "currentTrend": "Still the most represented support color across top archetypes."
       },
       "emerald": {
-        "role": "Gameplay Manipulation",
-        "description": "Creature control and game-state effects",
-        "metaPosition": "Strong in midrange. Versatile in hybrid decks.",
-        "currentTrend": "Consistent performer in Emerald/Sapphire midrange"
+        "role": "Disruption and pivot pressure",
+        "description": "Adds discard, evasive pressure, and punishing tempo swings.",
+        "metaPosition": "Critical in Dogs and Emerald/Sapphire control variants.",
+        "currentTrend": "High relevance due to strong tournament conversion in Dogs shells."
       },
       "steel": {
-        "role": "Defensive Power",
-        "description": "High-power creatures with Resist abilities",
-        "metaPosition": "Increasingly important in control and tempo-control decks",
-        "currentTrend": "Rising popularity in Sapphire/Steel and Ruby/Steel"
+        "role": "Board control and efficient trading",
+        "description": "Gives the format's most reliable challenge-based stabilization tools.",
+        "metaPosition": "Primary anti-aggro color and key support in counter-meta decks.",
+        "currentTrend": "Trending upward as players target Dogs and other low-curve aggression."
       },
       "amber": {
-        "role": "Defense & Recovery",
-        "description": "Healing and stabilization effects",
-        "metaPosition": "Strong in defensive decks. Emerging in tempo-control.",
-        "currentTrend": "Solid performer in Amber/Steel defensive decks"
+        "role": "Proactive board development and song support",
+        "description": "Supports fast board starts, recursion loops, and singer-based tempo spikes.",
+        "metaPosition": "Excellent when paired with Emerald or Steel for focused matchup plans.",
+        "currentTrend": "Very strong due to Dogs at top tables and Amber/Steel resurgence."
       },
       "amethyst": {
-        "role": "Hand Manipulation",
-        "description": "Discard pressure and spell-based control",
-        "metaPosition": "Staple in aggro-control. Critical for hand denial.",
-        "currentTrend": "Essential in Ruby/Amethyst, highest performer currently"
+        "role": "Card quality and flexible control tools",
+        "description": "Improves consistency with filtering, utility interaction, and durable threats.",
+        "metaPosition": "Foundational color in long-game control and value mirrors.",
+        "currentTrend": "Remains highly competitive, especially when tuned for aggro-heavy fields."
       }
     },
+    "cardViabilityByRole": {
+      "formatContext": "Set 5-12 Core Constructed, with final tuning based on local event spread.",
+      "highPriority": [
+        "Turn-1 and turn-2 cards that either quest immediately or trade up",
+        "Cheap interaction that cleanly answers 2-4 willpower threats",
+        "Cards that generate value while contesting board (draw on challenge, recoup effects)",
+        "Flexible songs/actions that are live in both aggro and control pairings"
+      ],
+      "situationalButStrong": [
+        "Narrow silver bullets that swing one expected matchup",
+        "High-ink finishers that also stabilize when behind",
+        "Location engines when your local field lacks dedicated location removal"
+      ],
+      "lowPriorityInCurrentMeta": [
+        "Greedy 6+ cost cards without immediate board impact",
+        "Cards that require multi-card setup before producing tempo",
+        "Non-inkable cards that are only good in one matchup"
+      ],
+      "deckBuildingRule": "If a card does not improve your first four turns or materially improve your worst matchup, it is usually a cut."
+    },
     "metaTechGuide": {
-      "against_rubyAmethyst": [
-        "Resist creatures - Steel blockers don't take damage from Rush",
-        "Early board wipes - prevent snowballing in turns 1-3",
-        "Healing/Recovery - Amber effects stabilize before they finish",
-        "Card draw engines - rebuild after hand disruption",
-        "Creatures with evasion blockers - trade efficiently"
+      "against_amberEmeraldDogs": [
+        "Prioritize one and two-cost interaction over greedier value cards",
+        "Keep at least one clean answer to Tramp and other lore-burst threats",
+        "Trade early and often - do not preserve life/lore at the cost of board",
+        "Sequence to minimize blowouts from Under the Sea turns",
+        "If possible, include 1-2 resilient blockers that survive damage-based clears"
       ],
-      "against_sapphireSteel": [
-        "Turn 1-2 pressure - force answers before draw engine",
-        "Hand disruption - prevent them from drawing key answers",
-        "Multiple simultaneous threats - overwhelm removal suite",
-        "Evasive creatures - bypass their Steel blockers",
-        "Fast clock - win before they stabilize board"
+      "against_emeraldSapphireControl": [
+        "Mulligan for proactive starts that threaten before Clarabelle turns",
+        "Pressure their ramp windows with sticky or evasive threats",
+        "Do not overextend into known sweep pivots",
+        "Force repeated answers rather than one big board",
+        "Close quickly once they spend premium reset tools"
       ],
-      "against_emeraldSapphire": [
-        "Redundant threats - they can't answer everything",
-        "Resource denial - discard their answers before turn plays",
-        "Cheap efficient creatures - establish presence while they setup",
-        "Removal immune creatures - forces their answers to be inefficient",
-        "Tempo pressure - apply damage faster than they can stabilize"
+      "against_amethystSapphireControl": [
+        "Apply pressure before their card-quality engine dominates",
+        "Use mixed threat types to tax removal diversity",
+        "Punish turns where they hold up reactive cards without advancing board",
+        "Protect key tempo threats from clean challenge lines",
+        "Plan a two-wave kill pattern rather than one all-in push"
       ],
       "against_amberSteel": [
-        "Aggressive early turns - don't let them stabilize",
-        "Hand disruption - prevent recovery setup",
-        "Multiple threats - force inefficient trades",
-        "Evasion creatures - bypass defensive blockers",
-        "Consistent clock - pressure before finisher turns online"
+        "Respect early singer plus song tempo spikes",
+        "Remove enablers before they unlock accelerated shift lines",
+        "Avoid challenge patterns that hand them favorable recoup windows",
+        "Preserve spot removal for true value engines",
+        "If controlling, prioritize inevitability over racing"
       ]
     },
     "recentSetImpact": {
+      "wilds_unknown_may2026": {
+        "set": "Wilds Unknown (Set 12, May 2026)",
+        "impact": "Card pool expanded immediately, but premier open-event data is still developing in the first weeks after release.",
+        "keyCards": "Early testing highlights flexible midgame tools and payoff cards for creature-centric shells, with final staples still settling.",
+        "advice": "Treat Set 12 includes as adjustable flex slots first, then lock them only after local event reps."
+      },
       "winterspell_february2026": {
-        "set": "Winterspell (Latest - Feb 13-20, 2026)",
-        "impact": "Winterspell cards are now integrated into established DLC lists, especially tempo and control shells.",
-        "keyCards": "Darkwing Duck - Dashing Gadgeteer, Launchpad - Trusty Sidekick, Winterspell are frequent inclusions.",
-        "advice": "Tune for efficient 2-4 cost interaction while preserving late-game card advantage."
+        "set": "Winterspell (Feb 2026)",
+        "impact": "Continues to shape the best decks through efficient tempo tools and support cards.",
+        "keyCards": "Angel - Experiment 624, Akood Et Emuti, and Winterspell role-players remain format-defining in several lists.",
+        "advice": "Build your maindeck expecting these cards across multiple top archetypes."
       },
       "whispers_november2025": {
         "set": "Whispers in the Well (Nov 2025)",
-        "impact": "Boost mechanic enabled value/snowball strategies. Extended some game lengths.",
-        "innovation": "Boost-focused decks emerged but haven't dominated meta",
-        "advice": "Consider Boost mechanics in matchup analysis. Some decks snowball harder with Boost."
-      },
-      "fabled_september2025": {
-        "set": "Fabled (Aug-Sep 2025)",
-        "impact": "Epic and Iconic rarities printed - highest power ceiling ever",
-        "keyCards": "Goofy Movie characters. Epic/Iconic cards from all inks.",
-        "advice": "If you haven't seen Fabled cards in meta yet, expect them to emerge in counters"
-      },
-      "archazia_march2025": {
-        "set": "Archazia's Island (Mar 2025)",
-        "impact": "Dual-ink cards introduced - expanded deck flexibility",
-        "innovation": "Dual-ink cards not inherently more powerful, but enabled new builds",
-        "advice": "Dual-ink cards provide flexibility without breaking existing color balance"
+        "impact": "Added scaling value lines and longer-game pressure engines.",
+        "innovation": "Boost packages appear as support plans rather than universal cores.",
+        "advice": "Use boost cards when they improve both floor and ceiling in your expected pairings."
       }
     },
     "metaShiftWarnings": [
-      "Emerald/Sapphire remains the primary benchmark in current DLC fields",
-      "Winterspell-era Ruby/Steel tempo shells punish slow openings",
-      "Card-advantage mirrors are common - plan for longer games",
-      "Efficient interaction on turns 2-4 is increasingly important",
-      "Keep flexible slots for fast aggro and grindy control matchups"
+      "Amber/Emerald Dogs remains the primary matchup check until proven otherwise",
+      "Sapphire-based control shells still punish clunky opening hands",
+      "Steel interaction density is increasing as players target low-curve aggression",
+      "Set 12 cards are strong but many lists are still in adaptation mode",
+      "Prioritize consistency over novelty for tournament conversion"
     ],
     "flexSlotRecommendations": {
       "against_currentMeta": [
-        "1x Cheap removal for Ruby Rush creatures (combat damage prevention)",
-        "1x Card draw engine piece (counter hand disruption from Amethyst)",
-        "1x Creature with Resist (defensive against aggro pressure)",
-        "1x Board wipe or mass answer (prevent snowballing)",
-        "1x Hand disruption piece (if not already in deck, pressure their setup)"
+        "1x Extra cheap removal for turns 1-3 aggro pressure",
+        "1x Flexible answer that can remove either a threat or a utility engine",
+        "1x Card-flow card that is good in both control mirrors and tempo games",
+        "1x Sticky midgame threat that survives common damage breakpoints",
+        "1x Dedicated anti-control closer or anti-aggro stabilizer based on local read"
       ],
       "sideboard_if_available": [
-        "2-3 Resist creatures - transforms matchups vs Ruby/Amethyst",
-        "2x Early removal suite - flexes for aggro-heavy metagame",
-        "2x Card draw pieces - tech in vs hand disruption heavy meta",
-        "2x Evasive creatures - bypass defensive decks",
-        "2-3 Specific archetype counters - adjust to your local meta"
+        "2-3 low-cost interaction cards for Dogs and hyper-aggro",
+        "2 durable value threats for Sapphire mirrors",
+        "2 location answers if your local field uses location engines",
+        "2 anti-recoup disruption cards versus grindy midrange",
+        "2 matchup-specific silver bullets for expected top-table archetypes"
       ]
     },
     "tieringGuide": {
-      "tier_s": "Emerald/Sapphire Control - Most consistent top-table performer.",
-      "tier_1a": "Ruby/Steel Winterspell Tempo - High conversion in recent DLC events.",
-      "tier_1b": "Amethyst/Sapphire Value - Strong in midrange and control fields.",
-      "tier_2": "Amber/Emerald Dogs, Sapphire/Steel Control - Solid performers with favorable pairings",
-      "tier_3": "Rogue strategies, Mono-color decks - Can steal games but less consistent",
-      "advice": "Tier placement changes based on local metagame. Play what you understand."
+      "tier_s": "Amber/Emerald Dogs and Emerald/Sapphire Control - the two decks most players must beat.",
+      "tier_1": "Amethyst/Sapphire Control and Amber/Steel - strong conversion and clear matchup plans.",
+      "tier_2": "Sapphire/Steel and tuned anti-meta midrange lists - viable with proper local targeting.",
+      "tier_3": "Rogue strategies and narrow combo shells - can spike events but are less consistent over long runs.",
+      "advice": "For tournament EV, choose the deck with the cleanest plan into Dogs plus at least one Sapphire control shell."
     }
   }
 }
