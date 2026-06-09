@@ -62,6 +62,42 @@ function findBestMatch(rawName) {
   return null
 }
 
+function combination(n, k) {
+  if (!Number.isFinite(n) || !Number.isFinite(k)) return 0
+  if (k < 0 || n < 0 || k > n) return 0
+  if (k === 0 || k === n) return 1
+  const kk = Math.min(k, n - k)
+  let result = 1
+  for (let i = 1; i <= kk; i++) {
+    result *= (n - kk + i) / i
+  }
+  return result
+}
+
+function probabilityAtLeastK(totalCards, successCards, draws, minHits) {
+  if (totalCards <= 0 || draws <= 0 || minHits <= 0) return 0
+  const n = Math.max(0, Math.floor(totalCards))
+  const s = Math.max(0, Math.min(Math.floor(successCards), n))
+  const d = Math.max(0, Math.min(Math.floor(draws), n))
+  if (d === 0 || s === 0) return 0
+
+  let probability = 0
+  const maxHits = Math.min(d, s)
+  for (let hit = minHits; hit <= maxHits; hit++) {
+    const waysSuccess = combination(s, hit)
+    const waysFail = combination(n - s, d - hit)
+    const waysTotal = combination(n, d)
+    if (waysTotal > 0) {
+      probability += (waysSuccess * waysFail) / waysTotal
+    }
+  }
+  return Math.max(0, Math.min(1, probability))
+}
+
+function formatPercent(value) {
+  return `${(Math.max(0, Math.min(1, value)) * 100).toFixed(1)}%`
+}
+
 export function analyzeDeck(deckText, format = 'infinity') {
   if (!deckText || deckText.trim() === "") {
     return { error: "No deck provided" };
@@ -105,6 +141,9 @@ export function analyzeDeck(deckText, format = 'infinity') {
   let hasShift = false;
   let hasEvasive = false;
   let hasSinger = false;
+  let interactionCount = 0;
+  let rampCount = 0;
+  let drawEngineCount = 0;
 
   // Cost distribution tracking
   let cost1Count = 0;
@@ -156,6 +195,32 @@ export function analyzeDeck(deckText, format = 'infinity') {
       if (kws.some(k => k.includes('bodyguard'))) bodyguardCount += count;
       if (kws.some(k => k.includes('resist'))) resistCount += count;
       if (kws.some(k => k.includes('challenger'))) challengerCount += count;
+
+      const typeLower = String(meta.type || '').toLowerCase();
+      const keywordText = kws.join(' ');
+      const isInteraction =
+        keywordText.includes('challenger') ||
+        keywordText.includes('rush') ||
+        keywordText.includes('banish') ||
+        keywordText.includes('damage') ||
+        keywordText.includes('exert') ||
+        keywordText.includes('cannot ready') ||
+        (typeLower.includes('action') && typeof meta.cost === 'number' && meta.cost <= 4);
+      const isRamp =
+        keywordText.includes('inkwell') ||
+        keywordText.includes('additional ink') ||
+        keywordText.includes('ramp') ||
+        keywordText.includes('tipo') ||
+        keywordText.includes('sail');
+      const isCardFlow =
+        keywordText.includes('draw') ||
+        keywordText.includes('look at') ||
+        keywordText.includes('search') ||
+        keywordText.includes('filter');
+
+      if (isInteraction) interactionCount += count;
+      if (isRamp) rampCount += count;
+      if (isCardFlow) drawEngineCount += count;
     }
   }
 
@@ -166,6 +231,16 @@ export function analyzeDeck(deckText, format = 'infinity') {
   const lateGamePercent = total > 0 ? (cost5PlusCount / total) * 100 : 0;
   const creaturePercent = total > 0 ? (creatureCount / total) * 100 : 0;
   const actionPercent = total > 0 ? (actionCount / total) * 100 : 0;
+
+  // Tournament-grade consistency checks
+  const earlyCards = cost1Count + cost2Count;
+  const playableByTurn2 = cost1Count + cost2Count + cost3to4Count;
+  const opening7 = probabilityAtLeastK(total, earlyCards, 7, 1);
+  const turn2Stability = probabilityAtLeastK(total, playableByTurn2, 8, 2);
+  const interactionByTurn3 = probabilityAtLeastK(total, interactionCount, 9, 1);
+
+  const colorCount = Object.keys(inkColors).length;
+  const overcopyCards = Object.entries(cards).filter(([, count]) => count > 4);
 
   // REVISED ARCHETYPE CLASSIFICATION - More explicit criteria
   let archetype = isValid ? 'Unclassified (ready)' : 'Unclassified (incomplete)';
@@ -234,6 +309,48 @@ export function analyzeDeck(deckText, format = 'infinity') {
   if (hasEvasive && (archetype.includes('Aggro') || archetype.includes('Tempo'))) synergies.push({ type: 'Evasive Aggro', strength: 'High', description: 'Evasive characters support aggressive strategy' });
   if (hasShift && uniqueCount > 10) synergies.push({ type: 'Shift Value', strength: 'Medium', description: 'Shift characters can generate tempo advantage' });
 
+  let competitiveScore = 100;
+
+  // Baseline legality/structure penalties
+  if (!isValid) competitiveScore -= 20;
+  if (format !== 'sealed' && colorCount > 2) competitiveScore -= 18;
+  if (colorCount === 0) competitiveScore -= 10;
+  competitiveScore -= overcopyCards.length * 8;
+
+  // Consistency penalties anchored to high-level tournament targets
+  if (opening7 < 0.75) competitiveScore -= Math.min(18, Math.round((0.75 - opening7) * 70));
+  if (turn2Stability < 0.70) competitiveScore -= Math.min(16, Math.round((0.70 - turn2Stability) * 65));
+
+  const archetypeLowerForScore = String(archetype || '').toLowerCase();
+  if (archetypeLowerForScore.includes('control') || archetypeLowerForScore.includes('tempo')) {
+    if (interactionByTurn3 < 0.58) competitiveScore -= Math.min(14, Math.round((0.58 - interactionByTurn3) * 60));
+  } else if (archetypeLowerForScore.includes('aggro')) {
+    if (opening7 < 0.80) competitiveScore -= Math.min(10, Math.round((0.80 - opening7) * 50));
+  }
+
+  // Curve quality penalties
+  if (avgCost !== null) {
+    if (avgCost < 2.7) competitiveScore -= 6;
+    if (avgCost > 4.9) competitiveScore -= 10;
+  }
+
+  if (creaturePercent < 38 || creaturePercent > 84) competitiveScore -= 6;
+  if (actionPercent > 34 && !archetypeLowerForScore.includes('control')) competitiveScore -= 4;
+
+  // Small positive adjustments for structurally strong lists
+  if (synergies.length >= 2) competitiveScore += 3;
+  if (interactionCount >= 8) competitiveScore += 2;
+  if (rampCount >= 4 && archetypeLowerForScore.includes('control')) competitiveScore += 2;
+
+  competitiveScore = Math.max(0, Math.min(100, Math.round(competitiveScore)));
+  const competitiveTier = competitiveScore >= 90
+    ? 'S-Tier Ready'
+    : competitiveScore >= 82
+      ? 'A-Tier Competitive'
+      : competitiveScore >= 72
+        ? 'B-Tier Improving'
+        : 'C-Tier Rebuild Needed';
+
   const weaknesses = [];
   if (format === 'sealed') {
     if (total < 40) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Sealed deck is under 40 cards minimum' });
@@ -241,6 +358,40 @@ export function analyzeDeck(deckText, format = 'infinity') {
   } else {
     if (total < 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is under 60 cards' });
     if (total > 60) weaknesses.push({ type: 'Deck Size', severity: 'High', description: 'Deck is over 60 cards' });
+  }
+
+  if (overcopyCards.length > 0) {
+    overcopyCards.forEach(([name, count]) => {
+      weaknesses.push({
+        type: 'Copy Limit Violation',
+        severity: 'High',
+        description: `${name} has ${count} copies (max 4 in constructed).`
+      });
+    });
+  }
+
+  if (opening7 < 0.70) {
+    weaknesses.push({
+      type: 'Opening Consistency',
+      severity: 'High',
+      description: `Only ${formatPercent(opening7)} to open at least one 1-2 cost play in 7 cards.`
+    });
+  }
+
+  if (turn2Stability < 0.65) {
+    weaknesses.push({
+      type: 'Curve Stability',
+      severity: 'Medium',
+      description: `Only ${formatPercent(turn2Stability)} to see two playable cards by turn 2.`
+    });
+  }
+
+  if ((String(archetype || '').toLowerCase().includes('control') || String(archetype || '').toLowerCase().includes('tempo')) && interactionByTurn3 < 0.55) {
+    weaknesses.push({
+      type: 'Interactive Density',
+      severity: 'High',
+      description: `Only ${formatPercent(interactionByTurn3)} to find early interaction by turn 3.`
+    });
   }
 
   // Add curve-based weaknesses
@@ -282,7 +433,18 @@ export function analyzeDeck(deckText, format = 'infinity') {
       bodyguard: bodyguardCount,
       resist: resistCount,
       challenger: challengerCount
-    }
+    },
+    consistencyMetrics: {
+      opening7EarlyPlay: formatPercent(opening7),
+      turn2TwoPlays: formatPercent(turn2Stability),
+      turn3Interaction: formatPercent(interactionByTurn3),
+      earlyPlayCount: earlyCards,
+      interactionCount,
+      rampCount,
+      drawEngineCount
+    },
+    competitiveScore,
+    competitiveTier
   };
 }
 

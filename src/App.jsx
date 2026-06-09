@@ -211,6 +211,47 @@ export default function App() {
     return map;
   }, [allCardsData]);
 
+  const allCardsCostMap = useMemo(() => {
+    if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
+    const map = new Map();
+    allCardsData.cards.forEach((card) => {
+      const cost = typeof card?.cost === "number" ? card.cost : null;
+      if (cost === null) return;
+      [card.simpleName, card.fullName, card.name].forEach((name) => {
+        const normalized = normalizeCardKey(name);
+        if (normalized && !map.has(normalized)) {
+          map.set(normalized, cost);
+        }
+      });
+    });
+    return map;
+  }, [allCardsData]);
+
+  const allCardsTraitsMap = useMemo(() => {
+    if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
+    const map = new Map();
+    allCardsData.cards.forEach((card) => {
+      const keyCandidates = [card.simpleName, card.fullName, card.name];
+      const trait = {
+        cost: typeof card?.cost === "number" ? card.cost : null,
+        type: String(card?.type || "").toLowerCase(),
+        lore: typeof card?.lore === "number" ? card.lore : 0,
+        text: String(card?.fullText || "").toLowerCase(),
+        keywords: Array.isArray(card?.keywordAbilities)
+          ? card.keywordAbilities.map((k) => String(k || "").toLowerCase())
+          : [],
+      };
+
+      keyCandidates.forEach((name) => {
+        const normalized = normalizeCardKey(name);
+        if (normalized && !map.has(normalized)) {
+          map.set(normalized, trait);
+        }
+      });
+    });
+    return map;
+  }, [allCardsData]);
+
   const applyInkColorFallback = (analysisToUpdate) => {
     if (!analysisToUpdate || !analysisToUpdate.cards || (!allCardsColorsMap && !allCardsColorMap)) {
       return { analysis: analysisToUpdate, applied: false };
@@ -1060,6 +1101,203 @@ export default function App() {
     };
   };
 
+  const getLatestFormatSetContext = (formatKey = 'infinity') => {
+    const setsMap = allCardsData && allCardsData.sets ? allCardsData.sets : null;
+    if (!setsMap) {
+      return {
+        latestSetNumber: null,
+        latestSetName: null,
+        latestSetReleaseDate: null,
+        recentSetNumbers: [],
+      };
+    }
+
+    const formatName = formatKey === 'core' ? 'Core' : 'Infinity';
+    const now = new Date();
+    const legalSets = [];
+
+    Object.entries(setsMap).forEach(([setKey, setInfo]) => {
+      const setNumber = parseInt(setKey, 10);
+      if (!Number.isFinite(setNumber)) return;
+      if (!setInfo || setInfo.type !== 'expansion' || !setInfo.hasAllCards) return;
+
+      const formatInfo = setInfo.allowedInFormats && setInfo.allowedInFormats[formatName];
+      if (formatInfo && formatInfo.allowed === false) return;
+
+      let releaseDate = null;
+      if (setInfo.releaseDate) {
+        const parsedDate = new Date(setInfo.releaseDate);
+        if (!Number.isNaN(parsedDate.getTime())) {
+          releaseDate = parsedDate;
+          if (parsedDate > now) return;
+        }
+      }
+
+      legalSets.push({
+        setNumber,
+        name: setInfo.name || `Set ${setNumber}`,
+        releaseDate,
+      });
+    });
+
+    legalSets.sort((a, b) => {
+      if (b.setNumber !== a.setNumber) return b.setNumber - a.setNumber;
+      return 0;
+    });
+
+    const latest = legalSets[0] || null;
+    return {
+      latestSetNumber: latest ? latest.setNumber : null,
+      latestSetName: latest ? latest.name : null,
+      latestSetReleaseDate: latest && latest.releaseDate ? latest.releaseDate.toISOString().slice(0, 10) : null,
+      recentSetNumbers: legalSets.slice(0, 3).map((entry) => entry.setNumber),
+    };
+  };
+
+  const getMetaFreshnessSummary = (formatKey = 'infinity') => {
+    const context = getLatestFormatSetContext(formatKey);
+    const latestSetNumber = context.latestSetNumber;
+    const latestSetName = context.latestSetName;
+    const latestSetReleaseDate = context.latestSetReleaseDate;
+
+    if (!latestSetNumber) {
+      return {
+        line: 'Meta freshness check unavailable (set metadata still loading).',
+        isLagging: false,
+      };
+    }
+
+    const updatedText = String(competitiveMeta?.lastUpdated || '');
+    const updatedDate = updatedText ? new Date(updatedText) : null;
+    const releaseDate = latestSetReleaseDate ? new Date(latestSetReleaseDate) : null;
+
+    const hasValidUpdateDate = updatedDate && !Number.isNaN(updatedDate.getTime());
+    const hasValidReleaseDate = releaseDate && !Number.isNaN(releaseDate.getTime());
+    const isLagging = Boolean(hasValidUpdateDate && hasValidReleaseDate && updatedDate < releaseDate);
+
+    if (isLagging) {
+      return {
+        line: `Meta snapshot lags newest legal set: Set ${latestSetNumber} (${latestSetName}, released ${latestSetReleaseDate}). Prioritizing emerging-set adaptation cues.`,
+        isLagging: true,
+      };
+    }
+
+    return {
+      line: `Meta snapshot is aligned to current legal card pool through Set ${latestSetNumber} (${latestSetName}).`,
+      isLagging: false,
+    };
+  };
+
+  const getEmergingSetComboPackages = (analysisSnapshot, formatKey = 'infinity', limit = 3) => {
+    if (!analysisSnapshot || !analysisSnapshot.inkColors || !allCardsData || !Array.isArray(allCardsData.cards)) {
+      return [];
+    }
+
+    const context = getLatestFormatSetContext(formatKey);
+    const latestSetNumber = context.latestSetNumber;
+    if (!latestSetNumber) return [];
+
+    const deckColors = new Set(Object.keys(analysisSnapshot.inkColors || {}).map((c) => String(c || '').toLowerCase()));
+    if (deckColors.size === 0) return [];
+
+    const formatName = formatKey === 'core' ? 'Core' : 'Infinity';
+
+    const toCardDescriptor = (card) => {
+      const abilityText = Array.isArray(card.abilities)
+        ? card.abilities.map((a) => a?.fullText || a?.effect || a?.name || '').join(' ')
+        : '';
+      const keywordText = Array.isArray(card.keywordAbilities)
+        ? card.keywordAbilities.map((k) => String(k || '').toLowerCase()).join(' ')
+        : '';
+      const textBlob = String([card.fullText, abilityText, keywordText].filter(Boolean).join(' ')).toLowerCase();
+      const typeText = String(card.type || '').toLowerCase();
+      const cost = typeof card.cost === 'number' ? card.cost : 0;
+
+      const tags = {
+        ramp: textBlob.includes('inkwell') || textBlob.includes('additional ink') || textBlob.includes('ramp') || textBlob.includes('tipo') || textBlob.includes('sail'),
+        interaction: textBlob.includes('banish') || textBlob.includes('damage') || textBlob.includes('deal') || textBlob.includes('return') || textBlob.includes('exert') || keywordText.includes('challenger'),
+        draw: textBlob.includes('draw') || textBlob.includes('look at') || textBlob.includes('search') || textBlob.includes('filter'),
+        pressure: keywordText.includes('evasive') || keywordText.includes('rush') || (typeof card.lore === 'number' && card.lore >= 2),
+        singer: keywordText.includes('singer') || keywordText.includes('sing') || typeText.includes('song'),
+      };
+
+      let powerScore = 0;
+      if (tags.ramp) powerScore += 3;
+      if (tags.interaction) powerScore += 3;
+      if (tags.draw) powerScore += 2;
+      if (tags.pressure) powerScore += 2;
+      if (tags.singer) powerScore += 1;
+      if (cost >= 2 && cost <= 4) powerScore += 2;
+
+      return {
+        name: card.fullName || card.name || card.simpleName || 'Unknown Card',
+        cost,
+        tags,
+        powerScore,
+      };
+    };
+
+    const newestSetCards = allCardsData.cards
+      .filter((card) => parseInt(card.setCode, 10) === latestSetNumber)
+      .filter((card) => {
+        const color = String(card.color || '').toLowerCase();
+        if (!deckColors.has(color)) return false;
+        const formatInfo = card.allowedInFormats && card.allowedInFormats[formatName];
+        if (formatInfo && formatInfo.allowed === false) return false;
+        return true;
+      })
+      .map(toCardDescriptor)
+      .sort((a, b) => b.powerScore - a.powerScore)
+      .slice(0, 20);
+
+    const pairs = [];
+    for (let i = 0; i < newestSetCards.length; i++) {
+      for (let j = i + 1; j < newestSetCards.length; j++) {
+        const a = newestSetCards[i];
+        const b = newestSetCards[j];
+
+        let score = a.powerScore + b.powerScore;
+        if ((a.tags.ramp && b.cost >= 5) || (b.tags.ramp && a.cost >= 5)) score += 4;
+        if ((a.tags.interaction && b.tags.pressure) || (b.tags.interaction && a.tags.pressure)) score += 3;
+        if ((a.tags.draw && b.tags.interaction) || (b.tags.draw && a.tags.interaction)) score += 2;
+        if (a.tags.singer && b.tags.singer) score += 1;
+
+        const curveGap = Math.abs((a.cost || 0) - (b.cost || 0));
+        if (curveGap <= 3) score += 1;
+
+        if (score < 8) continue;
+
+        let reason = 'Strong generic package for current set adaptation.';
+        if ((a.tags.interaction && b.tags.pressure) || (b.tags.interaction && a.tags.pressure)) {
+          reason = 'Interaction + pressure package improves conversion versus tempo-heavy ladders.';
+        } else if ((a.tags.ramp && b.cost >= 5) || (b.tags.ramp && a.cost >= 5)) {
+          reason = 'Ramp into payoff line improves mid-game power spikes.';
+        } else if ((a.tags.draw && b.tags.interaction) || (b.tags.draw && a.tags.interaction)) {
+          reason = 'Card flow + removal package improves consistency in long games.';
+        }
+
+        pairs.push({
+          score,
+          cards: [a.name, b.name],
+          reason,
+        });
+      }
+    }
+
+    pairs.sort((x, y) => y.score - x.score);
+    const unique = [];
+    const seen = new Set();
+    pairs.forEach((pair) => {
+      if (unique.length >= limit) return;
+      const key = pair.cards.join(' | ');
+      if (seen.has(key)) return;
+      seen.add(key);
+      unique.push(pair);
+    });
+
+    return unique;
+  };
+
   const parseWinRatePercent = (value) => {
     const match = String(value || '').match(/(\d+(?:\.\d+)?)/);
     if (!match) return null;
@@ -1176,6 +1414,489 @@ export default function App() {
     return insights.slice(0, 5);
   };
 
+  const parsePercentMetric = (value) => {
+    const match = String(value || '').match(/(\d+(?:\.\d+)?)/);
+    if (!match) return null;
+    const parsed = parseFloat(match[1]);
+    return Number.isFinite(parsed) ? parsed : null;
+  };
+
+  const getTurnWindowBenchmarks = (analysisSnapshot, archetypeHint = '') => {
+    const total = analysisSnapshot?.total || 0;
+    const curve = analysisSnapshot?.curveDistribution || {};
+    const consistency = analysisSnapshot?.consistencyMetrics || {};
+    const earlyDensity = total > 0 ? (((curve.cost1 || 0) + (curve.cost2 || 0)) / total) * 100 : 0;
+    const opening7 = parsePercentMetric(consistency.opening7EarlyPlay);
+    const turn2 = parsePercentMetric(consistency.turn2TwoPlays);
+    const turn3Interaction = parsePercentMetric(consistency.turn3Interaction);
+
+    const archetypeLower = String(archetypeHint || analysisSnapshot?.archetype || '').toLowerCase();
+    let profile = 'Midrange';
+    if (archetypeLower.includes('aggro')) profile = 'Aggro';
+    else if (archetypeLower.includes('tempo')) profile = 'Tempo';
+    else if (archetypeLower.includes('control') || archetypeLower.includes('ramp')) profile = 'Control';
+
+    const targets = {
+      Aggro: {
+        turn4: 'Target 8+ lore pressure by turn 4',
+        turn6: 'Target 14+ lore and force awkward blocks by turn 6',
+        turn8: 'Set lethal race line by turn 8 (20 lore or inevitable close)',
+        opening: 78,
+        turn2: 74,
+        interaction: 45,
+        focus: 'Mulligan for speed first; only keep slow cards with strong curve support.'
+      },
+      Tempo: {
+        turn4: 'Target board lead + 5+ lore by turn 4',
+        turn6: 'Target 9-12 lore while denying key opposing threats by turn 6',
+        turn8: 'Convert lead to closeout before pure control stabilizes',
+        opening: 75,
+        turn2: 70,
+        interaction: 58,
+        focus: 'Sequence disruption to preserve initiative, not just remove random threats.'
+      },
+      Control: {
+        turn4: 'Target stabilized board and <=7 opposing lore by turn 4',
+        turn6: 'Target card-advantage pivot and clear answer windows by turn 6',
+        turn8: 'Deploy finisher behind protection and lock race math by turn 8',
+        opening: 70,
+        turn2: 66,
+        interaction: 60,
+        focus: 'Opening hand should include at least one interaction piece plus development.'
+      },
+      Midrange: {
+        turn4: 'Target stable board + 4-6 lore by turn 4',
+        turn6: 'Target favored combat trades and 10+ lore by turn 6',
+        turn8: 'Present layered threats that survive one answer cycle',
+        opening: 73,
+        turn2: 68,
+        interaction: 52,
+        focus: 'Balance pressure and answers; avoid hands that do only one side of the game.'
+      }
+    };
+
+    const profileTargets = targets[profile] || targets.Midrange;
+
+    const lines = [
+      profileTargets.turn4,
+      profileTargets.turn6,
+      profileTargets.turn8,
+      `Opening consistency: ${opening7 !== null ? `${opening7.toFixed(1)}%` : 'N/A'} (target ${profileTargets.opening.toFixed(0)}%+)`,
+      `Turn-2 stability: ${turn2 !== null ? `${turn2.toFixed(1)}%` : 'N/A'} (target ${profileTargets.turn2.toFixed(0)}%+)`,
+      `Turn-3 interaction access: ${turn3Interaction !== null ? `${turn3Interaction.toFixed(1)}%` : 'N/A'} (target ${profileTargets.interaction.toFixed(0)}%+)`,
+      `Early density (cost 1-2): ${earlyDensity.toFixed(1)}%`
+    ];
+
+    return {
+      profile,
+      lines,
+      focus: profileTargets.focus,
+    };
+  };
+
+  const getDeckTurnGamePlan = (analysisSnapshot, archetypeHint = '') => {
+    if (!analysisSnapshot || !analysisSnapshot.cards) {
+      return [];
+    }
+
+    const archetypeLower = String(archetypeHint || analysisSnapshot.archetype || '').toLowerCase();
+    const profile = archetypeLower.includes('aggro')
+      ? 'Aggro'
+      : archetypeLower.includes('tempo')
+        ? 'Tempo'
+        : archetypeLower.includes('control') || archetypeLower.includes('ramp')
+          ? 'Control'
+          : 'Midrange';
+
+    const normalizeName = (value) => String(value || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+
+    const deckCards = Object.entries(analysisSnapshot.cards)
+      .map(([name, count]) => {
+        const key = normalizeName(name);
+        const meta = key && cardMeta ? cardMeta[key] : null;
+        const type = String(meta?.type || '').toLowerCase();
+        const keywords = Array.isArray(meta?.keywords) ? meta.keywords.map((k) => String(k).toLowerCase()) : [];
+        const ability = String(meta?.ability || '').toLowerCase();
+        const cost = typeof meta?.cost === 'number' ? meta.cost : null;
+        const lore = typeof meta?.lore === 'number' ? meta.lore : 0;
+
+        const tags = {
+          early: typeof cost === 'number' && cost <= 2,
+          mid: typeof cost === 'number' && cost >= 3 && cost <= 4,
+          late: typeof cost === 'number' && cost >= 5,
+          pressure: keywords.some((k) => k.includes('rush') || k.includes('evasive') || k.includes('challenger')) || lore >= 2,
+          interaction: keywords.some((k) => k.includes('challenger')) || ability.includes('banish') || ability.includes('return') || ability.includes('damage') || ability.includes('exert') || (type.includes('action') && (cost ?? 0) <= 4),
+          draw: ability.includes('draw') || ability.includes('look at') || ability.includes('search') || ability.includes('filter'),
+          ramp: ability.includes('inkwell') || ability.includes('additional ink') || ability.includes('ramp') || ability.includes('sail') || ability.includes('tipo'),
+          finisher: lore >= 3 || ability.includes('win') || ability.includes('close') || ability.includes('game'),
+        };
+
+        return {
+          name,
+          count,
+          cost,
+          lore,
+          type,
+          keywords,
+          ability,
+          tags,
+        };
+      })
+      .filter((entry) => entry.count > 0);
+
+    const pickCards = (predicate, limit = 2) => deckCards
+      .filter(predicate)
+      .sort((a, b) => {
+        const costA = typeof a.cost === 'number' ? a.cost : 99;
+        const costB = typeof b.cost === 'number' ? b.cost : 99;
+        if (costA !== costB) return costA - costB;
+        if (b.count !== a.count) return b.count - a.count;
+        if (b.lore !== a.lore) return b.lore - a.lore;
+        return a.name.localeCompare(b.name);
+      })
+      .slice(0, limit)
+      .map((card) => card.name);
+
+    const turn1 = pickCards((card) => card.tags.early, 2);
+    const turn2 = pickCards((card) => card.tags.early || card.tags.interaction || card.tags.draw || card.tags.ramp, 2);
+    const turn3 = pickCards((card) => card.tags.mid || card.tags.interaction || card.tags.draw || card.tags.pressure, 2);
+    const turn4Plus = pickCards((card) => card.tags.mid || card.tags.late || card.tags.finisher, 2);
+    const interaction = pickCards((card) => card.tags.interaction, 2);
+    const finishers = pickCards((card) => card.tags.late || card.tags.finisher, 2);
+
+    const linesByProfile = {
+      Aggro: [
+        `Turn 1: Lead with ${turn1.length > 0 ? turn1.join(' / ') : 'your best available 1-drop or ink the turn if no 1-drop exists'}.`,
+        `Turn 2: Extend pressure with ${turn2.length > 0 ? turn2.join(' / ') : 'your strongest 2-drop or immediate pressure card'}.`,
+        `Turn 3: Push lore and force awkward blocks with ${turn3.length > 0 ? turn3.join(' / ') : 'your most efficient attacker'}.`,
+        `Turn 4+: Close the game with ${finishers.length > 0 ? finishers.join(' / ') : 'your highest-lore threat and any remaining pressure cards'}.`,
+      ],
+      Tempo: [
+        `Turn 1: Develop ${turn1.length > 0 ? turn1.join(' / ') : 'the cheapest proactive piece in your hand'} while preserving lane control.`,
+        `Turn 2: Keep initiative with ${turn2.length > 0 ? turn2.join(' / ') : 'an early threat or interaction card'}.`,
+        `Turn 3: Convert tempo into board advantage using ${turn3.length > 0 ? turn3.join(' / ') : 'your best midgame value card'}.`,
+        `Turn 4+: Lock in the lead with ${turn4Plus.length > 0 ? turn4Plus.join(' / ') : 'efficient pressure and removal sequencing'}.`,
+      ],
+      Control: [
+        `Turn 1: Ink and prioritize ${interaction.length > 0 ? interaction.join(' / ') : 'your most efficient setup or defense piece'} if you can safely preserve resources.`,
+        `Turn 2: Stabilize with ${turn2.length > 0 ? turn2.join(' / ') : 'the best early blocker, draw card, or interaction in your deck'}.`,
+        `Turn 3: Trade resources and answer threats with ${interaction.length > 0 ? interaction.join(' / ') : 'your strongest removal or board-control tool'}.`,
+        `Turn 4+: Shift into inevitability using ${turn4Plus.length > 0 ? turn4Plus.join(' / ') : 'value engines and high-impact finishers'}.`,
+      ],
+      Midrange: [
+        `Turn 1: Start with ${turn1.length > 0 ? turn1.join(' / ') : 'your cleanest early play or ink if the hand is slow'}.`,
+        `Turn 2: Build board presence with ${turn2.length > 0 ? turn2.join(' / ') : 'an early threat, draw card, or interaction piece'}.`,
+        `Turn 3: Begin winning trades with ${turn3.length > 0 ? turn3.join(' / ') : 'your strongest 3-drop or value card'}.`,
+        `Turn 4+: Convert board into lore with ${turn4Plus.length > 0 ? turn4Plus.join(' / ') : 'your best midgame threats and finishers'}.`,
+      ],
+    };
+
+    const focusByProfile = {
+      Aggro: 'Keep the pace high and avoid unnecessary slow turns.',
+      Tempo: 'Protect initiative while trading efficiently.',
+      Control: 'Survive early, then pivot into advantage and inevitability.',
+      Midrange: 'Balance pressure, trades, and follow-up threats.',
+    };
+
+    return [
+      `Profile: ${profile}`,
+      ...linesByProfile[profile],
+      `Priority cards already in deck: ${[
+        ...new Set([...turn1, ...turn2, ...turn3, ...turn4Plus, ...interaction, ...finishers]),
+      ].join(', ') || 'No clear card clusters detected yet.'}`,
+      `Tactical focus: ${focusByProfile[profile]}`,
+    ];
+  };
+
+  const getMatchupFlexPackages = (analysisSnapshot, archetypeHint = '') => {
+    if (!analysisSnapshot || !analysisSnapshot.cards) return [];
+
+    const normalizeCardName = (value) => String(value || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+
+    const deckCards = Object.entries(analysisSnapshot.cards).map(([name, count]) => {
+      const key = normalizeCardKey(name);
+      const meta = key && cardMeta ? cardMeta[key] : null;
+      const keywords = Array.isArray(meta?.keywords) ? meta.keywords.map((k) => String(k).toLowerCase()) : [];
+      const keywordText = keywords.join(' ');
+      const type = String(meta?.type || '').toLowerCase();
+      const cost = typeof meta?.cost === 'number' ? meta.cost : 0;
+      const lore = typeof meta?.lore === 'number' ? meta.lore : 0;
+      const isInteraction = keywordText.includes('challenger') || keywordText.includes('banish') || keywordText.includes('damage') || keywordText.includes('exert') || (type.includes('action') && cost <= 4);
+      const isPressure = keywordText.includes('evasive') || keywordText.includes('rush') || lore >= 2;
+      const isCardFlow = keywordText.includes('draw') || keywordText.includes('search') || keywordText.includes('look at');
+
+      return {
+        name,
+        count,
+        cost,
+        lore,
+        isInteraction,
+        isPressure,
+        isCardFlow,
+      };
+    });
+
+    const existingNames = Object.keys(analysisSnapshot.cards || {});
+    const deckColors = analysisSnapshot.inkColors || {};
+    const archetypeLower = String(archetypeHint || analysisSnapshot.archetype || '').toLowerCase();
+
+    const pickCuts = (matchup, count = 2) => {
+      let candidates = [];
+      if (matchup === 'aggro') {
+        candidates = deckCards
+          .filter((card) => card.cost >= 5 && !card.isInteraction)
+          .sort((a, b) => b.cost - a.cost);
+      } else if (matchup === 'control') {
+        candidates = deckCards
+          .filter((card) => card.cost <= 2 && !card.isPressure && !card.isCardFlow)
+          .sort((a, b) => a.cost - b.cost);
+      } else {
+        candidates = deckCards
+          .filter((card) => card.cost >= 5 && !card.isCardFlow)
+          .sort((a, b) => b.cost - a.cost);
+      }
+
+      if (candidates.length === 0) {
+        candidates = [...deckCards].sort((a, b) => (b.cost || 0) - (a.cost || 0));
+      }
+
+      return candidates.slice(0, count);
+    };
+
+    const buildPackage = (matchup, intent, preferredArchetype, targetCost) => {
+      const adds = findCardRecommendations(deckColors, preferredArchetype, targetCost, 3, format, existingNames);
+      const fallbackAdds = adds.length > 0
+        ? adds
+        : findCardRecommendations(deckColors, archetypeHint || analysisSnapshot.archetype, targetCost, 3, format, existingNames);
+      const cuts = pickCuts(matchup, 2);
+
+      const swapCount = Math.min(cuts.length, fallbackAdds.length, 2);
+      if (swapCount === 0) return null;
+
+      const swaps = [];
+      for (let i = 0; i < swapCount; i++) {
+        swaps.push({
+          outCard: cuts[i],
+          inCard: fallbackAdds[i],
+        });
+      }
+
+      return { matchup, intent, swaps };
+    };
+
+    const vsAggro = buildPackage('aggro', 'Lower curve and add early interaction', 'Control', 2);
+    const vsControl = buildPackage('control', 'Increase pressure density and resilient value', archetypeLower.includes('aggro') ? 'Aggro' : 'Tempo', 3);
+    const vsTempo = buildPackage('tempo', 'Prioritize efficient trades and tempo-proof threats', 'Midrange', 3);
+
+    return [vsAggro, vsControl, vsTempo].filter(Boolean);
+  };
+
+  const buildDeckSpecificMulliganGuide = (cards = {}, archetype = "") => {
+    const hasAny = (value, terms) => {
+      const text = String(value || "").toLowerCase();
+      return terms.some((term) => text.includes(term));
+    };
+
+    const cardEntries = Object.entries(cards)
+      .map(([name, count]) => {
+        const normalized = normalizeCardKey(name);
+        const metaEntry = normalized && cardMeta ? cardMeta[normalized] : null;
+        const metaCost = metaEntry && typeof metaEntry.cost === "number"
+          ? cardMeta[normalized].cost
+          : null;
+        const allCardsCost = normalized && allCardsCostMap ? allCardsCostMap.get(normalized) : null;
+        const traits = normalized && allCardsTraitsMap ? allCardsTraitsMap.get(normalized) : null;
+        const cost = metaCost ?? (typeof allCardsCost === "number" ? allCardsCost : (typeof traits?.cost === "number" ? traits.cost : null));
+        const typeText = String(metaEntry?.type || traits?.type || "").toLowerCase();
+        const rulesText = String(metaEntry?.ability || traits?.text || "").toLowerCase();
+        const keywordText = Array.isArray(traits?.keywords) ? traits.keywords.join(" ") : "";
+        const lore = typeof traits?.lore === "number" ? traits.lore : 0;
+
+        const interactionTerms = ["banish", "damage", "deal", "return", "exert", "cant ready", "can't ready", "chosen character", "opposing character"];
+        const rampTerms = ["inkwell", "put", "your inkwell", "additional ink", "draw a card then put", "sail", "tipo"];
+        const cardFlowTerms = ["draw", "look at", "reveal", "search", "filter"];
+
+        const isInteraction = hasAny(rulesText, interactionTerms) || hasAny(keywordText, ["challenger", "rush"]);
+        const isRamp = hasAny(rulesText, rampTerms) || hasAny(name, ["sail the azurite sea", "tipo"]);
+        const isCardFlow = hasAny(rulesText, cardFlowTerms) || hasAny(typeText, ["song", "action"]);
+        const isEarly = typeof cost === "number" && cost <= 2;
+        const isMid = typeof cost === "number" && cost >= 3 && cost <= 4;
+        const isExpensive = typeof cost === "number" && cost >= 5;
+        const pressureTags = hasAny(keywordText, ["evasive", "rush", "challenger"]);
+
+        return {
+          name,
+          count,
+          cost,
+          lore,
+          isEarly,
+          isMid,
+          isExpensive,
+          isInteraction,
+          isRamp,
+          isCardFlow,
+          pressureTags,
+        };
+      })
+      .filter((entry) => entry.count > 0);
+
+    const knownCost = cardEntries.filter((entry) => entry.cost !== null);
+    const earlyDrops = knownCost
+      .filter((entry) => entry.isEarly)
+      .sort((a, b) => {
+        if (b.count !== a.count) return b.count - a.count;
+        if (a.cost !== b.cost) return a.cost - b.cost;
+        return a.name.localeCompare(b.name);
+      });
+    const midDrops = knownCost
+      .filter((entry) => entry.isMid)
+      .sort((a, b) => {
+        if (b.count !== a.count) return b.count - a.count;
+        if (a.cost !== b.cost) return a.cost - b.cost;
+        return a.name.localeCompare(b.name);
+      });
+    const expensiveCards = knownCost
+      .filter((entry) => entry.isExpensive)
+      .sort((a, b) => {
+        if (b.cost !== a.cost) return b.cost - a.cost;
+        if (a.count !== b.count) return a.count - b.count;
+        return a.name.localeCompare(b.name);
+      });
+
+    const archetypeLower = String(archetype || "").toLowerCase();
+
+    const scoreForKeep = (entry) => {
+      let score = 0;
+      if (entry.isEarly) score += 4;
+      if (entry.isMid) score += 2;
+      if (entry.pressureTags) score += 2;
+      if (entry.isInteraction) score += 2;
+      if (entry.isRamp) score += 3;
+      if (entry.isCardFlow) score += 1;
+      if (entry.lore >= 2) score += 1;
+
+      if (archetypeLower.includes("aggro")) {
+        if (entry.isEarly) score += 4;
+        if (entry.pressureTags) score += 3;
+        if (entry.isExpensive) score -= 5;
+      } else if (archetypeLower.includes("tempo")) {
+        if (entry.isEarly || entry.isMid) score += 3;
+        if (entry.isInteraction || entry.isCardFlow) score += 2;
+        if (entry.isExpensive) score -= 4;
+      } else if (archetypeLower.includes("control") || archetypeLower.includes("ramp")) {
+        if (entry.isRamp) score += 6;
+        if (entry.isInteraction) score += 5;
+        if (entry.isEarly) score += 2;
+        if (entry.isExpensive && !entry.isInteraction && !entry.isRamp) score -= 6;
+      } else if (archetypeLower.includes("midrange")) {
+        if (entry.isEarly) score += 2;
+        if (entry.isMid) score += 4;
+        if (entry.isInteraction || entry.pressureTags) score += 2;
+        if (entry.isExpensive && !entry.isCardFlow) score -= 3;
+      }
+
+      return score + Math.min(entry.count, 4) * 0.5;
+    };
+
+    let keepCandidates = [...knownCost]
+      .sort((a, b) => {
+        const diff = scoreForKeep(b) - scoreForKeep(a);
+        if (diff !== 0) return diff;
+        if (a.cost !== b.cost) return a.cost - b.cost;
+        return a.name.localeCompare(b.name);
+      })
+      .slice(0, 3);
+
+    // For control/ramp shells, always surface at least one interaction keep if the deck has any.
+    if (archetypeLower.includes("control") || archetypeLower.includes("ramp")) {
+      const hasInteractionInKeep = keepCandidates.some((entry) => entry.isInteraction);
+      if (!hasInteractionInKeep) {
+        const bestInteraction = knownCost
+          .filter((entry) => entry.isInteraction)
+          .sort((a, b) => {
+            const diff = scoreForKeep(b) - scoreForKeep(a);
+            if (diff !== 0) return diff;
+            if (a.cost !== b.cost) return a.cost - b.cost;
+            return a.name.localeCompare(b.name);
+          })[0];
+
+        if (bestInteraction) {
+          const withInteraction = keepCandidates.filter((entry) => entry.isInteraction);
+          if (withInteraction.length === 0 && keepCandidates.length > 0) {
+            const replaceIndex = keepCandidates.length - 1;
+            keepCandidates = [...keepCandidates];
+            keepCandidates[replaceIndex] = bestInteraction;
+          }
+
+          // Guard against accidental duplicates after replacement.
+          const deduped = [];
+          const seen = new Set();
+          keepCandidates.forEach((entry) => {
+            const key = normalizeCardKey(entry.name);
+            if (!key || seen.has(key)) return;
+            seen.add(key);
+            deduped.push(entry);
+          });
+
+          if (deduped.length < keepCandidates.length) {
+            const fillers = knownCost.filter((entry) => {
+              const key = normalizeCardKey(entry.name);
+              return key && !seen.has(key);
+            });
+            keepCandidates = [...deduped, ...fillers].slice(0, 3);
+          }
+        }
+      }
+    }
+
+    let mulliganCandidates = expensiveCards
+      .filter((entry) => !(entry.isInteraction || entry.isRamp))
+      .slice(0, 3);
+    if (mulliganCandidates.length === 0) {
+      mulliganCandidates = knownCost
+        .filter((entry) => entry.isExpensive)
+        .sort((a, b) => {
+          if (b.cost !== a.cost) return b.cost - a.cost;
+          return a.name.localeCompare(b.name);
+        })
+        .slice(0, 3);
+    }
+
+    const keepList = keepCandidates.length > 0
+      ? keepCandidates.map((entry) => `${entry.name} (${entry.cost})`).join(", ")
+      : "any hand with a smooth 2-3-4 curve";
+    const mulliganList = mulliganCandidates.length > 0
+      ? mulliganCandidates.map((entry) => `${entry.name} (${entry.cost})`).join(", ")
+      : "hands with no early play by turn 2";
+
+    let summary = "Prioritize a playable curve with at least one early card.";
+    let keepRequirement = "";
+    if (archetypeLower.includes("aggro") || archetypeLower.includes("tempo")) {
+      summary = "Prioritize aggressive starts: keep hands with turn-1/turn-2 pressure.";
+    } else if (archetypeLower.includes("control")) {
+      summary = "Prioritize stable control openers: keep at least one ramp/interaction card plus an early stabilizer.";
+      keepRequirement = "KEEP requirement: include at least one interaction card in your opener when available.";
+    } else if (archetypeLower.includes("ramp")) {
+      summary = "Prioritize stable ramp openers: keep acceleration plus one interaction or stabilizer.";
+      keepRequirement = "KEEP requirement: include at least one interaction card in your opener when available.";
+    } else if (archetypeLower.includes("midrange")) {
+      summary = "Prioritize balanced openers: one early play plus strong turn-3/turn-4 follow-up.";
+    }
+
+    return {
+      summary,
+      keepRequirement,
+      keepList,
+      mulliganList,
+    };
+  };
+
   const getDeckBuildingAdvice = (playstylePreferenceText = "") => {
     try {
       if (!analysis) return "No analysis available";
@@ -1188,13 +1909,30 @@ export default function App() {
       const archetype = analysis.archetype || "Unknown";
       const desiredPlaystyle = inferDesiredPlaystyle(playstylePreferenceText);
       const recommendationArchetype = desiredPlaystyle || archetype;
+      const mulliganGuide = buildDeckSpecificMulliganGuide(cards, recommendationArchetype);
+      const turnBenchmarks = getTurnWindowBenchmarks(analysis, recommendationArchetype);
+      const flexPackages = getMatchupFlexPackages(analysis, recommendationArchetype);
       const inkColors = analysis.inkColors || {};
       const inks = Object.keys(inkColors);
+      const consistency = analysis.consistencyMetrics || {};
+      const competitiveScore = typeof analysis.competitiveScore === 'number' ? analysis.competitiveScore : null;
+      const competitiveTier = analysis.competitiveTier || 'Unrated';
+      const metaFreshness = getMetaFreshnessSummary(format);
+      const emergingCombos = getEmergingSetComboPackages(analysis, format, 3);
 
       let advice = `DECK STATS:\n`;
       advice += `• Total cards: ${cardCount}\n`;
       advice += `• Unique cards: ${uniqueCount}\n`;
       advice += `• Average cost: ${avgCost}\n`;
+
+      if (competitiveScore !== null) {
+        advice += `• Competitive score: ${competitiveScore}/100 (${competitiveTier})\n`;
+      }
+      if (consistency.opening7EarlyPlay || consistency.turn2TwoPlays || consistency.turn3Interaction) {
+        advice += `• Opening consistency (7 cards): ${consistency.opening7EarlyPlay || 'N/A'}\n`;
+        advice += `• Turn-2 stability (2 playable cards): ${consistency.turn2TwoPlays || 'N/A'}\n`;
+        advice += `• Early interaction by turn 3: ${consistency.turn3Interaction || 'N/A'}\n`;
+      }
 
       // Official Lorcana ink colors
       const officialInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
@@ -1438,6 +2176,33 @@ export default function App() {
       advice += `• Cost 1: ${curve.cost1 || 0}\n`;
       advice += `• Cost 5+: ${curve.cost5Plus || 0}\n`;
       advice += `• Archetype: ${archetype}\n\n`;
+
+      advice += `MULLIGAN PLAN (DECK-SPECIFIC):\n`;
+      advice += `• ${mulliganGuide.summary}\n`;
+      if (mulliganGuide.keepRequirement) {
+        advice += `• ${mulliganGuide.keepRequirement}\n`;
+      }
+      advice += `• KEEP: ${mulliganGuide.keepList}\n`;
+      advice += `• MULLIGAN: ${mulliganGuide.mulliganList}\n\n`;
+
+      advice += `META FRESHNESS & SET ALIGNMENT:\n`;
+      advice += `• ${metaFreshness.line}\n`;
+      if (emergingCombos.length > 0) {
+        advice += `• Emerging newest-set packages to test now:\n`;
+        emergingCombos.forEach((pkg, idx) => {
+          advice += `  ${idx + 1}) ${pkg.cards.join(' + ')}\n`;
+          advice += `     why: ${pkg.reason}\n`;
+        });
+      } else {
+        advice += `• No high-confidence newest-set package found in your ink pair yet; keep tracking post-release event conversion.\n`;
+      }
+      advice += `\n`;
+
+      advice += `TURN-WINDOW BENCHMARKS (${turnBenchmarks.profile.toUpperCase()}):\n`;
+      turnBenchmarks.lines.forEach((line) => {
+        advice += `• ${line}\n`;
+      });
+      advice += `• Tactical focus: ${turnBenchmarks.focus}\n\n`;
 
       if (desiredPlaystyle) {
         advice += `• Recommendation profile: ${desiredPlaystyle} (user-requested)\n`;
@@ -1842,6 +2607,19 @@ export default function App() {
       } else {
         advice += `No high-confidence cut/add pairs found from current list.\n`;
         advice += `Your deck appears broadly aligned with ${formatSetWindow} legality and current recommendation profile.\n\n`;
+      }
+
+      if (flexPackages.length > 0) {
+        advice += `MATCHUP FLEX PACKAGES (TOURNAMENT PREP):\n`;
+        advice += `These are sideboard-style prep swaps for testing/tuning plans between events.\n`;
+        flexPackages.forEach((pkg) => {
+          advice += `• vs ${pkg.matchup.toUpperCase()}: ${pkg.intent}\n`;
+          pkg.swaps.forEach((swap, idx) => {
+            const outLabel = swap.outCard?.cost ? `${swap.outCard.name} (Cost ${swap.outCard.cost})` : swap.outCard?.name;
+            advice += `   ${idx + 1}) OUT ${outLabel} -> IN ${swap.inCard.name} (Cost ${swap.inCard.cost || '?'})\n`;
+          });
+        });
+        advice += `\n`;
       }
 
       const illegalCards = removalCandidates.filter((candidate) => candidate.illegalInFormat);
@@ -2301,6 +3079,10 @@ export default function App() {
       const deckColors = Object.keys(analysis.inkColors || {});
       const metaContext = resolveMetaForFormat(format);
       const internetInsights = getInternetStrategyInsights(metaContext, archetype, deckColors);
+      const turnBenchmarks = getTurnWindowBenchmarks(analysis, archetype);
+      const flexPackages = getMatchupFlexPackages(analysis, archetype);
+      const freshness = getMetaFreshnessSummary(format);
+      const emergingCombos = getEmergingSetComboPackages(analysis, format, 2);
       const pairings = pickRelevantMetaEntries(metaContext.metaPairings, archetype, 8, deckColors);
       const sortByWinRate = (items, direction = 'desc') => {
         const copied = [...items];
@@ -2322,6 +3104,22 @@ export default function App() {
       if (deckColors.length > 0) {
         advice += `Detected inks: ${deckColors.join(' + ')}\n\n`;
       }
+
+      advice += `TURN-WINDOW WIN BENCHMARKS (${turnBenchmarks.profile.toUpperCase()}):\n`;
+      turnBenchmarks.lines.forEach((line) => {
+        advice += `• ${line}\n`;
+      });
+      advice += `• Tactical focus: ${turnBenchmarks.focus}\n\n`;
+
+      advice += `META FRESHNESS CHECK:\n`;
+      advice += `• ${freshness.line}\n`;
+      if (emergingCombos.length > 0) {
+        advice += `• Newest-set matchup packages to test:\n`;
+        emergingCombos.forEach((pkg) => {
+          advice += `  - ${pkg.cards.join(' + ')}: ${pkg.reason}\n`;
+        });
+      }
+      advice += `\n`;
 
       advice += `FAVORABLE MATCHUPS:\n`;
       if (favorable.length > 0) {
@@ -2392,6 +3190,19 @@ export default function App() {
         });
       }
 
+      if (flexPackages.length > 0) {
+        advice += `\nMATCHUP FLEX SWAP PLANS (PREP TOOL):\n`;
+        advice += `Lorcana has no formal sideboard; use these as event-tuning packages for expected fields.\n`;
+        flexPackages.forEach((pkg) => {
+          advice += `• vs ${pkg.matchup.toUpperCase()}: ${pkg.intent}\n`;
+          pkg.swaps.forEach((swap, idx) => {
+            const outCard = swap.outCard?.name || 'Current slot';
+            const outCost = swap.outCard?.cost ? ` (Cost ${swap.outCard.cost})` : '';
+            advice += `  ${idx + 1}) OUT ${outCard}${outCost} -> IN ${swap.inCard.name} (Cost ${swap.inCard.cost || '?'})\n`;
+          });
+        });
+      }
+
       if (internetInsights.length > 0) {
         advice += `\nINTERNET-VERIFIED PRIORITIES:\n`;
         internetInsights.slice(0, 3).forEach((tip) => {
@@ -2419,6 +3230,9 @@ export default function App() {
         ? competitiveMeta.internetStrategySources
         : [];
       const internetInsights = getInternetStrategyInsights(metaContext, 'meta-context', []);
+      const freshness = getMetaFreshnessSummary(format);
+      const newestSetContext = getLatestFormatSetContext(format);
+      const emergingCombos = analysis ? getEmergingSetComboPackages(analysis, format, 3) : [];
 
       if (competitiveMeta?.lastUpdated || competitiveMeta?.source) {
         if (competitiveMeta?.lastUpdated) {
@@ -2437,7 +3251,7 @@ export default function App() {
           const tier = deck.tier ? ` [${deck.tier}]` : '';
           metaText += `${idx + 1}. ${deck.name}${tier} (${rate} WR)\n`;
           if (deck.mulligan) {
-            metaText += `   Mulligan: ${deck.mulligan}\n`;
+            metaText += `   Mulligan: Prioritize turn-1/turn-2 plays and a clean curve follow-up for this shell.\n`;
           }
         });
       } else {
@@ -2446,6 +3260,18 @@ export default function App() {
         metaText += `2. Midrange - 28% meta share\n`;
         metaText += `3. Aggro - 22% meta share\n`;
         metaText += `4. Combo - 15% meta share\n`;
+      }
+
+      metaText += `\nSET ALIGNMENT:\n`;
+      metaText += `• ${freshness.line}\n`;
+      if (newestSetContext.latestSetNumber) {
+        metaText += `• Latest legal set: Set ${newestSetContext.latestSetNumber} (${newestSetContext.latestSetName || 'Unknown'})\n`;
+      }
+      if (emergingCombos.length > 0) {
+        metaText += `• Emerging newest-set packages for your deck colors:\n`;
+        emergingCombos.forEach((pkg) => {
+          metaText += `  - ${pkg.cards.join(' + ')}: ${pkg.reason}\n`;
+        });
       }
 
       metaText += `\nRECOMMENDATIONS:\n`;
@@ -2776,6 +3602,24 @@ export default function App() {
       text += `• Average Cost: ${avgCost.toFixed(2)}\n`;
       text += `• Archetype: ${archetype}\n\n`;
 
+      const consistency = analysis.consistencyMetrics || {};
+      if (typeof analysis.competitiveScore === 'number' || consistency.opening7EarlyPlay) {
+        text += `🏅 COMPETITIVE SCORECARD\n`;
+        if (typeof analysis.competitiveScore === 'number') {
+          text += `• Score: ${analysis.competitiveScore}/100 (${analysis.competitiveTier || 'Unrated'})\n`;
+        }
+        if (consistency.opening7EarlyPlay) {
+          text += `• Opening consistency (7 cards): ${consistency.opening7EarlyPlay}\n`;
+        }
+        if (consistency.turn2TwoPlays) {
+          text += `• Turn-2 stability (2 playable cards): ${consistency.turn2TwoPlays}\n`;
+        }
+        if (consistency.turn3Interaction) {
+          text += `• Early interaction by turn 3: ${consistency.turn3Interaction}\n`;
+        }
+        text += `\n`;
+      }
+
       if (!sizeOk) {
         if (format === "sealed" && cardCount < 40) {
           text += `⚠️  Add ${40 - cardCount} more cards for sealed (minimum 40).\n\n`;
@@ -2798,7 +3642,7 @@ export default function App() {
       text += `🎯 PLAYSTYLE DETECTED\n`;
       text += `• Primary: ${detectedPlaystyle}\n\n`;
 
-      // Look up matching top deck entry for gameplan + mulligan
+      // Look up matching top deck entry for archetype context only.
       const metaCtx = resolveMetaForFormat(format);
       const detectedLower = (detectedPlaystyle || '').toLowerCase();
       const archetypeLower2 = archetype.toLowerCase();
@@ -2808,16 +3652,29 @@ export default function App() {
         return dName.includes(detectedLower) || dArch.includes(detectedLower) ||
                dName.includes(archetypeLower2) || dArch.includes(archetypeLower2);
       });
+
+      const deckTurnPlan = getDeckTurnGamePlan(analysis, archetype);
+      text += `📋 TURN-BY-TURN GAME PLAN (YOUR DECK)\n`;
+      deckTurnPlan.forEach((line) => {
+        text += `• ${line}\n`;
+      });
       if (matchedTopDeck) {
-        if (matchedTopDeck.gameplan) {
-          text += `📋 GAMEPLAN (${matchedTopDeck.name})\n`;
-          text += `• ${matchedTopDeck.gameplan}\n\n`;
-        }
-        if (matchedTopDeck.mulligan) {
-          text += `🎴 MULLIGAN GUIDE\n`;
-          text += `• ${matchedTopDeck.mulligan}\n\n`;
-        }
+        text += `• Meta context anchored to ${matchedTopDeck.name}, but the plan above is built only from cards in your deck.\n`;
       }
+      text += `\n`;
+
+      const overviewMulliganGuide = buildDeckSpecificMulliganGuide(analysis.cards || {}, archetype);
+      text += `🎴 MULLIGAN GUIDE (YOUR DECK)\n`;
+      text += `• ${overviewMulliganGuide.summary}\n`;
+      if (overviewMulliganGuide.keepRequirement) {
+        text += `• ${overviewMulliganGuide.keepRequirement}\n`;
+      }
+      text += `• KEEP: ${overviewMulliganGuide.keepList}\n`;
+      text += `• MULLIGAN: ${overviewMulliganGuide.mulliganList}\n`;
+      if (matchedTopDeck && matchedTopDeck.mulligan) {
+        text += `• Meta baseline from ${matchedTopDeck.name} translated to your exact card list.\n`;
+      }
+      text += `\n`;
 
       // Recommendations
       text += `💡 RECOMMENDATIONS\n`;
@@ -3411,6 +4268,16 @@ export default function App() {
                   <p><strong>Unique Cards:</strong> {analysis.uniqueCount}</p>
                   <p><strong>Average Cost:</strong> {parseFloat(analysis.avgCost || 0).toFixed(2)}</p>
                   <p><strong>Archetype:</strong> {analysis.archetype}</p>
+                  {typeof analysis.competitiveScore === "number" && (
+                    <p><strong>Competitive Score:</strong> {analysis.competitiveScore}/100 ({analysis.competitiveTier || "Unrated"})</p>
+                  )}
+                  {analysis.consistencyMetrics && (
+                    <>
+                      <p><strong>Opening 7 (1+ early play):</strong> {analysis.consistencyMetrics.opening7EarlyPlay || "N/A"}</p>
+                      <p><strong>Turn-2 Stability:</strong> {analysis.consistencyMetrics.turn2TwoPlays || "N/A"}</p>
+                      <p><strong>Turn-3 Interaction:</strong> {analysis.consistencyMetrics.turn3Interaction || "N/A"}</p>
+                    </>
+                  )}
                 </div>
               )}
             </div>
