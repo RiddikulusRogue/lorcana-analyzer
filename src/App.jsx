@@ -163,7 +163,8 @@ export default function App() {
   const [promptFormat, setPromptFormat] = useState("infinity");
   const [strictPromptLock, setStrictPromptLock] = useState(false);
   const [strictPromptTarget, setStrictPromptTarget] = useState(24);
-  const [mode, setMode] = useState("overview"); // overview | coaching | deckbuilding | meta
+  const [mode, setMode] = useState("overview"); // overview | deckbuilding | meta | matchup | synergylab | proengine
+  const tuningHistoryKey = "lorcana_auto_tune_history";
 
   const cardMetaInkMap = useMemo(() => {
     if (!cardMeta) return null;
@@ -246,6 +247,20 @@ export default function App() {
         const normalized = normalizeCardKey(name);
         if (normalized && !map.has(normalized)) {
           map.set(normalized, trait);
+        }
+      });
+    });
+    return map;
+  }, [allCardsData]);
+
+  const allCardsByNormalizedName = useMemo(() => {
+    if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
+    const map = new Map();
+    allCardsData.cards.forEach((card) => {
+      [card.simpleName, card.fullName, card.name].forEach((name) => {
+        const normalized = normalizeCardKey(name);
+        if (normalized && !map.has(normalized)) {
+          map.set(normalized, card);
         }
       });
     });
@@ -383,15 +398,15 @@ export default function App() {
     loadData();
   }, []);
 
-  const handleAnalyze = async () => {
-    let result = analyzeDeck(deckText, format);
+  const analyzeDeckInput = async (inputDeckText) => {
+    const deckSource = typeof inputDeckText === "string" ? inputDeckText : deckText;
+    let result = analyzeDeck(deckSource, format, competitiveMeta, cardSetsData, coreConstructed);
 
     const fallbackResult = applyInkColorFallback(result);
     result = fallbackResult.analysis;
 
     // Enrich color data if needed - fetch from API for cards with unknown colors
     if (result.inkColors) {
-      const colorKeys = Object.keys(result.inkColors);
       const totalAccounted = Object.values(result.inkColors).reduce((sum, count) => sum + count, 0);
       const totalCards = result.total || 0;
 
@@ -406,6 +421,11 @@ export default function App() {
     }
 
     setAnalysis(result);
+    return result;
+  };
+
+  const handleAnalyze = async () => {
+    await analyzeDeckInput(deckText);
   };
 
   useEffect(() => {
@@ -3217,6 +3237,609 @@ export default function App() {
     }
   };
 
+  const getSynergyLabAdvice = () => {
+    try {
+      if (!analysis) return "No analysis available";
+
+      const synergy = analysis.synergyInsights || {};
+      const tournamentPackages = Array.isArray(synergy.tournament?.packages) ? synergy.tournament.packages : [];
+      if (tournamentPackages.length === 0) {
+        return "No tournament combo package data available yet. Analyze a deck with loaded competitive meta data first.";
+      }
+
+      const toTitle = (value) => String(value || "")
+        .split(" ")
+        .filter(Boolean)
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+
+      const normalize = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+      const selectedPackage = tournamentPackages.find((pkg) => Array.isArray(pkg.missingCards) && pkg.missingCards.length > 0)
+        || tournamentPackages[0];
+
+      const matched = Array.isArray(selectedPackage?.matchedCards) ? selectedPackage.matchedCards : [];
+      const missing = Array.isArray(selectedPackage?.missingCards) ? selectedPackage.missingCards : [];
+
+      const deckEntries = Object.entries(analysis.cards || {}).map(([name, count]) => {
+        const normalized = normalize(name);
+        const traits = (normalized && allCardsTraitsMap) ? allCardsTraitsMap.get(normalized) : null;
+        const meta = (normalized && cardMeta) ? cardMeta[normalized] : null;
+
+        const keywords = Array.isArray(meta?.keywords) ? meta.keywords.map((k) => String(k).toLowerCase()) : (Array.isArray(traits?.keywords) ? traits.keywords : []);
+        const keywordText = keywords.join(" ");
+        const text = String(traits?.text || "").toLowerCase();
+        const cost = typeof meta?.cost === "number" ? meta.cost : (typeof traits?.cost === "number" ? traits.cost : 0);
+        const lore = typeof traits?.lore === "number" ? traits.lore : 0;
+
+        const isInteraction = keywordText.includes("challenger") || keywordText.includes("rush") || text.includes("banish") || text.includes("damage") || text.includes("exert");
+        const isPressure = keywordText.includes("evasive") || keywordText.includes("rush") || lore >= 2;
+        const isFlow = text.includes("draw") || text.includes("search") || text.includes("look at") || text.includes("filter");
+
+        let removeScore = 0;
+        if (cost >= 6) removeScore += 9;
+        else if (cost >= 5) removeScore += 6;
+        else if (cost <= 1) removeScore -= 2;
+        if (count > 2) removeScore += (count - 2) * 3;
+        if (!isInteraction && !isPressure) removeScore += 3;
+        if (!isFlow && cost >= 4) removeScore += 2;
+        if (matched.includes(normalized)) removeScore -= 15;
+
+        return {
+          name,
+          normalized,
+          count,
+          cost,
+          removeScore,
+        };
+      }).sort((a, b) => b.removeScore - a.removeScore);
+
+      const missingCardsDetailed = missing.slice(0, 5)
+        .filter((normalizedName) => {
+          // CRITICAL: Validate format legality on missing cards
+          const record = allCardsByNormalizedName ? allCardsByNormalizedName.get(normalizedName) : null;
+          const displayName = record?.fullName || record?.name || toTitle(normalizedName);
+          
+          // Check format legality before including in suggestions
+          if (!isCardLegalForFormat(displayName, format)) {
+            return false;
+          }
+          return true;
+        })
+        .map((normalizedName) => {
+          const record = allCardsByNormalizedName ? allCardsByNormalizedName.get(normalizedName) : null;
+          const displayName = record?.fullName || record?.name || toTitle(normalizedName);
+          const cost = typeof record?.cost === "number" ? record.cost : "?";
+          const setCode = record?.setCode || "?";
+          return {
+            normalizedName,
+            name: displayName,
+            cost,
+            setCode,
+          };
+        });
+
+      const swapCount = Math.min(deckEntries.length, missingCardsDetailed.length, 5);
+      const swaps = [];
+      for (let i = 0; i < swapCount; i++) {
+        swaps.push({ outCard: deckEntries[i], inCard: missingCardsDetailed[i] });
+      }
+
+      let output = ``;
+      output += `Target package: ${selectedPackage.name}\n`;
+      output += `Completion: ${Math.round((selectedPackage.completion || 0) * 100)}%\n`;
+      output += `Matched pieces: ${(matched || []).length}\n`;
+      output += `Missing pieces: ${(missing || []).length}\n\n`;
+
+      if (matched.length > 0) {
+        output += `ONLINE PIECES:\n`;
+        matched.slice(0, 6).forEach((card) => {
+          const rec = allCardsByNormalizedName ? allCardsByNormalizedName.get(card) : null;
+          output += `• ${rec?.fullName || rec?.name || toTitle(card)}\n`;
+        });
+        output += `\n`;
+      }
+
+      if (missingCardsDetailed.length > 0) {
+        output += `MISSING PIECES TO COMPLETE THE LINE:\n`;
+        missingCardsDetailed.forEach((card) => {
+          output += `• ${card.name} (Cost ${card.cost}, Set ${card.setCode})\n`;
+        });
+        output += `\n`;
+      }
+
+      if (swaps.length > 0) {
+        output += `SWAP-IN PLAN (3-5 ACTIONABLE CHANGES):\n`;
+        swaps.forEach((swap, idx) => {
+          output += `${idx + 1}. OUT: ${swap.outCard.count}x ${swap.outCard.name} (Cost ${swap.outCard.cost || "?"})\n`;
+          output += `   IN: 1x ${swap.inCard.name} (Cost ${swap.inCard.cost}, Set ${swap.inCard.setCode})\n`;
+          output += `   Why: Improve package completion while reducing low-impact slot overlap.\n`;
+        });
+        output += `\n`;
+      }
+
+      if (Array.isArray(synergy.matchup?.matchups) && synergy.matchup.matchups.length > 0) {
+        const sortedMatchups = [...synergy.matchup.matchups].sort((a, b) => a.projection - b.projection);
+        output += `MATCHUP SYNERGY FOCUS (LOWEST PROJECTION FIRST):\n`;
+        sortedMatchups.slice(0, 3).forEach((entry) => {
+          output += `• vs ${entry.against}: ${entry.projection}/100 projected synergy (${entry.assessment || 'No assessment'})\n`;
+          if (entry.plan) output += `  Plan anchor: ${entry.plan}\n`;
+        });
+      }
+
+      return output;
+    } catch (error) {
+      console.error("Error in getSynergyLabAdvice:", error);
+      return `Error: ${error.message}`;
+    }
+  };
+
+  const getProEngineAdvice = () => {
+    try {
+      if (!analysis) return "No analysis available";
+
+      const engine = analysis.strategyEngine || null;
+      if (!engine) {
+        return "Strategy engine insights are unavailable. Re-run analysis to generate optimization targets.";
+      }
+
+      const focusAreas = Array.isArray(engine.focusAreas) ? engine.focusAreas : [];
+      const recommendations = Array.isArray(engine.recommendations) ? engine.recommendations : [];
+      const topGaps = focusAreas
+        .filter((area) => area.status !== "On Target")
+        .slice(0, 5);
+      const winPath = engine.winPath || {};
+      const trainingSignals = engine.trainingSignals || {};
+
+      let output = ``;
+      output += `Model: ${engine.model || "adaptive_strategy_engine"}\n`;
+      output += `Profile: ${engine.profile || "General profile"}\n`;
+      output += `Optimization score: ${typeof engine.optimizationScore === "number" ? `${engine.optimizationScore}/100` : "N/A"}\n\n`;
+
+      output += `PRIORITY TARGET GAPS:\n`;
+      if (topGaps.length > 0) {
+        topGaps.forEach((area, idx) => {
+          output += `${idx + 1}. ${area.area}\n`;
+          output += `   Current ${area.current}% vs Target ${area.target}% (${area.status}, gap ${area.gap})\n`;
+          output += `   Impact: ${area.impact}\n`;
+          output += `   Action: ${area.action}\n`;
+        });
+      } else {
+        output += `• Deck is currently on target across tracked strategy dimensions.\n`;
+      }
+
+      output += `\nWIN PATH SNAPSHOT:\n`;
+      output += `• Tournament line: ${winPath.primaryTournamentLine || "N/A"}\n`;
+      output += `• Logical engine: ${winPath.primaryLogicalEngine || "N/A"}\n`;
+      output += `• Weakest projected matchup: ${winPath.weakestMatchup || "N/A"}\n`;
+      output += `• Mulligan rule: ${winPath.mulliganRule || "N/A"}\n`;
+
+      output += `\nTRAINING SIGNALS (TRACK AFTER EACH ITERATION):\n`;
+      output += `• Opening 7 early play: ${trainingSignals.opening7EarlyPlay ?? "N/A"}%\n`;
+      output += `• Turn-2 two-play stability: ${trainingSignals.turn2TwoPlays ?? "N/A"}%\n`;
+      output += `• Turn-3 interaction: ${trainingSignals.turn3Interaction ?? "N/A"}%\n`;
+      output += `• Synergy model score: ${trainingSignals.synergyModelScore ?? "N/A"}/100\n`;
+      output += `• Matchup projection: ${trainingSignals.matchupProjection ?? "N/A"}/100\n`;
+
+      if (recommendations.length > 0) {
+        output += `\nAUTOPILOT IMPROVEMENT QUEUE:\n`;
+        recommendations.forEach((line) => {
+          output += `• ${line}\n`;
+        });
+      }
+
+      const previewPlan = getAutoTunePlan(5);
+      if (Array.isArray(previewPlan.swaps) && previewPlan.swaps.length > 0) {
+        output += `\nAUTO-TUNE PREVIEW (ONE-CLICK APPLY):\n`;
+        previewPlan.swaps.forEach((swap, idx) => {
+          output += `• ${idx + 1}) OUT ${swap.outCard?.name} -> IN ${swap.inCard?.name}\n`;
+        });
+      }
+
+      const multiPlans = getMultiPlanOptimizer();
+      if (Array.isArray(multiPlans) && multiPlans.length > 0) {
+        output += `\nMULTI-PLAN OPTIMIZER (3 STRATEGIES):\n`;
+        multiPlans.forEach((plan, idx) => {
+          output += `${idx + 1}. ${plan.name}: +${plan.projectedDelta} → ${plan.projectedScore}/100\n`;
+          output += `   ${plan.description}\n`;
+        });
+      }
+
+      try {
+        const historyRaw = localStorage.getItem(tuningHistoryKey);
+        const history = Array.isArray(JSON.parse(historyRaw || "[]")) ? JSON.parse(historyRaw || "[]") : [];
+        if (history.length > 0) {
+          output += `\nRECENT AUTO-TUNE RUNS:\n`;
+          history.slice(0, 5).forEach((run, idx) => {
+            const deltaPrefix = Number(run.delta || 0) > 0 ? "+" : "";
+            output += `• ${idx + 1}) ${run.before} -> ${run.after} (${deltaPrefix}${run.delta}) using ${run.swaps} swaps\n`;
+          });
+        }
+      } catch (error) {
+        console.warn("Could not parse auto-tune history", error);
+      }
+
+      return output;
+    } catch (error) {
+      console.error("Error in getProEngineAdvice:", error);
+      return `Error: ${error.message}`;
+    }
+  };
+
+  const isCardLegalForFormat = (cardName, gameFormat) => {
+    if (gameFormat === 'sealed') return true;
+    if (!cardSetsData || !cardSetsData.cardSetMapping) return false;
+
+    const normalize = (name) => String(name || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    const normalized = normalize(cardName);
+    if (!normalized) return false;
+
+    const setMap = cardSetsData.cardSetMapping;
+    const cardSets = setMap[normalized];
+    if (!Array.isArray(cardSets) || cardSets.length === 0) return false;
+
+    if (gameFormat === 'core') {
+      const legalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [];
+      if (legalSets.length === 0) return false;
+      return cardSets.some((setNum) => legalSets.includes(setNum));
+    }
+
+    return true;
+  };
+
+  const getAutoTunePlan = (maxSwaps = 5, planVariant = 'balanced') => {
+    if (!analysis || !analysis.cards) {
+      return { swaps: [], reason: "Analyze a deck first.", variant: planVariant };
+    }
+
+    const engine = analysis.strategyEngine || {};
+    const synergy = analysis.synergyInsights || {};
+    const focusAreas = Array.isArray(engine.focusAreas) ? engine.focusAreas : [];
+    const topGap = focusAreas.find((area) => area.status !== "On Target") || null;
+    const topGapText = String(topGap?.area || "").toLowerCase();
+
+    let targetCost = null;
+    let variant = planVariant;
+    if (planVariant === 'speed') {
+      targetCost = 1;
+    } else if (planVariant === 'consistency') {
+      targetCost = 3;
+    } else {
+      if (topGapText.includes("early curve")) targetCost = 2;
+      else if (topGapText.includes("late-game")) targetCost = 5;
+      else if (topGapText.includes("interaction")) targetCost = 3;
+      else if (topGapText.includes("ramp")) targetCost = 2;
+      else if (topGapText.includes("card flow")) targetCost = 3;
+    }
+
+    const normalize = (value) => normalizeCardKey(value);
+    const inks = Object.keys(analysis.inkColors || {});
+    const inkSet = new Set(inks.map((ink) => String(ink || "").toLowerCase()));
+
+    const resolveCardColors = (normalizedName) => {
+      if (!normalizedName) return [];
+      const fromAllCards = allCardsColorsMap ? allCardsColorsMap.get(normalizedName) : null;
+      if (Array.isArray(fromAllCards) && fromAllCards.length > 0) {
+        return fromAllCards.map((color) => String(color || "").toLowerCase()).filter(Boolean);
+      }
+      const mono = cardMetaInkMap ? cardMetaInkMap.get(normalizedName) : null;
+      return mono ? [String(mono).toLowerCase()] : [];
+    };
+
+    const inDeckColors = (normalizedName) => {
+      const colors = resolveCardColors(normalizedName);
+      if (inkSet.size === 0 || colors.length === 0) return true;
+      return colors.some((color) => inkSet.has(color));
+    };
+
+    const deckEntries = Object.entries(analysis.cards || {}).map(([name, count]) => {
+      const normalized = normalize(name);
+      const traits = (normalized && allCardsTraitsMap) ? allCardsTraitsMap.get(normalized) : null;
+      const meta = (normalized && cardMeta) ? cardMeta[normalized] : null;
+      const keywords = Array.isArray(meta?.keywords)
+        ? meta.keywords.map((k) => String(k).toLowerCase())
+        : (Array.isArray(traits?.keywords) ? traits.keywords : []);
+      const keywordText = keywords.join(" ");
+      const text = String(traits?.text || "").toLowerCase();
+      const cost = typeof meta?.cost === "number" ? meta.cost : (typeof traits?.cost === "number" ? traits.cost : 0);
+      const lore = typeof traits?.lore === "number" ? traits.lore : 0;
+      const isInteraction = keywordText.includes("challenger") || keywordText.includes("rush") || text.includes("banish") || text.includes("damage") || text.includes("exert");
+      const isPressure = keywordText.includes("evasive") || keywordText.includes("rush") || lore >= 2;
+      const isFlow = text.includes("draw") || text.includes("search") || text.includes("look at") || text.includes("filter");
+
+      let removeScore = 0;
+      if (cost >= 6) removeScore += 10;
+      else if (cost >= 5) removeScore += 7;
+      else if (cost <= 1) removeScore -= 3;
+      if (count > 2) removeScore += (count - 2) * 3;
+      if (!isInteraction && !isPressure) removeScore += 3;
+      if (!isFlow && cost >= 4) removeScore += 2;
+      if (topGapText.includes("early curve") && cost >= 5) removeScore += 3;
+      if (topGapText.includes("late-game") && cost <= 2) removeScore += 3;
+
+      return { name, normalized, count, cost, removeScore };
+    }).sort((a, b) => b.removeScore - a.removeScore);
+
+    const packageCandidates = [];
+    const topPackage = Array.isArray(synergy.tournament?.packages)
+      ? synergy.tournament.packages.find((pkg) => Array.isArray(pkg.missingCards) && pkg.missingCards.length > 0)
+        || synergy.tournament.packages[0]
+      : null;
+
+    if (topPackage && Array.isArray(topPackage.missingCards)) {
+      topPackage.missingCards.forEach((normalizedName) => {
+        if (!normalizedName || !inDeckColors(normalizedName)) return;
+        
+        // CRITICAL: Validate format legality BEFORE adding to candidates
+        const record = allCardsByNormalizedName ? allCardsByNormalizedName.get(normalizedName) : null;
+        const name = record?.fullName || record?.name;
+        if (!name) return;
+        
+        // Check format legality - if format is core, must pass core legal sets check
+        if (!isCardLegalForFormat(name, format)) {
+          return;
+        }
+        
+        const cost = typeof record?.cost === "number" ? record.cost : null;
+        packageCandidates.push({
+          name,
+          normalized: normalizedName,
+          cost,
+          reason: `Complete tournament package: ${topPackage.name}`,
+        });
+      });
+    }
+
+    const recommendationCandidates = findCardRecommendations(
+      analysis.inkColors || {},
+      analysis.archetype || "Midrange",
+      targetCost,
+      20,
+      format,
+      Object.keys(analysis.cards || {})
+    )
+      .filter((card) => {
+        const cardName = card.name || card.fullName || '';
+        return isCardLegalForFormat(cardName, format) && inDeckColors(normalize(cardName));
+      })
+      .map((card) => ({
+        name: card.name,
+        normalized: normalize(card.simpleName || card.name),
+        cost: typeof card?.cost === "number" ? card.cost : null,
+        reason: topGap ? `Address strategy gap: ${topGap.area}` : "General optimization reinforcement",
+      }));
+
+    const inCandidates = [...packageCandidates, ...recommendationCandidates];
+    const seenIn = new Set();
+    const selectedIn = [];
+
+    const deckCountByNormalized = new Map();
+    Object.entries(analysis.cards || {}).forEach(([name, count]) => {
+      const key = normalize(name);
+      if (key) deckCountByNormalized.set(key, count);
+    });
+
+    inCandidates.forEach((candidate) => {
+      if (selectedIn.length >= maxSwaps) return;
+      if (seenIn.has(candidate.normalized)) return;
+      const currentCount = deckCountByNormalized.get(candidate.normalized) || 0;
+      if (currentCount >= 4) return;
+      seenIn.add(candidate.normalized);
+      selectedIn.push(candidate);
+    });
+
+    const swaps = [];
+    let outIndex = 0;
+    for (let i = 0; i < selectedIn.length && swaps.length < maxSwaps; i++) {
+      while (outIndex < deckEntries.length && deckEntries[outIndex].normalized === selectedIn[i].normalized) {
+        outIndex += 1;
+      }
+      if (outIndex >= deckEntries.length) break;
+      swaps.push({
+        outCard: deckEntries[outIndex],
+        inCard: selectedIn[i],
+        reason: selectedIn[i].reason,
+      });
+      outIndex += 1;
+    }
+
+    return {
+      swaps,
+      topGap,
+      topPackage,
+      variant,
+    };
+  };
+
+  const getMultiPlanOptimizer = () => {
+    if (!analysis || !analysis.cards) {
+      return [];
+    }
+
+    const baseEngine = analysis.strategyEngine || {};
+    const baseScore = typeof baseEngine.optimizationScore === "number" ? baseEngine.optimizationScore : 50;
+
+    const plans = [];
+
+    // Plan 1: Speed (fastest climb path - lower cost cards, early game focus)
+    const speedPlan = getAutoTunePlan(5, 'speed');
+    if (Array.isArray(speedPlan.swaps) && speedPlan.swaps.length > 0) {
+      plans.push({
+        name: 'Speed Climb',
+        variant: 'speed',
+        description: 'Fast optimization: prioritize early game cards and quick consistency improvements',
+        swaps: speedPlan.swaps,
+        projectedDelta: Math.min(12, speedPlan.swaps.length * 3),
+        projectedScore: Math.min(100, baseScore + Math.min(12, speedPlan.swaps.length * 3)),
+      });
+    }
+
+    // Plan 2: Consistency (rock-solid foundation path - mid-cost stabilizers)
+    const consistencyPlan = getAutoTunePlan(5, 'consistency');
+    if (Array.isArray(consistencyPlan.swaps) && consistencyPlan.swaps.length > 0) {
+      plans.push({
+        name: 'Consistency Foundation',
+        variant: 'consistency',
+        description: 'Stable optimization: reinforce curve smoothness and turn-2/3 reliability',
+        swaps: consistencyPlan.swaps,
+        projectedDelta: Math.min(10, consistencyPlan.swaps.length * 2.5),
+        projectedScore: Math.min(100, baseScore + Math.min(10, consistencyPlan.swaps.length * 2.5)),
+      });
+    }
+
+    // Plan 3: Balanced (default, addresses strategy gap first)
+    const balancedPlan = getAutoTunePlan(5, 'balanced');
+    if (Array.isArray(balancedPlan.swaps) && balancedPlan.swaps.length > 0) {
+      plans.push({
+        name: 'Strategic Tune',
+        variant: 'balanced',
+        description: 'Targeted optimization: address your highest-impact strategy gap directly',
+        swaps: balancedPlan.swaps,
+        projectedDelta: Math.min(15, balancedPlan.swaps.length * 3.5),
+        projectedScore: Math.min(100, baseScore + Math.min(15, balancedPlan.swaps.length * 3.5)),
+      });
+    }
+
+    return plans.sort((a, b) => b.projectedDelta - a.projectedDelta);
+  };
+
+  const applyMultiPlanSelection = async (selectedPlan) => {
+    if (!selectedPlan || !Array.isArray(selectedPlan.swaps) || selectedPlan.swaps.length === 0) {
+      alert("No valid swaps available for this plan.");
+      return;
+    }
+
+    const plan = selectedPlan;
+    if (!analysis || !analysis.cards) {
+      alert("Analyze a deck before applying tuning plans.");
+      return;
+    }
+
+    const nextDeck = { ...(analysis.cards || {}) };
+
+    plan.swaps.forEach((swap) => {
+      const outName = swap.outCard?.name;
+      const inName = swap.inCard?.name;
+      if (!outName || !inName || outName === inName) return;
+
+      nextDeck[outName] = Math.max(0, (nextDeck[outName] || 0) - 1);
+      if (nextDeck[outName] <= 0) {
+        delete nextDeck[outName];
+      }
+      nextDeck[inName] = (nextDeck[inName] || 0) + 1;
+    });
+
+    const resolveCost = (cardName) => {
+      const normalized = normalizeCardKey(cardName);
+      if (!normalized) return 99;
+      if (allCardsCostMap && allCardsCostMap.has(normalized)) return allCardsCostMap.get(normalized);
+      const meta = cardMeta ? cardMeta[normalized] : null;
+      return typeof meta?.cost === "number" ? meta.cost : 99;
+    };
+
+    const sortedEntries = Object.entries(nextDeck)
+      .sort((a, b) => {
+        const costA = resolveCost(a[0]);
+        const costB = resolveCost(b[0]);
+        if (costA !== costB) return costA - costB;
+        return a[0].localeCompare(b[0]);
+      });
+
+    const currentOptimization = typeof analysis?.strategyEngine?.optimizationScore === "number"
+      ? analysis.strategyEngine.optimizationScore
+      : null;
+
+    const nextDeckText = sortedEntries.map(([name, count]) => `${count}x ${name}`).join("\n");
+    setDeckText(nextDeckText);
+    const tunedResult = await analyzeDeckInput(nextDeckText);
+
+    const nextOptimization = typeof tunedResult?.strategyEngine?.optimizationScore === "number"
+      ? tunedResult.strategyEngine.optimizationScore
+      : null;
+
+    if (currentOptimization !== null && nextOptimization !== null) {
+      try {
+        const existing = JSON.parse(localStorage.getItem(tuningHistoryKey) || "[]");
+        const safeExisting = Array.isArray(existing) ? existing : [];
+        const run = {
+          timestamp: new Date().toISOString(),
+          before: currentOptimization,
+          after: nextOptimization,
+          delta: nextOptimization - currentOptimization,
+          swaps: plan.swaps.length,
+          planName: plan.name,
+        };
+        const updated = [run, ...safeExisting].slice(0, 25);
+        localStorage.setItem(tuningHistoryKey, JSON.stringify(updated));
+      } catch (error) {
+        console.warn("Could not save auto-tune history", error);
+      }
+    }
+
+    let output = `⚙️ PLAN APPLIED: ${plan.name}\n`;
+    output += `═══════════════════════════════════════════════════════\n\n`;
+    output += `Plan: ${plan.description}\n`;
+    output += `Expected delta: +${plan.projectedDelta}\n`;
+    if (currentOptimization !== null && nextOptimization !== null) {
+      const actualDelta = nextOptimization - currentOptimization;
+      const deltaPrefix = actualDelta > 0 ? "+" : "";
+      output += `Actual result: ${currentOptimization} → ${nextOptimization} (${deltaPrefix}${actualDelta})\n`;
+    }
+    output += `\nSwaps applied (${plan.swaps.length}):\n`;
+    plan.swaps.forEach((swap, idx) => {
+      const outCost = Number.isFinite(swap.outCard?.cost) ? swap.outCard.cost : "?";
+      const inCost = Number.isFinite(swap.inCard?.cost) ? swap.inCard.cost : "?";
+      output += `${idx + 1}. OUT: ${swap.outCard?.name} (Cost ${outCost})\n`;
+      output += `   IN: ${swap.inCard?.name} (Cost ${inCost})\n`;
+    });
+    output += `\nDeck text updated and re-analyzed.`;
+
+    setMode("proengine");
+    setCoaching(output);
+  };
+
+  const getPlanOptimizerAdvice = () => {
+    try {
+      if (!analysis) return "No analysis available";
+
+      const plans = getMultiPlanOptimizer();
+      if (plans.length === 0) {
+        return "No optimization plans available for this deck. Try analyzing again or changing format.";
+      }
+
+      let output = `Available tuning strategies:\n\n`;
+      plans.forEach((plan, idx) => {
+        output += `${idx + 1}. ${plan.name}\n`;
+        output += `   ${plan.description}\n`;
+        output += `   Swaps: ${plan.swaps.length} | Projected +${plan.projectedDelta} score → ${plan.projectedScore}/100\n`;
+      });
+      output += `\nSelect a plan above to apply it with one click.`;
+
+      return output;
+    } catch (error) {
+      console.error("Error in getPlanOptimizerAdvice:", error);
+      return `Error: ${error.message}`;
+    }
+  };
+
+  const applyAutoTunePlan = async () => {
+    const plans = getMultiPlanOptimizer();
+    if (!Array.isArray(plans) || plans.length === 0) {
+      setCoaching("⚙️ MULTI-PLAN OPTIMIZER\n\nNo valid plans found. Try analyzing a deck first.");
+      setMode("proengine");
+      return;
+    }
+
+    const bestPlan = plans[0];
+    await applyMultiPlanSelection(bestPlan);
+  };
+
+  const applyAutoTunePlanVariant = async (variant) => {
+    const plans = getMultiPlanOptimizer();
+    const selectedPlan = plans.find((p) => p.variant === variant) || plans[0];
+    await applyMultiPlanSelection(selectedPlan);
+  };
+
   const getMetaAnalysis = () => {
     try {
       let metaText = `CURRENT META ANALYSIS:\n\n`;
@@ -3620,6 +4243,30 @@ export default function App() {
         text += `\n`;
       }
 
+      if (analysis.synergyInsights) {
+        const synergyOverall = typeof analysis.synergyInsights.overallScore === 'number'
+          ? analysis.synergyInsights.overallScore
+          : null;
+        const topTournamentPackage = Array.isArray(analysis.synergyInsights.tournament?.packages)
+          ? analysis.synergyInsights.tournament.packages[0]
+          : null;
+        const topLogicalSignal = Array.isArray(analysis.synergyInsights.logical?.signals)
+          ? analysis.synergyInsights.logical.signals[0]
+          : null;
+
+        text += `🧠 SYNERGY INTELLIGENCE\n`;
+        if (synergyOverall !== null) {
+          text += `• Overall synergy score: ${synergyOverall}/100\n`;
+        }
+        if (topTournamentPackage) {
+          text += `• Tournament combo alignment: ${topTournamentPackage.name} (${Math.round((topTournamentPackage.completion || 0) * 100)}% online)\n`;
+        }
+        if (topLogicalSignal) {
+          text += `• Logical engine: ${topLogicalSignal.name} (${topLogicalSignal.score}/100)\n`;
+        }
+        text += `\n`;
+      }
+
       if (!sizeOk) {
         if (format === "sealed" && cardCount < 40) {
           text += `⚠️  Add ${40 - cardCount} more cards for sealed (minimum 40).\n\n`;
@@ -3701,7 +4348,7 @@ export default function App() {
 
       // Format-specific
       if (format === "core") {
-        const coreLegalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [5, 6, 7, 8, 9, 10, 11, 12];
+        const coreLegalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [5, 6, 7, 8, 9, 10, 11, 12, 13];
         const coreMinSet = Math.min(...coreLegalSets);
         const coreMaxSet = Math.max(...coreLegalSets);
         text += `📋 CORE CONSTRUCTED (Sets ${coreMinSet}-${coreMaxSet})\n`;
@@ -3748,6 +4395,30 @@ export default function App() {
       } catch (error) {
         console.error("Error in matchup:", error);
         text = `Error generating matchup advice: ${error.message}`;
+      }
+    } else if (mode === "synergylab") {
+      console.log("Synergy Lab mode selected");
+      try {
+        const labAdvice = getSynergyLabAdvice();
+        text = `🧪 SYNERGY LAB\n`;
+        text += `═══════════════════════════════════════════════════════\n\n`;
+        text += labAdvice;
+        text += `\n═══════════════════════════════════════════════════════`;
+      } catch (error) {
+        console.error("Error in synergy lab:", error);
+        text = `Error generating synergy lab advice: ${error.message}`;
+      }
+    } else if (mode === "proengine") {
+      console.log("Pro Engine mode selected");
+      try {
+        const proAdvice = getProEngineAdvice();
+        text = `⚙️ PRO ENGINE OPTIMIZER\n`;
+        text += `═══════════════════════════════════════════════════════\n\n`;
+        text += proAdvice;
+        text += `\n═══════════════════════════════════════════════════════`;
+      } catch (error) {
+        console.error("Error in pro engine:", error);
+        text = `Error generating pro engine advice: ${error.message}`;
       }
     }
 
@@ -4278,6 +4949,83 @@ export default function App() {
                       <p><strong>Turn-3 Interaction:</strong> {analysis.consistencyMetrics.turn3Interaction || "N/A"}</p>
                     </>
                   )}
+                  {analysis.synergyInsights && (
+                    <>
+                      <p><strong>Synergy Intelligence:</strong> {analysis.synergyInsights.overallScore}/100</p>
+                      {Array.isArray(analysis.synergyInsights.tournament?.packages) && analysis.synergyInsights.tournament.packages.length > 0 && (
+                        <div style={{ marginTop: "6px" }}>
+                          <p><strong>Tournament Combo Heatmap:</strong></p>
+                          {analysis.synergyInsights.tournament.packages.slice(0, 5).map((pkg, idx) => {
+                            const completion = Math.round((pkg.completion || 0) * 100);
+                            const barColor = completion >= 85 ? "#22c55e" : completion >= 65 ? "#84cc16" : completion >= 45 ? "#f59e0b" : "#ef4444";
+                            return (
+                              <div key={`pkg-heat-${idx}`} style={{ marginBottom: "8px" }}>
+                                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px" }}>
+                                  <span>{pkg.name}</span>
+                                  <span>{completion}%</span>
+                                </div>
+                                <div style={{ height: "8px", background: "rgba(255,255,255,0.12)", borderRadius: "999px", overflow: "hidden" }}>
+                                  <div style={{ width: `${completion}%`, height: "100%", background: barColor }} />
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                      {Array.isArray(analysis.synergyInsights.logical?.signals) && analysis.synergyInsights.logical.signals.length > 0 && (
+                        <div style={{ marginTop: "6px" }}>
+                          <p><strong>Logical Engine Signals:</strong></p>
+                          <ul style={{ marginTop: "4px" }}>
+                            {analysis.synergyInsights.logical.signals.slice(0, 3).map((signal, idx) => (
+                              <li key={`signal-${idx}`}>
+                                {signal.name}: {signal.score}/100
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {Array.isArray(analysis.synergyInsights.matchup?.matchups) && analysis.synergyInsights.matchup.matchups.length > 0 && (
+                        <div style={{ marginTop: "6px" }}>
+                          <p><strong>Matchup Synergy Heatmap:</strong></p>
+                          {analysis.synergyInsights.matchup.matchups.slice(0, 5).map((entry, idx) => {
+                            const score = Math.max(0, Math.min(100, Math.round(entry.projection || 0)));
+                            const barColor = score >= 80 ? "#22c55e" : score >= 65 ? "#84cc16" : score >= 50 ? "#f59e0b" : "#ef4444";
+                            return (
+                              <div key={`matchup-heat-${idx}`} style={{ marginBottom: "8px" }}>
+                                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px" }}>
+                                  <span>{entry.against || "Unknown matchup"}</span>
+                                  <span>{score}/100</span>
+                                </div>
+                                <div style={{ height: "8px", background: "rgba(255,255,255,0.12)", borderRadius: "999px", overflow: "hidden" }}>
+                                  <div style={{ width: `${score}%`, height: "100%", background: barColor }} />
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </>
+                  )}
+                  {analysis.strategyEngine && (
+                    <div style={{ marginTop: "8px" }}>
+                      <p><strong>Strategy Engine:</strong> {analysis.strategyEngine.optimizationScore}/100 ({analysis.strategyEngine.profile || "General"})</p>
+                      {Array.isArray(analysis.strategyEngine.focusAreas) && analysis.strategyEngine.focusAreas.length > 0 && (
+                        <div style={{ marginTop: "4px" }}>
+                          <p><strong>Top Optimization Targets:</strong></p>
+                          <ul style={{ marginTop: "4px" }}>
+                            {analysis.strategyEngine.focusAreas
+                              .filter((area) => area.status !== "On Target")
+                              .slice(0, 3)
+                              .map((area, idx) => (
+                                <li key={`engine-gap-${idx}`}>
+                                  {area.area}: {area.current}% vs {area.target}% ({area.status})
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -4377,12 +5125,39 @@ export default function App() {
           <button onClick={() => setMode("matchup")} style={modeButtonStyle(mode === "matchup")}>
             Matchup Strategy
           </button>
+          <button onClick={() => setMode("synergylab")} style={modeButtonStyle(mode === "synergylab")}>
+            Synergy Lab
+          </button>
+          <button onClick={() => setMode("proengine")} style={modeButtonStyle(mode === "proengine")}>
+            Pro Engine
+          </button>
         </div>
 
         {/* Quick Action Buttons */}
         <div style={{ marginBottom: "1rem" }}>
           <button onClick={getInkweaverCoaching} style={buttonStyle}>
             🎯 Get Coaching
+          </button>
+          <button
+            onClick={applyAutoTunePlan}
+            style={!analysis ? disabledButtonStyle : buttonStyle}
+            disabled={!analysis}
+          >
+            ⚙️ Auto-Tune (Best)
+          </button>
+          <button
+            onClick={() => applyAutoTunePlanVariant('speed')}
+            style={!analysis ? disabledButtonStyle : { ...buttonStyle, background: "rgba(34, 197, 94, 0.6)" }}
+            disabled={!analysis}
+          >
+            ⚡ Speed Plan
+          </button>
+          <button
+            onClick={() => applyAutoTunePlanVariant('consistency')}
+            style={!analysis ? disabledButtonStyle : { ...buttonStyle, background: "rgba(59, 130, 246, 0.6)" }}
+            disabled={!analysis}
+          >
+            🛡️ Consistency Plan
           </button>
         </div>
 

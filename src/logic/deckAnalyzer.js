@@ -98,7 +98,501 @@ function formatPercent(value) {
   return `${(Math.max(0, Math.min(1, value)) * 100).toFixed(1)}%`
 }
 
-export function analyzeDeck(deckText, format = 'infinity') {
+function normalizeWinRateValue(rawValue) {
+  const match = String(rawValue || '').match(/(\d+(?:\.\d+)?)/)
+  if (!match) return null
+  const parsed = parseFloat(match[1])
+  return Number.isFinite(parsed) ? parsed : null
+}
+
+function toFormatMetaKey(format) {
+  if (format === 'core') return 'coreConstructed'
+  if (format === 'sealed') return 'sealed'
+  return 'infinity'
+}
+
+function getFormatMetaContext(format, competitiveMeta) {
+  const key = toFormatMetaKey(format)
+  const formatData = competitiveMeta?.formats?.[key] || null
+
+  const fallbackTopDecks = Array.isArray(competitiveMeta?.topDecks) ? competitiveMeta.topDecks : []
+  const fallbackPairings = Array.isArray(competitiveMeta?.metaPairings) ? competitiveMeta.metaPairings : []
+  const fallbackCombos = Array.isArray(competitiveMeta?.comboPackages) ? competitiveMeta.comboPackages : []
+
+  return {
+    topDecks: Array.isArray(formatData?.topDecks) && formatData.topDecks.length > 0 ? formatData.topDecks : fallbackTopDecks,
+    metaPairings: Array.isArray(formatData?.metaPairings) && formatData.metaPairings.length > 0 ? formatData.metaPairings : fallbackPairings,
+    comboPackages: Array.isArray(formatData?.comboPackages) && formatData.comboPackages.length > 0 ? formatData.comboPackages : fallbackCombos,
+  }
+}
+
+function isCardLegalForFormatAnalysis(normalizedCardName, format, cardSetsData, coreConstructed) {
+  if (format === 'sealed') return true
+  if (!cardSetsData || !cardSetsData.cardSetMapping) return false
+
+  const cardSets = cardSetsData.cardSetMapping[normalizedCardName]
+  if (!Array.isArray(cardSets) || cardSets.length === 0) return false
+
+  if (format === 'core') {
+    const legalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : []
+    if (legalSets.length === 0) return true
+    return cardSets.some((setNum) => legalSets.includes(setNum))
+  }
+
+  return true
+}
+
+function summarizeTournamentSynergy(deckEntries, format, competitiveMeta, cardSetsData = null, coreConstructed = null) {
+  const deckMap = new Map(
+    deckEntries.map(([name, count]) => [normalizeName(name), count]).filter(([name]) => Boolean(name))
+  )
+  const context = getFormatMetaContext(format, competitiveMeta)
+
+  const weightedComboPackages = (Array.isArray(context.comboPackages) ? context.comboPackages : [])
+    .map((combo) => {
+      const comboCards = Array.isArray(combo?.cards)
+        ? Array.from(new Set(combo.cards.map((card) => normalizeName(card)).filter(Boolean)))
+        : []
+      if (comboCards.length < 2) return null
+
+      const matchedCards = comboCards.filter((card) => deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
+      const missingCards = comboCards.filter((card) => !deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
+      const completion = matchedCards.length / comboCards.length
+
+      return {
+        name: combo?.name || 'Unnamed combo package',
+        archetype: combo?.archetype || null,
+        matchedCards,
+        missingCards,
+        completion,
+        source: 'tournament_combo_package',
+      }
+    })
+    .filter(Boolean)
+
+  const weightedTopDeckPackages = (Array.isArray(context.topDecks) ? context.topDecks : [])
+    .map((deck) => {
+      const keyCards = Array.isArray(deck?.keyCards)
+        ? Array.from(new Set(deck.keyCards.map((card) => normalizeName(card)).filter(Boolean)))
+        : []
+      if (keyCards.length < 3) return null
+
+      const matchedCards = keyCards.filter((card) => deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
+      const missingCards = keyCards.filter((card) => !deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
+      const completion = matchedCards.length / keyCards.length
+      const wr = normalizeWinRateValue(deck?.winRate)
+
+      return {
+        name: `${deck?.name || 'Meta Deck'} Core Line`,
+        archetype: deck?.archetype || null,
+        matchedCards,
+        missingCards,
+        completion,
+        source: 'tournament_top_deck_line',
+        winRate: wr,
+      }
+    })
+    .filter(Boolean)
+
+  const allPackages = [...weightedComboPackages, ...weightedTopDeckPackages]
+  const ranked = allPackages
+    .map((pkg) => {
+      const completedBonus = pkg.completion >= 1 ? 10 : 0
+      const winRateBonus = pkg.winRate ? Math.max(0, (pkg.winRate - 45) * 0.5) : 0
+      const sourceBonus = pkg.source === 'tournament_combo_package' ? 6 : 3
+      const matchBonus = pkg.matchedCards.length * 4
+      const packageScore = Math.round(pkg.completion * 70 + matchBonus + completedBonus + sourceBonus + winRateBonus)
+
+      let status = 'missing_pieces'
+      if (pkg.completion >= 1) status = 'fully_online'
+      else if (pkg.completion >= 0.67) status = 'mostly_online'
+      else if (pkg.completion >= 0.34) status = 'partial_shell'
+
+      return {
+        ...pkg,
+        packageScore,
+        status,
+      }
+    })
+    .filter((pkg) => pkg.matchedCards.length > 0)
+    .sort((a, b) => b.packageScore - a.packageScore)
+
+  const top = ranked.slice(0, 6)
+  const avgScore = top.length > 0
+    ? top.reduce((sum, pkg) => sum + pkg.packageScore, 0) / top.length
+    : 0
+
+  return {
+    model: 'tournament_combo_alignment_v1',
+    score: Math.max(0, Math.min(100, Math.round(avgScore))),
+    packages: top,
+  }
+}
+
+function summarizeLogicalSynergy({
+  songCount,
+  singerCount,
+  shiftCount,
+  rampCount,
+  interactionCount,
+  cost5PlusCount,
+  evasiveCount,
+  rushCount,
+  bodyguardCount,
+  challengerCount,
+  drawEngineCount,
+  cardCount,
+}) {
+  const signals = []
+
+  const singerSongScore = Math.min(100, Math.round(Math.min(songCount, singerCount) * 12 + Math.max(0, singerCount - songCount) * 3))
+  signals.push({
+    name: 'Singer + Song Engine',
+    score: singerSongScore,
+    evidence: `singers=${singerCount}, songs=${songCount}`,
+  })
+
+  const rampPayoffScore = Math.min(100, Math.round((rampCount * 8) + (cost5PlusCount * 4)))
+  signals.push({
+    name: 'Ramp Into Payoff Curve',
+    score: rampPayoffScore,
+    evidence: `rampPieces=${rampCount}, payoffs5Plus=${cost5PlusCount}`,
+  })
+
+  const tempoPressureScore = Math.min(100, Math.round((interactionCount * 4) + ((evasiveCount + rushCount + challengerCount) * 3)))
+  signals.push({
+    name: 'Tempo Pressure Chain',
+    score: tempoPressureScore,
+    evidence: `interaction=${interactionCount}, pressureKeywords=${evasiveCount + rushCount + challengerCount}`,
+  })
+
+  const valueEngineScore = Math.min(100, Math.round((drawEngineCount * 7) + (bodyguardCount * 3) + (shiftCount * 4)))
+  signals.push({
+    name: 'Value Engine Stack',
+    score: valueEngineScore,
+    evidence: `draw=${drawEngineCount}, bodyguard=${bodyguardCount}, shift=${shiftCount}`,
+  })
+
+  const normalizedSignals = signals.map((signal) => {
+    const scale = cardCount > 0 ? Math.min(1.3, 60 / cardCount) : 1
+    return {
+      ...signal,
+      score: Math.max(0, Math.min(100, Math.round(signal.score * scale))),
+    }
+  })
+
+  const weighted = normalizedSignals.reduce((sum, signal) => sum + signal.score, 0)
+  const overall = normalizedSignals.length > 0 ? Math.round(weighted / normalizedSignals.length) : 0
+
+  return {
+    model: 'logical_combo_inference_v1',
+    score: overall,
+    signals: normalizedSignals.sort((a, b) => b.score - a.score),
+  }
+}
+
+function scoreMatchupSynergy({
+  format,
+  competitiveMetaData,
+  archetype,
+  inkColors,
+  logicalSynergy,
+}) {
+  const context = getFormatMetaContext(format, competitiveMetaData)
+  const pairings = Array.isArray(context.metaPairings) ? context.metaPairings : []
+  if (pairings.length === 0) {
+    return {
+      model: 'matchup_synergy_projection_v1',
+      overallScore: 0,
+      matchups: [],
+    }
+  }
+
+  const archetypeLower = String(archetype || '').toLowerCase()
+  const colorTokens = Object.keys(inkColors || {}).map((color) => String(color || '').toLowerCase())
+  const signalMap = new Map(
+    (logicalSynergy?.signals || []).map((signal) => [String(signal.name || '').toLowerCase(), signal.score || 0])
+  )
+
+  const interactionSignal = signalMap.get('tempo pressure chain') || 0
+  const rampSignal = signalMap.get('ramp into payoff curve') || 0
+  const valueSignal = signalMap.get('value engine stack') || 0
+  const singerSignal = signalMap.get('singer + song engine') || 0
+
+  const scored = pairings.map((entry) => {
+    const deckLabel = String(entry?.deck || '').toLowerCase()
+    const againstLabel = String(entry?.against || '').toLowerCase()
+    const assessment = String(entry?.assessment || '').toLowerCase()
+
+    let relevance = 0
+    if (archetypeLower && deckLabel.includes(archetypeLower)) relevance += 45
+    colorTokens.forEach((token) => {
+      if (deckLabel.includes(token)) relevance += 15
+    })
+    if (relevance === 0) relevance = 18
+
+    const wr = normalizeWinRateValue(entry?.winRate)
+    const wrScore = wr !== null ? Math.max(0, Math.min(100, (wr - 35) * 2.5)) : 50
+
+    let fitScore = 50
+    if (againstLabel.includes('aggro') || againstLabel.includes('dogs')) {
+      fitScore = Math.round((interactionSignal * 0.55) + (valueSignal * 0.30) + (rampSignal * 0.15))
+    } else if (againstLabel.includes('control') || againstLabel.includes('sapphire')) {
+      fitScore = Math.round((rampSignal * 0.35) + (valueSignal * 0.40) + (singerSignal * 0.25))
+    } else if (againstLabel.includes('midrange') || againstLabel.includes('tempo')) {
+      fitScore = Math.round((interactionSignal * 0.45) + (valueSignal * 0.35) + (singerSignal * 0.20))
+    }
+    fitScore = Math.max(0, Math.min(100, fitScore))
+
+    let projection = Math.round((wrScore * 0.6) + (fitScore * 0.4))
+    if (assessment.includes('strongly favored')) projection += 4
+    if (assessment.includes('slightly favored')) projection += 2
+    if (assessment.includes('strongly unfavored')) projection -= 4
+    if (assessment.includes('slightly unfavored')) projection -= 2
+    projection = Math.max(0, Math.min(100, projection))
+
+    return {
+      deck: entry?.deck || 'Unknown deck shell',
+      against: entry?.against || 'Unknown matchup',
+      winRate: entry?.winRate || null,
+      assessment: entry?.assessment || null,
+      relevance,
+      wrScore,
+      fitScore,
+      projection,
+      plan: entry?.plan || null,
+    }
+  })
+
+  scored.sort((a, b) => {
+    if (b.relevance !== a.relevance) return b.relevance - a.relevance
+    return b.projection - a.projection
+  })
+
+  const topMatchups = scored.slice(0, 8)
+  const weightedTotal = topMatchups.reduce((sum, item) => sum + (item.projection * item.relevance), 0)
+  const weightSum = topMatchups.reduce((sum, item) => sum + item.relevance, 0)
+  const overallScore = weightSum > 0 ? Math.round(weightedTotal / weightSum) : 0
+
+  return {
+    model: 'matchup_synergy_projection_v1',
+    overallScore,
+    matchups: topMatchups,
+  }
+}
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value))
+}
+
+function getArchetypeTargets(archetype) {
+  const lower = String(archetype || '').toLowerCase()
+  if (lower.includes('aggro')) {
+    return {
+      profile: 'Aggro pressure profile',
+      earlyGamePercent: 40,
+      lateGamePercent: 20,
+      interactionRate: 14,
+      rampRate: 4,
+      drawRate: 10,
+    }
+  }
+  if (lower.includes('tempo')) {
+    return {
+      profile: 'Tempo initiative profile',
+      earlyGamePercent: 35,
+      lateGamePercent: 22,
+      interactionRate: 18,
+      rampRate: 5,
+      drawRate: 12,
+    }
+  }
+  if (lower.includes('control') || lower.includes('ramp')) {
+    return {
+      profile: 'Control inevitability profile',
+      earlyGamePercent: 20,
+      lateGamePercent: 34,
+      interactionRate: 22,
+      rampRate: 10,
+      drawRate: 15,
+    }
+  }
+  return {
+    profile: 'Midrange balance profile',
+    earlyGamePercent: 30,
+    lateGamePercent: 26,
+    interactionRate: 17,
+    rampRate: 7,
+    drawRate: 12,
+  }
+}
+
+function buildStrategyEngineInsights({
+  archetype,
+  totalCards,
+  earlyGamePercent,
+  lateGamePercent,
+  interactionCount,
+  rampCount,
+  drawEngineCount,
+  opening7,
+  turn2Stability,
+  interactionByTurn3,
+  synergyModelScore,
+  tournamentSynergy,
+  logicalSynergy,
+  matchupSynergy,
+}) {
+  const targets = getArchetypeTargets(archetype)
+  const safeTotal = Math.max(1, totalCards || 0)
+  const interactionRate = (interactionCount / safeTotal) * 100
+  const rampRate = (rampCount / safeTotal) * 100
+  const drawRate = (drawEngineCount / safeTotal) * 100
+
+  const focusAreas = []
+
+  const pushFocus = (area, current, target, action, impact) => {
+    const delta = Number((current - target).toFixed(1))
+    const gap = Math.abs(delta)
+    const severity = gap >= 10 ? 'Critical' : gap >= 6 ? 'High' : gap >= 3 ? 'Medium' : 'Low'
+    const status = gap <= 2.5 ? 'On Target' : current < target ? 'Below Target' : 'Above Target'
+    focusAreas.push({
+      area,
+      current: Number(current.toFixed(1)),
+      target: Number(target.toFixed(1)),
+      delta,
+      gap: Number(gap.toFixed(1)),
+      status,
+      severity,
+      impact,
+      action,
+    })
+  }
+
+  pushFocus(
+    'Early curve pressure (1-2 cost share)',
+    earlyGamePercent,
+    targets.earlyGamePercent,
+    earlyGamePercent < targets.earlyGamePercent
+      ? 'Increase 1-2 cost proactive slots by 2-4 cards to improve opening pressure.'
+      : 'Trim 1-2 low-impact slots for stronger mid-game conversion cards.',
+    'Opening stability and tempo starts'
+  )
+
+  pushFocus(
+    'Late-game conversion (5+ cost share)',
+    lateGamePercent,
+    targets.lateGamePercent,
+    lateGamePercent < targets.lateGamePercent
+      ? 'Add 1-2 high-impact finishers that immediately swing board or lore races.'
+      : 'Cut top-heavy cards that do not stabilize or close quickly.',
+    'Closing power and inevitability'
+  )
+
+  pushFocus(
+    'Interaction density',
+    interactionRate,
+    targets.interactionRate,
+    interactionRate < targets.interactionRate
+      ? 'Add cheap removal/challenge tools to hit opposing engines by turn 3.'
+      : 'Replace excess interaction with proactive threats when matchup coverage is already strong.',
+    'Matchup resilience versus fast and value decks'
+  )
+
+  pushFocus(
+    'Ramp density',
+    rampRate,
+    targets.rampRate,
+    rampRate < targets.rampRate
+      ? 'Add acceleration pieces to unlock stronger turn-4 and turn-5 pivots.'
+      : 'Trim redundant ramp for stronger payoffs if you flood on setup pieces.',
+    'Speed to key power spikes'
+  )
+
+  pushFocus(
+    'Card flow density (draw/search/filter)',
+    drawRate,
+    targets.drawRate,
+    drawRate < targets.drawRate
+      ? 'Add card flow effects so your best lines appear more often by turns 4-6.'
+      : 'Convert extra card flow into board-impact cards if games are already stable.',
+    'Consistency of high-value lines'
+  )
+
+  const consistencyFocus = {
+    area: 'Tournament consistency checks',
+    current: Number((opening7 * 100).toFixed(1)),
+    target: 78,
+    delta: Number(((opening7 * 100) - 78).toFixed(1)),
+    gap: Number(Math.abs(((opening7 * 100) - 78)).toFixed(1)),
+    status: opening7 >= 0.78 && turn2Stability >= 0.72 && interactionByTurn3 >= 0.58 ? 'On Target' : 'Below Target',
+    severity: opening7 >= 0.78 && turn2Stability >= 0.72 && interactionByTurn3 >= 0.58 ? 'Low' : 'High',
+    impact: 'Round-to-round reliability',
+    action: opening7 >= 0.78 && turn2Stability >= 0.72
+      ? 'Maintain curve discipline while refining matchup tech slots.'
+      : 'Raise early playable count and cheap interaction to improve openers and turn-2 stability.',
+    details: {
+      opening7EarlyPlay: Math.round(opening7 * 100),
+      turn2TwoPlays: Math.round(turn2Stability * 100),
+      turn3Interaction: Math.round(interactionByTurn3 * 100),
+    }
+  }
+  focusAreas.push(consistencyFocus)
+
+  const weightedPenalty = focusAreas.reduce((sum, area) => {
+    const weight = area.severity === 'Critical' ? 1.35 : area.severity === 'High' ? 1.15 : area.severity === 'Medium' ? 0.8 : 0.35
+    return sum + (area.gap * weight)
+  }, 0)
+
+  const synergyBonus = (synergyModelScore >= 75 ? 9 : synergyModelScore >= 60 ? 5 : synergyModelScore >= 45 ? 2 : -4)
+  const matchupBonus = (matchupSynergy?.overallScore || 0) >= 72 ? 5 : (matchupSynergy?.overallScore || 0) >= 60 ? 2 : -3
+  const optimizationScore = clamp(Math.round(100 - weightedPenalty + synergyBonus + matchupBonus), 0, 100)
+
+  const sortedFocus = [...focusAreas].sort((a, b) => {
+    if (a.status === 'On Target' && b.status !== 'On Target') return 1
+    if (a.status !== 'On Target' && b.status === 'On Target') return -1
+    if (b.gap !== a.gap) return b.gap - a.gap
+    return a.area.localeCompare(b.area)
+  })
+
+  const topPackage = Array.isArray(tournamentSynergy?.packages) ? tournamentSynergy.packages[0] : null
+  const topSignal = Array.isArray(logicalSynergy?.signals) ? logicalSynergy.signals[0] : null
+  const weakestMatchup = Array.isArray(matchupSynergy?.matchups) && matchupSynergy.matchups.length > 0
+    ? [...matchupSynergy.matchups].sort((a, b) => a.projection - b.projection)[0]
+    : null
+
+  const recommendations = sortedFocus
+    .filter((area) => area.status !== 'On Target')
+    .slice(0, 5)
+    .map((area, idx) => `${idx + 1}. ${area.area}: ${area.action}`)
+
+  const mulliganRule = opening7 >= 0.8
+    ? 'Keep proactive hands with at least one early play and one curve follow-up.'
+    : 'Mulligan hands without a turn-1/turn-2 play or cheap interaction by default.'
+
+  return {
+    model: 'adaptive_strategy_engine_v1',
+    profile: targets.profile,
+    optimizationScore,
+    focusAreas: sortedFocus,
+    recommendations,
+    winPath: {
+      primaryTournamentLine: topPackage ? `${topPackage.name} (${Math.round((topPackage.completion || 0) * 100)}% online)` : 'No tournament package identified yet',
+      primaryLogicalEngine: topSignal ? `${topSignal.name} (${topSignal.score}/100)` : 'No logical engine signal yet',
+      weakestMatchup: weakestMatchup ? `${weakestMatchup.against} (${weakestMatchup.projection}/100)` : 'No matchup projection available',
+      mulliganRule,
+    },
+    trainingSignals: {
+      opening7EarlyPlay: Math.round(opening7 * 100),
+      turn2TwoPlays: Math.round(turn2Stability * 100),
+      turn3Interaction: Math.round(interactionByTurn3 * 100),
+      synergyModelScore,
+      matchupProjection: matchupSynergy?.overallScore || 0,
+    },
+  }
+}
+
+export function analyzeDeck(deckText, format = 'infinity', competitiveMetaData = null, cardSetsData = null, coreConstructed = null) {
   if (!deckText || deckText.trim() === "") {
     return { error: "No deck provided" };
   }
@@ -141,6 +635,8 @@ export function analyzeDeck(deckText, format = 'infinity') {
   let hasShift = false;
   let hasEvasive = false;
   let hasSinger = false;
+  let singerCount = 0;
+  let shiftCount = 0;
   let interactionCount = 0;
   let rampCount = 0;
   let drawEngineCount = 0;
@@ -188,9 +684,9 @@ export function analyzeDeck(deckText, format = 'infinity') {
       }
 
       const kws = (meta.keywords || []).map(k => String(k).toLowerCase());
-      if (kws.some(k => k.includes('shift'))) hasShift = true;
+      if (kws.some(k => k.includes('shift'))) { hasShift = true; shiftCount += count; }
       if (kws.some(k => k.includes('evasive'))) { hasEvasive = true; evasiveCount += count; }
-      if (kws.some(k => k.includes('singer') || k.includes('sing'))) hasSinger = true;
+      if (kws.some(k => k.includes('singer') || k.includes('sing'))) { hasSinger = true; singerCount += count; }
       if (kws.some(k => k.includes('rush'))) rushCount += count;
       if (kws.some(k => k.includes('bodyguard'))) bodyguardCount += count;
       if (kws.some(k => k.includes('resist'))) resistCount += count;
@@ -309,6 +805,71 @@ export function analyzeDeck(deckText, format = 'infinity') {
   if (hasEvasive && (archetype.includes('Aggro') || archetype.includes('Tempo'))) synergies.push({ type: 'Evasive Aggro', strength: 'High', description: 'Evasive characters support aggressive strategy' });
   if (hasShift && uniqueCount > 10) synergies.push({ type: 'Shift Value', strength: 'Medium', description: 'Shift characters can generate tempo advantage' });
 
+  const tournamentSynergy = summarizeTournamentSynergy(Object.entries(cards), format, competitiveMetaData, cardSetsData, coreConstructed)
+  const logicalSynergy = summarizeLogicalSynergy({
+    songCount,
+    singerCount,
+    shiftCount,
+    rampCount,
+    interactionCount,
+    cost5PlusCount,
+    evasiveCount,
+    rushCount,
+    bodyguardCount,
+    challengerCount,
+    drawEngineCount,
+    cardCount: total,
+  })
+
+  const matchupSynergy = scoreMatchupSynergy({
+    format,
+    competitiveMetaData,
+    archetype,
+    inkColors,
+    logicalSynergy,
+  })
+
+  const synergyModelScore = Math.round(
+    (tournamentSynergy.score * 0.45) +
+    (logicalSynergy.score * 0.35) +
+    (matchupSynergy.overallScore * 0.20)
+  )
+
+  const strategyEngine = buildStrategyEngineInsights({
+    archetype,
+    totalCards: total,
+    earlyGamePercent,
+    lateGamePercent,
+    interactionCount,
+    rampCount,
+    drawEngineCount,
+    opening7,
+    turn2Stability,
+    interactionByTurn3,
+    synergyModelScore,
+    tournamentSynergy,
+    logicalSynergy,
+    matchupSynergy,
+  })
+
+  if (tournamentSynergy.packages.length > 0) {
+    const topPkg = tournamentSynergy.packages[0]
+    synergies.push({
+      type: `Tournament Line: ${topPkg.name}`,
+      strength: topPkg.status === 'fully_online' ? 'High' : topPkg.status === 'mostly_online' ? 'Medium' : 'Low',
+      description: `Completion ${(topPkg.completion * 100).toFixed(0)}% (${topPkg.matchedCards.length}/${topPkg.matchedCards.length + topPkg.missingCards.length} pieces).`,
+    })
+  }
+
+  const bestLogicalSignal = logicalSynergy.signals[0]
+  if (bestLogicalSignal && bestLogicalSignal.score >= 40) {
+    synergies.push({
+      type: `Logical Engine: ${bestLogicalSignal.name}`,
+      strength: bestLogicalSignal.score >= 70 ? 'High' : 'Medium',
+      description: `${bestLogicalSignal.evidence} (score ${bestLogicalSignal.score}/100).`,
+    })
+  }
+
   let competitiveScore = 100;
 
   // Baseline legality/structure penalties
@@ -341,6 +902,11 @@ export function analyzeDeck(deckText, format = 'infinity') {
   if (synergies.length >= 2) competitiveScore += 3;
   if (interactionCount >= 8) competitiveScore += 2;
   if (rampCount >= 4 && archetypeLowerForScore.includes('control')) competitiveScore += 2;
+  if (synergyModelScore >= 70) competitiveScore += 4;
+  else if (synergyModelScore >= 55) competitiveScore += 2;
+  else if (synergyModelScore < 35) competitiveScore -= 4;
+  if (strategyEngine.optimizationScore >= 80) competitiveScore += 2;
+  else if (strategyEngine.optimizationScore < 45) competitiveScore -= 3;
 
   competitiveScore = Math.max(0, Math.min(100, Math.round(competitiveScore)));
   const competitiveTier = competitiveScore >= 90
@@ -394,6 +960,22 @@ export function analyzeDeck(deckText, format = 'infinity') {
     });
   }
 
+  if (synergyModelScore < 40) {
+    weaknesses.push({
+      type: 'Synergy Coherence',
+      severity: 'Medium',
+      description: 'Deck has weak combo cohesion versus tournament lines and logical engine checks.'
+    });
+  }
+
+  if ((strategyEngine?.optimizationScore || 0) < 55) {
+    weaknesses.push({
+      type: 'Strategy Engine Drift',
+      severity: 'Medium',
+      description: 'Deck is off target versus archetype curve and interaction benchmarks. Use strategy engine focus areas to tighten performance.'
+    })
+  }
+
   // Add curve-based weaknesses
   if (earlyGamePercent < 20 && archetype.includes('Aggro')) {
     weaknesses.push({ type: 'Curve Gap', severity: 'High', description: 'Not enough early game for an aggressive deck' });
@@ -443,6 +1025,13 @@ export function analyzeDeck(deckText, format = 'infinity') {
       rampCount,
       drawEngineCount
     },
+    synergyInsights: {
+      overallScore: synergyModelScore,
+      tournament: tournamentSynergy,
+      logical: logicalSynergy,
+      matchup: matchupSynergy,
+    },
+    strategyEngine,
     competitiveScore,
     competitiveTier
   };
