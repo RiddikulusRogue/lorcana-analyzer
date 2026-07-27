@@ -3,6 +3,12 @@
 ## Overview
 Inkweaver now includes **real-time competitive meta data** from TCGPlayer tournament results! The coaching system now provides up-to-date deck recommendations and strategies based on actual tournament performance.
 
+## Rotation Update (Jul 25, 2026)
+
+- Core Constructed legality has been updated to include set 13 (sets 5-13).
+- Infinity remains the full released-set card pool, subject to active ban list constraints.
+- Card and rulings data were refreshed from the upstream card database and propagated to local derived files.
+
 ## Data Source
 **DLC Circuit Results (Richmond + February Winterspell events)**
 - Top-cut meta breakdowns

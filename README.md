@@ -9,7 +9,7 @@ Inkweaver is updated for the current DLC + Winterspell + early-March qualifier e
 - **Deck to beat:** Emerald/Sapphire Control
 - **Rising archetype:** Ruby/Steel Winterspell Tempo
 - **Strong alternatives:** Amethyst/Sapphire Value, Amber/Emerald Dogs
-- **Core legality support:** Wilds Unknown (Set 12) integrated into legality/recommendation flow
+- **Core legality support:** Core rotation updated and set 13 integrated into legality/recommendation flow
 - **New strategy intelligence:** format-aware matchup pairings, combo packages, and counterplay coaching
 
 ## Documentation

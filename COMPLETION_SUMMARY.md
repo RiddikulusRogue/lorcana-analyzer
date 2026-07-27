@@ -1,7 +1,17 @@
-# ✅ COMPLETION SUMMARY - Strategy Engine + DLC Meta Refresh
+# ✅ COMPLETION SUMMARY - Strategy Engine + DLC Meta + Rotation Refresh
 
 ## Mission Status
-Completed a full strategy and competitive-meta refresh for the Lorcana analyzer, aligned to latest DLC and Winterspell-era data as of **Feb 28, 2026**.
+Completed a full strategy and competitive-meta refresh for the Lorcana analyzer, aligned to latest DLC and Winterspell-era data, then updated for the set 13 Core rotation as of **Jul 25, 2026**.
+
+---
+
+## Rotation Update (Jul 25, 2026)
+
+- Refreshed `src/data/allCards.json` from upstream source.
+- Confirmed card pool now includes sets 1-13.
+- Rebuilt `src/data/cardSets.json` and `src/data/cardMeta.json`.
+- Updated Core Constructed legality from sets 5-12 to sets 5-13.
+- Synced docs/logs to reflect the new Core vs Infinity rotation state.
 
 ---
 

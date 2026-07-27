@@ -321,6 +321,72 @@ const inferDesiredPlaystyle = (input) => {
   return null;
 };
 
+const normalizeStrategyPreference = (value) => {
+  const query = String(value || '').toLowerCase().trim();
+  if (!query || query === 'auto') return 'auto';
+  if (query.includes('aggro') || query.includes('aggressive')) return 'aggro';
+  if (query.includes('tempo')) return 'tempo';
+  if (query.includes('control') || query.includes('ramp') || query.includes('control/ramp')) return 'control';
+  if (query.includes('midrange') || query.includes('balanced')) return 'midrange';
+  if (query.includes('combo') || query.includes('synergy')) return 'combo';
+  return 'auto';
+};
+
+const getMetaDrivenStrategyCall = (metaContext = null) => {
+  const topDecks = Array.isArray(metaContext?.topDecks) ? metaContext.topDecks : [];
+  const pressure = { aggro: 0, control: 0, tempo: 0, midrange: 0 };
+
+  topDecks.forEach((deck) => {
+    const text = String([deck?.name, deck?.archetype, deck?.description].filter(Boolean).join(' ')).toLowerCase();
+    const weight = (() => {
+      const parsed = parseFloat(String(deck?.winRate || deck?.metaCount || deck?.count || 10));
+      return Number.isFinite(parsed) && parsed > 0 ? parsed : 10;
+    })();
+
+    if (text.includes('aggro') || text.includes('dogs') || text.includes('burn')) pressure.aggro += weight;
+    if (text.includes('control') || text.includes('ramp') || text.includes('sapphire')) pressure.control += weight;
+    if (text.includes('tempo') || text.includes('evasive')) pressure.tempo += weight;
+    if (text.includes('midrange')) pressure.midrange += weight;
+  });
+
+  const sorted = Object.entries(pressure).sort((a, b) => b[1] - a[1]);
+  const [dominant, dominantScore] = sorted[0] || ['midrange', 0];
+  const runnerUpScore = sorted[1]?.[1] || 0;
+
+  if (dominant === 'aggro' && dominantScore >= runnerUpScore + 8) {
+    return {
+      label: 'Control',
+      reason: 'Aggro is overrepresented; a sturdier control shell is the cleanest counter-plan.',
+    };
+  }
+
+  if (dominant === 'control' && dominantScore >= runnerUpScore + 8) {
+    return {
+      label: 'Aggro',
+      reason: 'Control is the biggest share; speed and early pressure punish slow stabilization.',
+    };
+  }
+
+  if (dominant === 'tempo' && dominantScore >= runnerUpScore + 8) {
+    return {
+      label: 'Midrange',
+      reason: 'Tempo-heavy fields reward sturdier value trades and higher-ceiling threats.',
+    };
+  }
+
+  if (dominant === 'midrange' && dominantScore >= runnerUpScore + 8) {
+    return {
+      label: 'Tempo',
+      reason: 'Midrange mirrors are decided by initiative and cleaner curve pressure.',
+    };
+  }
+
+  return {
+    label: 'Midrange',
+    reason: 'The field is mixed; a balanced value shell is the safest default.',
+  };
+};
+
 export default function App() {
   const [deckText, setDeckText] = useState("");
   const [analysis, setAnalysis] = useState(null);
@@ -338,6 +404,7 @@ export default function App() {
   const [customQuery, setCustomQuery] = useState("");
   const [promptDeckQuery, setPromptDeckQuery] = useState("");
   const [promptFormat, setPromptFormat] = useState("infinity");
+  const [deckStrategyPreference, setDeckStrategyPreference] = useState("auto");
   const [strictPromptLock, setStrictPromptLock] = useState(false);
   const [strictPromptTarget, setStrictPromptTarget] = useState(24);
   const [mode, setMode] = useState("overview"); // overview | deckbuilding | meta | matchup | synergylab | proengine
@@ -2140,7 +2207,7 @@ export default function App() {
     };
   };
 
-  const getDeckBuildingAdvice = (playstylePreferenceText = "") => {
+  const getDeckBuildingAdvice = (playstylePreferenceText = "", strategyPreference = deckStrategyPreference) => {
     try {
       if (!analysis) return "No analysis available";
 
@@ -2152,6 +2219,14 @@ export default function App() {
       const archetype = analysis.archetype || "Unknown";
       const desiredPlaystyle = inferDesiredPlaystyle(playstylePreferenceText);
       const recommendationArchetype = desiredPlaystyle || archetype;
+      const selectedStrategy = normalizeStrategyPreference(strategyPreference);
+      const metaStrategy = getMetaDrivenStrategyCall(resolveMetaForFormat(format));
+      const strategyPlan = selectedStrategy === 'auto'
+        ? metaStrategy
+        : {
+            label: selectedStrategy === 'aggro' ? 'Aggro' : selectedStrategy === 'control' ? 'Control' : selectedStrategy === 'tempo' ? 'Tempo' : selectedStrategy === 'combo' ? 'Combo' : 'Midrange',
+            reason: 'Selected manually from the deck strategy selector.',
+          };
       const mulliganGuide = buildDeckSpecificMulliganGuide(cards, recommendationArchetype);
       const turnBenchmarks = getTurnWindowBenchmarks(analysis, recommendationArchetype);
       const flexPackages = getMatchupFlexPackages(analysis, recommendationArchetype);
@@ -2167,6 +2242,7 @@ export default function App() {
       advice += `• Total cards: ${cardCount}\n`;
       advice += `• Unique cards: ${uniqueCount}\n`;
       advice += `• Average cost: ${avgCost}\n`;
+      advice += `• Deck strategy: ${strategyPlan.label} (${strategyPlan.reason})\n`;
 
       if (competitiveScore !== null) {
         advice += `• Competitive score: ${competitiveScore}/100 (${competitiveTier})\n`;
@@ -3007,6 +3083,13 @@ export default function App() {
 
       const promptLower = promptText.toLowerCase();
       const desiredPlaystyle = inferDesiredPlaystyle(promptText) || 'Midrange';
+      const selectedStrategy = normalizeStrategyPreference(deckStrategyPreference);
+      const strategyPlan = selectedStrategy === 'auto'
+        ? getMetaDrivenStrategyCall(resolveMetaForFormat(selectedPromptFormat))
+        : {
+            label: selectedStrategy === 'aggro' ? 'Aggro' : selectedStrategy === 'control' ? 'Control' : selectedStrategy === 'tempo' ? 'Tempo' : selectedStrategy === 'combo' ? 'Combo' : 'Midrange',
+            reason: 'Selected manually from the deck strategy selector.',
+          };
       const metaContext = resolveMetaForFormat(selectedPromptFormat);
       const topDecks = Array.isArray(metaContext?.topDecks) ? metaContext.topDecks : [];
 
@@ -3079,7 +3162,7 @@ export default function App() {
 
       const forcedColors = getPromptColors();
       const anchorColors = Array.isArray(anchorDeck?.colors) ? anchorDeck.colors : [];
-      const playstyleColors = playstyleDefaultColors[String(desiredPlaystyle || '').toLowerCase()] || ['Amber', 'Steel'];
+      const playstyleColors = playstyleDefaultColors[String(strategyPlan.label || desiredPlaystyle || '').toLowerCase()] || playstyleDefaultColors[String(desiredPlaystyle || '').toLowerCase()] || ['Amber', 'Steel'];
       const chosenColors = (forcedColors.length > 0 ? forcedColors : (anchorColors.length > 0 ? anchorColors : playstyleColors)).slice(0, 2);
       const colorSet = new Set(chosenColors.map((c) => String(c || '').toLowerCase()));
 
@@ -3299,6 +3382,7 @@ export default function App() {
       output += `═══════════════════════════════════════════════════════\n\n`;
       output += `Prompt: "${promptText}"\n`;
       output += `Format: ${selectedPromptFormat.toUpperCase()}\n`;
+      output += `Strategy: ${strategyPlan.label} (${strategyPlan.reason})\n`;
       output += `Profile: ${desiredPlaystyle}\n`;
       output += `Colors: ${chosenColors.join(' + ')}\n`;
       output += `Strict Tribal Lock: ${strictPromptLock ? 'ON' : 'OFF'}\n`;
@@ -5472,6 +5556,28 @@ export default function App() {
           }}
         >
           <p style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>Build Competitive Deck From Prompt:</p>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px", flexWrap: "wrap" }}>
+            <span style={{ fontSize: "13px" }}>Strategy:</span>
+            <select
+              value={deckStrategyPreference}
+              onChange={(e) => setDeckStrategyPreference(e.target.value)}
+              style={{
+                padding: "6px 10px",
+                backgroundColor: "rgba(30, 20, 60, 0.8)",
+                border: "2px solid rgba(251, 191, 36, 0.5)",
+                color: "#fff",
+                borderRadius: "6px",
+                fontSize: "13px"
+              }}
+            >
+              <option value="auto">Auto (meta-driven)</option>
+              <option value="aggro">Aggro</option>
+              <option value="tempo">Tempo</option>
+              <option value="midrange">Midrange</option>
+              <option value="control">Control</option>
+              <option value="combo">Combo</option>
+            </select>
+          </div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
             <span style={{ fontSize: "13px" }}>Prompt Format:</span>
             <button

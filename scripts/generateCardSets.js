@@ -107,7 +107,7 @@ function fetchFromApi() {
 function writeOutput(source, cardSetMapping) {
     const totalUniqueCards = Object.keys(cardSetMapping).length;
     const output = {
-        description: 'Maps card names to their set numbers (as arrays to handle reprints). Generated from local allCards data when available, with API fallback. For Core Constructed, a card is legal if ANY of its sets is in the current legal set window (currently 5-12).',
+        description: 'Maps card names to their set numbers (as arrays to handle reprints). Generated from local allCards data when available, with API fallback. For Core Constructed, a card is legal if ANY of its sets is in the current legal set window configured in src/data/coreConstructed.json.',
         lastUpdated: new Date().toISOString(),
         source,
         totalUniqueCards,

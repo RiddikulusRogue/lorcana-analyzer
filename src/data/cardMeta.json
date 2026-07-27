@@ -22904,5 +22904,2061 @@
       "RESEARCH & DEVELOPMENT",
       "CHEAP SHOT"
     ]
+  },
+  "woody helping a friend": {
+    "name": "woody helping a friend",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "HANG ON!"
+    ]
+  },
+  "ming lee proud parent": {
+    "name": "ming lee proud parent",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": 2,
+    "keywords": [
+      "BIGGEST FAN",
+      "FOLLOW THE MUSIC"
+    ]
+  },
+  "isabela madrigal kind cultivator": {
+    "name": "isabela madrigal kind cultivator",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 1,
+    "keywords": []
+  },
+  "tyler nguyen-baker 4*town fan": {
+    "name": "tyler nguyen-baker 4*town fan",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "rabbit hunny paladin": {
+    "name": "rabbit hunny paladin",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "Bodyguard",
+      "HUNNY AURA"
+    ]
+  },
+  "celia mae friendly receptionist": {
+    "name": "celia mae friendly receptionist",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": 2,
+    "keywords": [
+      "PLEASE HOLD"
+    ]
+  },
+  "meilin lee lead vocalist": {
+    "name": "meilin lee lead vocalist",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "Singer",
+      "BAND LOYALTY"
+    ]
+  },
+  "priya mangal serious music lover": {
+    "name": "priya mangal serious music lover",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "THIS IS MY JAM"
+    ]
+  },
+  "miriam mendelsohn ticket holder": {
+    "name": "miriam mendelsohn ticket holder",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "I GOT 'EM!"
+    ]
+  },
+  "lilo patient weaver": {
+    "name": "lilo patient weaver",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "Support"
+    ]
+  },
+  "kocoum defender of the tribe": {
+    "name": "kocoum defender of the tribe",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 6,
+    "lore": 3,
+    "keywords": [
+      "Bodyguard"
+    ]
+  },
+  "pocahontas guiding the tribe": {
+    "name": "pocahontas guiding the tribe",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "STAY CLOSE"
+    ]
+  },
+  "woody town sheriff": {
+    "name": "woody town sheriff",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "MOVE ALONG"
+    ]
+  },
+  "abby park over the top": {
+    "name": "abby park over the top",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "ROCK THE MIC"
+    ]
+  },
+  "gaston superior archer": {
+    "name": "gaston superior archer",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "WATCH THIS!"
+    ]
+  },
+  "meilin lee losing control": {
+    "name": "meilin lee losing control",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "RED PANDA POWER"
+    ]
+  },
+  "4*town hottest band of the year": {
+    "name": "4*town hottest band of the year",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "Singer",
+      "STAR PERFORMANCE"
+    ]
+  },
+  "mike wazowski heroic climber": {
+    "name": "mike wazowski heroic climber",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "FIND A FRIEND"
+    ]
+  },
+  "boo in disguise": {
+    "name": "boo in disguise",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 2,
+    "lore": 2,
+    "keywords": [
+      "YOU'RE SAFE NOW"
+    ]
+  },
+  "jasmine vine expert": {
+    "name": "jasmine vine expert",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "SHARED RESOURCES"
+    ]
+  },
+  "mike wazowski well-rounded entertainer": {
+    "name": "mike wazowski well-rounded entertainer",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "MAKE 'EM LAUGH"
+    ]
+  },
+  "the horned king merciless master": {
+    "name": "the horned king merciless master",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "CAULDRON'S POWER"
+    ]
+  },
+  "kanga hunny bard": {
+    "name": "kanga hunny bard",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "Singer"
+    ]
+  },
+  "sulley the new boss": {
+    "name": "sulley the new boss",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "Bodyguard",
+      "REHIRE"
+    ]
+  },
+  "mirabel madrigal family guardian": {
+    "name": "mirabel madrigal family guardian",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "MIRACULOUS PROTECTION"
+    ]
+  },
+  "ursula created by the vine": {
+    "name": "ursula created by the vine",
+    "type": "Character",
+    "ink": "Amber",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "ENERGY SAP"
+    ]
+  },
+  "pocahontas & meeko adventurous friends": {
+    "name": "pocahontas & meeko adventurous friends",
+    "type": "Character",
+    "ink": "Amber-Amethyst",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "Evasive",
+      "WELCOME RETURN"
+    ]
+  },
+  "woody & buzz lightyear best buddies": {
+    "name": "woody & buzz lightyear best buddies",
+    "type": "Character",
+    "ink": "Amber-Emerald",
+    "cost": 7,
+    "lore": 3,
+    "keywords": [
+      "Shift",
+      "TO INFINITY...",
+      "...AND BEYOND!"
+    ]
+  },
+  "sulley & boo scare buddies": {
+    "name": "sulley & boo scare buddies",
+    "type": "Character",
+    "ink": "Amber-Ruby",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "Combo Shift",
+      "THE POWER OF FRIENDSHIP"
+    ]
+  },
+  "the madrigal family every generation": {
+    "name": "the madrigal family every generation",
+    "type": "Character",
+    "ink": "Amber-Sapphire",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "Madrigal Shift",
+      "FAMILY BLESSINGS"
+    ]
+  },
+  "lilo & stitch fun-loving friends": {
+    "name": "lilo & stitch fun-loving friends",
+    "type": "Character",
+    "ink": "Amber-Steel",
+    "cost": 5,
+    "lore": 3,
+    "keywords": [
+      "Shift",
+      "Resist",
+      "Support"
+    ]
+  },
+  "if i didn't have you": {
+    "name": "if i didn't have you",
+    "type": "Action",
+    "ink": "Amber",
+    "cost": 3,
+    "lore": null,
+    "keywords": []
+  },
+  "i'm never not by your side": {
+    "name": "i'm never not by your side",
+    "type": "Action",
+    "ink": "Amber",
+    "cost": 5,
+    "lore": null,
+    "keywords": [
+      "Sing Together"
+    ]
+  },
+  "besties assemble": {
+    "name": "besties assemble",
+    "type": "Action",
+    "ink": "Amber",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "nobody like u": {
+    "name": "nobody like u",
+    "type": "Action",
+    "ink": "Amber",
+    "cost": 5,
+    "lore": null,
+    "keywords": [
+      "Sing Together"
+    ]
+  },
+  "powhatan's staff": {
+    "name": "powhatan's staff",
+    "type": "Item",
+    "ink": "Amber",
+    "cost": 1,
+    "lore": null,
+    "keywords": [
+      "STEP FORWARD"
+    ]
+  },
+  "rapunzel's tower taken by the vine": {
+    "name": "rapunzel's tower taken by the vine",
+    "type": "Location",
+    "ink": "Amber",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "EMBRACING CHANGE"
+    ]
+  },
+  "fflewddur fflam luckless bard": {
+    "name": "fflewddur fflam luckless bard",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "CHASING ADVENTURE"
+    ]
+  },
+  "maleficent exultant spellcaster": {
+    "name": "maleficent exultant spellcaster",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "winnie the pooh hunny archmage": {
+    "name": "winnie the pooh hunny archmage",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "STICK TOGETHER"
+    ]
+  },
+  "panic hammer enthusiast": {
+    "name": "panic hammer enthusiast",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 3,
+    "lore": 2,
+    "keywords": [
+      "Rush"
+    ]
+  },
+  "lumpy hunny druid": {
+    "name": "lumpy hunny druid",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "WELCOME HEALING"
+    ]
+  },
+  "abu wise sultan": {
+    "name": "abu wise sultan",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": 2,
+    "keywords": [
+      "RULER FOR A DAY"
+    ]
+  },
+  "meilin lee superficially obedient": {
+    "name": "meilin lee superficially obedient",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "NEWFOUND CONFIDENCE"
+    ]
+  },
+  "genie hard to grasp": {
+    "name": "genie hard to grasp",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "Evasive"
+    ]
+  },
+  "vixey expert fisher": {
+    "name": "vixey expert fisher",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "STEALING IN"
+    ]
+  },
+  "meeko lucky raccoon": {
+    "name": "meeko lucky raccoon",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "pain running with scissors": {
+    "name": "pain running with scissors",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "MULTIPURPOSE TOOL"
+    ]
+  },
+  "ming lee overprotective parent": {
+    "name": "ming lee overprotective parent",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "YOU'RE GROUNDED"
+    ]
+  },
+  "merida wisp conjurer": {
+    "name": "merida wisp conjurer",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "FOCUSED ENERGY",
+      "BECKON"
+    ]
+  },
+  "mrs incredible created by the vine": {
+    "name": "mrs incredible created by the vine",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "TORRENT"
+    ]
+  },
+  "pete created by the vine": {
+    "name": "pete created by the vine",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "THORNY OVERGROWTH"
+    ]
+  },
+  "grandma wu wise grandmother": {
+    "name": "grandma wu wise grandmother",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "Challenger",
+      "ANCESTRAL UNDERSTANDING"
+    ]
+  },
+  "heihei created by the vine": {
+    "name": "heihei created by the vine",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "BOTANICAL REMEDY"
+    ]
+  },
+  "hera created by the vine": {
+    "name": "hera created by the vine",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "MYSTICAL BOON"
+    ]
+  },
+  "tinker bell finding a way": {
+    "name": "tinker bell finding a way",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": 2,
+    "keywords": []
+  },
+  "morph little imitator": {
+    "name": "morph little imitator",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "ADVANCED MIMICRY"
+    ]
+  },
+  "peter pan playful prankster": {
+    "name": "peter pan playful prankster",
+    "type": "Character",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "STAY RIGHT THERE"
+    ]
+  },
+  "aladdin & genie mischievous pals": {
+    "name": "aladdin & genie mischievous pals",
+    "type": "Character",
+    "ink": "Amethyst-Emerald",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "SLEIGHT OF HAND"
+    ]
+  },
+  "peter pan & tinker bell fast friends": {
+    "name": "peter pan & tinker bell fast friends",
+    "type": "Character",
+    "ink": "Amethyst-Ruby",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "YOU CAN FLY!"
+    ]
+  },
+  "christopher robin hunny sage": {
+    "name": "christopher robin hunny sage",
+    "type": "Character",
+    "ink": "Amethyst-Sapphire",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "GATHER THE PARTY",
+      "MAGICAL SUMMONS"
+    ]
+  },
+  "winnie the pooh & piglet hunny mages": {
+    "name": "winnie the pooh & piglet hunny mages",
+    "type": "Character",
+    "ink": "Amethyst-Sapphire",
+    "cost": 5,
+    "lore": 0,
+    "keywords": [
+      "Shift",
+      "MAGICAL MIX"
+    ]
+  },
+  "maleficent & diablo evil incarnate": {
+    "name": "maleficent & diablo evil incarnate",
+    "type": "Character",
+    "ink": "Amethyst-Steel",
+    "cost": 7,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "FOOLS!",
+      "RAVEN'S CALL"
+    ]
+  },
+  "you've got some punch": {
+    "name": "you've got some punch",
+    "type": "Action",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "with a few good friends": {
+    "name": "with a few good friends",
+    "type": "Action",
+    "ink": "Amethyst",
+    "cost": 6,
+    "lore": null,
+    "keywords": [
+      "Sing Together"
+    ]
+  },
+  "petrify": {
+    "name": "petrify",
+    "type": "Action",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "one and only": {
+    "name": "one and only",
+    "type": "Action",
+    "ink": "Amethyst",
+    "cost": 3,
+    "lore": null,
+    "keywords": []
+  },
+  "protective aura": {
+    "name": "protective aura",
+    "type": "Action",
+    "ink": "Amethyst",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "narrow escape": {
+    "name": "narrow escape",
+    "type": "Action",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": null,
+    "keywords": []
+  },
+  "broken pod": {
+    "name": "broken pod",
+    "type": "Item",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": null,
+    "keywords": [
+      "RENEWAL PROCESS"
+    ]
+  },
+  "magical hunny staff": {
+    "name": "magical hunny staff",
+    "type": "Item",
+    "ink": "Amethyst",
+    "cost": 1,
+    "lore": null,
+    "keywords": [
+      "GIFT OF THE HIVE",
+      "SPELL OF SWIFTNESS"
+    ]
+  },
+  "source of the vine": {
+    "name": "source of the vine",
+    "type": "Item",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": null,
+    "keywords": [
+      "SIPHON",
+      "RADIANT BLOOM"
+    ]
+  },
+  "ring of stones taken by the vine": {
+    "name": "ring of stones taken by the vine",
+    "type": "Location",
+    "ink": "Amethyst",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "DEEP WISDOM"
+    ]
+  },
+  "carl fredricksen loving husband": {
+    "name": "carl fredricksen loving husband",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "TAKE MY HAND"
+    ]
+  },
+  "ellie fredricksen loving wife": {
+    "name": "ellie fredricksen loving wife",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "ADVENTUROUS HEART"
+    ]
+  },
+  "buzz lightyear grounded": {
+    "name": "buzz lightyear grounded",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "NOT A FLYING TOY"
+    ]
+  },
+  "buzz lightyear providing cover": {
+    "name": "buzz lightyear providing cover",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "ACTION FIGURE"
+    ]
+  },
+  "gopher hunny cook": {
+    "name": "gopher hunny cook",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "DOWN THE HOLE",
+      "FORTIFYING MEAL"
+    ]
+  },
+  "russell senior wilderness explorer": {
+    "name": "russell senior wilderness explorer",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "Shift",
+      "BASE CAMP",
+      "GOOD LEADERSHIP"
+    ]
+  },
+  "rapunzel tower defender": {
+    "name": "rapunzel tower defender",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "THE FATES' DESIGN"
+    ]
+  },
+  "tod clever fox": {
+    "name": "tod clever fox",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "PROBLEM SOLVING"
+    ]
+  },
+  "russell junior wilderness explorer": {
+    "name": "russell junior wilderness explorer",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "ASSISTING THE ELDERLY BADGE"
+    ]
+  },
+  "roo hunny rogue": {
+    "name": "roo hunny rogue",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "Ward",
+      "ELUSIVE EXPERTISE"
+    ]
+  },
+  "winifred exasperated elephant": {
+    "name": "winifred exasperated elephant",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "Ward"
+    ]
+  },
+  "aladdin doing his part": {
+    "name": "aladdin doing his part",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "CLEAR IT OUT"
+    ]
+  },
+  "madam mim hummingbird": {
+    "name": "madam mim hummingbird",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "Evasive",
+      "JUST HOW I LIKE IT"
+    ]
+  },
+  "minnie mouse curious adventurer": {
+    "name": "minnie mouse curious adventurer",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "kevin flightless bird": {
+    "name": "kevin flightless bird",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 3,
+    "keywords": [
+      "BACK TO THE NEST"
+    ]
+  },
+  "peter pan created by the vine": {
+    "name": "peter pan created by the vine",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 3,
+    "lore": 2,
+    "keywords": [
+      "CLEVER TRICK"
+    ]
+  },
+  "copper creative storyteller": {
+    "name": "copper creative storyteller",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 2,
+    "keywords": []
+  },
+  "posey vampire potato": {
+    "name": "posey vampire potato",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 7,
+    "lore": 2,
+    "keywords": [
+      "Potato Shift"
+    ]
+  },
+  "dr bushroot evil botanist": {
+    "name": "dr bushroot evil botanist",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 5,
+    "lore": 3,
+    "keywords": [
+      "Ward",
+      "FAIR IS FAIR"
+    ]
+  },
+  "mother gothel evil as ever": {
+    "name": "mother gothel evil as ever",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "MUMMY'S BACK"
+    ]
+  },
+  "tod & copper best of friends": {
+    "name": "tod & copper best of friends",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "Evasive"
+    ]
+  },
+  "rapunzel escaping the tower": {
+    "name": "rapunzel escaping the tower",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "THE CALL OF ADVENTURE"
+    ]
+  },
+  "cetus mighty serpent": {
+    "name": "cetus mighty serpent",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 6,
+    "lore": 2,
+    "keywords": []
+  },
+  "mushu stealthy dragon": {
+    "name": "mushu stealthy dragon",
+    "type": "Character",
+    "ink": "Emerald",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "Evasive",
+      "TIP THE SCALES"
+    ]
+  },
+  "carl fredricksen & russell intrepid explorers": {
+    "name": "carl fredricksen & russell intrepid explorers",
+    "type": "Character",
+    "ink": "Emerald-Ruby",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "OUTDOOR SKILLS"
+    ]
+  },
+  "mickey mouse & minnie mouse adventuring duo": {
+    "name": "mickey mouse & minnie mouse adventuring duo",
+    "type": "Character",
+    "ink": "Emerald-Sapphire",
+    "cost": 7,
+    "lore": 5,
+    "keywords": [
+      "Duo Shift",
+      "THINKING OF YOU"
+    ]
+  },
+  "rapunzel & flynn rider unlikely pair": {
+    "name": "rapunzel & flynn rider unlikely pair",
+    "type": "Character",
+    "ink": "Emerald-Steel",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "CLEVER SWAP",
+      "FRESH START"
+    ]
+  },
+  "to wither a flower": {
+    "name": "to wither a flower",
+    "type": "Action",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": null,
+    "keywords": []
+  },
+  "piercing attack": {
+    "name": "piercing attack",
+    "type": "Action",
+    "ink": "Emerald",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "put that thing back": {
+    "name": "put that thing back",
+    "type": "Action",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": null,
+    "keywords": []
+  },
+  "scout ahead": {
+    "name": "scout ahead",
+    "type": "Action",
+    "ink": "Emerald",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "potato": {
+    "name": "potato",
+    "type": "Item",
+    "ink": "Emerald",
+    "cost": 1,
+    "lore": null,
+    "keywords": [
+      "FULL OF POTENTIAL"
+    ]
+  },
+  "my adventure book": {
+    "name": "my adventure book",
+    "type": "Item",
+    "ink": "Emerald",
+    "cost": 3,
+    "lore": null,
+    "keywords": [
+      "NEW MEMORIES"
+    ]
+  },
+  "vine pod": {
+    "name": "vine pod",
+    "type": "Item",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": null,
+    "keywords": [
+      "FRAGILE HUSK",
+      "REGENERATE"
+    ]
+  },
+  "paradise falls exotic destination": {
+    "name": "paradise falls exotic destination",
+    "type": "Location",
+    "ink": "Emerald",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "QUITE A SIGHT"
+    ]
+  },
+  "dash parr super fast": {
+    "name": "dash parr super fast",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "Shift",
+      "Evasive",
+      "FOLLOW ME!"
+    ]
+  },
+  "yzma choosy customer": {
+    "name": "yzma choosy customer",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "GET THIS RIGHT"
+    ]
+  },
+  "kuzco picky customer": {
+    "name": "kuzco picky customer",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": 1,
+    "keywords": []
+  },
+  "the bear territorial animal": {
+    "name": "the bear territorial animal",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "SAVAGE FURY"
+    ]
+  },
+  "carl fredricksen on the move": {
+    "name": "carl fredricksen on the move",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "MOVING PARTNER",
+      "ADVENTURE AWAITS"
+    ]
+  },
+  "dash parr dodgeball dynamo": {
+    "name": "dash parr dodgeball dynamo",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "Evasive"
+    ]
+  },
+  "gaston created by the vine": {
+    "name": "gaston created by the vine",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "DRAWING STRENGTH"
+    ]
+  },
+  "colonel hathi on the march": {
+    "name": "colonel hathi on the march",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "HUP, TWO, THREE, FOUR"
+    ]
+  },
+  "splodyhead experiment 619": {
+    "name": "splodyhead experiment 619",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 3,
+    "lore": 2,
+    "keywords": []
+  },
+  "pacha panicked customer": {
+    "name": "pacha panicked customer",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": 0,
+    "keywords": [
+      "Reckless",
+      "ADRENALINE SURGE"
+    ]
+  },
+  "sun yee red panda spirit": {
+    "name": "sun yee red panda spirit",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "Temporary Red Panda Shift"
+    ]
+  },
+  "grandma wu fierce red panda": {
+    "name": "grandma wu fierce red panda",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 7,
+    "lore": 1,
+    "keywords": [
+      "Temporary Shift",
+      "INTIMIDATING CHARGE"
+    ]
+  },
+  "king louie king of swing": {
+    "name": "king louie king of swing",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "Singer"
+    ]
+  },
+  "beast fierce defender": {
+    "name": "beast fierce defender",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "FORMIDABLE LOVE"
+    ]
+  },
+  "randall boggs envious coworker": {
+    "name": "randall boggs envious coworker",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": 0,
+    "keywords": [
+      "Evasive",
+      "AFTER-HOURS PROJECT"
+    ]
+  },
+  "donald duck vineling rider": {
+    "name": "donald duck vineling rider",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "Rush"
+    ]
+  },
+  "meilin lee popular red panda": {
+    "name": "meilin lee popular red panda",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 6,
+    "lore": 3,
+    "keywords": [
+      "Temporary Shift",
+      "KARAOKE QUEEN"
+    ]
+  },
+  "tigger hunny barbarian": {
+    "name": "tigger hunny barbarian",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": 0,
+    "keywords": [
+      "Reckless",
+      "PROTECTIVE CHARGE"
+    ]
+  },
+  "boo energetic child": {
+    "name": "boo energetic child",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "Rush",
+      "KID-TASTROPHE!"
+    ]
+  },
+  "sulley protective monster": {
+    "name": "sulley protective monster",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "FEARSOME GLARE",
+      "RILED UP"
+    ]
+  },
+  "ming lee giant red panda": {
+    "name": "ming lee giant red panda",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 9,
+    "lore": 2,
+    "keywords": [
+      "Temporary Shift",
+      "PATH OF DESTRUCTION"
+    ]
+  },
+  "captain hook conniving pirate": {
+    "name": "captain hook conniving pirate",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "HAVE AT YOU"
+    ]
+  },
+  "peter pan vine duelist": {
+    "name": "peter pan vine duelist",
+    "type": "Character",
+    "ink": "Ruby",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "belle & beast certain as the sun": {
+    "name": "belle & beast certain as the sun",
+    "type": "Character",
+    "ink": "Ruby-Sapphire",
+    "cost": 8,
+    "lore": 3,
+    "keywords": [
+      "Shift",
+      "INSPIRING DANCE",
+      "APPRECIATIVE AUDIENCE"
+    ]
+  },
+  "dash parr & violet parr super siblings": {
+    "name": "dash parr & violet parr super siblings",
+    "type": "Character",
+    "ink": "Ruby-Steel",
+    "cost": 8,
+    "lore": 2,
+    "keywords": [
+      "Combo Shift",
+      "Evasive",
+      "Resist",
+      "INCREDIBLE TACTICS"
+    ]
+  },
+  "red moon ritual": {
+    "name": "red moon ritual",
+    "type": "Action",
+    "ink": "Ruby",
+    "cost": 7,
+    "lore": null,
+    "keywords": [
+      "Sing Together"
+    ]
+  },
+  "red alert": {
+    "name": "red alert",
+    "type": "Action",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": null,
+    "keywords": []
+  },
+  "rahr": {
+    "name": "rahr",
+    "type": "Action",
+    "ink": "Ruby",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "prophetic vision": {
+    "name": "prophetic vision",
+    "type": "Action",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "it's gonna be great": {
+    "name": "it's gonna be great",
+    "type": "Action",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "scream canister": {
+    "name": "scream canister",
+    "type": "Item",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": null,
+    "keywords": [
+      "ERRATIC SCREAMS"
+    ]
+  },
+  "bunch of balloons": {
+    "name": "bunch of balloons",
+    "type": "Item",
+    "ink": "Ruby",
+    "cost": 1,
+    "lore": null,
+    "keywords": [
+      "FLOAT AWAY",
+      "OUT OF SIGHT"
+    ]
+  },
+  "beast's castle overrun by the vine": {
+    "name": "beast's castle overrun by the vine",
+    "type": "Location",
+    "ink": "Ruby",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "IMMINENT THREAT"
+    ]
+  },
+  "carl's house flying high": {
+    "name": "carl's house flying high",
+    "type": "Location",
+    "ink": "Ruby",
+    "cost": 2,
+    "lore": 0,
+    "keywords": [
+      "MOVING DAY"
+    ]
+  },
+  "launchpad sky patrol": {
+    "name": "launchpad sky patrol",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "Alert"
+    ]
+  },
+  "dug good boy": {
+    "name": "dug good boy",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "FETCH!"
+    ]
+  },
+  "roz always watching": {
+    "name": "roz always watching",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "ALWAYS"
+    ]
+  },
+  "merlin envisioning the future": {
+    "name": "merlin envisioning the future",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "MINOR TRICKERY",
+      "AGE OF INCONVENIENCE"
+    ]
+  },
+  "quackerjack loony toymaker": {
+    "name": "quackerjack loony toymaker",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "EVIL DESIGN"
+    ]
+  },
+  "belle always reading": {
+    "name": "belle always reading",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "DREAMING OF MORE"
+    ]
+  },
+  "ellie fredricksen adventure partner": {
+    "name": "ellie fredricksen adventure partner",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "ALWAYS WITH YOU"
+    ]
+  },
+  "mrs hasagawa fruit vendor": {
+    "name": "mrs hasagawa fruit vendor",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": 1,
+    "keywords": []
+  },
+  "alpha pack leader": {
+    "name": "alpha pack leader",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "WHO WANTS A TREAT?"
+    ]
+  },
+  "sulley strategic scarer": {
+    "name": "sulley strategic scarer",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "JUMP SCARE"
+    ]
+  },
+  "randall boggs scary smart": {
+    "name": "randall boggs scary smart",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "GET OUTTA HERE!",
+      "DEVIOUS PLAN"
+    ]
+  },
+  "piglet hunny mage apprentice": {
+    "name": "piglet hunny mage apprentice",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "mickey mouse inquisitive explorer": {
+    "name": "mickey mouse inquisitive explorer",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 2,
+    "keywords": []
+  },
+  "hades meticulous schemer": {
+    "name": "hades meticulous schemer",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 6,
+    "lore": 3,
+    "keywords": [
+      "Ward"
+    ]
+  },
+  "antonio madrigal animal doctor": {
+    "name": "antonio madrigal animal doctor",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "HEALING HANDS"
+    ]
+  },
+  "maid marian created by the vine": {
+    "name": "maid marian created by the vine",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 1,
+    "keywords": [
+      "INKFLOW"
+    ]
+  },
+  "robin hood created by the vine": {
+    "name": "robin hood created by the vine",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "KEEN-EYED"
+    ]
+  },
+  "boo human child": {
+    "name": "boo human child",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 1,
+    "lore": 1,
+    "keywords": [
+      "MAKING MEMORIES"
+    ]
+  },
+  "pluto suspicious sentry": {
+    "name": "pluto suspicious sentry",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 5,
+    "lore": 3,
+    "keywords": [
+      "Support"
+    ]
+  },
+  "charles muntz obsessive explorer": {
+    "name": "charles muntz obsessive explorer",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "USEFUL GEAR",
+      "FIND THAT BIRD!"
+    ]
+  },
+  "henry j waternoose iii chief executive officer": {
+    "name": "henry j waternoose iii chief executive officer",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "THE BOTTOM LINE"
+    ]
+  },
+  "eeyore hunny scholar": {
+    "name": "eeyore hunny scholar",
+    "type": "Character",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "HUNNY TACTICS"
+    ]
+  },
+  "darkwing duck & launchpad st canard's finest": {
+    "name": "darkwing duck & launchpad st canard's finest",
+    "type": "Character",
+    "ink": "Sapphire-Steel",
+    "cost": 7,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "Ward",
+      "VICTORY POSE"
+    ]
+  },
+  "power surge": {
+    "name": "power surge",
+    "type": "Action",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": null,
+    "keywords": []
+  },
+  "focused search": {
+    "name": "focused search",
+    "type": "Action",
+    "ink": "Sapphire",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "we've got a lot to do": {
+    "name": "we've got a lot to do",
+    "type": "Action",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": null,
+    "keywords": []
+  },
+  "startle": {
+    "name": "startle",
+    "type": "Action",
+    "ink": "Sapphire",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "closet door portal": {
+    "name": "closet door portal",
+    "type": "Item",
+    "ink": "Sapphire",
+    "cost": 4,
+    "lore": null,
+    "keywords": [
+      "KNOCK, KNOCK",
+      "WHO'S THERE?"
+    ]
+  },
+  "hana's inkcaster": {
+    "name": "hana's inkcaster",
+    "type": "Item",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": null,
+    "keywords": [
+      "REJUVENATING FLOURISH"
+    ]
+  },
+  "laugh canister": {
+    "name": "laugh canister",
+    "type": "Item",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": null,
+    "keywords": [
+      "COPYCAT"
+    ]
+  },
+  "translation collar": {
+    "name": "translation collar",
+    "type": "Item",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": null,
+    "keywords": [
+      "YOU ARE MY FRIEND"
+    ]
+  },
+  "big book of hunny": {
+    "name": "big book of hunny",
+    "type": "Item",
+    "ink": "Sapphire",
+    "cost": 2,
+    "lore": null,
+    "keywords": [
+      "INVOKE HUNNY"
+    ]
+  },
+  "hundred acre wood hunny campsite": {
+    "name": "hundred acre wood hunny campsite",
+    "type": "Location",
+    "ink": "Sapphire",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "HOME AWAY FROM HOME",
+      "HUNNY QUEST"
+    ]
+  },
+  "violet parr super resilient": {
+    "name": "violet parr super resilient",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "Resist",
+      "HEROIC SYNERGY"
+    ]
+  },
+  "aladdin created by the vine": {
+    "name": "aladdin created by the vine",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "THE VINE PROVIDES"
+    ]
+  },
+  "willie the giant created by the vine": {
+    "name": "willie the giant created by the vine",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 6,
+    "lore": 2,
+    "keywords": [
+      "DEFEND THE STALK"
+    ]
+  },
+  "sprout experiment 509": {
+    "name": "sprout experiment 509",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 5,
+    "lore": 2,
+    "keywords": [
+      "Resist",
+      "BOTANICAL EVIL"
+    ]
+  },
+  "stitch protector of frogs": {
+    "name": "stitch protector of frogs",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "sheriff of nottingham vine slayer": {
+    "name": "sheriff of nottingham vine slayer",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "Challenger"
+    ]
+  },
+  "mata meat hut waitress": {
+    "name": "mata meat hut waitress",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 1,
+    "lore": 1,
+    "keywords": []
+  },
+  "violet parr force field practice": {
+    "name": "violet parr force field practice",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "Resist"
+    ]
+  },
+  "dr hamsterviel evil observer": {
+    "name": "dr hamsterviel evil observer",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "Alert"
+    ]
+  },
+  "owl hunny ranger": {
+    "name": "owl hunny ranger",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": 2,
+    "keywords": [
+      "HUNNY ALLIANCE"
+    ]
+  },
+  "megavolt electrical menace": {
+    "name": "megavolt electrical menace",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 4,
+    "lore": 3,
+    "keywords": [
+      "FORCE FIELD"
+    ]
+  },
+  "darkwing duck shadowy superhero": {
+    "name": "darkwing duck shadowy superhero",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "PREEMPTIVE STRIKE"
+    ]
+  },
+  "omnidroid scanning for threats": {
+    "name": "omnidroid scanning for threats",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "FACTORY SETTINGS"
+    ]
+  },
+  "flynn rider high-climbing rogue": {
+    "name": "flynn rider high-climbing rogue",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": 2,
+    "keywords": [
+      "WE CAN WORK THIS OUT"
+    ]
+  },
+  "the irate chef meat hut cook": {
+    "name": "the irate chef meat hut cook",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 4,
+    "lore": 1,
+    "keywords": []
+  },
+  "kronk meat hut cook": {
+    "name": "kronk meat hut cook",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "Resist",
+      "PICKUP!"
+    ]
+  },
+  "mulan created by the vine": {
+    "name": "mulan created by the vine",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 4,
+    "lore": 2,
+    "keywords": [
+      "DEMOLISH"
+    ]
+  },
+  "diablo protecting his mistress": {
+    "name": "diablo protecting his mistress",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": 1,
+    "keywords": [
+      "FLURRY OF FEATHERS"
+    ]
+  },
+  "scar created by the vine": {
+    "name": "scar created by the vine",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "VICTOR'S REWARD",
+      "FILL THE RANKS"
+    ]
+  },
+  "maximus relentless stallion": {
+    "name": "maximus relentless stallion",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 5,
+    "lore": 1,
+    "keywords": [
+      "NO ESCAPE"
+    ]
+  },
+  "omnidroid ultimate iteration": {
+    "name": "omnidroid ultimate iteration",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 8,
+    "lore": 2,
+    "keywords": [
+      "Shift",
+      "Resist",
+      "RETURN ON INVESTMENT"
+    ]
+  },
+  "the vine towering stalk": {
+    "name": "the vine towering stalk",
+    "type": "Character",
+    "ink": "Steel",
+    "cost": 10,
+    "lore": 3,
+    "keywords": [
+      "Floodborn Shift",
+      "SATURATE",
+      "HOSTILE SWARM"
+    ]
+  },
+  "cower before me": {
+    "name": "cower before me",
+    "type": "Action",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "we'll save our village": {
+    "name": "we'll save our village",
+    "type": "Action",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "look what you've done": {
+    "name": "look what you've done",
+    "type": "Action",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": null,
+    "keywords": []
+  },
+  "you broke my smolder": {
+    "name": "you broke my smolder",
+    "type": "Action",
+    "ink": "Steel",
+    "cost": 1,
+    "lore": null,
+    "keywords": []
+  },
+  "attack of the vine": {
+    "name": "attack of the vine",
+    "type": "Action",
+    "ink": "Steel",
+    "cost": 6,
+    "lore": null,
+    "keywords": []
+  },
+  "windstorm": {
+    "name": "windstorm",
+    "type": "Action",
+    "ink": "Steel",
+    "cost": 4,
+    "lore": null,
+    "keywords": []
+  },
+  "discarded armor": {
+    "name": "discarded armor",
+    "type": "Item",
+    "ink": "Steel",
+    "cost": 1,
+    "lore": null,
+    "keywords": [
+      "FOUND EQUIPMENT"
+    ]
+  },
+  "the weedwhacker": {
+    "name": "the weedwhacker",
+    "type": "Item",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": null,
+    "keywords": [
+      "FULL POWER",
+      "CLEAR-CUT"
+    ]
+  },
+  "absorbing bloom": {
+    "name": "absorbing bloom",
+    "type": "Item",
+    "ink": "Steel",
+    "cost": 2,
+    "lore": null,
+    "keywords": [
+      "METAMORPHOSIS"
+    ]
+  },
+  "vine entrance ominous passageway": {
+    "name": "vine entrance ominous passageway",
+    "type": "Location",
+    "ink": "Steel",
+    "cost": 3,
+    "lore": 1,
+    "keywords": [
+      "ROOT OF POWER"
+    ]
   }
 }

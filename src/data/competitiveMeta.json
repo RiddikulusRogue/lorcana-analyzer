@@ -1,6 +1,6 @@
 {
-    "lastUpdated": "2026-05-12",
-    "source": "Latest verified tournament window: DLC Circuit (Melbourne + Ghent + Taipei) plus Winterspell Set Championship season and CCS $25k; Wilds Unknown (Set 12) released and still in early adaptation.",
+    "lastUpdated": "2026-07-25",
+    "source": "Latest verified tournament window: DLC Circuit (Melbourne + Ghent + Taipei) plus Winterspell Set Championship season and CCS $25k; core rotation now includes set 13.",
     "internetStrategySources": [
         {
             "name": "TCGplayer - The Best Decks From DLC Ghent & CCS $25k Invitational Qualifier",
@@ -36,7 +36,7 @@
             "name": "TCGplayer - Wilds Unknown Launch Coverage",
             "url": "https://www.tcgplayer.com/content/disney-lorcana/articles",
             "lastChecked": "2026-05-12",
-            "notes": "Set 12 Wilds Unknown coverage is now live (May 2026). Competitive constructed data is still maturing, so strategic recommendations remain anchored to latest completed open-event results until post-release events conclude."
+            "notes": "Set 13 rotation is now live (Jul 2026). Competitive constructed data is still maturing, so strategic recommendations remain anchored to latest completed open-event results until post-release events conclude."
         }
     ],
     "banList": {
@@ -49,7 +49,7 @@
         ]
     },
     "upcomingEvents": {
-        "note": "DLC Indianapolis and DLC Dortmund upcoming, both featuring Infinity format as main event. Wilds Unknown (Set 12, featuring Pixar IPs including The Incredibles, Toy Story, and Brave) is now released and expected to reshape those events.",
+        "note": "DLC Indianapolis and DLC Dortmund upcoming, both featuring Infinity format as main event. Core rotation now includes set 13 and is expected to reshape prep for both events.",
         "events": [
             {
                 "name": "DLC Indianapolis",
@@ -489,7 +489,7 @@
         "Amethyst/Sapphire is still the most powerful deck in a vacuum but Dogs was adapted around at Taipei — the meta shifts are ongoing",
         "Set Championship season has diversified the format — Amber/Ruby, Sapphire/Steel, and Amethyst/Ruby now all win high-level events",
         "Hiram Flaversham - Toymaker is banned — update all Steel decks that relied on Fortisphere enabling",
-        "Wilds Unknown (Set 12, Pixar) is now legal before DLC Indianapolis/Dortmund, and early testing suggests meaningful shifts from Incredibles/Toy Story cards"
+        "Set 13 is now legal in Core, and early testing suggests meaningful shifts in tempo and value mirrors before DLC Indianapolis/Dortmund"
     ],
     "metaPairings": [
         {

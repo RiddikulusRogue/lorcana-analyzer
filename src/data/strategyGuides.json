@@ -492,7 +492,7 @@
       }
     },
     "cardViabilityByRole": {
-      "formatContext": "Set 5-12 Core Constructed, with final tuning based on local event spread.",
+      "formatContext": "Set 5-13 Core Constructed, with final tuning based on local event spread.",
       "highPriority": [
         "Turn-1 and turn-2 cards that either quest immediately or trade up",
         "Cheap interaction that cleanly answers 2-4 willpower threats",
@@ -542,11 +542,11 @@
       ]
     },
     "recentSetImpact": {
-      "wilds_unknown_may2026": {
-        "set": "Wilds Unknown (Set 12, May 2026)",
-        "impact": "Card pool expanded immediately, but premier open-event data is still developing in the first weeks after release.",
-        "keyCards": "Early testing highlights flexible midgame tools and payoff cards for creature-centric shells, with final staples still settling.",
-        "advice": "Treat Set 12 includes as adjustable flex slots first, then lock them only after local event reps."
+      "set13_rotation_july2026": {
+        "set": "Core Rotation Update (Set 13, Jul 2026)",
+        "impact": "Core Constructed legality window now includes set 13, increasing both proactive curve options and late-game payoff density.",
+        "keyCards": "Early set 13 testing points to improved tempo mirrors and new hybrid value shells across multiple color pairs.",
+        "advice": "Test set 13 cards as primary flex candidates first, then lock only the cards that improve your worst expected matchups."
       },
       "winterspell_february2026": {
         "set": "Winterspell (Feb 2026)",
@@ -565,7 +565,7 @@
       "Amber/Emerald Dogs remains the primary matchup check until proven otherwise",
       "Sapphire-based control shells still punish clunky opening hands",
       "Steel interaction density is increasing as players target low-curve aggression",
-      "Set 12 cards are strong but many lists are still in adaptation mode",
+      "Set 13 cards are now legal in Core and many lists are still in adaptation mode",
       "Prioritize consistency over novelty for tournament conversion"
     ],
     "flexSlotRecommendations": {

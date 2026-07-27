@@ -1,4 +1,14 @@
-# Latest Strategy + Meta Enhancements (Feb 28, 2026)
+# Latest Strategy + Meta Enhancements (Jul 25, 2026)
+
+## Rotation + Rulings Update (Jul 25, 2026)
+
+- Core Constructed legal set window updated to 5-13.
+- Card database refreshed from upstream Lorcana JSON and now includes set 13 cards.
+- Derived mapping files were rebuilt:
+  - `src/data/cardSets.json`
+  - `src/data/cardMeta.json`
+- Rule text and card rulings were refreshed via `src/data/allCards.json` sync.
+- Strategy/meta reference text updated to reflect post-rotation Core and Infinity context.
 
 ## Overview
 Inkweaver has been updated to make the strategy engine and competitive meta output fully aligned with current DLC + Winterspell play data.
