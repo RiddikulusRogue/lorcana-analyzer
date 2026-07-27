@@ -64,6 +64,183 @@ const normalizeCardKey = (value) =>
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
+const OFFICIAL_INKS = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+
+const toTitleWords = (value) => String(value || '')
+  .split(/\s+/)
+  .filter(Boolean)
+  .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+  .join(' ');
+
+const extractJsonFromWrappedText = (rawText) => {
+  const text = String(rawText || '');
+  const start = text.indexOf('{');
+  const end = text.lastIndexOf('}');
+  if (start === -1 || end === -1 || end <= start) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(text.slice(start, end + 1));
+  } catch (error) {
+    console.warn('Could not parse wrapped JSON payload:', error);
+    return null;
+  }
+};
+
+const parseInkDecksMetagameFromMarkdown = (markdownText) => {
+  const text = String(markdownText || '');
+  const publishedMatch = text.match(/Published Time:\s*([^\n]+)/i);
+  const titleMatch = text.match(/Title:\s*([^\n]+)/i);
+
+  const rows = [];
+  const tableRows = text
+    .split('\n')
+    .filter((line) => line.startsWith('|') && line.includes('Metashare'));
+
+  tableRows.forEach((line) => {
+    const nameMatch = line.match(/\[\*\*([^*\]]+)\*\*/);
+    const shareMatch = line.match(/(\d+(?:\.\d+)?)%\s+Metashare/i);
+    if (!nameMatch || !shareMatch) return;
+
+    const rawName = String(nameMatch[1] || '').trim();
+    const metashare = parseFloat(shareMatch[1]);
+    if (!rawName || !Number.isFinite(metashare)) return;
+
+    const colors = [];
+    OFFICIAL_INKS.forEach((ink) => {
+      const marker = `: ${ink.toLowerCase()}`;
+      if (line.toLowerCase().includes(marker) && !colors.includes(ink)) {
+        colors.push(ink);
+      }
+    });
+
+    rows.push({
+      name: rawName,
+      metashare,
+      colors: colors.slice(0, 2),
+    });
+  });
+
+  const topDecks = rows.slice(0, 12).map((row) => {
+    return {
+      name: row.colors.length > 0 ? `${row.colors.join('/')} ${row.name}` : row.name,
+      tier: row.metashare >= 10 ? 'S' : row.metashare >= 6 ? 'A' : 'B',
+      colors: row.colors,
+      archetype: row.name,
+      winRate: `~${row.metashare.toFixed(1)}%`,
+      description: `Live metagame signal from Ink Decks (${row.metashare.toFixed(1)}% metashare in current report).`,
+      keyCards: [],
+      gameplan: 'Live tournament meta import from Ink Decks.',
+      strengths: [],
+      weaknesses: [],
+      mulligan: 'Refer to current tournament list details on Ink Decks.',
+      sourceTag: 'inkdecks',
+      metaCount: row.metashare,
+    };
+  });
+
+  const formatHint = /core constructed/i.test(String(titleMatch?.[1] || '')) ? 'core' : 'infinity';
+
+  return {
+    publishedTime: publishedMatch ? publishedMatch[1].trim() : null,
+    title: titleMatch ? titleMatch[1].trim() : null,
+    formatHint,
+    topDecks,
+  };
+};
+
+const parseDuelsPublicDecksFromWrappedJson = (wrappedText) => {
+  const payload = extractJsonFromWrappedText(wrappedText);
+  const decks = Array.isArray(payload?.decks) ? payload.decks : [];
+  if (decks.length === 0) return [];
+
+  const pairMap = new Map();
+  decks.forEach((deck) => {
+    const colors = Array.isArray(deck?.colors)
+      ? deck.colors.map((color) => toTitleWords(color)).filter((color) => OFFICIAL_INKS.includes(color))
+      : [];
+    if (colors.length !== 2) return;
+    const key = [...colors].sort().join('/');
+    const existing = pairMap.get(key) || { key, count: 0, likeCount: 0, viewCount: 0 };
+    existing.count += 1;
+    existing.likeCount += Number(deck?.likeCount || 0);
+    existing.viewCount += Number(deck?.viewCount || 0);
+    pairMap.set(key, existing);
+  });
+
+  const rankedPairs = Array.from(pairMap.values())
+    .sort((a, b) => (b.count - a.count) || (b.likeCount - a.likeCount) || (b.viewCount - a.viewCount))
+    .slice(0, 8);
+
+  const total = rankedPairs.reduce((sum, pair) => sum + pair.count, 0);
+  return rankedPairs.map((pair) => {
+    const colors = pair.key.split('/');
+    const share = total > 0 ? ((pair.count / total) * 100).toFixed(1) : '0.0';
+    return {
+      name: `${colors.join('/')} Duels Ladder`,
+      tier: pair.count >= 60 ? 'S' : pair.count >= 30 ? 'A' : 'B',
+      colors,
+      archetype: 'Ladder/Competitive',
+      winRate: `~${share}%`,
+      description: `Live duels.ink public-deck trend (${pair.count} tracked decks, ${pair.likeCount} likes).`,
+      keyCards: [],
+      gameplan: 'Derived from current duels.ink public decks leaderboard mix.',
+      strengths: [],
+      weaknesses: [],
+      mulligan: 'Use this as a meta-pressure signal, then tune with matchup-specific testing.',
+      sourceTag: 'duels',
+      metaCount: pair.count,
+    };
+  });
+};
+
+const mergeCompetitiveMetaWithLiveSources = (baseMeta, liveMeta) => {
+  if (!baseMeta || !liveMeta) return baseMeta;
+  const incomingDecks = Array.isArray(liveMeta.topDecks) ? liveMeta.topDecks : [];
+  if (incomingDecks.length === 0) return baseMeta;
+
+  const existingDecks = Array.isArray(baseMeta.topDecks) ? baseMeta.topDecks : [];
+  const mergedDecks = [];
+  const seen = new Set();
+
+  [...incomingDecks, ...existingDecks].forEach((deck) => {
+    const key = String(deck?.name || '').toLowerCase().trim();
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    mergedDecks.push(deck);
+  });
+
+  const existingSources = Array.isArray(baseMeta.internetStrategySources) ? baseMeta.internetStrategySources : [];
+  const incomingSources = Array.isArray(liveMeta.internetStrategySources) ? liveMeta.internetStrategySources : [];
+
+  const merged = {
+    ...baseMeta,
+    topDecks: mergedDecks,
+    source: liveMeta.source || baseMeta.source,
+    lastUpdated: liveMeta.lastUpdated || baseMeta.lastUpdated,
+    internetStrategySources: [...incomingSources, ...existingSources],
+  };
+
+  const targetFormatKey = liveMeta.formatHint === 'core' ? 'coreConstructed' : 'infinity';
+  const existingFormats = merged.formats && typeof merged.formats === 'object' ? merged.formats : {};
+  const targetFormat = existingFormats[targetFormatKey] && typeof existingFormats[targetFormatKey] === 'object'
+    ? existingFormats[targetFormatKey]
+    : {};
+
+  merged.formats = {
+    ...existingFormats,
+    [targetFormatKey]: {
+      ...targetFormat,
+      topDecks: mergedDecks,
+      lastUpdated: merged.lastUpdated,
+      source: merged.source,
+    },
+  };
+
+  return merged;
+};
+
 const normalizePlaystylesData = (raw) => {
   if (Array.isArray(raw)) {
     return raw;
@@ -388,6 +565,10 @@ export default function App() {
         const onlineData = await fetchOnlineMetaData();
         if (onlineData) {
           setOnlineMetaData(onlineData);
+          setCompetitiveMeta((currentMeta) => {
+            if (!currentMeta) return currentMeta;
+            return mergeCompetitiveMetaWithLiveSources(currentMeta, onlineData);
+          });
           console.log("Loaded online meta data");
         }
       } catch (e) {
@@ -590,12 +771,54 @@ export default function App() {
   // Fetch competitive meta data from online sources
   const fetchOnlineMetaData = async () => {
     try {
-      // Try fetching from Dreamborn API or similar sources
-      const response = await fetch('https://api.lorcana-api.com/cards/all');
-      if (response.ok) {
-        const data = await response.json();
-        return data;
+      // Pull live, current competitive signals from Ink Decks and duels.ink via r.jina.ai
+      const [inkResponse, duelsResponse] = await Promise.all([
+        fetch('https://r.jina.ai/http://inkdecks.com/lorcana-metagame'),
+        fetch('https://r.jina.ai/http://duels.ink/api/decks/public'),
+      ]);
+
+      const [inkText, duelsText] = await Promise.all([
+        inkResponse.ok ? inkResponse.text() : Promise.resolve(''),
+        duelsResponse.ok ? duelsResponse.text() : Promise.resolve(''),
+      ]);
+
+      const inkMeta = parseInkDecksMetagameFromMarkdown(inkText);
+      const duelsDecks = parseDuelsPublicDecksFromWrappedJson(duelsText);
+
+      const topDecks = [
+        ...(Array.isArray(inkMeta?.topDecks) ? inkMeta.topDecks : []),
+        ...duelsDecks,
+      ];
+
+      if (topDecks.length === 0) {
+        console.warn('Live tournament sources did not return parseable deck data.');
+        return null;
       }
+
+      const now = new Date();
+      const today = now.toISOString().slice(0, 10);
+      const lastChecked = now.toISOString();
+
+      return {
+        lastUpdated: today,
+        source: 'Live competitive pull from Ink Decks and duels.ink',
+        formatHint: inkMeta?.formatHint || 'core',
+        topDecks,
+        internetStrategySources: [
+          {
+            name: 'Ink Decks - Live Metagame',
+            url: 'https://inkdecks.com/lorcana-metagame',
+            lastChecked,
+            notes: inkMeta?.title || 'Pulled via r.jina.ai from Ink Decks metagame page.',
+          },
+          {
+            name: 'duels.ink - Public Deck Trends',
+            url: 'https://duels.ink/api/decks/public',
+            lastChecked,
+            notes: `Pulled ${duelsDecks.length} two-color ladder trend entries from live public decks feed.`,
+          },
+        ],
+      };
     } catch (error) {
       console.warn('Could not fetch online meta data:', error);
     }
@@ -1980,9 +2203,28 @@ export default function App() {
       const getCardColors = (cardName) => {
         const normalized = normalizeCardKey(cardName);
         if (!normalized) return null;
+
         const metaColor = cardMetaInkMap ? cardMetaInkMap.get(normalized) : null;
         if (metaColor) return [metaColor];
-        return allCardsColorsMap ? allCardsColorsMap.get(normalized) || null : null;
+
+        const fallbackColors = allCardsColorsMap ? allCardsColorsMap.get(normalized) : null;
+        if (fallbackColors) return fallbackColors;
+
+        if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
+
+        const directMatches = allCardsData.cards.filter((card) => {
+          const variants = [card?.simpleName, card?.fullName, card?.name].map(normalizeCardKey).filter(Boolean);
+          return variants.includes(normalized);
+        });
+
+        if (directMatches.length > 0) {
+          const colors = Array.isArray(directMatches[0].colors) && directMatches[0].colors.length > 0
+            ? directMatches[0].colors
+            : (directMatches[0].color ? [directMatches[0].color] : null);
+          return colors;
+        }
+
+        return null;
       };
 
       Object.entries(cards).forEach(([cardName, count]) => {
@@ -2012,16 +2254,24 @@ export default function App() {
         }
       });
 
-      // Determine primary deck colors (cards with actual color assignments)
-      const primaryColors = officialInks.filter(color => colorPresenceCounts[color] > 0);
+      // Determine primary deck colors from the two strongest color pools.
+      const rankedColors = officialInks
+        .map((color) => [color, colorPresenceCounts[color] || 0])
+        .filter(([, count]) => count > 0)
+        .sort((a, b) => b[1] - a[1]);
+
+      const primaryColors = rankedColors.slice(0, 2).map(([color]) => color);
+      const splashColors = rankedColors.slice(2).filter(([, count]) => count > 0);
+      const splashThreshold = Math.max(2, Math.floor(cardCount * 0.1));
+      const significantSplashColors = splashColors.filter(([, count]) => count >= splashThreshold);
 
       // Calculate how many cards are accounted for
       const accountedCards = Object.values(colorCounts).reduce((sum, count) => sum + count, 0) + dualInkCount;
       const unaccountedCards = cardCount - accountedCards;
 
       // Validate deck color count
-      if (primaryColors.length > 2) {
-        advice += `• ⚠️  WARNING: Deck has ${primaryColors.length} colors (${primaryColors.join(', ')})\n`;
+      if (significantSplashColors.length > 0) {
+        advice += `• ⚠️  WARNING: Deck appears to include a significant splash color (${significantSplashColors.map(([color]) => color).join(', ')})\n`;
         advice += `  Legal decks should be 1-2 colors only!\n`;
       } else if (primaryColors.length === 0) {
         advice += `• ⚠️  WARNING: No ink colors detected in deck\n`;
