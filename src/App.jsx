@@ -5067,8 +5067,18 @@ export default function App() {
         minHeight: "100vh"
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-        <img src="/inkweaver.png" alt="Inkweaver" style={{ width: "120px", height: "auto", borderRadius: "8px", border: "3px solid rgba(236, 72, 153, 0.7)" }} />
+      <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", marginBottom: "2rem" }}>
+        <img
+          src="/inkweaver.png"
+          alt="Inkweaver"
+          style={{
+            width: "160px",
+            height: "auto",
+            borderRadius: "14px",
+            border: "2px solid rgba(56, 189, 248, 0.55)",
+            boxShadow: "0 10px 28px rgba(59, 130, 246, 0.35)"
+          }}
+        />
         <div>
           <h1 style={{ margin: 0, marginBottom: "0.25rem", fontSize: "2.5rem" }}>✨ Inkweaver</h1>
           <p style={{ color: "#aaa", margin: 0 }}>Analyze • Save • Download • Get Coaching</p>
