@@ -18,7 +18,7 @@ const ALL_CARDS_FILE = path.join(DATA_DIR, 'allCards.json');
 const LORCANA_JSON_URL = 'https://api.lorcana-api.com/cards/all';
 
 function normalizeName(value) {
-    return String(value || '').trim().toLowerCase();
+    return String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
 function addMappingEntry(mapping, name, setNum) {

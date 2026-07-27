@@ -309,7 +309,7 @@
       "BIRTHDAY LIGHTS"
     ]
   },
-  "ursula's shell necklace": {
+  "ursula s shell necklace": {
     "name": "ursula's shell necklace",
     "type": "Item",
     "ink": "Amber",
@@ -397,7 +397,7 @@
       "DEEP FREEZE"
     ]
   },
-  "flotsam ursula's spy": {
+  "flotsam ursula s spy": {
     "name": "flotsam ursula's spy",
     "type": "Character",
     "ink": "Amethyst",
@@ -428,7 +428,7 @@
       "Challenger"
     ]
   },
-  "jetsam ursula's spy": {
+  "jetsam ursula s spy": {
     "name": "jetsam ursula's spy",
     "type": "Character",
     "ink": "Amethyst",
@@ -496,7 +496,7 @@
     "lore": 1,
     "keywords": []
   },
-  "pascal rapunzel's companion": {
+  "pascal rapunzel s companion": {
     "name": "pascal rapunzel's companion",
     "type": "Character",
     "ink": "Amethyst",
@@ -534,7 +534,7 @@
       "I SUMMON THEE"
     ]
   },
-  "the wardrobe belle's confidant": {
+  "the wardrobe belle s confidant": {
     "name": "the wardrobe belle's confidant",
     "type": "Character",
     "ink": "Amethyst",
@@ -542,7 +542,7 @@
     "lore": 1,
     "keywords": []
   },
-  "tinker bell peter pan's ally": {
+  "tinker bell peter pan s ally": {
     "name": "tinker bell peter pan's ally",
     "type": "Character",
     "ink": "Amethyst",
@@ -626,7 +626,7 @@
       "SPEAK!"
     ]
   },
-  "ursula's cauldron": {
+  "ursula s cauldron": {
     "name": "ursula's cauldron",
     "type": "Item",
     "ink": "Amethyst",
@@ -636,7 +636,7 @@
       "PEER INTO THE DEPTHS"
     ]
   },
-  "white rabbit's pocket watch": {
+  "white rabbit s pocket watch": {
     "name": "white rabbit's pocket watch",
     "type": "Item",
     "ink": "Amethyst",
@@ -744,7 +744,7 @@
     "lore": 3,
     "keywords": []
   },
-  "horace no-good scoundrel": {
+  "horace no good scoundrel": {
     "name": "horace no-good scoundrel",
     "type": "Character",
     "ink": "Emerald",
@@ -752,7 +752,7 @@
     "lore": 1,
     "keywords": []
   },
-  "iago loud-mouthed parrot": {
+  "iago loud mouthed parrot": {
     "name": "iago loud-mouthed parrot",
     "type": "Character",
     "ink": "Emerald",
@@ -945,7 +945,7 @@
     "lore": null,
     "keywords": []
   },
-  "dr facilier's cards": {
+  "dr facilier s cards": {
     "name": "dr facilier's cards",
     "type": "Item",
     "ink": "Emerald",
@@ -994,7 +994,7 @@
       "IMPROVISE"
     ]
   },
-  "captain colonel's lieutenant": {
+  "captain colonel s lieutenant": {
     "name": "captain colonel's lieutenant",
     "type": "Character",
     "ink": "Ruby",
@@ -1130,7 +1130,7 @@
       "Rush"
     ]
   },
-  "pongo ol' rascal": {
+  "pongo ol rascal": {
     "name": "pongo ol' rascal",
     "type": "Character",
     "ink": "Ruby",
@@ -1237,7 +1237,7 @@
     "lore": null,
     "keywords": []
   },
-  "he's got a sword": {
+  "he s got a sword": {
     "name": "he's got a sword",
     "type": "Action",
     "ink": "Ruby",
@@ -1426,7 +1426,7 @@
     "lore": 3,
     "keywords": []
   },
-  "maurice world-famous inventor": {
+  "maurice world famous inventor": {
     "name": "maurice world-famous inventor",
     "type": "Character",
     "ink": "Sapphire",
@@ -1437,7 +1437,7 @@
       "IT WORKS!"
     ]
   },
-  "merlin self-appointed mentor": {
+  "merlin self appointed mentor": {
     "name": "merlin self-appointed mentor",
     "type": "Character",
     "ink": "Sapphire",
@@ -1523,7 +1523,7 @@
     "lore": null,
     "keywords": []
   },
-  "if it's not baroque": {
+  "if it s not baroque": {
     "name": "if it's not baroque",
     "type": "Action",
     "ink": "Sapphire",
@@ -1655,7 +1655,7 @@
       "STOLEN DUST"
     ]
   },
-  "cerberus three-headed dog": {
+  "cerberus three headed dog": {
     "name": "cerberus three-headed dog",
     "type": "Character",
     "ink": "Steel",
@@ -1684,7 +1684,7 @@
       "UNDER ARREST"
     ]
   },
-  "goons maleficent's underlings": {
+  "goons maleficent s underlings": {
     "name": "goons maleficent's underlings",
     "type": "Character",
     "ink": "Steel",
@@ -1720,7 +1720,7 @@
     "lore": 2,
     "keywords": []
   },
-  "kronk right-hand man": {
+  "kronk right hand man": {
     "name": "kronk right-hand man",
     "type": "Character",
     "ink": "Steel",
@@ -1796,7 +1796,7 @@
       "I KNOW WHAT I HAVE TO DO"
     ]
   },
-  "starkey hook's henchman": {
+  "starkey hook s henchman": {
     "name": "starkey hook's henchman",
     "type": "Character",
     "ink": "Steel",
@@ -1886,7 +1886,7 @@
     "lore": null,
     "keywords": []
   },
-  "beast's mirror": {
+  "beast s mirror": {
     "name": "beast's mirror",
     "type": "Item",
     "ink": "Steel",
@@ -2012,7 +2012,7 @@
       "YES, YOUR MAJESTY"
     ]
   },
-  "grumpy bad-tempered": {
+  "grumpy bad tempered": {
     "name": "grumpy bad-tempered",
     "type": "Character",
     "ink": "Amber",
@@ -2022,7 +2022,7 @@
       "THERE'S TROUBLE A-BREWIN'"
     ]
   },
-  "happy good-natured": {
+  "happy good natured": {
     "name": "happy good-natured",
     "type": "Character",
     "ink": "Amber",
@@ -2216,7 +2216,7 @@
     "lore": null,
     "keywords": []
   },
-  "world's greatest criminal mind": {
+  "world s greatest criminal mind": {
     "name": "world's greatest criminal mind",
     "type": "Action",
     "ink": "Amber",
@@ -2242,7 +2242,7 @@
       "BRING BACK TO LIFE"
     ]
   },
-  "sleepy's flute": {
+  "sleepy s flute": {
     "name": "sleepy's flute",
     "type": "Item",
     "ink": "Amber",
@@ -2252,7 +2252,7 @@
       "A SILLY SONG"
     ]
   },
-  "arthur wizard's apprentice": {
+  "arthur wizard s apprentice": {
     "name": "arthur wizard's apprentice",
     "type": "Character",
     "ink": "Amethyst",
@@ -2340,7 +2340,7 @@
       "HE'S BACK!"
     ]
   },
-  "jiminy cricket pinocchio's conscience": {
+  "jiminy cricket pinocchio s conscience": {
     "name": "jiminy cricket pinocchio's conscience",
     "type": "Character",
     "ink": "Amethyst",
@@ -2454,7 +2454,7 @@
       "LOOK BEFORE YOU LEAP"
     ]
   },
-  "peter pan's shadow not sewn on": {
+  "peter pan s shadow not sewn on": {
     "name": "peter pan's shadow not sewn on",
     "type": "Character",
     "ink": "Amethyst",
@@ -2530,7 +2530,7 @@
     "lore": null,
     "keywords": []
   },
-  "i'm stuck": {
+  "i m stuck": {
     "name": "i'm stuck",
     "type": "Action",
     "ink": "Amethyst",
@@ -2576,7 +2576,7 @@
       "TO WONDERLAND"
     ]
   },
-  "the sorcerer's spellbook": {
+  "the sorcerer s spellbook": {
     "name": "the sorcerer's spellbook",
     "type": "Item",
     "ink": "Amethyst",
@@ -2798,7 +2798,7 @@
       "I SENTENCE YOU"
     ]
   },
-  "queen of hearts quick-tempered": {
+  "queen of hearts quick tempered": {
     "name": "queen of hearts quick-tempered",
     "type": "Character",
     "ink": "Emerald",
@@ -2902,7 +2902,7 @@
     "lore": null,
     "keywords": []
   },
-  "ratigan's marvelous trap": {
+  "ratigan s marvelous trap": {
     "name": "ratigan's marvelous trap",
     "type": "Item",
     "ink": "Emerald",
@@ -2912,7 +2912,7 @@
       "SNAP! BOOM! TWANG!"
     ]
   },
-  "baloo fun-loving bear": {
+  "baloo fun loving bear": {
     "name": "baloo fun-loving bear",
     "type": "Character",
     "ink": "Ruby",
@@ -2957,7 +2957,7 @@
       "Reckless"
     ]
   },
-  "fidget ratigan's henchman": {
+  "fidget ratigan s henchman": {
     "name": "fidget ratigan's henchman",
     "type": "Character",
     "ink": "Ruby",
@@ -3016,7 +3016,7 @@
       "Evasive"
     ]
   },
-  "minnie mouse wide-eyed diver": {
+  "minnie mouse wide eyed diver": {
     "name": "minnie mouse wide-eyed diver",
     "type": "Character",
     "ink": "Ruby",
@@ -3217,7 +3217,7 @@
       "YOU KNOW WHAT HAPPENS"
     ]
   },
-  "peter pan's dagger": {
+  "peter pan s dagger": {
     "name": "peter pan's dagger",
     "type": "Item",
     "ink": "Ruby",
@@ -3324,7 +3324,7 @@
       "OH, NO YOU DON'T"
     ]
   },
-  "duke weaselton small-time crook": {
+  "duke weaselton small time crook": {
     "name": "duke weaselton small-time crook",
     "type": "Character",
     "ink": "Sapphire",
@@ -3532,7 +3532,7 @@
       "THE BEST I'VE EVER TASTED"
     ]
   },
-  "maurice's workshop": {
+  "maurice s workshop": {
     "name": "maurice's workshop",
     "type": "Item",
     "ink": "Sapphire",
@@ -3636,7 +3636,7 @@
       "THE SINGING SWORD"
     ]
   },
-  "donald duck deep-sea diver": {
+  "donald duck deep sea diver": {
     "name": "donald duck deep-sea diver",
     "type": "Character",
     "ink": "Steel",
@@ -3901,7 +3901,7 @@
       "LET'S MAKE LIKE A TREE"
     ]
   },
-  "bernard brand-new agent": {
+  "bernard brand new agent": {
     "name": "bernard brand-new agent",
     "type": "Character",
     "ink": "Amber",
@@ -4127,7 +4127,7 @@
     "lore": null,
     "keywords": []
   },
-  "boss's orders": {
+  "boss s orders": {
     "name": "boss's orders",
     "type": "Action",
     "ink": "Amber",
@@ -4179,7 +4179,7 @@
       "LIFE GIVER"
     ]
   },
-  "wildcat's wrench": {
+  "wildcat s wrench": {
     "name": "wildcat's wrench",
     "type": "Item",
     "ink": "Amber",
@@ -4208,7 +4208,7 @@
       "LION HOME"
     ]
   },
-  "tiana's palace jazz restaurant": {
+  "tiana s palace jazz restaurant": {
     "name": "tiana's palace jazz restaurant",
     "type": "Location",
     "ink": "Amber",
@@ -4228,7 +4228,7 @@
       "CURIOUSER AND CURIOUSER"
     ]
   },
-  "chernabog's followers creatures of evil": {
+  "chernabog s followers creatures of evil": {
     "name": "chernabog's followers creatures of evil",
     "type": "Character",
     "ink": "Amethyst",
@@ -4486,7 +4486,7 @@
     "lore": null,
     "keywords": []
   },
-  "last-ditch effort": {
+  "last ditch effort": {
     "name": "last-ditch effort",
     "type": "Action",
     "ink": "Amethyst",
@@ -4512,7 +4512,7 @@
       "GOOD OR EVIL"
     ]
   },
-  "the sorcerer's hat": {
+  "the sorcerer s hat": {
     "name": "the sorcerer's hat",
     "type": "Item",
     "ink": "Amethyst",
@@ -4522,7 +4522,7 @@
       "INCREDIBLE ENERGY"
     ]
   },
-  "forbidden mountain maleficent's castle": {
+  "forbidden mountain maleficent s castle": {
     "name": "forbidden mountain maleficent's castle",
     "type": "Location",
     "ink": "Amethyst",
@@ -4530,7 +4530,7 @@
     "lore": 1,
     "keywords": []
   },
-  "the queen's castle mirror chamber": {
+  "the queen s castle mirror chamber": {
     "name": "the queen's castle mirror chamber",
     "type": "Location",
     "ink": "Amethyst",
@@ -4540,7 +4540,7 @@
       "USING THE MIRROR"
     ]
   },
-  "the sorcerer's tower wondrous workspace": {
+  "the sorcerer s tower wondrous workspace": {
     "name": "the sorcerer's tower wondrous workspace",
     "type": "Location",
     "ink": "Amethyst",
@@ -4561,7 +4561,7 @@
       "THE BEAR"
     ]
   },
-  "cursed merfolk ursula's handiwork": {
+  "cursed merfolk ursula s handiwork": {
     "name": "cursed merfolk ursula's handiwork",
     "type": "Character",
     "ink": "Emerald",
@@ -4836,7 +4836,7 @@
       "I GOT TO BE GOING"
     ]
   },
-  "robin's bow": {
+  "robin s bow": {
     "name": "robin's bow",
     "type": "Item",
     "ink": "Emerald",
@@ -4858,7 +4858,7 @@
       "TRAP"
     ]
   },
-  "de vil manor cruella's estate": {
+  "de vil manor cruella s estate": {
     "name": "de vil manor cruella's estate",
     "type": "Location",
     "ink": "Emerald",
@@ -4876,7 +4876,7 @@
       "SURROUNDED BY WATER"
     ]
   },
-  "kuzco's palace home of the emperor": {
+  "kuzco s palace home of the emperor": {
     "name": "kuzco's palace home of the emperor",
     "type": "Location",
     "ink": "Emerald",
@@ -5057,7 +5057,7 @@
       "OVER HERE, TINK"
     ]
   },
-  "peter pan pirate's bane": {
+  "peter pan pirate s bane": {
     "name": "peter pan pirate's bane",
     "type": "Character",
     "ink": "Ruby",
@@ -5118,7 +5118,7 @@
       "Rush"
     ]
   },
-  "trigger not-so-sharp shooter": {
+  "trigger not so sharp shooter": {
     "name": "trigger not-so-sharp shooter",
     "type": "Character",
     "ink": "Ruby",
@@ -5144,7 +5144,7 @@
     "lore": null,
     "keywords": []
   },
-  "i've got a dream": {
+  "i ve got a dream": {
     "name": "i've got a dream",
     "type": "Action",
     "ink": "Ruby",
@@ -5168,7 +5168,7 @@
     "lore": null,
     "keywords": []
   },
-  "maui's fish hook": {
+  "maui s fish hook": {
     "name": "maui's fish hook",
     "type": "Item",
     "ink": "Ruby",
@@ -5197,7 +5197,7 @@
     "lore": 2,
     "keywords": []
   },
-  "jolly roger hook's ship": {
+  "jolly roger hook s ship": {
     "name": "jolly roger hook's ship",
     "type": "Location",
     "ink": "Ruby",
@@ -5369,7 +5369,7 @@
       "THIS GOING TO BE GOOD"
     ]
   },
-  "pluto mickey's clever friend": {
+  "pluto mickey s clever friend": {
     "name": "pluto mickey's clever friend",
     "type": "Character",
     "ink": "Sapphire",
@@ -5455,7 +5455,7 @@
     "lore": null,
     "keywords": []
   },
-  "how far i'll go": {
+  "how far i ll go": {
     "name": "how far i'll go",
     "type": "Action",
     "ink": "Sapphire",
@@ -5501,7 +5501,7 @@
       "NUMBER ONE"
     ]
   },
-  "scrooge's top hat": {
+  "scrooge s top hat": {
     "name": "scrooge's top hat",
     "type": "Item",
     "ink": "Sapphire",
@@ -5521,7 +5521,7 @@
       "SEALED AWAY"
     ]
   },
-  "belle's house maurice's workshop": {
+  "belle s house maurice s workshop": {
     "name": "belle's house maurice's workshop",
     "type": "Location",
     "ink": "Sapphire",
@@ -5531,7 +5531,7 @@
       "LABORATORY"
     ]
   },
-  "mcduck manor scrooge's mansion": {
+  "mcduck manor scrooge s mansion": {
     "name": "mcduck manor scrooge's mansion",
     "type": "Location",
     "ink": "Sapphire",
@@ -5588,7 +5588,7 @@
       "CALL THE TITANS"
     ]
   },
-  "helga sinclair right-hand woman": {
+  "helga sinclair right hand woman": {
     "name": "helga sinclair right-hand woman",
     "type": "Character",
     "ink": "Steel",
@@ -5629,7 +5629,7 @@
       "OKAY, BIG SHOT"
     ]
   },
-  "little john robin's pal": {
+  "little john robin s pal": {
     "name": "little john robin's pal",
     "type": "Character",
     "ink": "Steel",
@@ -5795,7 +5795,7 @@
     "lore": null,
     "keywords": []
   },
-  "ba-boom": {
+  "ba boom": {
     "name": "ba-boom",
     "type": "Action",
     "ink": "Steel",
@@ -5819,7 +5819,7 @@
     "lore": null,
     "keywords": []
   },
-  "captain hook's rapier": {
+  "captain hook s rapier": {
     "name": "captain hook's rapier",
     "type": "Item",
     "ink": "Steel",
@@ -5851,7 +5851,7 @@
       "SHOW THE WAY"
     ]
   },
-  "maui's place of exile hidden island": {
+  "maui s place of exile hidden island": {
     "name": "maui's place of exile hidden island",
     "type": "Location",
     "ink": "Steel",
@@ -5861,7 +5861,7 @@
       "ISOLATED"
     ]
   },
-  "nottingham prince john's castle": {
+  "nottingham prince john s castle": {
     "name": "nottingham prince john's castle",
     "type": "Location",
     "ink": "Steel",
@@ -5957,7 +5957,7 @@
       "WAIT FOR ME!"
     ]
   },
-  "felix madrigal fun-loving family man": {
+  "felix madrigal fun loving family man": {
     "name": "felix madrigal fun-loving family man",
     "type": "Character",
     "ink": "Amber",
@@ -6091,7 +6091,7 @@
       "Bodyguard"
     ]
   },
-  "prince eric ursula's groom": {
+  "prince eric ursula s groom": {
     "name": "prince eric ursula's groom",
     "type": "Character",
     "ink": "Amber",
@@ -6110,7 +6110,7 @@
     "lore": 1,
     "keywords": []
   },
-  "ursula eric's bride": {
+  "ursula eric s bride": {
     "name": "ursula eric's bride",
     "type": "Character",
     "ink": "Amber",
@@ -6131,7 +6131,7 @@
       "Singer"
     ]
   },
-  "bruno's return": {
+  "bruno s return": {
     "name": "bruno's return",
     "type": "Action",
     "ink": "Amber",
@@ -6294,7 +6294,7 @@
       "TEMPEST"
     ]
   },
-  "flotsam ursula's baby": {
+  "flotsam ursula s baby": {
     "name": "flotsam ursula's baby",
     "type": "Character",
     "ink": "Amethyst",
@@ -6305,7 +6305,7 @@
       "OMINOUS PAIR"
     ]
   },
-  "flotsam & jetsam entangling eels": {
+  "flotsam jetsam entangling eels": {
     "name": "flotsam & jetsam entangling eels",
     "type": "Character",
     "ink": "Amethyst",
@@ -6327,7 +6327,7 @@
       "LEAVE IT TO ME"
     ]
   },
-  "jetsam ursula's baby": {
+  "jetsam ursula s baby": {
     "name": "jetsam ursula's baby",
     "type": "Character",
     "ink": "Amethyst",
@@ -6424,7 +6424,7 @@
     "lore": 1,
     "keywords": []
   },
-  "tick-tock ever-present pursuer": {
+  "tick tock ever present pursuer": {
     "name": "tick-tock ever-present pursuer",
     "type": "Character",
     "ink": "Amethyst",
@@ -6493,7 +6493,7 @@
     "lore": null,
     "keywords": []
   },
-  "ursula's plan": {
+  "ursula s plan": {
     "name": "ursula's plan",
     "type": "Action",
     "ink": "Amethyst",
@@ -6521,7 +6521,7 @@
       "MYSTICAL PETALS"
     ]
   },
-  "triton's trident": {
+  "triton s trident": {
     "name": "triton's trident",
     "type": "Item",
     "ink": "Amethyst",
@@ -6541,7 +6541,7 @@
       "OUR HOME"
     ]
   },
-  "ursula's lair eye of the storm": {
+  "ursula s lair eye of the storm": {
     "name": "ursula's lair eye of the storm",
     "type": "Location",
     "ink": "Amethyst",
@@ -6552,7 +6552,7 @@
       "SEAT OF POWER"
     ]
   },
-  "cri-kee lucky cricket": {
+  "cri kee lucky cricket": {
     "name": "cri-kee lucky cricket",
     "type": "Character",
     "ink": "Emerald",
@@ -6574,7 +6574,7 @@
       "CIRCLE FAR AND WIDE"
     ]
   },
-  "diablo maleficent's spy": {
+  "diablo maleficent s spy": {
     "name": "diablo maleficent's spy",
     "type": "Character",
     "ink": "Emerald",
@@ -6820,7 +6820,7 @@
       "Sing Together"
     ]
   },
-  "ursula's trickery": {
+  "ursula s trickery": {
     "name": "ursula's trickery",
     "type": "Action",
     "ink": "Emerald",
@@ -6828,7 +6828,7 @@
     "lore": null,
     "keywords": []
   },
-  "we don't talk about bruno": {
+  "we don t talk about bruno": {
     "name": "we don't talk about bruno",
     "type": "Action",
     "ink": "Emerald",
@@ -6878,7 +6878,7 @@
       "REVITALIZING WATERS"
     ]
   },
-  "ursula's garden full of the unfortunate": {
+  "ursula s garden full of the unfortunate": {
     "name": "ursula's garden full of the unfortunate",
     "type": "Location",
     "ink": "Emerald",
@@ -6906,7 +6906,7 @@
     "lore": 1,
     "keywords": []
   },
-  "fa zhou mulan's father": {
+  "fa zhou mulan s father": {
     "name": "fa zhou mulan's father",
     "type": "Character",
     "ink": "Ruby",
@@ -6967,7 +6967,7 @@
     "lore": 1,
     "keywords": []
   },
-  "li shang general's son": {
+  "li shang general s son": {
     "name": "li shang general's son",
     "type": "Character",
     "ink": "Ruby",
@@ -7139,7 +7139,7 @@
       "ON A ROLL"
     ]
   },
-  "a pirate's life": {
+  "a pirate s life": {
     "name": "a pirate's life",
     "type": "Action",
     "ink": "Ruby",
@@ -7235,7 +7235,7 @@
       "I WAS BORN READY"
     ]
   },
-  "anna true-hearted": {
+  "anna true hearted": {
     "name": "anna true-hearted",
     "type": "Character",
     "ink": "Sapphire",
@@ -7288,7 +7288,7 @@
       "YOU BETTER TALK FAST"
     ]
   },
-  "fa li mulan's mother": {
+  "fa li mulan s mother": {
     "name": "fa li mulan's mother",
     "type": "Character",
     "ink": "Sapphire",
@@ -7296,7 +7296,7 @@
     "lore": 1,
     "keywords": []
   },
-  "flounder collector's companion": {
+  "flounder collector s companion": {
     "name": "flounder collector's companion",
     "type": "Character",
     "ink": "Sapphire",
@@ -7538,7 +7538,7 @@
       "CHILLY LABOR"
     ]
   },
-  "ariel's grotto a secret place": {
+  "ariel s grotto a secret place": {
     "name": "ariel's grotto a secret place",
     "type": "Location",
     "ink": "Sapphire",
@@ -7606,7 +7606,7 @@
       "AMPLIFIED VOICE"
     ]
   },
-  "beast thick-skinned": {
+  "beast thick skinned": {
     "name": "beast thick-skinned",
     "type": "Character",
     "ink": "Steel",
@@ -7616,7 +7616,7 @@
       "Resist"
     ]
   },
-  "chi-fu imperial advisor": {
+  "chi fu imperial advisor": {
     "name": "chi-fu imperial advisor",
     "type": "Character",
     "ink": "Steel",
@@ -7626,7 +7626,7 @@
       "OVERLY CAUTIOUS"
     ]
   },
-  "chien-po imperial soldier": {
+  "chien po imperial soldier": {
     "name": "chien-po imperial soldier",
     "type": "Character",
     "ink": "Steel",
@@ -7746,7 +7746,7 @@
     "lore": 1,
     "keywords": []
   },
-  "philoctetes no-nonsense instructor": {
+  "philoctetes no nonsense instructor": {
     "name": "philoctetes no-nonsense instructor",
     "type": "Character",
     "ink": "Steel",
@@ -7808,7 +7808,7 @@
     "lore": null,
     "keywords": []
   },
-  "i find 'em i flatten 'em": {
+  "i find em i flatten em": {
     "name": "i find 'em i flatten 'em",
     "type": "Action",
     "ink": "Steel",
@@ -7834,7 +7834,7 @@
       "Sing Together"
     ]
   },
-  "triton's decree": {
+  "triton s decree": {
     "name": "triton's decree",
     "type": "Action",
     "ink": "Steel",
@@ -7863,7 +7863,7 @@
       "WITHIN RANGE"
     ]
   },
-  "rls legacy's cannon": {
+  "rls legacy s cannon": {
     "name": "rls legacy's cannon",
     "type": "Item",
     "ink": "Steel",
@@ -7964,7 +7964,7 @@
       "EVERYTHING HAS A PRICE"
     ]
   },
-  "jafar double-crossing vizier": {
+  "jafar double crossing vizier": {
     "name": "jafar double-crossing vizier",
     "type": "Character",
     "ink": null,
@@ -7998,7 +7998,7 @@
     "lore": 2,
     "keywords": []
   },
-  "minnie mouse wild-eyed diver": {
+  "minnie mouse wild eyed diver": {
     "name": "minnie mouse wild-eyed diver",
     "type": "Character",
     "ink": null,
@@ -8039,7 +8039,7 @@
       "PICK ONE!"
     ]
   },
-  "triton's daughters discordant chorus": {
+  "triton s daughters discordant chorus": {
     "name": "triton's daughters discordant chorus",
     "type": "Character",
     "ink": null,
@@ -8153,7 +8153,7 @@
       "PERKS OF POWER"
     ]
   },
-  "ursula's contract": {
+  "ursula s contract": {
     "name": "ursula's contract",
     "type": "Item",
     "ink": null,
@@ -8164,7 +8164,7 @@
       "MINOR STIPULATION"
     ]
   },
-  "ursula's stolen trident": {
+  "ursula s stolen trident": {
     "name": "ursula's stolen trident",
     "type": "Item",
     "ink": null,
@@ -8259,7 +8259,7 @@
       "YOU'VE GOT TO PAY TO PLAY"
     ]
   },
-  "fix-it felix jr trusty builder": {
+  "fix it felix jr trusty builder": {
     "name": "fix-it felix jr trusty builder",
     "type": "Character",
     "ink": "Amber",
@@ -8279,7 +8279,7 @@
       "Singer"
     ]
   },
-  "fix-it felix jr niceland steward": {
+  "fix it felix jr niceland steward": {
     "name": "fix-it felix jr niceland steward",
     "type": "Character",
     "ink": "Amber",
@@ -8322,7 +8322,7 @@
       "PARADE ORDER"
     ]
   },
-  "daisy duck donald's date": {
+  "daisy duck donald s date": {
     "name": "daisy duck donald's date",
     "type": "Character",
     "ink": "Amber",
@@ -8332,7 +8332,7 @@
       "BIG PRIZE"
     ]
   },
-  "fix-it felix jr delighted sightseer": {
+  "fix it felix jr delighted sightseer": {
     "name": "fix-it felix jr delighted sightseer",
     "type": "Character",
     "ink": "Amber",
@@ -8361,7 +8361,7 @@
       "I HEREBY DECREE"
     ]
   },
-  "alan-a-dale rockin' rooster": {
+  "alan a dale rockin rooster": {
     "name": "alan-a-dale rockin' rooster",
     "type": "Character",
     "ink": "Amber",
@@ -8371,7 +8371,7 @@
       "FAN FAVORITE"
     ]
   },
-  "wreck-it ralph admiral underpants": {
+  "wreck it ralph admiral underpants": {
     "name": "wreck-it ralph admiral underpants",
     "type": "Character",
     "ink": "Amber",
@@ -8461,7 +8461,7 @@
       "RENEWING ESSENCE"
     ]
   },
-  "queen's sensor core": {
+  "queen s sensor core": {
     "name": "queen's sensor core",
     "type": "Item",
     "ink": "Amber",
@@ -8482,7 +8482,7 @@
       "AMBER LIGHT"
     ]
   },
-  "rapunzel's tower secluded prison": {
+  "rapunzel s tower secluded prison": {
     "name": "rapunzel's tower secluded prison",
     "type": "Location",
     "ink": "Amber",
@@ -8815,7 +8815,7 @@
       "AMETHYST LIGHT"
     ]
   },
-  "elsa's ice palace place of solitude": {
+  "elsa s ice palace place of solitude": {
     "name": "elsa's ice palace place of solitude",
     "type": "Location",
     "ink": "Amethyst",
@@ -8846,7 +8846,7 @@
       "Ward"
     ]
   },
-  "shenzi scar's accomplice": {
+  "shenzi scar s accomplice": {
     "name": "shenzi scar's accomplice",
     "type": "Character",
     "ink": "Emerald",
@@ -9105,7 +9105,7 @@
     "lore": null,
     "keywords": []
   },
-  "you're welcome": {
+  "you re welcome": {
     "name": "you're welcome",
     "type": "Action",
     "ink": "Emerald",
@@ -9121,7 +9121,7 @@
     "lore": null,
     "keywords": []
   },
-  "prince john's mirror": {
+  "prince john s mirror": {
     "name": "prince john's mirror",
     "type": "Item",
     "ink": "Emerald",
@@ -9181,7 +9181,7 @@
     "lore": 2,
     "keywords": []
   },
-  "wreck-it ralph demolition dude": {
+  "wreck it ralph demolition dude": {
     "name": "wreck-it ralph demolition dude",
     "type": "Character",
     "ink": "Ruby",
@@ -9252,7 +9252,7 @@
       "Rush"
     ]
   },
-  "daisy duck spotless food-fighter": {
+  "daisy duck spotless food fighter": {
     "name": "daisy duck spotless food-fighter",
     "type": "Character",
     "ink": "Ruby",
@@ -9360,7 +9360,7 @@
       "Reckless"
     ]
   },
-  "donald duck daisy's date": {
+  "donald duck daisy s date": {
     "name": "donald duck daisy's date",
     "type": "Character",
     "ink": "Ruby",
@@ -9429,7 +9429,7 @@
     "lore": null,
     "keywords": []
   },
-  "don't let the frostbite bite": {
+  "don t let the frostbite bite": {
     "name": "don't let the frostbite bite",
     "type": "Action",
     "ink": "Ruby",
@@ -9445,7 +9445,7 @@
     "lore": null,
     "keywords": []
   },
-  "who's with me": {
+  "who s with me": {
     "name": "who's with me",
     "type": "Action",
     "ink": "Ruby",
@@ -9493,7 +9493,7 @@
       "ON YOUR MARKS!"
     ]
   },
-  "ratigan's party seedy back room": {
+  "ratigan s party seedy back room": {
     "name": "ratigan's party seedy back room",
     "type": "Location",
     "ink": "Ruby",
@@ -9557,7 +9557,7 @@
       "LONG LIVE THE KING!"
     ]
   },
-  "pacha emperor's guide": {
+  "pacha emperor s guide": {
     "name": "pacha emperor's guide",
     "type": "Character",
     "ink": "Sapphire",
@@ -9645,7 +9645,7 @@
       "EVERYTHING THE LIGHT TOUCHES"
     ]
   },
-  "ludwig von drake self-proclaimed genius": {
+  "ludwig von drake self proclaimed genius": {
     "name": "ludwig von drake self-proclaimed genius",
     "type": "Character",
     "ink": "Sapphire",
@@ -9653,7 +9653,7 @@
     "lore": 3,
     "keywords": []
   },
-  "minnie mouse quick-thinking inventor": {
+  "minnie mouse quick thinking inventor": {
     "name": "minnie mouse quick-thinking inventor",
     "type": "Character",
     "ink": "Sapphire",
@@ -9786,7 +9786,7 @@
       "CONGRATULATIONS, SOLDIER"
     ]
   },
-  "basil's magnifying glass": {
+  "basil s magnifying glass": {
     "name": "basil's magnifying glass",
     "type": "Item",
     "ink": "Sapphire",
@@ -9796,7 +9796,7 @@
       "FIND WHAT'S HIDDEN"
     ]
   },
-  "merlin's carpetbag": {
+  "merlin s carpetbag": {
     "name": "merlin's carpetbag",
     "type": "Item",
     "ink": "Sapphire",
@@ -9827,7 +9827,7 @@
       "WARM WELCOME"
     ]
   },
-  "merlin's cottage the wizard's home": {
+  "merlin s cottage the wizard s home": {
     "name": "merlin's cottage the wizard's home",
     "type": "Location",
     "ink": "Sapphire",
@@ -9955,7 +9955,7 @@
       "Resist"
     ]
   },
-  "snow white fair-hearted": {
+  "snow white fair hearted": {
     "name": "snow white fair-hearted",
     "type": "Character",
     "ink": "Steel",
@@ -10085,7 +10085,7 @@
       "BLOW THE WHISTLE"
     ]
   },
-  "tug-of-war": {
+  "tug of war": {
     "name": "tug-of-war",
     "type": "Action",
     "ink": "Steel",
@@ -10147,7 +10147,7 @@
       "STEEL LIGHT"
     ]
   },
-  "bad-anon villain support center": {
+  "bad anon villain support center": {
     "name": "bad-anon villain support center",
     "type": "Location",
     "ink": "Steel",
@@ -10157,7 +10157,7 @@
       "THERE'S NO ONE I'D RATHER BE THAN ME"
     ]
   },
-  "seven dwarfs' mine secure fortress": {
+  "seven dwarfs mine secure fortress": {
     "name": "seven dwarfs' mine secure fortress",
     "type": "Location",
     "ink": "Steel",
@@ -10198,7 +10198,7 @@
       "WE'RE PIRATES, YOU SEE"
     ]
   },
-  "gopher ship's carpenter": {
+  "gopher ship s carpenter": {
     "name": "gopher ship's carpenter",
     "type": "Character",
     "ink": "Amber",
@@ -10206,7 +10206,7 @@
     "lore": 2,
     "keywords": []
   },
-  "simba happy-go-lucky": {
+  "simba happy go lucky": {
     "name": "simba happy-go-lucky",
     "type": "Character",
     "ink": "Amber",
@@ -10283,7 +10283,7 @@
       "THE VALUE OF FRIENDSHIP"
     ]
   },
-  "monterey jack good-hearted ranger": {
+  "monterey jack good hearted ranger": {
     "name": "monterey jack good-hearted ranger",
     "type": "Character",
     "ink": "Amber",
@@ -10291,7 +10291,7 @@
     "lore": 2,
     "keywords": []
   },
-  "chip 'n' dale recovery rangers": {
+  "chip n dale recovery rangers": {
     "name": "chip 'n' dale recovery rangers",
     "type": "Character",
     "ink": "Amber",
@@ -10434,7 +10434,7 @@
     "lore": null,
     "keywords": []
   },
-  "i won't give in": {
+  "i won t give in": {
     "name": "i won't give in",
     "type": "Action",
     "ink": "Amber",
@@ -10458,7 +10458,7 @@
     "lore": null,
     "keywords": []
   },
-  "naveen's ukulele": {
+  "naveen s ukulele": {
     "name": "naveen's ukulele",
     "type": "Item",
     "ink": "Amber",
@@ -10488,7 +10488,7 @@
       "I MADE HER"
     ]
   },
-  "hundred acre island pooh's home": {
+  "hundred acre island pooh s home": {
     "name": "hundred acre island pooh's home",
     "type": "Location",
     "ink": "Amber",
@@ -10557,7 +10557,7 @@
       "A WEALTH OF HAPPINESS"
     ]
   },
-  "juju mama odie's companion": {
+  "juju mama odie s companion": {
     "name": "juju mama odie's companion",
     "type": "Character",
     "ink": "Amethyst",
@@ -10790,7 +10790,7 @@
     "lore": null,
     "keywords": []
   },
-  "maleficent's staff": {
+  "maleficent s staff": {
     "name": "maleficent's staff",
     "type": "Item",
     "ink": "Amethyst",
@@ -10800,7 +10800,7 @@
       "BACK, FOOLS!"
     ]
   },
-  "mad hatter's teapot": {
+  "mad hatter s teapot": {
     "name": "mad hatter's teapot",
     "type": "Item",
     "ink": "Amethyst",
@@ -10828,7 +10828,7 @@
     "lore": 1,
     "keywords": []
   },
-  "mystical tree mama odie's home": {
+  "mystical tree mama odie s home": {
     "name": "mystical tree mama odie's home",
     "type": "Location",
     "ink": "Amethyst",
@@ -10910,7 +10910,7 @@
     "lore": 1,
     "keywords": []
   },
-  "dawson basil's assistant": {
+  "dawson basil s assistant": {
     "name": "dawson basil's assistant",
     "type": "Character",
     "ink": "Emerald",
@@ -10958,7 +10958,7 @@
       "DISTANT SHORES"
     ]
   },
-  "mertle edmonds lilo's rival": {
+  "mertle edmonds lilo s rival": {
     "name": "mertle edmonds lilo's rival",
     "type": "Character",
     "ink": "Emerald",
@@ -11061,7 +11061,7 @@
       "TWISTS AND TURNS"
     ]
   },
-  "olivia flaversham the toymaker's daughter": {
+  "olivia flaversham the toymaker s daughter": {
     "name": "olivia flaversham the toymaker's daughter",
     "type": "Character",
     "ink": "Emerald",
@@ -11233,7 +11233,7 @@
       "CHART YOUR OWN COURSE"
     ]
   },
-  "vanellope von schweetz gutsy go-getter": {
+  "vanellope von schweetz gutsy go getter": {
     "name": "vanellope von schweetz gutsy go-getter",
     "type": "Character",
     "ink": "Ruby",
@@ -11299,7 +11299,7 @@
       "KEEP DRIVING"
     ]
   },
-  "moana self-taught sailor": {
+  "moana self taught sailor": {
     "name": "moana self-taught sailor",
     "type": "Character",
     "ink": "Ruby",
@@ -11368,7 +11368,7 @@
       "Evasive"
     ]
   },
-  "maui half-shark": {
+  "maui half shark": {
     "name": "maui half-shark",
     "type": "Character",
     "ink": "Ruby",
@@ -11390,7 +11390,7 @@
       "WHAT ARE YOU GONNA DO?"
     ]
   },
-  "tigger in the crow's nest": {
+  "tigger in the crow s nest": {
     "name": "tigger in the crow's nest",
     "type": "Character",
     "ink": "Ruby",
@@ -11463,7 +11463,7 @@
       "SPARKLY ACCESS"
     ]
   },
-  "card soldier's spear": {
+  "card soldier s spear": {
     "name": "card soldier's spear",
     "type": "Item",
     "ink": "Ruby",
@@ -11586,7 +11586,7 @@
       "SWEET TECH"
     ]
   },
-  "heihei not-so-tricky chicken": {
+  "heihei not so tricky chicken": {
     "name": "heihei not-so-tricky chicken",
     "type": "Character",
     "ink": "Sapphire",
@@ -11778,7 +11778,7 @@
     "lore": null,
     "keywords": []
   },
-  "baymax's healthcare chip": {
+  "baymax s healthcare chip": {
     "name": "baymax's healthcare chip",
     "type": "Item",
     "ink": "Sapphire",
@@ -11830,7 +11830,7 @@
       "PUSH THE BOUNDARIES"
     ]
   },
-  "kakamora long-range specialist": {
+  "kakamora long range specialist": {
     "name": "kakamora long-range specialist",
     "type": "Character",
     "ink": "Steel",
@@ -11909,7 +11909,7 @@
     "lore": 1,
     "keywords": []
   },
-  "king hubert phillip's father": {
+  "king hubert phillip s father": {
     "name": "king hubert phillip's father",
     "type": "Character",
     "ink": "Steel",
@@ -11927,7 +11927,7 @@
       "Challenger"
     ]
   },
-  "john silver ship's cook": {
+  "john silver ship s cook": {
     "name": "john silver ship's cook",
     "type": "Character",
     "ink": "Steel",
@@ -11937,7 +11937,7 @@
       "HUNK OF HARDWARE"
     ]
   },
-  "mr arrow legacy's first mate": {
+  "mr arrow legacy s first mate": {
     "name": "mr arrow legacy's first mate",
     "type": "Character",
     "ink": "Steel",
@@ -12016,7 +12016,7 @@
     "lore": 4,
     "keywords": []
   },
-  "wreck-it ralph ham hands": {
+  "wreck it ralph ham hands": {
     "name": "wreck-it ralph ham hands",
     "type": "Character",
     "ink": "Steel",
@@ -12048,7 +12048,7 @@
       "EVERYTHING SHIPSHAPE"
     ]
   },
-  "jafar power-hungry vizier": {
+  "jafar power hungry vizier": {
     "name": "jafar power-hungry vizier",
     "type": "Character",
     "ink": "Steel",
@@ -12078,7 +12078,7 @@
     "lore": null,
     "keywords": []
   },
-  "i'm still here": {
+  "i m still here": {
     "name": "i'm still here",
     "type": "Action",
     "ink": "Steel",
@@ -12110,7 +12110,7 @@
     "lore": null,
     "keywords": []
   },
-  "king's sensor core": {
+  "king s sensor core": {
     "name": "king's sensor core",
     "type": "Item",
     "ink": "Steel",
@@ -12259,7 +12259,7 @@
       "NO THANKS NECESSARY"
     ]
   },
-  "tramp street-smart dog": {
+  "tramp street smart dog": {
     "name": "tramp street-smart dog",
     "type": "Character",
     "ink": "Amber-Emerald",
@@ -12374,7 +12374,7 @@
       "SWEET REVENGE"
     ]
   },
-  "penny bolt's person": {
+  "penny bolt s person": {
     "name": "penny bolt's person",
     "type": "Character",
     "ink": "Amber-Steel",
@@ -12384,7 +12384,7 @@
       "ENDURING LOYALTY"
     ]
   },
-  "fix-it felix jr pint-sized hero": {
+  "fix it felix jr pint sized hero": {
     "name": "fix-it felix jr pint-sized hero",
     "type": "Character",
     "ink": "Amber-Ruby",
@@ -12436,7 +12436,7 @@
       "BACK TO START POSITIONS!"
     ]
   },
-  "wreck-it ralph hero's duty": {
+  "wreck it ralph hero s duty": {
     "name": "wreck-it ralph hero's duty",
     "type": "Character",
     "ink": "Amber",
@@ -12528,7 +12528,7 @@
       "HER OWN SPECIAL GIFT"
     ]
   },
-  "calhoun battle-tested": {
+  "calhoun battle tested": {
     "name": "calhoun battle-tested",
     "type": "Character",
     "ink": "Amber",
@@ -12813,7 +12813,7 @@
       "NOW YOU'VE UPSET ME"
     ]
   },
-  "sven keen-eyed reindeer": {
+  "sven keen eyed reindeer": {
     "name": "sven keen-eyed reindeer",
     "type": "Character",
     "ink": "Amethyst-Sapphire",
@@ -12921,7 +12921,7 @@
       "NO ORDINARY APPLE"
     ]
   },
-  "panic high-strung imp": {
+  "panic high strung imp": {
     "name": "panic high-strung imp",
     "type": "Character",
     "ink": "Amethyst",
@@ -13041,7 +13041,7 @@
       "SHHHHH"
     ]
   },
-  "thomas o'malley feline charmer": {
+  "thomas o malley feline charmer": {
     "name": "thomas o'malley feline charmer",
     "type": "Character",
     "ink": "Emerald",
@@ -13191,7 +13191,7 @@
       "FULL PACK"
     ]
   },
-  "tweedledee & tweedledum strange storytellers": {
+  "tweedledee tweedledum strange storytellers": {
     "name": "tweedledee & tweedledum strange storytellers",
     "type": "Character",
     "ink": "Emerald-Ruby",
@@ -13334,7 +13334,7 @@
     "lore": null,
     "keywords": []
   },
-  "he's a tramp": {
+  "he s a tramp": {
     "name": "he's a tramp",
     "type": "Action",
     "ink": "Emerald",
@@ -13432,7 +13432,7 @@
       "REPURPOSE"
     ]
   },
-  "cy-bug invasive enemy": {
+  "cy bug invasive enemy": {
     "name": "cy-bug invasive enemy",
     "type": "Character",
     "ink": "Ruby",
@@ -13480,7 +13480,7 @@
     "lore": 1,
     "keywords": []
   },
-  "beagle boys small-time crooks": {
+  "beagle boys small time crooks": {
     "name": "beagle boys small-time crooks",
     "type": "Character",
     "ink": "Ruby-Sapphire",
@@ -13586,7 +13586,7 @@
       "EXCEPTIONAL LEADER"
     ]
   },
-  "baloo ol' iron paws": {
+  "baloo ol iron paws": {
     "name": "baloo ol' iron paws",
     "type": "Character",
     "ink": "Ruby",
@@ -13632,7 +13632,7 @@
     "lore": 1,
     "keywords": []
   },
-  "we've got company": {
+  "we ve got company": {
     "name": "we've got company",
     "type": "Action",
     "ink": "Ruby",
@@ -13668,7 +13668,7 @@
       "FIXED IN NO TIME"
     ]
   },
-  "maurice's machine": {
+  "maurice s machine": {
     "name": "maurice's machine",
     "type": "Item",
     "ink": "Ruby-Sapphire",
@@ -13678,7 +13678,7 @@
       "BREAK DOWN"
     ]
   },
-  "devil's eye diamond": {
+  "devil s eye diamond": {
     "name": "devil's eye diamond",
     "type": "Item",
     "ink": "Ruby",
@@ -13720,7 +13720,7 @@
       "PROUD TO SERVE"
     ]
   },
-  "monsieur d'arque despicable proprietor": {
+  "monsieur d arque despicable proprietor": {
     "name": "monsieur d'arque despicable proprietor",
     "type": "Character",
     "ink": "Sapphire",
@@ -13820,7 +13820,7 @@
       "I'LL SHOW YOU"
     ]
   },
-  "pepper quick-thinking puppy": {
+  "pepper quick thinking puppy": {
     "name": "pepper quick-thinking puppy",
     "type": "Character",
     "ink": "Sapphire",
@@ -13950,7 +13950,7 @@
       "BRILLIANT SHINE"
     ]
   },
-  "baymax's charging station": {
+  "baymax s charging station": {
     "name": "baymax's charging station",
     "type": "Item",
     "ink": "Sapphire",
@@ -13960,7 +13960,7 @@
       "ENERGY CONVERTER"
     ]
   },
-  "dr calico green-eyed man": {
+  "dr calico green eyed man": {
     "name": "dr calico green-eyed man",
     "type": "Character",
     "ink": "Steel",
@@ -14058,7 +14058,7 @@
       "THAT'S BETTER"
     ]
   },
-  "tick-tock relentless crocodile": {
+  "tick tock relentless crocodile": {
     "name": "tick-tock relentless crocodile",
     "type": "Character",
     "ink": "Steel",
@@ -14262,7 +14262,7 @@
       "TRUE VALOR"
     ]
   },
-  "ludwig von drake all-around expert": {
+  "ludwig von drake all around expert": {
     "name": "ludwig von drake all-around expert",
     "type": "Character",
     "ink": "Amber-Sapphire",
@@ -14342,7 +14342,7 @@
       "KEEPING WATCH"
     ]
   },
-  "rhino one-sixteenth wolf": {
+  "rhino one sixteenth wolf": {
     "name": "rhino one-sixteenth wolf",
     "type": "Character",
     "ink": "Amber",
@@ -14435,7 +14435,7 @@
       "A NEW ROSTER"
     ]
   },
-  "wreck-it ralph big lug": {
+  "wreck it ralph big lug": {
     "name": "wreck-it ralph big lug",
     "type": "Character",
     "ink": "Amber-Ruby",
@@ -14510,7 +14510,7 @@
       "EPIC BALL OF AWESOME"
     ]
   },
-  "antonio's jaguar faithful companion": {
+  "antonio s jaguar faithful companion": {
     "name": "antonio's jaguar faithful companion",
     "type": "Character",
     "ink": "Amber",
@@ -14520,7 +14520,7 @@
       "YOU WANT TO GO WHERE?"
     ]
   },
-  "calhoun hard-nosed leader": {
+  "calhoun hard nosed leader": {
     "name": "calhoun hard-nosed leader",
     "type": "Character",
     "ink": "Amber",
@@ -14592,7 +14592,7 @@
     "lore": null,
     "keywords": []
   },
-  "she's your person": {
+  "she s your person": {
     "name": "she's your person",
     "type": "Action",
     "ink": "Amber-Steel",
@@ -14626,7 +14626,7 @@
     "lore": null,
     "keywords": []
   },
-  "the nephews' piggy bank": {
+  "the nephews piggy bank": {
     "name": "the nephews' piggy bank",
     "type": "Item",
     "ink": "Amber",
@@ -14699,7 +14699,7 @@
       "GRASPING TRUNK"
     ]
   },
-  "bruno madrigal single-minded": {
+  "bruno madrigal single minded": {
     "name": "bruno madrigal single-minded",
     "type": "Character",
     "ink": "Amethyst",
@@ -14749,7 +14749,7 @@
       "WE ONLY TRUST NATURE"
     ]
   },
-  "ryder fleet-footed infiltrator": {
+  "ryder fleet footed infiltrator": {
     "name": "ryder fleet-footed infiltrator",
     "type": "Character",
     "ink": "Amethyst",
@@ -14767,7 +14767,7 @@
     "lore": 1,
     "keywords": []
   },
-  "poe de spell magica's brother": {
+  "poe de spell magica s brother": {
     "name": "poe de spell magica's brother",
     "type": "Character",
     "ink": "Amethyst",
@@ -14804,7 +14804,7 @@
       "GOT TO KEEP REAL QUIET"
     ]
   },
-  "jiminy cricket level-headed and wise": {
+  "jiminy cricket level headed and wise": {
     "name": "jiminy cricket level-headed and wise",
     "type": "Character",
     "ink": "Amethyst",
@@ -14890,7 +14890,7 @@
       "MAKE WAY, COMING THROUGH!"
     ]
   },
-  "mother gothel knows what's best": {
+  "mother gothel knows what s best": {
     "name": "mother gothel knows what's best",
     "type": "Character",
     "ink": "Amethyst-Ruby",
@@ -15006,7 +15006,7 @@
     "lore": null,
     "keywords": []
   },
-  "everybody's got a weakness": {
+  "everybody s got a weakness": {
     "name": "everybody's got a weakness",
     "type": "Action",
     "ink": "Amethyst",
@@ -15094,7 +15094,7 @@
       "NOTHING TO IT"
     ]
   },
-  "march hare hare-brained eccentric": {
+  "march hare hare brained eccentric": {
     "name": "march hare hare-brained eccentric",
     "type": "Character",
     "ink": "Emerald",
@@ -15114,7 +15114,7 @@
       "SPITTING FIRE!"
     ]
   },
-  "mad dog karnage's first mate": {
+  "mad dog karnage s first mate": {
     "name": "mad dog karnage's first mate",
     "type": "Character",
     "ink": "Emerald",
@@ -15161,7 +15161,7 @@
       "I'LL HANDLE THIS"
     ]
   },
-  "fred giant-sized": {
+  "fred giant sized": {
     "name": "fred giant-sized",
     "type": "Character",
     "ink": "Emerald",
@@ -15480,7 +15480,7 @@
       "BREAK APART"
     ]
   },
-  "mushu fast-talking dragon": {
+  "mushu fast talking dragon": {
     "name": "mushu fast-talking dragon",
     "type": "Character",
     "ink": "Ruby",
@@ -15490,7 +15490,7 @@
       "LET'S GET THIS SHOW ON THE ROAD"
     ]
   },
-  "cri-kee part of the team": {
+  "cri kee part of the team": {
     "name": "cri-kee part of the team",
     "type": "Character",
     "ink": "Ruby",
@@ -15528,7 +15528,7 @@
       "YOU CAN DO IT!"
     ]
   },
-  "wreck-it ralph back seat driver": {
+  "wreck it ralph back seat driver": {
     "name": "wreck-it ralph back seat driver",
     "type": "Character",
     "ink": "Ruby",
@@ -15644,7 +15644,7 @@
       "PRECOCIOUS FRIEND"
     ]
   },
-  "prince john fraidy-cat": {
+  "prince john fraidy cat": {
     "name": "prince john fraidy-cat",
     "type": "Character",
     "ink": "Ruby",
@@ -15654,7 +15654,7 @@
       "HELP! HELP!"
     ]
   },
-  "nothing we won't do": {
+  "nothing we won t do": {
     "name": "nothing we won't do",
     "type": "Action",
     "ink": "Ruby",
@@ -15688,7 +15688,7 @@
     "lore": null,
     "keywords": []
   },
-  "most everyone's mad here": {
+  "most everyone s mad here": {
     "name": "most everyone's mad here",
     "type": "Action",
     "ink": "Ruby",
@@ -15696,7 +15696,7 @@
     "lore": null,
     "keywords": []
   },
-  "the sword of shan-yu": {
+  "the sword of shan yu": {
     "name": "the sword of shan-yu",
     "type": "Item",
     "ink": "Ruby",
@@ -15865,7 +15865,7 @@
       "NO MORE BOOKS"
     ]
   },
-  "bernard over-prepared": {
+  "bernard over prepared": {
     "name": "bernard over-prepared",
     "type": "Character",
     "ink": "Sapphire-Steel",
@@ -15961,7 +15961,7 @@
       "IS IT ON YET?"
     ]
   },
-  "belle's favorite book": {
+  "belle s favorite book": {
     "name": "belle's favorite book",
     "type": "Item",
     "ink": "Sapphire",
@@ -16020,7 +16020,7 @@
       "UNWELCOME PROPOSAL"
     ]
   },
-  "dumptruck karnage's second mate": {
+  "dumptruck karnage s second mate": {
     "name": "dumptruck karnage's second mate",
     "type": "Character",
     "ink": "Steel",
@@ -16137,7 +16137,7 @@
       "I JUST LIKE TO BLOW THINGS UP"
     ]
   },
-  "namaari single-minded rival": {
+  "namaari single minded rival": {
     "name": "namaari single-minded rival",
     "type": "Character",
     "ink": "Steel",
@@ -16729,7 +16729,7 @@
       "Singer"
     ]
   },
-  "powerline world's greatest rock star": {
+  "powerline world s greatest rock star": {
     "name": "powerline world's greatest rock star",
     "type": "Character",
     "ink": "Ruby",
@@ -16753,7 +16753,7 @@
       "CROWNING ACHIEVEMENT"
     ]
   },
-  "max goof rockin' teen": {
+  "max goof rockin teen": {
     "name": "max goof rockin' teen",
     "type": "Character",
     "ink": "Ruby",
@@ -17158,7 +17158,7 @@
     "lore": null,
     "keywords": []
   },
-  "della's moon lullaby": {
+  "della s moon lullaby": {
     "name": "della's moon lullaby",
     "type": "Action",
     "ink": "Amber",
@@ -17185,7 +17185,7 @@
       "WHISPERED POWER"
     ]
   },
-  "webby's diary": {
+  "webby s diary": {
     "name": "webby's diary",
     "type": "Item",
     "ink": "Amber",
@@ -17217,7 +17217,7 @@
       "COME ON OUT"
     ]
   },
-  "duckburg funso's funzone": {
+  "duckburg funso s funzone": {
     "name": "duckburg funso's funzone",
     "type": "Location",
     "ink": "Amber",
@@ -17306,7 +17306,7 @@
       "ARCANE CONNECTION"
     ]
   },
-  "iago stompin' mad": {
+  "iago stompin mad": {
     "name": "iago stompin' mad",
     "type": "Character",
     "ink": "Amethyst",
@@ -17336,7 +17336,7 @@
       "CLOSER LOOK"
     ]
   },
-  "mushu braggin' dragon": {
+  "mushu braggin dragon": {
     "name": "mushu braggin' dragon",
     "type": "Character",
     "ink": "Amethyst",
@@ -17496,7 +17496,7 @@
     "lore": null,
     "keywords": []
   },
-  "can't hold it back anymore": {
+  "can t hold it back anymore": {
     "name": "can't hold it back anymore",
     "type": "Action",
     "ink": "Amethyst",
@@ -17559,7 +17559,7 @@
       "STARTLING DISCOVERY"
     ]
   },
-  "baloo laid-back bear": {
+  "baloo laid back bear": {
     "name": "baloo laid-back bear",
     "type": "Character",
     "ink": "Emerald",
@@ -17663,7 +17663,7 @@
       "Evasive"
     ]
   },
-  "emily quackfaster level-headed librarian": {
+  "emily quackfaster level headed librarian": {
     "name": "emily quackfaster level-headed librarian",
     "type": "Character",
     "ink": "Emerald",
@@ -17734,7 +17734,7 @@
       "I'LL BE FINE"
     ]
   },
-  "goldie o'gilt cunning prospector": {
+  "goldie o gilt cunning prospector": {
     "name": "goldie o'gilt cunning prospector",
     "type": "Character",
     "ink": "Emerald",
@@ -17942,7 +17942,7 @@
       "ON PATROL"
     ]
   },
-  "shere khan keen-eyed hunter": {
+  "shere khan keen eyed hunter": {
     "name": "shere khan keen-eyed hunter",
     "type": "Character",
     "ink": "Ruby",
@@ -17970,7 +17970,7 @@
       "SOMEBODY'S GOT TO USE IT"
     ]
   },
-  "katrina van tassel rosy-cheeked lass": {
+  "katrina van tassel rosy cheeked lass": {
     "name": "katrina van tassel rosy-cheeked lass",
     "type": "Character",
     "ink": "Ruby",
@@ -18194,7 +18194,7 @@
     "lore": null,
     "keywords": []
   },
-  "mushu's rocket": {
+  "mushu s rocket": {
     "name": "mushu's rocket",
     "type": "Item",
     "ink": "Ruby",
@@ -18273,7 +18273,7 @@
       "Support"
     ]
   },
-  "cri-kee good luck charm": {
+  "cri kee good luck charm": {
     "name": "cri-kee good luck charm",
     "type": "Character",
     "ink": "Sapphire",
@@ -18293,7 +18293,7 @@
       "ENSNARL"
     ]
   },
-  "fergus mcduck scrooge's father": {
+  "fergus mcduck scrooge s father": {
     "name": "fergus mcduck scrooge's father",
     "type": "Character",
     "ink": "Sapphire",
@@ -18454,7 +18454,7 @@
       "WORTH MINING"
     ]
   },
-  "hen wen's visions": {
+  "hen wen s visions": {
     "name": "hen wen's visions",
     "type": "Action",
     "ink": "Sapphire",
@@ -18494,7 +18494,7 @@
     "lore": null,
     "keywords": []
   },
-  "detective's badge": {
+  "detective s badge": {
     "name": "detective's badge",
     "type": "Item",
     "ink": "Sapphire",
@@ -18514,7 +18514,7 @@
       "ENERGY CAPTURE"
     ]
   },
-  "fairy godmother's wand": {
+  "fairy godmother s wand": {
     "name": "fairy godmother's wand",
     "type": "Item",
     "ink": "Sapphire",
@@ -18718,7 +18718,7 @@
       "CASE CLOSED"
     ]
   },
-  "mayor winddancer actor-turned-politician": {
+  "mayor winddancer actor turned politician": {
     "name": "mayor winddancer actor-turned-politician",
     "type": "Character",
     "ink": "Steel",
@@ -18791,7 +18791,7 @@
       "Bodyguard"
     ]
   },
-  "but i'm much faster": {
+  "but i m much faster": {
     "name": "but i'm much faster",
     "type": "Action",
     "ink": "Steel",
@@ -18815,7 +18815,7 @@
     "lore": null,
     "keywords": []
   },
-  "the game's afoot": {
+  "the game s afoot": {
     "name": "the game's afoot",
     "type": "Action",
     "ink": "Steel",
@@ -18886,7 +18886,7 @@
       "PROTECT THIS CASTLE"
     ]
   },
-  "thomas wide-eyed recruit": {
+  "thomas wide eyed recruit": {
     "name": "thomas wide-eyed recruit",
     "type": "Character",
     "ink": "Amber",
@@ -19198,7 +19198,7 @@
     "lore": null,
     "keywords": []
   },
-  "john smith's compass": {
+  "john smith s compass": {
     "name": "john smith's compass",
     "type": "Item",
     "ink": "Amber",
@@ -19227,7 +19227,7 @@
       "PLAYFUL SLIDE"
     ]
   },
-  "alice well-read whisper": {
+  "alice well read whisper": {
     "name": "alice well-read whisper",
     "type": "Character",
     "ink": "Amethyst",
@@ -19268,7 +19268,7 @@
       "LOOK OUT!"
     ]
   },
-  "morgana macawber self-centered spellcaster": {
+  "morgana macawber self centered spellcaster": {
     "name": "morgana macawber self-centered spellcaster",
     "type": "Character",
     "ink": "Amethyst",
@@ -19504,7 +19504,7 @@
     "lore": null,
     "keywords": []
   },
-  "mother's necklace": {
+  "mother s necklace": {
     "name": "mother's necklace",
     "type": "Item",
     "ink": "Amethyst",
@@ -19592,7 +19592,7 @@
       "OOH, I'M SCARED"
     ]
   },
-  "chien-po snow warrior": {
+  "chien po snow warrior": {
     "name": "chien-po snow warrior",
     "type": "Character",
     "ink": "Emerald",
@@ -19832,7 +19832,7 @@
       "BARRICADE"
     ]
   },
-  "rafiki's bakora staff": {
+  "rafiki s bakora staff": {
     "name": "rafiki's bakora staff",
     "type": "Item",
     "ink": "Emerald",
@@ -19874,7 +19874,7 @@
       "EASY TO MISS"
     ]
   },
-  "wreck-it ralph raging wrecker": {
+  "wreck it ralph raging wrecker": {
     "name": "wreck-it ralph raging wrecker",
     "type": "Character",
     "ink": "Ruby",
@@ -20048,7 +20048,7 @@
       "Evasive"
     ]
   },
-  "goofy marley's clumsy spirit": {
+  "goofy marley s clumsy spirit": {
     "name": "goofy marley's clumsy spirit",
     "type": "Character",
     "ink": "Ruby",
@@ -20123,7 +20123,7 @@
       "THE FOOD OF GENEROSITY"
     ]
   },
-  "nani's payback": {
+  "nani s payback": {
     "name": "nani's payback",
     "type": "Action",
     "ink": "Ruby",
@@ -20173,7 +20173,7 @@
       "HAUNTING PRESENCE"
     ]
   },
-  "kristoff's lute": {
+  "kristoff s lute": {
     "name": "kristoff's lute",
     "type": "Item",
     "ink": "Ruby",
@@ -20183,7 +20183,7 @@
       "MOMENT OF INSPIRATION"
     ]
   },
-  "scrooge's counting house ebenezer's office": {
+  "scrooge s counting house ebenezer s office": {
     "name": "scrooge's counting house ebenezer's office",
     "type": "Location",
     "ink": "Ruby",
@@ -20205,7 +20205,7 @@
       "ANOTHER CHANCE"
     ]
   },
-  "beast's castle winter gardens": {
+  "beast s castle winter gardens": {
     "name": "beast's castle winter gardens",
     "type": "Location",
     "ink": "Ruby",
@@ -20244,7 +20244,7 @@
     "lore": 1,
     "keywords": []
   },
-  "mickey mouse tiny tim's father": {
+  "mickey mouse tiny tim s father": {
     "name": "mickey mouse tiny tim's father",
     "type": "Character",
     "ink": "Sapphire",
@@ -20252,7 +20252,7 @@
     "lore": 2,
     "keywords": []
   },
-  "minnie mouse tiny tim's mother": {
+  "minnie mouse tiny tim s mother": {
     "name": "minnie mouse tiny tim's mother",
     "type": "Character",
     "ink": "Sapphire",
@@ -20496,7 +20496,7 @@
       "CLOUD OF MYSTERY"
     ]
   },
-  "tiny tim's crutch": {
+  "tiny tim s crutch": {
     "name": "tiny tim's crutch",
     "type": "Item",
     "ink": "Sapphire",
@@ -20506,7 +20506,7 @@
       "AT YOUR SIDE"
     ]
   },
-  "darkwing's chair set": {
+  "darkwing s chair set": {
     "name": "darkwing's chair set",
     "type": "Item",
     "ink": "Sapphire",
@@ -20517,7 +20517,7 @@
       "SUDDEN SPIN"
     ]
   },
-  "darkwing's gas device": {
+  "darkwing s gas device": {
     "name": "darkwing's gas device",
     "type": "Item",
     "ink": "Sapphire",
@@ -20585,7 +20585,7 @@
       "Challenger"
     ]
   },
-  "gantu hamsterviel's accomplice": {
+  "gantu hamsterviel s accomplice": {
     "name": "gantu hamsterviel's accomplice",
     "type": "Character",
     "ink": "Steel",
@@ -20635,7 +20635,7 @@
       "Alert"
     ]
   },
-  "mchorn ice-cold officer": {
+  "mchorn ice cold officer": {
     "name": "mchorn ice-cold officer",
     "type": "Character",
     "ink": "Steel",
@@ -20808,7 +20808,7 @@
     "lore": null,
     "keywords": []
   },
-  "let's get dangerous": {
+  "let s get dangerous": {
     "name": "let's get dangerous",
     "type": "Action",
     "ink": "Steel",
@@ -20832,7 +20832,7 @@
     "lore": null,
     "keywords": []
   },
-  "infra-pink ultra scan specs": {
+  "infra pink ultra scan specs": {
     "name": "infra-pink ultra scan specs",
     "type": "Item",
     "ink": "Steel",
@@ -20934,7 +20934,7 @@
       "Support"
     ]
   },
-  "alan-a-dale loyal bard": {
+  "alan a dale loyal bard": {
     "name": "alan-a-dale loyal bard",
     "type": "Character",
     "ink": "Amber",
@@ -21148,7 +21148,7 @@
       "RANGER RESOURCEFULNESS"
     ]
   },
-  "ranger team-up": {
+  "ranger team up": {
     "name": "ranger team-up",
     "type": "Action",
     "ink": "Amber",
@@ -21164,7 +21164,7 @@
     "lore": null,
     "keywords": []
   },
-  "you've got a friend in me": {
+  "you ve got a friend in me": {
     "name": "you've got a friend in me",
     "type": "Action",
     "ink": "Amber",
@@ -21199,7 +21199,7 @@
       "PACK IT UP"
     ]
   },
-  "andy's room home base": {
+  "andy s room home base": {
     "name": "andy's room home base",
     "type": "Location",
     "ink": "Amber",
@@ -21209,7 +21209,7 @@
       "ANDY'S FAVORITE"
     ]
   },
-  "mor'du wicked with pride": {
+  "mor du wicked with pride": {
     "name": "mor'du wicked with pride",
     "type": "Character",
     "ink": "Amethyst",
@@ -21327,7 +21327,7 @@
       "Evasive"
     ]
   },
-  "will o' the wisp forest spirit": {
+  "will o the wisp forest spirit": {
     "name": "will o' the wisp forest spirit",
     "type": "Character",
     "ink": "Amethyst",
@@ -21358,7 +21358,7 @@
       "FLEXIBLE THINKING"
     ]
   },
-  "hamish hubert & harris making mischief": {
+  "hamish hubert harris making mischief": {
     "name": "hamish hubert & harris making mischief",
     "type": "Character",
     "ink": "Amethyst",
@@ -21431,7 +21431,7 @@
       "SILVER LINING"
     ]
   },
-  "mor'du savage cursed prince": {
+  "mor du savage cursed prince": {
     "name": "mor'du savage cursed prince",
     "type": "Character",
     "ink": "Amethyst",
@@ -21512,7 +21512,7 @@
     "lore": null,
     "keywords": []
   },
-  "don't be nervous": {
+  "don t be nervous": {
     "name": "don't be nervous",
     "type": "Action",
     "ink": "Amethyst",
@@ -21563,7 +21563,7 @@
       "Ward"
     ]
   },
-  "hamish hubert & harris troublemaking triplets": {
+  "hamish hubert harris troublemaking triplets": {
     "name": "hamish hubert & harris troublemaking triplets",
     "type": "Character",
     "ink": "Emerald",
@@ -21573,7 +21573,7 @@
       "Evasive"
     ]
   },
-  "young macguffin soft-spoken son": {
+  "young macguffin soft spoken son": {
     "name": "young macguffin soft-spoken son",
     "type": "Character",
     "ink": "Emerald",
@@ -21629,7 +21629,7 @@
     "lore": 1,
     "keywords": []
   },
-  "rc remote-controlled car": {
+  "rc remote controlled car": {
     "name": "rc remote-controlled car",
     "type": "Character",
     "ink": "Emerald",
@@ -21808,7 +21808,7 @@
       "COMBAT TRAINING"
     ]
   },
-  "the huntsman on the queen's orders": {
+  "the huntsman on the queen s orders": {
     "name": "the huntsman on the queen's orders",
     "type": "Character",
     "ink": "Emerald",
@@ -21842,7 +21842,7 @@
     "lore": null,
     "keywords": []
   },
-  "buzz's arm": {
+  "buzz s arm": {
     "name": "buzz's arm",
     "type": "Item",
     "ink": "Emerald",
@@ -21863,7 +21863,7 @@
       "THE CLAW CHOOSES"
     ]
   },
-  "gyro-evac": {
+  "gyro evac": {
     "name": "gyro-evac",
     "type": "Item",
     "ink": "Emerald",
@@ -21874,7 +21874,7 @@
       "CRASH LANDING"
     ]
   },
-  "merida's bow": {
+  "merida s bow": {
     "name": "merida's bow",
     "type": "Item",
     "ink": "Emerald",
@@ -21973,7 +21973,7 @@
       "PRICE OF PROGRESS"
     ]
   },
-  "jingle joe sid's toy": {
+  "jingle joe sid s toy": {
     "name": "jingle joe sid's toy",
     "type": "Character",
     "ink": "Ruby",
@@ -21983,7 +21983,7 @@
       "TURN OUT THE LIGHT"
     ]
   },
-  "wind-up frog sid's toy": {
+  "wind up frog sid s toy": {
     "name": "wind-up frog sid's toy",
     "type": "Character",
     "ink": "Ruby",
@@ -21993,7 +21993,7 @@
       "ADDED TRACTION"
     ]
   },
-  "roller bob sid's toy": {
+  "roller bob sid s toy": {
     "name": "roller bob sid's toy",
     "type": "Character",
     "ink": "Ruby",
@@ -22003,7 +22003,7 @@
       "TIME TO MOVE"
     ]
   },
-  "hand-in-the-box sid's toy": {
+  "hand in the box sid s toy": {
     "name": "hand-in-the-box sid's toy",
     "type": "Character",
     "ink": "Ruby",
@@ -22052,7 +22052,7 @@
       "Rush"
     ]
   },
-  "babyhead leader of sid's toys": {
+  "babyhead leader of sid s toys": {
     "name": "babyhead leader of sid's toys",
     "type": "Character",
     "ink": "Ruby",
@@ -22063,7 +22063,7 @@
       "REPLACEMENT PARTS"
     ]
   },
-  "bouncing ducky sid's toy": {
+  "bouncing ducky sid s toy": {
     "name": "bouncing ducky sid's toy",
     "type": "Character",
     "ink": "Ruby",
@@ -22074,7 +22074,7 @@
       "REPURPOSED"
     ]
   },
-  "jack-jack parr incredible potential": {
+  "jack jack parr incredible potential": {
     "name": "jack-jack parr incredible potential",
     "type": "Character",
     "ink": "Ruby",
@@ -22148,7 +22148,7 @@
       "LET'S DO THIS!"
     ]
   },
-  "pterodactyl janie doll sid's toy": {
+  "pterodactyl janie doll sid s toy": {
     "name": "pterodactyl janie doll sid's toy",
     "type": "Character",
     "ink": "Ruby",
@@ -22198,7 +22198,7 @@
     "lore": null,
     "keywords": []
   },
-  "amazu's inkcaster": {
+  "amazu s inkcaster": {
     "name": "amazu's inkcaster",
     "type": "Item",
     "ink": "Ruby",
@@ -22219,7 +22219,7 @@
       "SUCCESSFUL EXPEDITION"
     ]
   },
-  "leviathan's lair dangerous ground": {
+  "leviathan s lair dangerous ground": {
     "name": "leviathan's lair dangerous ground",
     "type": "Location",
     "ink": "Ruby",
@@ -22255,7 +22255,7 @@
       "Ward"
     ]
   },
-  "fauna good-natured fairy": {
+  "fauna good natured fairy": {
     "name": "fauna good-natured fairy",
     "type": "Character",
     "ink": "Sapphire",
@@ -22265,7 +22265,7 @@
       "Support"
     ]
   },
-  "flora strong-willed fairy": {
+  "flora strong willed fairy": {
     "name": "flora strong-willed fairy",
     "type": "Character",
     "ink": "Sapphire",
@@ -22513,7 +22513,7 @@
     "lore": null,
     "keywords": []
   },
-  "julieta's arepas": {
+  "julieta s arepas": {
     "name": "julieta's arepas",
     "type": "Item",
     "ink": "Sapphire",
@@ -22535,7 +22535,7 @@
       "BIG LIFT"
     ]
   },
-  "gadget's goggles": {
+  "gadget s goggles": {
     "name": "gadget's goggles",
     "type": "Item",
     "ink": "Sapphire",
@@ -22545,7 +22545,7 @@
       "ENHANCED VISION"
     ]
   },
-  "shepherd's journal": {
+  "shepherd s journal": {
     "name": "shepherd's journal",
     "type": "Item",
     "ink": "Sapphire",
@@ -22636,7 +22636,7 @@
       "SPOILER ALERT"
     ]
   },
-  "violet parr at wits' end": {
+  "violet parr at wits end": {
     "name": "violet parr at wits' end",
     "type": "Character",
     "ink": "Steel",
@@ -22664,7 +22664,7 @@
     "lore": 2,
     "keywords": []
   },
-  "lord macintosh wiry and high-strung": {
+  "lord macintosh wiry and high strung": {
     "name": "lord macintosh wiry and high-strung",
     "type": "Character",
     "ink": "Steel",
@@ -22864,7 +22864,7 @@
       "SUCTION TECHNOLOGY"
     ]
   },
-  "syndrome's remote": {
+  "syndrome s remote": {
     "name": "syndrome's remote",
     "type": "Item",
     "ink": "Steel",
@@ -22886,7 +22886,7 @@
       "COOL CATS ONLY"
     ]
   },
-  "fat cat's club seedy headquarters": {
+  "fat cat s club seedy headquarters": {
     "name": "fat cat's club seedy headquarters",
     "type": "Location",
     "ink": "Steel",
@@ -22894,7 +22894,7 @@
     "lore": 2,
     "keywords": []
   },
-  "the island of nomanisan syndrome's headquarters": {
+  "the island of nomanisan syndrome s headquarters": {
     "name": "the island of nomanisan syndrome's headquarters",
     "type": "Location",
     "ink": "Steel",
@@ -22934,7 +22934,7 @@
     "lore": 1,
     "keywords": []
   },
-  "tyler nguyen-baker 4*town fan": {
+  "tyler nguyen baker 4 town fan": {
     "name": "tyler nguyen-baker 4*town fan",
     "type": "Character",
     "ink": "Amber",
@@ -23064,7 +23064,7 @@
       "RED PANDA POWER"
     ]
   },
-  "4*town hottest band of the year": {
+  "4 town hottest band of the year": {
     "name": "4*town hottest band of the year",
     "type": "Character",
     "ink": "Amber",
@@ -23105,7 +23105,7 @@
       "SHARED RESOURCES"
     ]
   },
-  "mike wazowski well-rounded entertainer": {
+  "mike wazowski well rounded entertainer": {
     "name": "mike wazowski well-rounded entertainer",
     "type": "Character",
     "ink": "Amber",
@@ -23166,7 +23166,7 @@
       "ENERGY SAP"
     ]
   },
-  "pocahontas & meeko adventurous friends": {
+  "pocahontas meeko adventurous friends": {
     "name": "pocahontas & meeko adventurous friends",
     "type": "Character",
     "ink": "Amber-Amethyst",
@@ -23178,7 +23178,7 @@
       "WELCOME RETURN"
     ]
   },
-  "woody & buzz lightyear best buddies": {
+  "woody buzz lightyear best buddies": {
     "name": "woody & buzz lightyear best buddies",
     "type": "Character",
     "ink": "Amber-Emerald",
@@ -23190,7 +23190,7 @@
       "...AND BEYOND!"
     ]
   },
-  "sulley & boo scare buddies": {
+  "sulley boo scare buddies": {
     "name": "sulley & boo scare buddies",
     "type": "Character",
     "ink": "Amber-Ruby",
@@ -23212,7 +23212,7 @@
       "FAMILY BLESSINGS"
     ]
   },
-  "lilo & stitch fun-loving friends": {
+  "lilo stitch fun loving friends": {
     "name": "lilo & stitch fun-loving friends",
     "type": "Character",
     "ink": "Amber-Steel",
@@ -23224,7 +23224,7 @@
       "Support"
     ]
   },
-  "if i didn't have you": {
+  "if i didn t have you": {
     "name": "if i didn't have you",
     "type": "Action",
     "ink": "Amber",
@@ -23232,7 +23232,7 @@
     "lore": null,
     "keywords": []
   },
-  "i'm never not by your side": {
+  "i m never not by your side": {
     "name": "i'm never not by your side",
     "type": "Action",
     "ink": "Amber",
@@ -23260,7 +23260,7 @@
       "Sing Together"
     ]
   },
-  "powhatan's staff": {
+  "powhatan s staff": {
     "name": "powhatan's staff",
     "type": "Item",
     "ink": "Amber",
@@ -23270,7 +23270,7 @@
       "STEP FORWARD"
     ]
   },
-  "rapunzel's tower taken by the vine": {
+  "rapunzel s tower taken by the vine": {
     "name": "rapunzel's tower taken by the vine",
     "type": "Location",
     "ink": "Amber",
@@ -23486,7 +23486,7 @@
       "STAY RIGHT THERE"
     ]
   },
-  "aladdin & genie mischievous pals": {
+  "aladdin genie mischievous pals": {
     "name": "aladdin & genie mischievous pals",
     "type": "Character",
     "ink": "Amethyst-Emerald",
@@ -23497,7 +23497,7 @@
       "SLEIGHT OF HAND"
     ]
   },
-  "peter pan & tinker bell fast friends": {
+  "peter pan tinker bell fast friends": {
     "name": "peter pan & tinker bell fast friends",
     "type": "Character",
     "ink": "Amethyst-Ruby",
@@ -23519,7 +23519,7 @@
       "MAGICAL SUMMONS"
     ]
   },
-  "winnie the pooh & piglet hunny mages": {
+  "winnie the pooh piglet hunny mages": {
     "name": "winnie the pooh & piglet hunny mages",
     "type": "Character",
     "ink": "Amethyst-Sapphire",
@@ -23530,7 +23530,7 @@
       "MAGICAL MIX"
     ]
   },
-  "maleficent & diablo evil incarnate": {
+  "maleficent diablo evil incarnate": {
     "name": "maleficent & diablo evil incarnate",
     "type": "Character",
     "ink": "Amethyst-Steel",
@@ -23542,7 +23542,7 @@
       "RAVEN'S CALL"
     ]
   },
-  "you've got some punch": {
+  "you ve got some punch": {
     "name": "you've got some punch",
     "type": "Action",
     "ink": "Amethyst",
@@ -23836,7 +23836,7 @@
       "MUMMY'S BACK"
     ]
   },
-  "tod & copper best of friends": {
+  "tod copper best of friends": {
     "name": "tod & copper best of friends",
     "type": "Character",
     "ink": "Emerald",
@@ -23876,7 +23876,7 @@
       "TIP THE SCALES"
     ]
   },
-  "carl fredricksen & russell intrepid explorers": {
+  "carl fredricksen russell intrepid explorers": {
     "name": "carl fredricksen & russell intrepid explorers",
     "type": "Character",
     "ink": "Emerald-Ruby",
@@ -23887,7 +23887,7 @@
       "OUTDOOR SKILLS"
     ]
   },
-  "mickey mouse & minnie mouse adventuring duo": {
+  "mickey mouse minnie mouse adventuring duo": {
     "name": "mickey mouse & minnie mouse adventuring duo",
     "type": "Character",
     "ink": "Emerald-Sapphire",
@@ -23898,7 +23898,7 @@
       "THINKING OF YOU"
     ]
   },
-  "rapunzel & flynn rider unlikely pair": {
+  "rapunzel flynn rider unlikely pair": {
     "name": "rapunzel & flynn rider unlikely pair",
     "type": "Character",
     "ink": "Emerald-Steel",
@@ -24218,7 +24218,7 @@
     "lore": 1,
     "keywords": []
   },
-  "belle & beast certain as the sun": {
+  "belle beast certain as the sun": {
     "name": "belle & beast certain as the sun",
     "type": "Character",
     "ink": "Ruby-Sapphire",
@@ -24230,7 +24230,7 @@
       "APPRECIATIVE AUDIENCE"
     ]
   },
-  "dash parr & violet parr super siblings": {
+  "dash parr violet parr super siblings": {
     "name": "dash parr & violet parr super siblings",
     "type": "Character",
     "ink": "Ruby-Steel",
@@ -24277,7 +24277,7 @@
     "lore": null,
     "keywords": []
   },
-  "it's gonna be great": {
+  "it s gonna be great": {
     "name": "it's gonna be great",
     "type": "Action",
     "ink": "Ruby",
@@ -24306,7 +24306,7 @@
       "OUT OF SIGHT"
     ]
   },
-  "beast's castle overrun by the vine": {
+  "beast s castle overrun by the vine": {
     "name": "beast's castle overrun by the vine",
     "type": "Location",
     "ink": "Ruby",
@@ -24316,7 +24316,7 @@
       "IMMINENT THREAT"
     ]
   },
-  "carl's house flying high": {
+  "carl s house flying high": {
     "name": "carl's house flying high",
     "type": "Location",
     "ink": "Ruby",
@@ -24543,7 +24543,7 @@
       "HUNNY TACTICS"
     ]
   },
-  "darkwing duck & launchpad st canard's finest": {
+  "darkwing duck launchpad st canard s finest": {
     "name": "darkwing duck & launchpad st canard's finest",
     "type": "Character",
     "ink": "Sapphire-Steel",
@@ -24571,7 +24571,7 @@
     "lore": null,
     "keywords": []
   },
-  "we've got a lot to do": {
+  "we ve got a lot to do": {
     "name": "we've got a lot to do",
     "type": "Action",
     "ink": "Sapphire",
@@ -24598,7 +24598,7 @@
       "WHO'S THERE?"
     ]
   },
-  "hana's inkcaster": {
+  "hana s inkcaster": {
     "name": "hana's inkcaster",
     "type": "Item",
     "ink": "Sapphire",
@@ -24778,7 +24778,7 @@
       "FACTORY SETTINGS"
     ]
   },
-  "flynn rider high-climbing rogue": {
+  "flynn rider high climbing rogue": {
     "name": "flynn rider high-climbing rogue",
     "type": "Character",
     "ink": "Steel",
@@ -24880,7 +24880,7 @@
     "lore": null,
     "keywords": []
   },
-  "we'll save our village": {
+  "we ll save our village": {
     "name": "we'll save our village",
     "type": "Action",
     "ink": "Steel",
@@ -24888,7 +24888,7 @@
     "lore": null,
     "keywords": []
   },
-  "look what you've done": {
+  "look what you ve done": {
     "name": "look what you've done",
     "type": "Action",
     "ink": "Steel",

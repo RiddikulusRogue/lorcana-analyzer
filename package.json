@@ -13,7 +13,8 @@
     "build-card-meta": "node scripts/buildCardMeta.js",
     "update-card-db": "npm run refresh-cards ; npm run generate-cards ; npm run build-card-meta",
     "test:cards": "node scripts/testCardRecognition.js",
-    "test:strategy": "node scripts/testStrategyAdvisor.js"
+    "test:strategy": "node scripts/testStrategyAdvisor.js",
+    "test:data": "node scripts/testCardDataIntegrity.js"
   },
   "dependencies": {
     "react": "^18.2.0",

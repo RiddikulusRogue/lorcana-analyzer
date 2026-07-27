@@ -9,6 +9,14 @@ const outfile = path.resolve(__dirname, '../src/data/cardMeta.json');
 const j = JSON.parse(fs.readFileSync(infile, 'utf8'));
 const cards = Array.isArray(j.cards) ? j.cards : Object.values(j.cards || {});
 
+function normalizeName(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function toNumberOrNull(value) {
   return typeof value === 'number' ? value : null;
 }
@@ -38,7 +46,7 @@ cards.forEach((card) => {
   const name = (card.simpleName || card.name || card.fullName || '').trim();
   if (!name) return;
 
-  const key = name.toLowerCase();
+  const key = normalizeName(name);
   meta[key] = {
     name,
     type: card.type || null,
