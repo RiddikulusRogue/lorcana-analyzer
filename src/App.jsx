@@ -77,6 +77,24 @@ const toTitleWords = (value) => String(value || '')
   .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
   .join(' ');
 
+const extractInkColors = (rawColor, rawColors = null) => {
+  const candidates = [];
+
+  if (Array.isArray(rawColors)) {
+    candidates.push(...rawColors);
+  }
+
+  if (typeof rawColor === 'string' && rawColor.trim()) {
+    candidates.push(...rawColor.split(/[\/,&-]+/g));
+  }
+
+  const normalized = candidates
+    .map((entry) => toTitleWords(String(entry || '').trim()))
+    .filter((entry) => OFFICIAL_INKS.includes(entry));
+
+  return Array.from(new Set(normalized));
+};
+
 const extractJsonFromWrappedText = (rawText) => {
   const text = String(rawText || '');
   const start = text.indexOf('{');
@@ -353,10 +371,11 @@ export default function App() {
     if (!cardMeta) return null;
     const map = new Map();
     Object.entries(cardMeta).forEach(([key, value]) => {
-      if (value && typeof value.ink === "string") {
-        const normalized = normalizeCardKey(key);
-        if (normalized) map.set(normalized, value.ink);
-      }
+      if (!value) return;
+      const normalized = normalizeCardKey(key);
+      if (!normalized) return;
+      const inks = extractInkColors(value.ink, value.colors);
+      if (inks.length > 0) map.set(normalized, inks);
     });
     return map;
   }, [cardMeta]);
@@ -365,12 +384,12 @@ export default function App() {
     if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
     const map = new Map();
     allCardsData.cards.forEach((card) => {
-      const color = card && card.color;
-      if (!color) return;
+      const colors = extractInkColors(card?.color, card?.colors);
+      if (colors.length === 0) return;
       [card.simpleName, card.fullName, card.name].forEach((name) => {
         const normalized = normalizeCardKey(name);
         if (normalized && !map.has(normalized)) {
-          map.set(normalized, color);
+          map.set(normalized, colors[0]);
         }
       });
     });
@@ -381,10 +400,8 @@ export default function App() {
     if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
     const map = new Map();
     allCardsData.cards.forEach((card) => {
-      const colors = Array.isArray(card.colors) && card.colors.length > 0
-        ? card.colors
-        : (card.color ? [card.color] : null);
-      if (!colors) return;
+      const colors = extractInkColors(card?.color, card?.colors);
+      if (colors.length === 0) return;
       [card.simpleName, card.fullName, card.name].forEach((name) => {
         const normalized = normalizeCardKey(name);
         if (normalized && !map.has(normalized)) {
@@ -460,13 +477,18 @@ export default function App() {
     Object.entries(analysisToUpdate.cards).forEach(([cardName, count]) => {
       const normalized = normalizeCardKey(cardName);
       if (!normalized) return;
-      const metaColor = cardMetaInkMap ? cardMetaInkMap.get(normalized) : null;
+      const metaColors = cardMetaInkMap ? cardMetaInkMap.get(normalized) : null;
       const fallbackColors = allCardsColorsMap ? allCardsColorsMap.get(normalized) : null;
-      const color = metaColor
-        || (Array.isArray(fallbackColors) && fallbackColors.length > 0 ? fallbackColors[0] : null)
-        || (allCardsColorMap ? allCardsColorMap.get(normalized) : null);
-      if (!color) return;
-      updatedInkColors[color] = (updatedInkColors[color] || 0) + count;
+      const fallbackMono = allCardsColorMap ? allCardsColorMap.get(normalized) : null;
+      const colors = (Array.isArray(metaColors) && metaColors.length > 0)
+        ? metaColors
+        : (Array.isArray(fallbackColors) && fallbackColors.length > 0)
+          ? fallbackColors
+          : extractInkColors(fallbackMono);
+      if (!Array.isArray(colors) || colors.length === 0) return;
+      colors.forEach((color) => {
+        updatedInkColors[color] = (updatedInkColors[color] || 0) + count;
+      });
     });
 
     const previousInkColors = analysisToUpdate.inkColors || {};
@@ -912,6 +934,7 @@ export default function App() {
     const inks = Object.keys(inkColors || {})
       .filter(ink => typeof ink === 'string' && ink.length > 0)
       .map(ink => ink.trim());
+    const allowedInkSet = new Set(inks.map((ink) => String(ink).toLowerCase()));
 
     if (inks.length === 0) {
       console.warn('No valid ink colors provided for recommendations');
@@ -942,6 +965,7 @@ export default function App() {
           name: card.fullName || card.name || card.simpleName || 'Unknown',
           simpleName: card.simpleName || (card.fullName || card.name || '').toLowerCase(),
           ink: card.color,
+          colors: extractInkColors(card.color, card.colors),
           inkwell: typeof card.inkwell === 'boolean' ? card.inkwell : null,
           cost: card.cost,
           lore: card.lore,
@@ -956,6 +980,7 @@ export default function App() {
     } else {
       allCards = Object.values(cardMeta).map(card => ({
         ...card,
+        colors: extractInkColors(card.ink, card.colors),
         simpleName: (card.name || '').toLowerCase()
       }));
     }
@@ -1157,17 +1182,10 @@ export default function App() {
           const normalizedCardName = normalizeCardName(card.simpleName || card.name || '');
           if (excludedNameSet.has(normalizedCardName)) return false;
 
-          // STRICT ink color matching - card must have a valid ink color string that matches deck
-          const cardInk = card.ink;
-
-          // Reject cards without a specific ink color (ink: true, null, undefined, arrays, etc.)
-          if (typeof cardInk !== 'string') return false;
-
-          // Reject dual-ink cards (if they contain "/" or "-" or multiple colors)
-          if (cardInk.includes('/') || cardInk.includes('-') || cardInk.includes(' ')) return false;
-
-          // Card ink MUST be in the deck's ink colors
-          if (!inks.includes(cardInk)) return false;
+          // Dual-ink is valid if every ink on the card is in the deck's color pair.
+          const cardInks = extractInkColors(card.ink, card.colors).map((ink) => String(ink).toLowerCase());
+          if (cardInks.length === 0) return false;
+          if (!cardInks.every((ink) => allowedInkSet.has(ink))) return false;
 
           // Must be around target cost (±1)
           if (enforceCost && targetCost !== null) {
@@ -1489,8 +1507,9 @@ export default function App() {
     const newestSetCards = allCardsData.cards
       .filter((card) => parseInt(card.setCode, 10) === latestSetNumber)
       .filter((card) => {
-        const color = String(card.color || '').toLowerCase();
-        if (!deckColors.has(color)) return false;
+        const cardColors = extractInkColors(card.color, card.colors).map((color) => color.toLowerCase());
+        if (cardColors.length === 0) return false;
+        if (!cardColors.every((color) => deckColors.has(color))) return false;
         const formatInfo = card.allowedInFormats && card.allowedInFormats[formatName];
         if (formatInfo && formatInfo.allowed === false) return false;
         return true;
@@ -2219,11 +2238,11 @@ export default function App() {
         const normalized = normalizeCardKey(cardName);
         if (!normalized) return null;
 
-        const metaColor = cardMetaInkMap ? cardMetaInkMap.get(normalized) : null;
-        if (metaColor) return [metaColor];
+        const metaColors = cardMetaInkMap ? cardMetaInkMap.get(normalized) : null;
+        if (Array.isArray(metaColors) && metaColors.length > 0) return metaColors;
 
         const fallbackColors = allCardsColorsMap ? allCardsColorsMap.get(normalized) : null;
-        if (fallbackColors) return fallbackColors;
+        if (Array.isArray(fallbackColors) && fallbackColors.length > 0) return fallbackColors;
 
         if (!allCardsData || !Array.isArray(allCardsData.cards)) return null;
 
@@ -2233,10 +2252,8 @@ export default function App() {
         });
 
         if (directMatches.length > 0) {
-          const colors = Array.isArray(directMatches[0].colors) && directMatches[0].colors.length > 0
-            ? directMatches[0].colors
-            : (directMatches[0].color ? [directMatches[0].color] : null);
-          return colors;
+          const colors = extractInkColors(directMatches[0].color, directMatches[0].colors);
+          return colors.length > 0 ? colors : null;
         }
 
         return null;
@@ -3108,8 +3125,9 @@ export default function App() {
       const coreLegalSets = Array.isArray(coreConstructed?.legalSets) ? coreConstructed.legalSets : [];
       const activeFormatKey = selectedPromptFormat === 'core' ? 'Core' : 'Infinity';
       const legalCards = allCardsData.cards.filter((card) => {
-        const cardColor = String(card?.color || '').toLowerCase();
-        if (!colorSet.has(cardColor)) return false;
+        const cardColors = extractInkColors(card?.color, card?.colors).map((color) => color.toLowerCase());
+        if (cardColors.length === 0) return false;
+        if (!cardColors.every((color) => colorSet.has(color))) return false;
 
         const formatInfo = card?.allowedInFormats?.[activeFormatKey];
         if (formatInfo && formatInfo.allowed === false) return false;
@@ -3795,8 +3813,10 @@ export default function App() {
       if (Array.isArray(fromAllCards) && fromAllCards.length > 0) {
         return fromAllCards.map((color) => String(color || "").toLowerCase()).filter(Boolean);
       }
-      const mono = cardMetaInkMap ? cardMetaInkMap.get(normalizedName) : null;
-      return mono ? [String(mono).toLowerCase()] : [];
+      const fromMeta = cardMetaInkMap ? cardMetaInkMap.get(normalizedName) : null;
+      return Array.isArray(fromMeta)
+        ? fromMeta.map((color) => String(color || '').toLowerCase()).filter(Boolean)
+        : [];
     };
 
     const inDeckColors = (normalizedName) => {

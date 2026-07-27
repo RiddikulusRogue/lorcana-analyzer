@@ -6,6 +6,29 @@ function normalizeName(s) {
   return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
+const OFFICIAL_INK_BY_LOWER = {
+  amber: 'Amber',
+  amethyst: 'Amethyst',
+  emerald: 'Emerald',
+  ruby: 'Ruby',
+  sapphire: 'Sapphire',
+  steel: 'Steel',
+}
+
+function parseInkColors(rawInk) {
+  if (!rawInk) return []
+  const rawTokens = Array.isArray(rawInk)
+    ? rawInk
+    : String(rawInk).split(/[\/,&-]+/g)
+
+  const normalized = rawTokens
+    .map((token) => String(token || '').toLowerCase().trim())
+    .map((token) => OFFICIAL_INK_BY_LOWER[token] || null)
+    .filter(Boolean)
+
+  return Array.from(new Set(normalized))
+}
+
 function levenshtein(a, b) {
   if (!a) return b ? b.length : 0
   if (!b) return a.length
@@ -661,7 +684,9 @@ export function analyzeDeck(deckText, format = 'infinity', competitiveMetaData =
     const key = rawName.toLowerCase();
     const meta = cardMeta[key];
     if (meta) {
-      if (meta.ink && typeof meta.ink === 'string') inkColors[meta.ink] = (inkColors[meta.ink] || 0) + count;
+      parseInkColors(meta.ink).forEach((ink) => {
+        inkColors[ink] = (inkColors[ink] || 0) + count
+      })
 
       if (typeof meta.cost === 'number') {
         costSum += meta.cost * count;
