@@ -3591,10 +3591,17 @@ export default function App() {
           const record = allCardsByNormalizedName ? allCardsByNormalizedName.get(normalizedName) : null;
           const displayName = record?.fullName || record?.name || toTitle(normalizedName);
           
-          // Check format legality before including in suggestions
-          if (!isCardLegalForFormat(displayName, format)) {
-            return false;
+          if (!isCardLegalForFormat(displayName, format)) return false;
+
+          // CRITICAL: Validate ink color — only suggest cards in the deck's two colors
+          if (record && analysis?.inkColors && Object.keys(analysis.inkColors).length > 0) {
+            const allowedDeckColors = new Set(Object.keys(analysis.inkColors).map((c) => String(c).toLowerCase()));
+            const cardColors = extractInkColors(record.color, record.colors).map((c) => String(c).toLowerCase());
+            if (cardColors.length > 0 && !cardColors.every((c) => allowedDeckColors.has(c))) {
+              return false;
+            }
           }
+
           return true;
         })
         .map((normalizedName) => {

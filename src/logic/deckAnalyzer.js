@@ -165,11 +165,29 @@ function isCardLegalForFormatAnalysis(normalizedCardName, format, cardSetsData, 
   return true
 }
 
-function summarizeTournamentSynergy(deckEntries, format, competitiveMeta, cardSetsData = null, coreConstructed = null) {
+function summarizeTournamentSynergy(deckEntries, format, competitiveMeta, cardSetsData = null, coreConstructed = null, deckInkColors = null) {
   const deckMap = new Map(
     deckEntries.map(([name, count]) => [normalizeName(name), count]).filter(([name]) => Boolean(name))
   )
   const context = getFormatMetaContext(format, competitiveMeta)
+
+  // Build the set of colors this deck is allowed to run (Lorcana two-color rule)
+  const allowedColors = new Set(
+    Object.keys(deckInkColors || {}).map((c) => String(c).toLowerCase()).filter(Boolean)
+  )
+  const hasColorConstraint = allowedColors.size > 0
+
+  // Returns true only if every ink color on the card is within the deck's allowed colors
+  const isCardInDeckColors = (normalizedCardName) => {
+    if (!hasColorConstraint) return true
+    const metaKey = normalizedMetaKeyToKey.get(normalizedCardName)
+    if (!metaKey) return true // unknown card — allow, don't block
+    const ink = cardMeta[metaKey]?.ink
+    if (!ink) return true // no ink data — allow
+    const cardColors = parseInkColors(ink).map((c) => String(c).toLowerCase())
+    if (cardColors.length === 0) return true
+    return cardColors.every((c) => allowedColors.has(c))
+  }
 
   const weightedComboPackages = (Array.isArray(context.comboPackages) ? context.comboPackages : [])
     .map((combo) => {
@@ -179,7 +197,12 @@ function summarizeTournamentSynergy(deckEntries, format, competitiveMeta, cardSe
       if (comboCards.length < 2) return null
 
       const matchedCards = comboCards.filter((card) => deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
-      const missingCards = comboCards.filter((card) => !deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
+      // Only suggest missing cards that belong to the deck's two colors
+      const missingCards = comboCards.filter((card) =>
+        !deckMap.has(card) &&
+        isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed) &&
+        isCardInDeckColors(card)
+      )
       const completion = matchedCards.length / comboCards.length
 
       return {
@@ -201,7 +224,12 @@ function summarizeTournamentSynergy(deckEntries, format, competitiveMeta, cardSe
       if (keyCards.length < 3) return null
 
       const matchedCards = keyCards.filter((card) => deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
-      const missingCards = keyCards.filter((card) => !deckMap.has(card) && isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed))
+      // Only suggest missing cards that belong to the deck's two colors
+      const missingCards = keyCards.filter((card) =>
+        !deckMap.has(card) &&
+        isCardLegalForFormatAnalysis(card, format, cardSetsData, coreConstructed) &&
+        isCardInDeckColors(card)
+      )
       const completion = matchedCards.length / keyCards.length
       const wr = normalizeWinRateValue(deck?.winRate)
 
@@ -830,7 +858,7 @@ export function analyzeDeck(deckText, format = 'infinity', competitiveMetaData =
   if (hasEvasive && (archetype.includes('Aggro') || archetype.includes('Tempo'))) synergies.push({ type: 'Evasive Aggro', strength: 'High', description: 'Evasive characters support aggressive strategy' });
   if (hasShift && uniqueCount > 10) synergies.push({ type: 'Shift Value', strength: 'Medium', description: 'Shift characters can generate tempo advantage' });
 
-  const tournamentSynergy = summarizeTournamentSynergy(Object.entries(cards), format, competitiveMetaData, cardSetsData, coreConstructed)
+  const tournamentSynergy = summarizeTournamentSynergy(Object.entries(cards), format, competitiveMetaData, cardSetsData, coreConstructed, inkColors)
   const logicalSynergy = summarizeLogicalSynergy({
     songCount,
     singerCount,
