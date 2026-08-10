@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "formatVersion": "2.3.4",
-    "generatedOn": "2026-07-24T17:37:21",
+    "formatVersion": "2.3.5",
+    "generatedOn": "2026-08-02T19:16:26",
     "language": "en"
   },
   "sets": {
@@ -101,8 +101,8 @@
       "cardCounts": {
         "base": 204,
         "nonBase": 21,
-        "promo": 10,
-        "total": 235
+        "promo": 11,
+        "total": 236
       }
     },
     "5": {
@@ -126,8 +126,8 @@
       "cardCounts": {
         "base": 204,
         "nonBase": 19,
-        "promo": 11,
-        "total": 234
+        "promo": 12,
+        "total": 235
       }
     },
     "6": {
@@ -225,8 +225,8 @@
       "cardCounts": {
         "base": 205,
         "nonBase": 38,
-        "promo": 16,
-        "total": 259
+        "promo": 17,
+        "total": 260
       }
     },
     "10": {
@@ -297,8 +297,8 @@
       "cardCounts": {
         "base": 204,
         "nonBase": 38,
-        "promo": 13,
-        "total": 255
+        "promo": 15,
+        "total": 257
       }
     },
     "13": {
@@ -321,8 +321,8 @@
       "cardCounts": {
         "base": 207,
         "nonBase": 38,
-        "promo": 11,
-        "total": 256
+        "promo": 16,
+        "total": 261
       }
     },
     "14": {
@@ -2093,7 +2093,8 @@
       "number": 23,
       "promoIds": [
         660,
-        688
+        688,
+        3245
       ],
       "rarity": "Super Rare",
       "reprintedAsIds": [
@@ -60401,6 +60402,9 @@
       "lore": 3,
       "name": "Rapunzel",
       "number": 153,
+      "promoIds": [
+        3243
+      ],
       "rarity": "Rare",
       "setCode": "4",
       "simpleName": "rapunzel appreciative artist",
@@ -75539,6 +75543,9 @@
       "lore": 1,
       "name": "Donald Duck",
       "number": 107,
+      "promoIds": [
+        3244
+      ],
       "rarity": "Legendary",
       "setCode": "5",
       "simpleName": "donald duck pie slinger",
@@ -82983,6 +82990,9 @@
       "lore": 1,
       "name": "Donald Duck",
       "number": 214,
+      "promoIds": [
+        3244
+      ],
       "rarity": "Enchanted",
       "setCode": "5",
       "simpleName": "donald duck pie slinger",
@@ -137722,6 +137732,9 @@
         "tcgPlayerId": 648600,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/648600"
       },
+      "foilEffectColors": [
+        "#79CC5E"
+      ],
       "foilTypes": [
         "SeaWave"
       ],
@@ -138074,7 +138087,8 @@
       "number": 3,
       "promoIds": [
         660,
-        688
+        688,
+        3245
       ],
       "rarity": "Super Rare",
       "reprintOfId": 23,
@@ -152428,6 +152442,9 @@
         "tcgPlayerId": 651110,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651110"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152497,6 +152514,9 @@
         "tcgPlayerId": 651122,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651122"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152574,6 +152594,9 @@
         "tcgPlayerId": 649230,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/649230"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152649,6 +152672,9 @@
         "tcgPlayerId": 651121,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651121"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152719,6 +152745,9 @@
         "tcgPlayerId": 651107,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651107"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152804,6 +152833,9 @@
         "tcgPlayerId": 651119,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651119"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152883,6 +152915,9 @@
         "tcgPlayerId": 651118,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651118"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -152963,6 +152998,9 @@
         "tcgPlayerId": 651113,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651113"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153028,6 +153066,9 @@
         "tcgPlayerId": 651112,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651112"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153101,6 +153142,9 @@
         "tcgPlayerId": 651123,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651123"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153189,6 +153233,9 @@
         "tcgPlayerId": 649231,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/649231"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153267,6 +153314,9 @@
         "tcgPlayerId": 651116,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651116"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153335,6 +153385,9 @@
         "tcgPlayerId": 651111,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651111"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153411,6 +153464,9 @@
         "tcgPlayerId": 651120,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651120"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153481,6 +153537,9 @@
         "tcgPlayerId": 651117,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651117"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153557,6 +153616,9 @@
         "tcgPlayerId": 649236,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/649236"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153633,6 +153695,9 @@
         "tcgPlayerId": 651108,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651108"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -153714,6 +153779,9 @@
         "tcgPlayerId": 651114,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651114"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -155104,6 +155172,9 @@
         "tcgPlayerId": 651106,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/651106"
       },
+      "foilEffectColors": [
+        "#FFB348"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -155187,6 +155258,9 @@
         "tcgPlayerId": 647663,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/647663"
       },
+      "foilEffectColors": [
+        "#FF474B"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -171603,6 +171677,9 @@
         "tcgPlayerId": 660365,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660365"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -171685,6 +171762,9 @@
         "tcgPlayerId": 658449,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/658449"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -171776,6 +171856,9 @@
         "tcgPlayerId": 658884,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/658884"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -171844,6 +171927,9 @@
         "tcgPlayerId": 660044,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660044"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -171925,6 +172011,9 @@
         "tcgPlayerId": 658215,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/658215"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -171992,6 +172081,9 @@
         "tcgPlayerId": 660041,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660041"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172068,6 +172160,9 @@
         "tcgPlayerId": 660173,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660173"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172150,6 +172245,9 @@
         "tcgPlayerId": 659443,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/659443"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172218,6 +172316,9 @@
         "tcgPlayerId": 660027,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660027"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172288,6 +172389,9 @@
         "tcgPlayerId": 660012,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660012"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172365,6 +172469,9 @@
         "tcgPlayerId": 660042,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660042"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172441,6 +172548,9 @@
         "tcgPlayerId": 660028,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660028"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172509,6 +172619,9 @@
         "tcgPlayerId": 660043,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660043"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172583,6 +172696,9 @@
         "tcgPlayerId": 660029,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660029"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172648,6 +172764,9 @@
         "tcgPlayerId": 660011,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660011"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172714,6 +172833,9 @@
         "tcgPlayerId": 660035,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660035"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172792,6 +172914,9 @@
         "tcgPlayerId": 660030,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660030"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172872,6 +172997,9 @@
         "tcgPlayerId": 660031,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/660031"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -172943,6 +173071,9 @@
         "tcgPlayerId": 657885,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/657885"
       },
+      "foilEffectColors": [
+        "#FFB348"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -173018,6 +173149,9 @@
         "tcgPlayerId": 657889,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/657889"
       },
+      "foilEffectColors": [
+        "#754D8C"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -192448,6 +192582,9 @@
         "tcgPlayerId": 673298,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/673298"
       },
+      "foilEffectColors": [
+        "#FFB348"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -192522,6 +192659,9 @@
         "tcgPlayerId": 673300,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/673300"
       },
+      "foilEffectColors": [
+        "#20BACB"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -198612,6 +198752,9 @@
       "lore": 1,
       "name": "Buzz Lightyear",
       "number": 76,
+      "promoIds": [
+        3250
+      ],
       "rarity": "Common",
       "setCode": "12",
       "simpleName": "buzz lightyear space ranger",
@@ -199271,6 +199414,9 @@
       "lore": 1,
       "name": "Buzz Lightyear",
       "number": 85,
+      "promoIds": [
+        3249
+      ],
       "rarity": "Rare",
       "setCode": "12",
       "simpleName": "buzz lightyear on the way",
@@ -208018,6 +208164,9 @@
       "lore": 1,
       "name": "Buzz Lightyear",
       "number": 211,
+      "promoIds": [
+        3250
+      ],
       "rarity": "Epic",
       "setCode": "12",
       "simpleName": "buzz lightyear space ranger",
@@ -208868,6 +209017,9 @@
         "tcgPlayerId": 692217,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692217"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -208946,6 +209098,9 @@
         "tcgPlayerId": 692089,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692089"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209015,6 +209170,9 @@
         "tcgPlayerId": 690747,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/690747"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209084,6 +209242,9 @@
         "tcgPlayerId": 692090,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692090"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209169,6 +209330,9 @@
         "tcgPlayerId": 692218,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692218"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209254,6 +209418,9 @@
         "tcgPlayerId": 692219,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692219"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209321,6 +209488,9 @@
         "tcgPlayerId": 692220,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692220"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209404,6 +209574,9 @@
         "tcgPlayerId": 692221,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692221"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209473,6 +209646,9 @@
         "tcgPlayerId": 692222,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692222"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209533,6 +209709,9 @@
         "tcgPlayerId": 692223,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692223"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209603,6 +209782,9 @@
         "tcgPlayerId": 692224,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692224"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209686,6 +209868,9 @@
         "tcgPlayerId": 692225,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692225"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209768,6 +209953,9 @@
         "tcgPlayerId": 692226,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692226"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209858,6 +210046,9 @@
         "tcgPlayerId": 692227,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692227"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209928,6 +210119,9 @@
         "tcgPlayerId": 690556,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/690556"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -209999,6 +210193,9 @@
         "tcgPlayerId": 692228,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692228"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -210087,6 +210284,9 @@
         "tcgPlayerId": 692229,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692229"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -210157,6 +210357,9 @@
         "tcgPlayerId": 692091,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/692091"
       },
+      "foilEffectColors": [
+        "#D9A36D"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -210234,6 +210437,9 @@
         "tcgPlayerId": 690216,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/690216"
       },
+      "foilEffectColors": [
+        "#8FD262"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -210316,6 +210522,9 @@
         "tcgPlayerId": 690217,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/690217"
       },
+      "foilEffectColors": [
+        "#B2B2B2"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -211455,6 +211664,9 @@
       "lore": 2,
       "name": "Woody",
       "number": 1,
+      "promoIds": [
+        3236
+      ],
       "rarity": "Rare",
       "setCode": "13",
       "simpleName": "woody helping a friend",
@@ -213086,6 +213298,9 @@
       "lore": 1,
       "name": "Sulley",
       "number": 24,
+      "promoIds": [
+        3235
+      ],
       "rarity": "Super Rare",
       "setCode": "13",
       "simpleName": "sulley the new boss",
@@ -213768,6 +213983,9 @@
       "inkwell": true,
       "name": "If I Didn't Have You",
       "number": 32,
+      "promoIds": [
+        3222
+      ],
       "rarity": "Common",
       "setCode": "13",
       "simpleName": "if i didn't have you",
@@ -220407,6 +220625,9 @@
       "lore": 0,
       "name": "Tigger",
       "number": 126,
+      "promoIds": [
+        3220
+      ],
       "rarity": "Rare",
       "setCode": "13",
       "simpleName": "tigger hunny barbarian",
@@ -221964,6 +222185,9 @@
       "lore": 1,
       "name": "Belle",
       "number": 148,
+      "promoIds": [
+        3221
+      ],
       "rarity": "Common",
       "setCode": "13",
       "simpleName": "belle always reading",
@@ -225830,6 +226054,7 @@
       ],
       "id": 3176,
       "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/set13/205_95850d0bc6a31248b33ca4feac1c6185b52230bc.jpg",
         "full": "https://api.lorcana.ravensburger.com/images/en/set13/205_fdd01b495c98a1267da4932730aaf499a2227dde.jpg",
         "thumbnail": "https://api.lorcana.ravensburger.com/images/en/set13/205_f8fac0ddfd521143baf769c6333a602cfb63f1ba.jpg"
       },
@@ -225894,6 +226119,7 @@
       ],
       "id": 3177,
       "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/set13/206_5696d8dd1a0720623532f82d1ac1eb0a76244b21.jpg",
         "full": "https://api.lorcana.ravensburger.com/images/en/set13/206_0f4f443c3bf2afe7ddad2d51ee9f256405858b30.jpg",
         "thumbnail": "https://api.lorcana.ravensburger.com/images/en/set13/206_6c223fa516e5f9ee2b2aa6f7021962a9ed1ba6c1.jpg"
       },
@@ -225951,6 +226177,7 @@
       ],
       "id": 3178,
       "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/set13/207_8403b9a680a0a17cebe0802aebcef6f56d9c1bc4.jpg",
         "full": "https://api.lorcana.ravensburger.com/images/en/set13/207_ae5b9cf92da8d201a7e35e48cbdd355477d1a5db.jpg",
         "thumbnail": "https://api.lorcana.ravensburger.com/images/en/set13/207_c685755cc78148fa4a38a9c1aa5844bea147c95e.jpg"
       },
@@ -227305,6 +227532,9 @@
         "tcgPlayerId": 704717,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704717"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227391,6 +227621,9 @@
         "tcgPlayerId": 704718,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704718"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227489,6 +227722,9 @@
         "tcgPlayerId": 704719,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704719"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227581,6 +227817,9 @@
         "tcgPlayerId": 704720,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704720"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227671,6 +227910,9 @@
         "tcgPlayerId": 704721,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704721"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227751,6 +227993,9 @@
         "tcgPlayerId": 704722,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704722"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227835,6 +228080,9 @@
         "tcgPlayerId": 704723,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704723"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -227924,6 +228172,9 @@
         "tcgPlayerId": 704724,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704724"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228014,6 +228265,9 @@
         "tcgPlayerId": 704725,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704725"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228111,6 +228365,9 @@
         "tcgPlayerId": 704726,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704726"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228197,6 +228454,9 @@
         "tcgPlayerId": 704727,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704727"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228288,6 +228548,9 @@
         "tcgPlayerId": 704728,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704728"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228377,6 +228640,9 @@
         "tcgPlayerId": 704729,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704729"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228472,6 +228738,9 @@
         "tcgPlayerId": 704730,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704730"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228560,6 +228829,9 @@
         "tcgPlayerId": 704731,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704731"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228657,6 +228929,9 @@
         "tcgPlayerId": 704732,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704732"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228755,6 +229030,9 @@
         "tcgPlayerId": 704733,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704733"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228843,6 +229121,9 @@
         "tcgPlayerId": 704734,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/704734"
       },
+      "foilEffectColors": [
+        "#99A2A6"
+      ],
       "foilTypes": [
         "Magma"
       ],
@@ -228930,6 +229211,10 @@
         "tcgPlayerId": 702666,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/702666"
       },
+      "foilEffectColors": [
+        "#FFB348",
+        "#B2B2B2"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -228946,7 +229231,8 @@
         "foilMask": "https://api.lorcana.ravensburger.com/images/en/set13/244_48006f08f5a4a88ad53e51b1548c74b25dda5d7c.jpg",
         "full": "https://api.lorcana.ravensburger.com/images/en/set13/244_f9111e7a4dede5dc5cd5378b5bb83134d4002e1d.jpg",
         "thumbnail": "https://api.lorcana.ravensburger.com/images/en/set13/244_c745b8aa88c2a3e0b282b4133eee7c35159e26ee.jpg",
-        "varnishMask": "https://api.lorcana.ravensburger.com/images/en/set13/244_8bcc4fe1806fddcfeb53b5c21dcc7ebc396901a4.jpg"
+        "varnishMask": "https://api.lorcana.ravensburger.com/images/en/set13/244_8bcc4fe1806fddcfeb53b5c21dcc7ebc396901a4.jpg",
+        "varnishMask2": "https://api.lorcana.ravensburger.com/images/en/set13/244_fb253e3d91de97f697fe1e641c24d0570ad887d9.jpg"
       },
       "inkwell": true,
       "keywordAbilities": [
@@ -229033,6 +229319,10 @@
         "tcgPlayerId": 702667,
         "tcgPlayerUrl": "https://www.tcgplayer.com/product/702667"
       },
+      "foilEffectColors": [
+        "#FF474B",
+        "#20BACB"
+      ],
       "foilTypes": [
         "Lore"
       ],
@@ -229049,7 +229339,8 @@
         "foilMask": "https://api.lorcana.ravensburger.com/images/en/set13/245_7c874efd1bc574d242de6a22b80f23d7a328a90d.jpg",
         "full": "https://api.lorcana.ravensburger.com/images/en/set13/245_bd7b519b182ce1d62fcab575e0358623b9aeb140.jpg",
         "thumbnail": "https://api.lorcana.ravensburger.com/images/en/set13/245_edb7d9f0d1808b13d78e8d01b94b1377e5e021d1.jpg",
-        "varnishMask": "https://api.lorcana.ravensburger.com/images/en/set13/245_1e984bf5a140f7bbd12f4271de07a38192675604.jpg"
+        "varnishMask": "https://api.lorcana.ravensburger.com/images/en/set13/245_1e984bf5a140f7bbd12f4271de07a38192675604.jpg",
+        "varnishMask2": "https://api.lorcana.ravensburger.com/images/en/set13/245_f461ba5f6e0ffcf004d815d15681d91f6cb0484e.jpg"
       },
       "inkwell": false,
       "keywordAbilities": [
@@ -229303,6 +229594,217 @@
       "type": "Character",
       "version": "Scary Smart",
       "willpower": 3
+    },
+    {
+      "abilities": [
+        {
+          "fullText": "Reckless (This character can't quest and must challenge\neach turn if able.)",
+          "keyword": "Reckless",
+          "reminderText": "This character can't quest and must challenge each turn if able.",
+          "type": "keyword"
+        },
+        {
+          "effect": "Once during your turn, whenever this character challenges another character, you may ready chosen Hunny character. If you do, that character can't quest for the rest of this turn.",
+          "fullText": "PROTECTIVE CHARGE Once during your turn, whenever\nthis character challenges another character, you may\nready chosen Hunny character. If you do, that character\ncan't quest for the rest of this turn.",
+          "name": "PROTECTIVE CHARGE",
+          "type": "triggered"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-07-17",
+      "artists": [
+        "Simone Giovanardi"
+      ],
+      "artistsText": "Simone Giovanardi",
+      "baseId": 3097,
+      "code": "PW",
+      "color": "Ruby",
+      "cost": 4,
+      "externalLinks": {
+        "cardTraderId": 401866,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/401866",
+        "cardmarketId": 898172,
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Promos-Year-4/Tigger-Hunny-Barbarian?language=1"
+      },
+      "foilTypes": [
+        "Silver"
+      ],
+      "fullIdentifier": "12/P4 • EN • 13",
+      "fullName": "Tigger - Hunny Barbarian",
+      "fullText": "Reckless (This character can't quest and must challenge\neach turn if able.)\nPROTECTIVE CHARGE Once during your turn, whenever\nthis character challenges another character, you may\nready chosen Hunny character. If you do, that character\ncan't quest for the rest of this turn.",
+      "fullTextSections": [
+        "Reckless (This character can't quest and must challenge\neach turn if able.)",
+        "PROTECTIVE CHARGE Once during your turn, whenever\nthis character challenges another character, you may\nready chosen Hunny character. If you do, that character\ncan't quest for the rest of this turn."
+      ],
+      "id": 3220,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo4/12_de02baa0e25857f8de95af4b2b216737e8c21e1b.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo4/12_57b02ba2f9714c298bf99f895d44a61530638071.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo4/12_c905dc1b63b25e945f36b6f49fc94dc62133eb6b.jpg"
+      },
+      "inkwell": true,
+      "keywordAbilities": [
+        "Reckless"
+      ],
+      "lore": 0,
+      "name": "Tigger",
+      "number": 12,
+      "promoGrouping": "P4",
+      "promoSourceCategory": "Promo",
+      "rarity": "Special",
+      "setCode": "13",
+      "simpleName": "tigger hunny barbarian",
+      "story": "Winnie the Pooh",
+      "strength": 5,
+      "subtypes": [
+        "Dreamborn",
+        "Ally",
+        "Tigger",
+        "Hunny"
+      ],
+      "subtypesText": "Dreamborn • Ally • Tigger • Hunny",
+      "type": "Character",
+      "version": "Hunny Barbarian",
+      "willpower": 4
+    },
+    {
+      "abilities": [
+        {
+          "effect": "You pay 1 ⬡ less to shift a character on top of this character.",
+          "fullText": "DREAMING OF MORE You pay 1 ⬡ less to shift a\ncharacter on top of this character.",
+          "name": "DREAMING OF MORE",
+          "type": "static"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-07-17",
+      "artists": [
+        "Pauline Voss"
+      ],
+      "artistsText": "Pauline Voss",
+      "baseId": 3119,
+      "code": "PX",
+      "color": "Sapphire",
+      "cost": 2,
+      "externalLinks": {
+        "cardTraderId": 401872,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/401872",
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Promos-Year-4/Belle-Always-Reading?language=1"
+      },
+      "flavorText": "“I just finished the most wonderful story about a\nbeanstalk and an ogre...”",
+      "foilTypes": [
+        "Silver"
+      ],
+      "fullIdentifier": "13/P4 • EN • 13",
+      "fullName": "Belle - Always Reading",
+      "fullText": "DREAMING OF MORE You pay 1 ⬡ less to shift a\ncharacter on top of this character.",
+      "fullTextSections": [
+        "DREAMING OF MORE You pay 1 ⬡ less to shift a\ncharacter on top of this character."
+      ],
+      "id": 3221,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo4/13_a02d56e6d9eb02e3270b7b59e5e7a8f029002272.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo4/13_f3a0fbc7abbc6bcb4155e243b425a35f281a8e89.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo4/13_0e2f1f11162f637a141d434aab3a53a3ae0a210e.jpg"
+      },
+      "inkwell": true,
+      "lore": 1,
+      "name": "Belle",
+      "number": 13,
+      "promoGrouping": "P4",
+      "promoSourceCategory": "Organized Play",
+      "rarity": "Special",
+      "setCode": "13",
+      "simpleName": "belle always reading",
+      "story": "Beauty and the Beast",
+      "strength": 2,
+      "subtypes": [
+        "Storyborn",
+        "Hero",
+        "Princess"
+      ],
+      "subtypesText": "Storyborn • Hero • Princess",
+      "type": "Character",
+      "version": "Always Reading",
+      "willpower": 3
+    },
+    {
+      "abilities": [
+        {
+          "effect": "A character with cost 3 or more can ⟳ to sing this song for free.",
+          "fullText": "(A character with cost 3 or more can ⟳ to sing this\nsong for free.)",
+          "type": "static"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-07-17",
+      "artists": [
+        "Saulo Nate"
+      ],
+      "artistsText": "Saulo Nate",
+      "baseId": 3003,
+      "code": "PY",
+      "color": "Amber",
+      "cost": 3,
+      "effects": [
+        "You and another chosen player each draw 2 cards."
+      ],
+      "externalLinks": {
+        "cardTraderId": 401871,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/401871",
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Promos-Year-4/If-I-Didnt-Have-You?language=1"
+      },
+      "foilTypes": [
+        "Silver"
+      ],
+      "fullIdentifier": "14/P4 • EN • 13",
+      "fullName": "If I Didn't Have You",
+      "fullText": "(A character with cost 3 or more can ⟳ to sing this\nsong for free.)\nYou and another chosen player each draw 2 cards.",
+      "fullTextSections": [
+        "(A character with cost 3 or more can ⟳ to sing this\nsong for free.)",
+        "You and another chosen player each draw 2 cards."
+      ],
+      "id": 3222,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo4/14_674d464d4e7005fb20b5d26efa4ece94f32c1741.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo4/14_6891a2880ea856b94622b710ba1a9c75965aed59.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo4/14_0b2aa70ca84a271b4d1c2a04105ba72688d0a214.jpg"
+      },
+      "inkwell": true,
+      "name": "If I Didn't Have You",
+      "number": 14,
+      "promoGrouping": "P4",
+      "promoSourceCategory": "Organized Play",
+      "rarity": "Special",
+      "setCode": "13",
+      "simpleName": "if i didn't have you",
+      "story": "Monsters, Inc.",
+      "subtypes": [
+        "Song"
+      ],
+      "subtypesText": "Song",
+      "type": "Action"
     },
     {
       "abilities": [
@@ -230044,6 +230546,142 @@
     {
       "abilities": [
         {
+          "fullText": "Bodyguard (This character may enter play exerted.\nAn opposing character who challenges one of your\ncharacters must choose one with Bodyguard if able.)",
+          "keyword": "Bodyguard",
+          "reminderText": "This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.",
+          "type": "keyword"
+        },
+        {
+          "effect": "When you play this character, you may return a character card from your discard to your hand.",
+          "fullText": "REHIRE When you play this character, you may return\na character card from your discard to your hand.",
+          "name": "REHIRE",
+          "type": "triggered"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-07-17",
+      "artists": [
+        "Anna Stosik"
+      ],
+      "artistsText": "Anna Stosik",
+      "baseId": 2995,
+      "code": "Qb",
+      "color": "Amber",
+      "cost": 5,
+      "externalLinks": {},
+      "foilTypes": [
+        "RainbowPillars"
+      ],
+      "fullIdentifier": "58/P3 • EN • 13",
+      "fullName": "Sulley - The New Boss",
+      "fullText": "Bodyguard (This character may enter play exerted.\nAn opposing character who challenges one of your\ncharacters must choose one with Bodyguard if able.)\nREHIRE When you play this character, you may return\na character card from your discard to your hand.",
+      "fullTextSections": [
+        "Bodyguard (This character may enter play exerted.\nAn opposing character who challenges one of your\ncharacters must choose one with Bodyguard if able.)",
+        "REHIRE When you play this character, you may return\na character card from your discard to your hand."
+      ],
+      "id": 3235,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo3/58_22913d4ae848f2f561ec81a011badd1a1ab431ab.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo3/58_f60ef7c18cfad9ebd578cca52d2b6643fc9b2555.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo3/58_93027eea26871cd161789657334c613e99064e9f.jpg"
+      },
+      "inkwell": false,
+      "keywordAbilities": [
+        "Bodyguard"
+      ],
+      "lore": 1,
+      "name": "Sulley",
+      "number": 58,
+      "promoGrouping": "P3",
+      "promoSourceCategory": "Promo",
+      "rarity": "Special",
+      "setCode": "13",
+      "simpleName": "sulley the new boss",
+      "story": "Monsters, Inc.",
+      "strength": 4,
+      "subtypes": [
+        "Storyborn",
+        "Hero",
+        "Monster"
+      ],
+      "subtypesText": "Storyborn • Hero • Monster",
+      "type": "Character",
+      "version": "The New Boss",
+      "willpower": 4
+    },
+    {
+      "abilities": [
+        {
+          "effect": "When you play this character, choose one of the following. If you have another Toy character in play, choose both instead: • You may return a character card with cost 2 or less from your discard to your hand. • You may play a character with cost 2 or less for free.",
+          "fullText": "HANG ON! When you play this character, choose\none of the following. If you have another Toy\ncharacter in play, choose both instead:\n• You may return a character card with cost 2 or less\nfrom your discard to your hand.\n• You may play a character with cost 2 or less for free.",
+          "name": "HANG ON!",
+          "type": "triggered"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-07-17",
+      "artists": [
+        "Marcel Berg"
+      ],
+      "artistsText": "Marcel Berg",
+      "baseId": 2972,
+      "code": "Qc",
+      "color": "Amber",
+      "cost": 4,
+      "externalLinks": {},
+      "foilTypes": [
+        "RainbowPillars"
+      ],
+      "fullIdentifier": "60/P3 • EN • 13",
+      "fullName": "Woody - Helping a Friend",
+      "fullText": "HANG ON! When you play this character, choose\none of the following. If you have another Toy\ncharacter in play, choose both instead:\n• You may return a character card with cost 2 or less\nfrom your discard to your hand.\n• You may play a character with cost 2 or less for free.",
+      "fullTextSections": [
+        "HANG ON! When you play this character, choose\none of the following. If you have another Toy\ncharacter in play, choose both instead:\n• You may return a character card with cost 2 or less\nfrom your discard to your hand.\n• You may play a character with cost 2 or less for free."
+      ],
+      "id": 3236,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo3/60_e20a3182f7928846ad39f92c838d5de21993c098.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo3/60_ed2d46869c77f291d299279a5998e4ff9ed3e71e.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo3/60_402fc0cd56eebc5dd490eed2e2dca190127ac6fc.jpg"
+      },
+      "inkwell": false,
+      "lore": 2,
+      "name": "Woody",
+      "number": 60,
+      "promoGrouping": "P3",
+      "promoSourceCategory": "Promo",
+      "rarity": "Special",
+      "setCode": "13",
+      "simpleName": "woody helping a friend",
+      "story": "Toy Story",
+      "strength": 2,
+      "subtypes": [
+        "Storyborn",
+        "Hero",
+        "Toy"
+      ],
+      "subtypesText": "Storyborn • Hero • Toy",
+      "type": "Character",
+      "version": "Helping a Friend",
+      "willpower": 4
+    },
+    {
+      "abilities": [
+        {
           "fullText": "Singer 5",
           "keyword": "Singer",
           "keywordValue": "5",
@@ -230518,6 +231156,387 @@
       "type": "Character",
       "version": "Giant Fairy",
       "willpower": 5
+    },
+    {
+      "abilities": [
+        {
+          "effect": "While you have a character named Pascal in play, this character gains Ward. (Opponents can't choose them except to challenge.)",
+          "fullText": "PERCEPTIVE PARTNER While you have a character\nnamed Pascal in play, this character gains Ward.\n(Opponents can't choose them except to challenge.)",
+          "name": "PERCEPTIVE PARTNER",
+          "type": "static"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": false,
+          "allowedUntilDate": "2025-09-05"
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2024-06-07",
+      "artists": [
+        "Aubrey Archer"
+      ],
+      "artistsText": "Aubrey Archer",
+      "baseId": 844,
+      "code": "Qj",
+      "color": "Sapphire",
+      "cost": 5,
+      "externalLinks": {
+        "cardTraderId": 365507,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/365507",
+        "cardmarketId": 864945,
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Discover-Promo/Rapunzel-Appreciative-Artist?language=1",
+        "tcgPlayerId": 668574,
+        "tcgPlayerUrl": "https://www.tcgplayer.com/product/668574"
+      },
+      "flavorText": "“Pascal! A new flower for the wall!”",
+      "foilTypes": [
+        "FreeForm2"
+      ],
+      "fullIdentifier": "1/DIS • EN • 4",
+      "fullName": "Rapunzel - Appreciative Artist",
+      "fullText": "PERCEPTIVE PARTNER While you have a character\nnamed Pascal in play, this character gains Ward.\n(Opponents can't choose them except to challenge.)",
+      "fullTextSections": [
+        "PERCEPTIVE PARTNER While you have a character\nnamed Pascal in play, this character gains Ward.\n(Opponents can't choose them except to challenge.)"
+      ],
+      "id": 3243,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/dis/1_ba60c5950169212d73c06d37a66d2477e097b3e4.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/dis/1_3c05105d76d9775274bc878161a602c4c12365de.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/dis/1_34ce7a9e5ab4384ee30682a04f49dd4bf6c55ecd.jpg"
+      },
+      "inkwell": true,
+      "lore": 3,
+      "name": "Rapunzel",
+      "number": 1,
+      "promoGrouping": "DIS",
+      "promoSourceCategory": "Disney Parks & Stores",
+      "rarity": "Special",
+      "setCode": "4",
+      "simpleName": "rapunzel appreciative artist",
+      "story": "Tangled",
+      "strength": 3,
+      "subtypes": [
+        "Dreamborn",
+        "Hero",
+        "Princess"
+      ],
+      "subtypesText": "Dreamborn • Hero • Princess",
+      "type": "Character",
+      "version": "Appreciative Artist",
+      "willpower": 5
+    },
+    {
+      "abilities": [
+        {
+          "fullText": "Shift 4 (You may pay 4 ⬡ to play this on top of one of your\ncharacters named Donald Duck.)",
+          "keyword": "Shift",
+          "keywordValue": "4",
+          "keywordValueNumber": 4,
+          "reminderText": "You may pay 4 ⬡ to play this on top of one of your characters named Donald Duck.",
+          "type": "keyword"
+        },
+        {
+          "effect": "When you play this character, if you used Shift to play him, each opponent loses 2 lore.",
+          "fullText": "HUMBLE PIE When you play this character, if you used Shift\nto play him, each opponent loses 2 lore.",
+          "name": "HUMBLE PIE",
+          "type": "triggered"
+        },
+        {
+          "effect": "While an opponent has 10 or more lore, this character gets +6 ¤.",
+          "fullText": "RAGING DUCK While an opponent has 10 or more lore, this\ncharacter gets +6 ¤.",
+          "name": "RAGING DUCK",
+          "type": "static"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": false,
+          "allowedUntilDate": "2026-07-17"
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2024-08-30",
+      "artists": [
+        "César Vergara"
+      ],
+      "artistsText": "César Vergara",
+      "baseId": 1063,
+      "code": "Qk",
+      "color": "Ruby",
+      "cost": 5,
+      "externalLinks": {
+        "cardTraderId": 365508,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/365508",
+        "cardmarketId": 864946,
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Discover-Promo/Donald-Duck-Pie-Slinger?language=1",
+        "tcgPlayerId": 668573,
+        "tcgPlayerUrl": "https://www.tcgplayer.com/product/668573"
+      },
+      "foilTypes": [
+        "FreeForm2"
+      ],
+      "fullIdentifier": "2/DIS • EN • 5",
+      "fullName": "Donald Duck - Pie Slinger",
+      "fullText": "Shift 4 (You may pay 4 ⬡ to play this on top of one of your\ncharacters named Donald Duck.)\nHUMBLE PIE When you play this character, if you used Shift\nto play him, each opponent loses 2 lore.\nRAGING DUCK While an opponent has 10 or more lore, this\ncharacter gets +6 ¤.",
+      "fullTextSections": [
+        "Shift 4 (You may pay 4 ⬡ to play this on top of one of your\ncharacters named Donald Duck.)",
+        "HUMBLE PIE When you play this character, if you used Shift\nto play him, each opponent loses 2 lore.",
+        "RAGING DUCK While an opponent has 10 or more lore, this\ncharacter gets +6 ¤."
+      ],
+      "id": 3244,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/dis/2_c8c5718c042c8c5c47a7a34b85d65466212acba6.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/dis/2_c736ec129c7b7d996b2adc2cb412e1e49f50e5ad.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/dis/2_c84a2dbfd172031b1c99e874e6b3a4a2e2a9abbc.jpg"
+      },
+      "inkwell": true,
+      "keywordAbilities": [
+        "Shift"
+      ],
+      "lore": 1,
+      "name": "Donald Duck",
+      "number": 2,
+      "promoGrouping": "DIS",
+      "promoSourceCategory": "Disney Parks & Stores",
+      "rarity": "Special",
+      "setCode": "5",
+      "simpleName": "donald duck pie slinger",
+      "story": "Mickey Mouse & Friends",
+      "strength": 3,
+      "subtypes": [
+        "Floodborn",
+        "Hero",
+        "Knight"
+      ],
+      "subtypesText": "Floodborn • Hero • Knight",
+      "type": "Character",
+      "version": "Pie Slinger",
+      "willpower": 6
+    },
+    {
+      "abilities": [
+        {
+          "fullText": "Shift 4 (You may pay 4 ⬡ to play this on top of one of\nyour characters named Stitch.)",
+          "keyword": "Shift",
+          "keywordValue": "4",
+          "keywordValueNumber": 4,
+          "reminderText": "You may pay 4 ⬡ to play this on top of one of your characters named Stitch.",
+          "type": "keyword"
+        },
+        {
+          "effect": "Whenever you play a character with cost 2 or less, you may exert them to draw a card.",
+          "fullText": "ADORING FANS Whenever you play a character with\ncost 2 or less, you may exert them to draw a card.",
+          "name": "ADORING FANS",
+          "type": "triggered"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2023-09-08",
+      "artists": [
+        "Simangaliso Sibaya"
+      ],
+      "artistsText": "Simangaliso Sibaya",
+      "baseId": 1939,
+      "code": "Ql",
+      "color": "Amber",
+      "cost": 6,
+      "externalLinks": {
+        "cardTraderId": 365509,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/365509",
+        "cardmarketId": 864947,
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Discover-Promo/Stitch-Rock-Star?language=1"
+      },
+      "flavorText": "The best part about a beachside concert is that there's\nalways room for one more.",
+      "foilTypes": [
+        "FreeForm2"
+      ],
+      "fullIdentifier": "3/DIS • EN • 9",
+      "fullName": "Stitch - Rock Star",
+      "fullText": "Shift 4 (You may pay 4 ⬡ to play this on top of one of\nyour characters named Stitch.)\nADORING FANS Whenever you play a character with\ncost 2 or less, you may exert them to draw a card.",
+      "fullTextSections": [
+        "Shift 4 (You may pay 4 ⬡ to play this on top of one of\nyour characters named Stitch.)",
+        "ADORING FANS Whenever you play a character with\ncost 2 or less, you may exert them to draw a card."
+      ],
+      "id": 3245,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/dis/3_672f06981f4bd3212e66f25ed25e3835fa481219.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/dis/3_a552e08f5a1eec401bbc897eda59b00c89c599e7.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/dis/3_0bda346ba8738c244a46970433ff0072b5847400.jpg"
+      },
+      "inkwell": true,
+      "keywordAbilities": [
+        "Shift"
+      ],
+      "lore": 3,
+      "name": "Stitch",
+      "number": 3,
+      "promoGrouping": "DIS",
+      "promoSourceCategory": "Disney Parks & Stores",
+      "rarity": "Special",
+      "setCode": "9",
+      "simpleName": "stitch rock star",
+      "story": "Lilo & Stitch",
+      "strength": 3,
+      "subtypes": [
+        "Floodborn",
+        "Hero",
+        "Alien"
+      ],
+      "subtypesText": "Floodborn • Hero • Alien",
+      "type": "Character",
+      "version": "Rock Star",
+      "willpower": 5
+    },
+    {
+      "abilities": [
+        {
+          "effect": "Whenever you pay 2 ⬡ or less to play a non-character, draw a card, then choose and discard a card.",
+          "fullText": "SECRET MISSION Whenever you pay 2 ⬡ or\nless to play a non-character, draw a card, then\nchoose and discard a card.",
+          "name": "SECRET MISSION",
+          "type": "triggered"
+        },
+        {
+          "effect": "Whenever you pay 2 ⬡ or less to play a character, deal 1 damage to chosen opposing damaged character.",
+          "fullText": "WORLD'S GREATEST TOY Whenever you pay 2 ⬡\nor less to play a character, deal 1 damage to\nchosen opposing damaged character.",
+          "name": "WORLD'S GREATEST TOY",
+          "type": "triggered"
+        }
+      ],
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-05-08",
+      "artists": [
+        "Max Grecke"
+      ],
+      "artistsText": "Max Grecke",
+      "baseId": 2800,
+      "code": "Qp",
+      "color": "Emerald",
+      "cost": 3,
+      "externalLinks": {
+        "cardTraderId": 394859,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/394859",
+        "cardmarketId": 888610,
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Promos-Year-3/Buzz-Lightyear-On-the-Way?language=1",
+        "tcgPlayerId": 692488,
+        "tcgPlayerUrl": "https://www.tcgplayer.com/product/692488"
+      },
+      "foilTypes": [
+        "Silver"
+      ],
+      "fullIdentifier": "56/P3 • EN • 12",
+      "fullName": "Buzz Lightyear - On the Way",
+      "fullText": "SECRET MISSION Whenever you pay 2 ⬡ or\nless to play a non-character, draw a card, then\nchoose and discard a card.\nWORLD'S GREATEST TOY Whenever you pay 2 ⬡\nor less to play a character, deal 1 damage to\nchosen opposing damaged character.",
+      "fullTextSections": [
+        "SECRET MISSION Whenever you pay 2 ⬡ or\nless to play a non-character, draw a card, then\nchoose and discard a card.",
+        "WORLD'S GREATEST TOY Whenever you pay 2 ⬡\nor less to play a character, deal 1 damage to\nchosen opposing damaged character."
+      ],
+      "id": 3249,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo3/56_7affab8406c4e8af8120f3d3703f77576311a0fb.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo3/56_8506064299f97aff4cae1cb819b7900f96758007.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo3/56_f38bb0531c708c62ffbce4c20eac1f6b0a4db772.jpg"
+      },
+      "inkwell": true,
+      "lore": 1,
+      "name": "Buzz Lightyear",
+      "number": 56,
+      "promoGrouping": "P3",
+      "promoSourceCategory": "Disney Parks & Stores",
+      "rarity": "Special",
+      "setCode": "12",
+      "simpleName": "buzz lightyear on the way",
+      "story": "Toy Story",
+      "strength": 4,
+      "subtypes": [
+        "Storyborn",
+        "Hero",
+        "Toy",
+        "Captain"
+      ],
+      "subtypesText": "Storyborn • Hero • Toy • Captain",
+      "type": "Character",
+      "version": "On the Way",
+      "willpower": 2
+    },
+    {
+      "allowedInFormats": {
+        "Core": {
+          "allowed": true
+        },
+        "Infinity": {
+          "allowed": true
+        }
+      },
+      "allowedInTournamentsFromDate": "2026-05-08",
+      "artists": [
+        "Max Grecke"
+      ],
+      "artistsText": "Max Grecke",
+      "baseId": 2791,
+      "code": "Qq",
+      "color": "Emerald",
+      "cost": 2,
+      "externalLinks": {
+        "cardTraderId": 401849,
+        "cardTraderUrl": "https://www.cardtrader.com/cards/401849",
+        "cardmarketId": 891471,
+        "cardmarketUrl": "https://www.cardmarket.com/en/Lorcana/Products/Singles/Promos-Year-3/Buzz-Lightyear-Space-Ranger-V1?language=1"
+      },
+      "flavorText": "“Environment appears habitable, but the flora\nseems to have undergone some strange\nmutations. Could be Zurg's influence.”",
+      "foilTypes": [
+        "RainbowPillars"
+      ],
+      "fullIdentifier": "57/P3 • EN • 12",
+      "fullName": "Buzz Lightyear - Space Ranger",
+      "fullText": "",
+      "fullTextSections": [],
+      "id": 3250,
+      "images": {
+        "foilMask": "https://api.lorcana.ravensburger.com/images/en/promo3/57_ce371c46d81ce45983b360832be679058b1ee7e7.jpg",
+        "full": "https://api.lorcana.ravensburger.com/images/en/promo3/57_b55c07cfe81c27edc73a7cf3de0ecef90183c4f1.jpg",
+        "thumbnail": "https://api.lorcana.ravensburger.com/images/en/promo3/57_ea790ef379aa668da70691d1caff7233d1f73eca.jpg"
+      },
+      "inkwell": true,
+      "lore": 1,
+      "name": "Buzz Lightyear",
+      "number": 57,
+      "promoGrouping": "P3",
+      "promoSourceCategory": "Promo",
+      "rarity": "Special",
+      "setCode": "12",
+      "simpleName": "buzz lightyear space ranger",
+      "story": "Toy Story",
+      "strength": 3,
+      "subtypes": [
+        "Storyborn",
+        "Hero",
+        "Toy",
+        "Captain"
+      ],
+      "subtypesText": "Storyborn • Hero • Toy • Captain",
+      "type": "Character",
+      "version": "Space Ranger",
+      "willpower": 3
     }
   ]
 }

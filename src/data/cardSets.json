@@ -1,6 +1,6 @@
 {
   "description": "Maps card names to their set numbers (as arrays to handle reprints). Generated from local allCards data when available, with API fallback. For Core Constructed, a card is legal if ANY of its sets is in the current legal set window configured in src/data/coreConstructed.json.",
-  "lastUpdated": "2026-07-27T05:09:27.304Z",
+  "lastUpdated": "2026-08-08T07:41:05.441Z",
   "source": "local:src/data/allCards.json",
   "totalUniqueCards": 3241,
   "cardSetMapping": {

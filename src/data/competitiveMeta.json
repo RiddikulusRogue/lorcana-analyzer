@@ -1,6 +1,6 @@
 {
-    "lastUpdated": "2026-07-25",
-    "source": "Latest verified tournament window: DLC Circuit (Melbourne + Ghent + Taipei) plus Winterspell Set Championship season and CCS $25k; core rotation now includes set 13.",
+    "lastUpdated": "2026-08-08",
+    "source": "Latest verified tournament window: DLC Dortmund & Indianapolis (Infinity, Jun 2026); Core Constructed rotation to Attack of the Vine! (Set 14, Jul 2026); Challenge Championship Qualifier (CCQ) results Jul 18-25 2026. Attack of the Vine! Set Championships upcoming.",
     "internetStrategySources": [
         {
             "name": "TCGplayer - The Best Decks From DLC Ghent & CCS $25k Invitational Qualifier",
@@ -37,6 +37,30 @@
             "url": "https://www.tcgplayer.com/content/disney-lorcana/articles",
             "lastChecked": "2026-05-12",
             "notes": "Set 13 rotation is now live (Jul 2026). Competitive constructed data is still maturing, so strategic recommendations remain anchored to latest completed open-event results until post-release events conclude."
+        },
+        {
+            "name": "TCGplayer - The Best Decks from DLC Dortmund",
+            "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-from-DLC-Dortmund/214e51f0-240b-4798-a271-80ddb2d451f9/",
+            "lastChecked": "2026-08-08",
+            "notes": "Infinity format. Grand Final: Amethyst/Emerald Tempo (Alessandro Danesi) — Diablo-based, 12 shift targets, Snow Fort protection, Pull the Lever!/Wrong Lever! engine. Saturday: Amber/Steel Singer (Alex Kuik) — Princess singers + Beast - Tragic Hero. 2nd both heats: Ruby/Sapphire Items. Published Jun 9, 2026."
+        },
+        {
+            "name": "TCGplayer - The Best Decks from Disney Lorcana Challenge Indianapolis",
+            "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-from-Disney-Lorcana-Challenge-Indianapolis/6c2a5fb9-0032-4b8d-80c4-e1ab65da1b56/",
+            "lastChecked": "2026-08-08",
+            "notes": "Infinity format, 1,747 players. 1st: Ruby/Sapphire Shark (Bryan Pereira/Splooshmcgoo) — Maui - Half-Shark, Olaf - Snowman of Action as new engine. 2nd: Amber/Emerald Dogs (IMP_Alphos) — Kida pair + Elinor tech. 3rd: Amethyst/Emerald Tempo (Ramen). Published Jun 24, 2026."
+        },
+        {
+            "name": "TCGplayer - The Best Decks From Lorcana's New Format",
+            "url": "https://www.tcgplayer.com/content/article/The-Best-Decks-From-Lorcana-s-New-Format/467b1fa5-9c7a-47b7-a4cf-3be3e175c5fe/",
+            "lastChecked": "2026-08-08",
+            "notes": "Post-rotation Core Constructed (Attack of the Vine! era). CCQ results from Vans Comics, Warehouse 51, and Millennium Games (Jul 18-25). Top: Amethyst/Steel Shift (Maleficent & Diablo + Omnidroid), Amber/Ruby Boost (Boosties), Amber/Emerald (multiple), Sapphire/Steel Darkwing Duck. Published Jul 29, 2026."
+        },
+        {
+            "name": "TCGplayer - The Best-Selling Cards from Disney Lorcana's Attack of the Vine!",
+            "url": "https://www.tcgplayer.com/content/article/The-Best-Selling-Cards-from-Disney-Lorcana-s-Attack-of-the-Vine/2b924e9a-76fd-481f-9fcf-4413cf2dccab/",
+            "lastChecked": "2026-08-08",
+            "notes": "Top sellers confirm meta priorities: Gaston - Superior Archer, Sulley - The New Boss, Sulley & Boo - Scare Buddies, Mulan - Resourceful Recruit, Morph - Little Imitator, Maleficent & Diablo - Evil Incarnate. Published Aug 3, 2026."
         }
     ],
     "banList": {
@@ -49,16 +73,18 @@
         ]
     },
     "upcomingEvents": {
-        "note": "DLC Indianapolis and DLC Dortmund upcoming, both featuring Infinity format as main event. Core rotation now includes set 13 and is expected to reshape prep for both events.",
+        "note": "DLC Dortmund (Jun 6-7), DLC Indianapolis (Jun 20-21), and DLC Manila (Jul 11-12) all completed — all three were Infinity format. Core Constructed rotation arrived with Attack of the Vine! (Set 14, Jul 2026). Attack of the Vine! Set Championships approximately 5 weeks from Jul 29 2026.",
         "events": [
             {
-                "name": "DLC Indianapolis",
+                "name": "DLC Manila",
                 "format": "Infinity",
-                "status": "upcoming"
+                "status": "completed",
+                "date": "2026-07-11/12",
+                "note": "Final Infinity DLC of Season 2 before Attack of the Vine! rotation."
             },
             {
-                "name": "DLC Dortmund",
-                "format": "Infinity",
+                "name": "Attack of the Vine! Set Championships",
+                "format": "Core Constructed",
                 "status": "upcoming"
             }
         ]
@@ -123,60 +149,337 @@
                 "Format diversifying — multiple color combinations winning high-level events",
                 "Amber/Ruby gaining traction as a Dogs-counter and off-meta threat"
             ]
+        },
+        {
+            "name": "DLC São Paulo",
+            "date": "2026-04-30",
+            "highlights": [
+                "Amber/Emerald Dogs maintained dominance going into Wilds Unknown season",
+                "Same Dogs-dominant pattern carried forward from DLC Ghent"
+            ]
+        },
+        {
+            "name": "DLC Dortmund (Infinity Format)",
+            "dateRange": "2026-06-06 to 2026-06-07",
+            "format": "Infinity Constructed",
+            "highlights": [
+                "Grand Final Winner: Alessandro Danesi — Amethyst/Emerald Tempo (Diablo-based), a widely overlooked pre-event pick",
+                "Saturday Winner: Alex Kuik — Amber/Steel Singer (Princess shell: Aurora, Cinderella - Ballroom Sensation, Ariel, Beast - Tragic Hero, Cinderella - Stouthearted)",
+                "2nd Place both heats: Ruby/Sapphire Items (Dillon Leduc Friday; Rafaelo Sarmiento Saturday)",
+                "Diablo - Devoted Herald + 12 Shift targets: 8 can shift Diablo on turn 2. Snow Fort keeps Diablo out of Let the Storm Rage On range",
+                "Amber/Emerald Dogs most-played but failed to reach either final",
+                "Ruby/Sapphire Items: 30+ items, Oswald - The Lucky Rabbit engine, Maurice's Workshop, Lucky Dime + Tamatoa - So Shiny! win con",
+                "Pull the Lever! / Wrong Lever! combo in Amethyst/Emerald creates 6 effective copies of Friends on the Other Side"
+            ]
+        },
+        {
+            "name": "DLC Indianapolis (Infinity Format)",
+            "dateRange": "2026-06-20 to 2026-06-21",
+            "format": "Infinity Constructed",
+            "highlights": [
+                "1st Place: Bryan Pereira (Splooshmcgoo) — Ruby/Sapphire Shark; Maui - Half-Shark + Olaf - Snowman of Action as key Wilds Unknown addition",
+                "2nd Place: IMP_Alphos — Amber/Emerald Dogs with new tech: Kida - Protector of Atlantis + Kida - Atlantean, Elinor - Renowned Diplomat, The Queen - Devious Disguise",
+                "3rd Place: Ramen — Amethyst/Emerald Tempo (5 cards different from Danesi Dortmund list; Sabotage, Ursula - Sea Witch Queen added)",
+                "1,747 players attended — high variety at top tables despite Amber/Emerald expectations",
+                "Olaf - Snowman of Action is inkable and drains lore massively after Be Prepared — the biggest Wilds Unknown upgrade for Shark",
+                "Amethyst/Emerald confirmed as the de facto purple deck in Infinity"
+            ]
+        },
+        {
+            "name": "Attack of the Vine! CCQ Season (Core Constructed Rotation)",
+            "dateRange": "2026-07-18 to 2026-07-25",
+            "format": "Core Constructed (Post-Rotation)",
+            "highlights": [
+                "Core Constructed rotation arrived with Attack of the Vine! (Set 14) — major format shift",
+                "CCQ Vans Comics (Jul 19): Amethyst/Steel Shift won (Brandon Bolen). Amber/Ruby Toys Top 4 (Dylan Brown). Amber/Emerald Prison Control 2nd",
+                "CCQ Warehouse 51 Games (Jul 18): Amber/Ruby Boost 'Boosties' won (Humble — Sulley - The New Boss / Sulley & Boo). Sapphire/Steel Darkwing Duck Detective Top 4 (Ezekiel Murphy)",
+                "CCQ Millennium Games (Jul 25): Amber/Emerald Elinor Aggro won — Mulan - Resourceful Recruit breakout. Three Amethyst/Steel Omnidroid decks in Top 8",
+                "Amethyst/Steel has two viable variants: Maleficent & Diablo Shift build and Omnidroid/Syndrome - Out for Revenge combo build",
+                "Amber/Ruby Boost: Sulley - New Boss shifts into Sulley & Boo — when banished after Raging Storm, Sulley replays free + draw a card",
+                "Sapphire/Steel Darkwing Duck Detective: 16 Darkwing Duck variants, no Tipo/Sail ramp, Judy Hopps - Lead Detective enables free challenges",
+                "Format is diverse: aggro (Amber/Emerald Elinor), combo (Amethyst/Steel Shift), midrange (Sapphire/Steel), and control (Amber/Emerald Prison) all winning events"
+            ]
         }
     ],
     "topDecks": [
         {
-            "name": "Amber/Emerald Dogs",
+            "name": "Amethyst/Steel (Shift Combo)",
             "tier": "S",
-            "colors": [
-                "Amber",
-                "Emerald"
-            ],
-            "archetype": "Aggro",
-            "winRate": "~27%",
-            "description": "The deck to beat. Won DLC Ghent (both brackets), placed 22 copies in top cut. Winterspell additions Grandmother Willow and Nani - Stage Manager turbocharge the already fast game plan. Under the Sea enables explosive cost reduction turns.",
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Amethyst", "Steel"],
+            "archetype": "Midrange/Combo",
+            "winRate": "~25%",
+            "description": "The breakout deck of the Attack of the Vine! CCQ season. Two distinct variants: Maleficent & Diablo - Evil Incarnate Shift build (Brandon Bolen, won Vans CCQ) and Omnidroid/Syndrome - Out for Revenge build (three Top 8 finishes at Millennium Games CCQ). Both use Shift to fuel card advantage. Maleficent & Diablo draws a card the moment it enters and every subsequent turn.",
             "keyCards": [
-                "Lady - Decisive Dog",
-                "Tramp - Enterprising Dog",
-                "Tramp - Street-Smart Dog",
-                "Grandmother Willow - Ancient Advisor",
-                "Nani - Stage Manager",
-                "Emerald Chromicon",
-                "Lady - Miss Park Avenue",
-                "Lilo - Escape Artist",
-                "Ursula - Deceiver",
-                "Mowgli - Man Cub",
-                "Under the Sea",
-                "Mickey Mouse - Amber Champion",
-                "Della's Moon Lullaby",
-                "Rhino - One-Sixteenth Wolf",
-                "Finnick - Tiny Terror"
+                "Maleficent & Diablo - Evil Incarnate",
+                "Violet Parr - Super Resilient",
+                "Violet Parr - At Wits' End",
+                "Luisa Madrigal - Confident Climber",
+                "Morph - Little Imitator",
+                "Omnidroid - Scanning For Threats",
+                "Omnidroid - V.9",
+                "Omnidroid - V.10",
+                "Omnidroid - Ultimate Iteration",
+                "Syndrome - Out for Revenge",
+                "Angel - Experiment 624",
+                "Demona - Scourge of the Wyvern Clan",
+                "Junior Woodchuck Guidebook",
+                "You Broke My Smolder",
+                "Hades - Looking for a Deal",
+                "Benja - Guardian of the Dragon Gem"
             ],
-            "gameplan": "Flood board turns 1-3 with cheap dogs. Use Grandmother Willow to dump hand and cheat Tramp - Street-Smart Dog on turn 3. Generate lore with Tramp synergies, use Under the Sea to close with a singer discount. Lady - Miss Park Avenue and Emerald Chromicon refuel, Ursula/Mowgli strip opponent answers.",
+            "gameplan": "Variant A (Shift/Maleficent & Diablo): Flood the discard with Shift targets. Deploy Maleficent & Diablo - Evil Incarnate for immediate card draw. Alert characters punish Evasive strategies. Variant B (Omnidroid): Chain Omnidroid Shifts, then Syndrome - Out for Revenge replays them for free when banished. Both aim to win turns 4-6 via overwhelming card advantage.",
             "strengths": [
-                "Explosive turn 3-4 closes",
-                "Card advantage through synergies",
-                "Hard to interact with due to cost reduction",
-                "Many redundant win conditions"
+                "Maleficent & Diablo draws a card immediately on entry — never a dead play",
+                "Alert removes Evasive characters that other strategies can't touch",
+                "Syndrome - Out for Revenge enables free Omnidroid replays for tempo",
+                "Benja - Guardian of the Dragon Gem hard-counters Ruby/Sapphire item strategies",
+                "Two distinct build variants both winning high-level events"
             ],
             "weaknesses": [
-                "Weak to Amber/Steel (Angel - Experiment 624 hard counters)",
-                "Vulnerable to well-timed board sweeps",
-                "Amethyst/Steel has favored matchup"
+                "Needs critical mass of discard to power Maleficent & Diablo effectively",
+                "Omnidroid build loses steam if Syndrome is removed early",
+                "Less explosive than pure aggro turns 1-2"
             ],
-            "mulligan": "Keep Grandmother Willow, any 1-2 cost dogs, or Tramp - Enterprising Dog. Mulligan all hands without a turn-1 or turn-2 play."
+            "mulligan": "Keep any 1-2 cost Shift target (Violet Parr, Morph - Little Imitator, Angel) plus a 3-4 drop. Discard Maleficent & Diablo to load discard count early."
         },
         {
-            "name": "Amethyst/Sapphire Control",
+            "name": "Amber/Ruby Boost (Boosties)",
             "tier": "S",
-            "colors": [
-                "Amethyst",
-                "Sapphire"
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Amber", "Ruby"],
+            "archetype": "Midrange/Combo",
+            "winRate": "~22%",
+            "description": "Won CCQ Warehouse 51 Games (Humble). Attack of the Vine! gave this deck Sulley - The New Boss and Sulley & Boo - Scare Buddies. Sulley shifts into Scare Buddies; when Scare Buddies is banished after Raging Storm, Sulley replays for free and draws a card. This violates Raging Storm's intended design. Webby's Diary + Medallion Weights are the draw engine. Gaston - Superior Archer and Red Alert add a powerful removal package.",
+            "keyCards": [
+                "Sulley - The New Boss",
+                "Sulley & Boo - Scare Buddies",
+                "Webby's Diary",
+                "Medallion Weights",
+                "Olaf - Snowman of Action",
+                "Maleficent - Monstrous Dragon",
+                "Raging Storm",
+                "Scrooge's Counting House - Ebenezer's Office",
+                "Gaston - Superior Archer",
+                "Red Alert",
+                "Hercules - Spectral God",
+                "Scrooge McDuck - Ghostly Ebenezer",
+                "Aladdin - Barreling Through",
+                "World's Greatest Criminal Mind",
+                "The Horseman Strikes!"
             ],
+            "gameplan": "Turn 1-3: Establish Webby's Diary / Medallion Weights draw engine. Turn 4: Shift Sulley - New Boss into Sulley & Boo - Scare Buddies. Cast Raging Storm — Scare Buddies is banished, Sulley - New Boss replays for free and you draw a card. Scrooge's Counting House starves opponent of lore. Maleficent - Monstrous Dragon closes.",
+            "strengths": [
+                "Sulley & Boo + Raging Storm: free board wipe plus free Sulley replay plus draw a card",
+                "Gaston - Superior Archer and Red Alert cover both aggro and control matchups",
+                "Webby's Diary / Medallion Weights extremely consistent card draw",
+                "Counting House denies opponent lore during mid-game"
+            ],
+            "weaknesses": [
+                "Setup-heavy — needs Diary/Weights to function smoothly",
+                "Can fall behind if early characters are removed before Sulley arrives",
+                "Slightly weaker into ultra-fast aggro"
+            ],
+            "mulligan": "Keep Webby's Diary or Medallion Weights. Any hand with early draw plus Sulley - New Boss is strong."
+        },
+        {
+            "name": "Amber/Emerald (Elinor Aggro)",
+            "tier": "A",
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Amber", "Emerald"],
+            "archetype": "Aggro/Midrange",
+            "winRate": "~20%",
+            "description": "Won CCQ Millennium Games. Multiple sub-variants — no consensus build yet. Core package: Aurora - Holding Court to jumpstart early Elinor - Renowned Diplomat. Mulan - Resourceful Recruit (new from Attack of the Vine!) is the breakout card — buff her with Dale - Ready For His Shot and Snow Fort and she quests for 3+ lore as a Princess demanding an immediate answer.",
+            "keyCards": [
+                "Elinor - Renowned Diplomat",
+                "Aurora - Holding Court",
+                "Pocahontas - Guiding the Tribe",
+                "Grandmother Willow - Ancient Advisor",
+                "Mulan - Resourceful Recruit",
+                "Dale - Ready For His Shot",
+                "Snow Fort",
+                "Ursula - Deceiver",
+                "Gaston - Superior Archer",
+                "Circle of Life",
+                "Pocahontas - Peacekeeper"
+            ],
+            "gameplan": "Turn 1-2: Deploy cheap 1-2 cost characters. Turn 3-4: Elinor - Renowned Diplomat stacks card advantage — multiple copies are exponential. Buff Mulan with Snow Fort / Dale for 3+ lore per quest while she demands answers. Ursula - Deceiver strips opponent responses.",
+            "strengths": [
+                "Elinor - Renowned Diplomat is crushing in multiples",
+                "Mulan - Resourceful Recruit is a must-answer threat that quests for massive lore",
+                "Multiple build variants make preparation difficult",
+                "Aurora doubles as ramp for Princess synergies"
+            ],
+            "weaknesses": [
+                "Weaker if Elinor is efficiently countered before she fires",
+                "No consensus build — format still maturing",
+                "Amethyst/Steel trades efficiently against the flood strategy"
+            ],
+            "mulligan": "Keep any 1-2 drop plus Aurora - Holding Court. Ideal: Aurora plus Pocahontas plus Elinor."
+        },
+        {
+            "name": "Amber/Emerald (Prison Control)",
+            "tier": "A",
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Amber", "Emerald"],
+            "archetype": "Control",
+            "winRate": "~17%",
+            "description": "2nd Place Vans CCQ and Top 8 Millennium Games CCQ. Prison/control variant of the same color pair. Hampers opponent's hand with Ursula - Deceiver and Lenny - Toy Binoculars, then clears repeatedly with Chernabog - Unnatural Force, Milo Thatch - Getting His Hands Dirty, and the Malicious, Mean and Scary + Prince Phillip - Vanquisher of Foes combo.",
+            "keyCards": [
+                "Chernabog - Unnatural Force",
+                "Milo Thatch - Getting His Hands Dirty",
+                "Prince Phillip - Vanquisher of Foes",
+                "Malicious, Mean and Scary",
+                "Ursula - Deceiver",
+                "Lenny - Toy Binoculars",
+                "Under the Sea",
+                "Stitch - Carefree Snowboarder",
+                "Circle of Life"
+            ],
+            "gameplan": "Turn 1-3: Deploy Ursula - Deceiver and Lenny - Toy Binoculars to strip hand. Turn 4+: Chernabog + Milo Thatch as recurring board sweepers. Malicious, Mean and Scary + Prince Phillip combo locks the field. Stitch + Circle of Life close with lore.",
+            "strengths": [
+                "Grinds out any deck relying on card advantage",
+                "Prince Phillip + Malicious combo is very hard to break out of",
+                "Layers of hand disruption plus board wipes"
+            ],
+            "weaknesses": [
+                "Slow setup — ultra-fast decks can race it",
+                "Relies on executing combos in order",
+                "Weaker if hand disruption pieces are removed early"
+            ],
+            "mulligan": "Keep Ursula - Deceiver and any early hand disruption. Ideal: Hand stripper plus a sweeper in hand."
+        },
+        {
+            "name": "Sapphire/Steel (Darkwing Duck Detective)",
+            "tier": "A",
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Sapphire", "Steel"],
+            "archetype": "Midrange",
+            "winRate": "~18%",
+            "description": "Top 4 at both Vans CCQ and Warehouse 51 CCQ (Ezekiel Murphy). Detective-class deck running 16 Darkwing Duck variants — no Tipo/Sail ramp. Judy Hopps - Lead Detective enables free challenges that punish anyone who quests. Nick Wilde - Persistent Investigator, Pluto - Steel Champion, and Darkwing Duck & Launchpad - St. Canard's Finest are the payoffs. Budget-friendly (~$180, of which $150 is Angel - Experiment 624).",
+            "keyCards": [
+                "Darkwing Duck & Launchpad - St. Canard's Finest",
+                "Darkwing Duck (multiple versions)",
+                "Launchpad",
+                "Judy Hopps - Lead Detective",
+                "Judy Hopps - Uncovering Clues",
+                "Nick Wilde - Persistent Investigator",
+                "Pluto - Steel Champion",
+                "The Terror That Flaps in the Night",
+                "Strength Of A Raging Fire"
+            ],
+            "gameplan": "Flood with cheap Darkwing / Launchpad Detective bodies. Judy Hopps - Lead Detective enables free challenges every time the opponent quests. Nick Wilde and Pluto generate value from challenges. Darkwing Duck & Launchpad finish as a top-end threat. The Terror That Flaps in the Night deals chip damage without additional ink.",
+            "strengths": [
+                "Extremely punishing against questing — Judy Hopps triggers free challenges every time",
+                "Alert handles Evasive threats efficiently",
+                "16 Darkwing variants give high consistency and synergy density",
+                "Budget-friendly if Angels are already owned"
+            ],
+            "weaknesses": [
+                "Less raw power against pure control shells",
+                "No ramp means slightly slower curve",
+                "Opponent can position to avoid profitable challenges"
+            ],
+            "mulligan": "Keep any Darkwing Duck plus Judy Hopps - Lead Detective. Two Darkwing variants is the ideal opening."
+        },
+        {
+            "name": "Amber/Ruby Toys",
+            "tier": "A",
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Amber", "Ruby"],
+            "archetype": "Aggro/Midrange",
+            "winRate": "~15%",
+            "description": "Top 4 Vans CCQ (Dylan Brown). Budget deck (~$60, no card over $4 including Legendaries). Woody - Helping A Friend (new from Attack of the Vine!) adds to the Toy card-flow engine alongside Jessie - Lively Cowgirl and Woody - Leader Of The Toys. Sid Phillips - Toy Surgeon provides fast lore close.",
+            "keyCards": [
+                "Jessie - Lively Cowgirl",
+                "Woody - Leader Of The Toys",
+                "Woody - Helping A Friend",
+                "Sid Phillips - Toy Surgeon",
+                "Various Toy-class characters"
+            ],
+            "gameplan": "Deploy cheap Toys aggressively for early questing. Woody - Leader Of The Toys and Jessie generate free cards when Toys are played. Woody - Helping A Friend adds Toy card flow. Sid Phillips - Toy Surgeon provides fast lore effect to close near 20.",
+            "strengths": [
+                "Extremely budget-friendly — under $60 to build",
+                "Toy synergies generate card advantage without dedicated draw spells",
+                "Sid Phillips - Toy Surgeon is a fast lore closer",
+                "Resilient mid-game with character flooding"
+            ],
+            "weaknesses": [
+                "Telegraphed strategy — experienced players know the lines",
+                "Weaker into mass board removal",
+                "Less raw power than S-tier decks"
+            ],
+            "mulligan": "Keep cheap Toy characters and Woody. Ideal: Turn 1 Toy plus Woody ready to leverage it."
+        },
+        {
+            "name": "Amber/Amethyst Midrange",
+            "tier": "B",
+            "format": "Core Constructed (Post-Rotation, Attack of the Vine! era)",
+            "colors": ["Amber", "Amethyst"],
             "archetype": "Midrange/Control",
-            "winRate": "~23%",
-            "description": "Highest raw power in a vacuum. Tipo + Sail ramp into Genie - Wish Fulfilled, Dumbo, Demona, and Hades. Now features Swordplay for extra +3 challenge math vs Dogs, and Demona - Betrayer of the Clan as a 4-of for stability.",
+            "winRate": "~12%",
+            "description": "Multiple successful variants in the first CCQs: Evasive-heavy midrange (Top 8 Warehouse 51) and Storm Control running Raging Storm + Junior Woodchuck Guidebook + Ohana Means Family (2nd Vans CCQ). Demona - Scourge of the Wyvern Clan provides stats and stability.",
+            "keyCards": [
+                "Demona - Scourge of the Wyvern Clan",
+                "Raging Storm",
+                "Junior Woodchuck Guidebook",
+                "Ohana Means Family"
+            ],
+            "gameplan": "Variant A (Evasive Midrange): Deploy Evasive threats backed by Demona. Variant B (Storm Control): Control early board, refill with Guidebook + Ohana Means Family, sweep with Raging Storm, close with threats.",
+            "strengths": [
+                "Raging Storm is a clean reset against any flood strategy",
+                "Two variants make preparation by opponents difficult",
+                "Demona provides strong board presence"
+            ],
+            "weaknesses": [
+                "Less consistent than top-tier decks",
+                "Storm Control loses tempo during sweep execution",
+                "Evasive variant weaker into heavy removal"
+            ],
+            "mulligan": "Keep early curve plus Guidebook (Storm) or Evasive threat (midrange)."
+        },
+        {
+            "name": "Amber/Emerald Dogs (Pre-Rotation / Infinity)",
+            "tier": "S (Infinity) / Pre-Rotation Core reference",
+            "format": "Infinity Constructed + Pre-Rotation Core reference",
+            "colors": ["Amber", "Emerald"],
+            "archetype": "Aggro",
+            "winRate": "~26% (Infinity)",
+            "description": "The pre-rotation Core boogeyman — still S-tier in Infinity. 2nd Place DLC Indianapolis (IMP_Alphos). New Infinity tech: Kida - Protector of Atlantis + Kida - Atlantean for Under the Sea in any matchup; Elinor - Renowned Diplomat for card advantage; The Queen - Devious Disguise as an Evasive threat that dodges removal and quests for 3. Core Dogs engine unchanged.",
+            "keyCards": [
+                "Tramp - Street-Smart Dog",
+                "Grandmother Willow - Ancient Advisor",
+                "Under the Sea",
+                "Kida - Protector of Atlantis",
+                "Kida - Atlantean",
+                "Elinor - Renowned Diplomat",
+                "The Queen - Devious Disguise",
+                "Aurora - Holding Court",
+                "Lilo - Escape Artist",
+                "Lady - Decisive Dog"
+            ],
+            "gameplan": "Flood board turns 1-3. Grandmother Willow accelerates to Tramp - Street-Smart Dog. Kida - Protector of Atlantis shifts in to shrink board before Under the Sea sweeps. Elinor and The Queen generate card advantage. Under the Sea closes via singer discount.",
+            "strengths": [
+                "Kida package powers Under the Sea in any matchup",
+                "Elinor - Renowned Diplomat is backbreaking in multiples",
+                "The Queen - Devious Disguise dodges removal and quests for 3",
+                "Core aggressive plan proven across dozens of high-level events"
+            ],
+            "weaknesses": [
+                "Amethyst/Emerald Tempo favorable via Diablo + Snow Fort (Infinity)",
+                "Ruby/Sapphire Shark resets with repeated sweepers",
+                "Amber/Steel Singer punishes via Cinderella singers + removal songs"
+            ],
+            "mulligan": "Keep Grandmother Willow, cheap dogs, Kida - Atlantean. Mulligan all hands without a turn 1-2 play."
+        },
+        {
+            "name": "Amethyst/Sapphire Control (Pre-Rotation)",
+            "tier": "S (Pre-Rotation Core reference)",
+            "format": "Pre-Rotation Core reference — see Infinity section for current viability",
+            "colors": ["Amethyst", "Sapphire"],
+            "archetype": "Midrange/Control",
+            "winRate": "~23% (pre-rotation)",
+            "description": "Pre-rotation top deck. Tipo + Sail ramp into Genie - Wish Fulfilled, Dumbo, Demona - Betrayer of the Clan (4-of), and Hades. Featured Swordplay for +3 challenge math vs Dogs. Remains a strong Infinity option but largely displaced in post-rotation Core by Attack of the Vine! archetypes.",
             "keyCards": [
                 "Tipo - Growing Son",
                 "Sail the Azurite Sea",
@@ -185,311 +488,93 @@
                 "Demona - Scourge of the Wyvern Clan",
                 "Demona - Betrayer of the Clan",
                 "Hades - Infernal Schemer",
-                "Into the Unknown",
-                "Belle - Accomplished Mystic",
-                "Cheshire Cat - Inexplicable",
-                "Let it Go",
-                "Swordplay",
-                "Junior Woodchuck Guidebook",
-                "Elsa - The Fifth Spirit",
-                "Rafiki - Mystical Fighter"
+                "Swordplay"
             ],
-            "gameplan": "Turn 1-2: Ramp with Tipo/Sail. Turn 3-5: Chain Genie/Dumbo card advantage. Turn 4+: Deploy Demona for stats + stabilize. Turn 6+: Hades, Into the Unknown, and finishers close the door.",
+            "gameplan": "Ramp → card advantage → finishers. Demona - Betrayer of the Clan as 4-of for Dogs resistance.",
             "strengths": [
-                "Highest card quality in format",
-                "Multiple card advantage engines",
-                "Flexible removal suite (Let it Go, Hades, Into the Unknown)",
-                "Almost no hard dead draws"
+                "Highest card quality in pre-rotation format",
+                "Multiple card advantage engines"
             ],
             "weaknesses": [
-                "Slightly soft to Dogs pre-stabilization (Under the Sea takes key pieces)",
-                "Mirror match skill-intensive",
-                "Requires careful ink management"
+                "Post-rotation legality uncertain for key ramp pieces in Core",
+                "Meta shifted significantly with Attack of the Vine!"
             ],
-            "mulligan": "Keep Tipo or Sail the Azurite Sea. Any hand with a turn-2 ramp piece and a follow-up is keepable."
+            "mulligan": "Keep Tipo or Sail the Azurite Sea."
         },
         {
-            "name": "Emerald/Sapphire Control",
-            "tier": "S",
-            "colors": [
-                "Emerald",
-                "Sapphire"
-            ],
+            "name": "Emerald/Sapphire Control (Pre-Rotation)",
+            "tier": "S (Pre-Rotation Core reference)",
+            "format": "Pre-Rotation Core reference",
+            "colors": ["Emerald", "Sapphire"],
             "archetype": "Control/Ramp",
-            "winRate": "~22%",
-            "description": "Won DLC Taipei (Edmond Chiu). Accelerates ink, draws cards with Clarabelle, then slams haymakers. The Under the Sea + Malicious, Mean and Scary pivot vs Dogs — combined with Ink Geyser after a shifted Prince Phillip — is the key adaptation from Winterspell.",
+            "winRate": "~22% (pre-rotation)",
+            "description": "Pre-rotation: Won DLC Taipei (Edmond Chiu). Accelerates ink, draws with Clarabelle, slams haymakers. The Under the Sea + Malicious, Mean and Scary pivot vs Dogs — combined with Ink Geyser after shifted Prince Phillip — was the key adaptation.",
             "keyCards": [
                 "Tipo - Growing Son",
                 "Sail the Azurite Sea",
                 "Clarabelle - Light on Her Hooves",
                 "Basil - Undercover Detective",
                 "Prince Phillip - Vanquisher of Foes",
-                "Malicious Mean and Scary",
+                "Malicious, Mean and Scary",
                 "John Silver - Alien Pirate",
                 "Under the Sea",
-                "Ink Geyser",
-                "Develop Your Brain",
-                "Visions of the Future",
-                "Pete - Ghost of Christmas Past"
+                "Ink Geyser"
             ],
-            "gameplan": "Turn 1-2: Ramp with Tipo/Sail. Turn 3: Clarabelle or tempo piece. Turn 4+: John Silver to deny lore then under the sea sweep. Turn 5+: Prince Phillip shifted in + Ink Geyser for full lock.",
+            "gameplan": "Ramp → Clarabelle card advantage → John Silver lore denial → Under the Sea sweep → Prince Phillip shifted + Ink Geyser lock.",
             "strengths": [
-                "Card advantage engine with Clarabelle",
-                "Late game inevitability",
-                "Under the Sea + Prince Phillip package beats Dogs",
-                "Ink Geyser post-shift is backbreaking"
+                "Ink Geyser + Prince Phillip post-shift is backbreaking",
+                "Under the Sea + Prince Phillip package reliably beats Dogs"
             ],
             "weaknesses": [
-                "Vulnerable early if ramp is disrupted",
-                "Slightly weaker mirror into Amethyst/Sapphire",
-                "Set up turns are critical"
+                "Post-rotation legality uncertain for core pieces",
+                "Vulnerable early if ramp is disrupted"
             ],
-            "mulligan": "Keep Tipo, Sail the Azurite Sea, or John Silver. Must have a turn-2 play."
+            "mulligan": "Keep Tipo, Sail, or John Silver. Must have a turn-2 play."
         },
         {
-            "name": "Amber/Steel",
-            "tier": "A",
-            "colors": [
-                "Amber",
-                "Steel"
-            ],
+            "name": "Amber/Steel (Pre-Rotation)",
+            "tier": "A (Pre-Rotation Core reference)",
+            "format": "Pre-Rotation Core reference",
+            "colors": ["Amber", "Steel"],
             "archetype": "Aggro/Tempo",
-            "winRate": "~18%",
-            "description": "Emerged at DLC Ghent as a Dogs counter and won the CCS $25k Invitational Qualifier. Two variants: Steelsong (Ariel - Ethereal Voice engine) and Goliath-focus (Goliath - Clan Leader). Angel - Experiment 624 is a hard counter to Dogs, and Akood Et Emuti enables explosive early shifts.",
+            "winRate": "~18% (pre-rotation)",
+            "description": "Pre-rotation: Emerged at DLC Ghent as a Dogs counter and won the CCS $25k Invitational Qualifier. Angel - Experiment 624 hard-counters Dogs. Akood Et Emuti enables turn-2 Angel via Cinderella - Ballroom Sensation or Angel - Siren Singer.",
             "keyCards": [
                 "Angel - Experiment 624",
                 "Angel - Siren Singer",
-                "Goliath - Clan Leader",
-                "Stitch - Carefree Snowboarder",
-                "Nani - Stage Manager",
-                "Doc - Bold Knight",
-                "Rhino - Power Hamster",
-                "Grandmother Willow - Ancient Advisor",
                 "Akood Et Emuti",
-                "Chief Powhatan - Protective Leader",
-                "Lilo - Bundled Up",
+                "Stitch - Carefree Snowboarder",
+                "Grandmother Willow - Ancient Advisor",
                 "Cinderella - Dream Come True"
             ],
-            "gameplan": "Turn 2: Angel - Experiment 624 via Akood Et Emuti / Angel - Siren Singer. Angel discards and removes cheap Dogs threats. Grandmother Willow dodges Under the Sea for key threats. Goliath counters Clarabelle; mid-game threats recoup hand with Nani/Doc.",
+            "gameplan": "Turn 2: Angel - Experiment 624 via Akood Et Emuti. Angel discards and removes cheap Dog threats. Grandmother Willow lets key threats dodge Under the Sea.",
             "strengths": [
                 "Angel - Experiment 624 hard-counters Dogs",
-                "Ignores Under the Sea via Grandmother Willow",
-                "Goliath disrupts Clarabelle card advantage",
-                "Good threat density at multiple curve points"
+                "Ignores Under the Sea via Grandmother Willow"
             ],
             "weaknesses": [
-                "Weaker in Amethyst-heavy fields",
-                "Less resilient without Angel on board",
-                "Runs out of gas in very long games"
+                "Post-rotation viability uncertain",
+                "Less resilient without Angel on board"
             ],
-            "mulligan": "Keep Angel - Siren Singer or Cinderella - Dream Come True. Ideal: Singer/Cinderella + Akood Et Emuti for turn-2 Angel."
-        },
-        {
-            "name": "Amethyst/Steel Midrange",
-            "tier": "A",
-            "colors": [
-                "Amethyst",
-                "Steel"
-            ],
-            "archetype": "Midrange",
-            "winRate": "~15%",
-            "description": "Best positioned against aggro. Strong removal suite and consistent curve. Two sub-variants: traditional midrange and location-based aggro (Fairy Ship, Castle Wyvern). Genie - Magical Researcher and Sven - Leaping Reindeer as new Winterspell additions.",
-            "keyCards": [
-                "Calhoun - Marine Sergeant",
-                "Captain Hook - Forceful Duelist",
-                "Strength of a Raging Fire",
-                "Doc - Bold Knight",
-                "Giant Cobra - Ghostly Serpent",
-                "Genie - Magical Researcher",
-                "Sven - Leaping Reindeer",
-                "Pocahontas - Following the Wind",
-                "Violet Sabrewing - Senior Junior Woodchuck"
-            ],
-            "gameplan": "Curve out 1-2-3-4, use Strength of a Raging Fire to stabilize against aggro, generate value with Doc/Genie. Giant Cobra provides late reach. Genie - Magical Researcher wins slow games.",
-            "strengths": [
-                "Crushes Amber/Emerald Dogs",
-                "Consistent removal curve",
-                "Genie - Magical Researcher wins attrition"
-            ],
-            "weaknesses": [
-                "Loses to Amethyst/Sapphire card advantage engine",
-                "Slower to establish than Amber/Steel vs aggro",
-                "Clarabelle is hard to answer"
-            ],
-            "mulligan": "Keep cheap creatures or Calhoun/Captain Hook. Ideal: 1-drop, 2-drop, removal."
-        },
-        {
-            "name": "Sapphire/Steel",
-            "tier": "A",
-            "colors": [
-                "Sapphire",
-                "Steel"
-            ],
-            "archetype": "Midrange/Control",
-            "winRate": "~14%",
-            "description": "Rising archetype — won a Winterspell Set Champs. Uses Tipo/Sail ramp into Doc - Bold Knight and Goliath - Clan Leader for card recovery. Jasmine - Steady Strategist (enabled by Pete - Ghost of Christmas Past) provides consistent 4-cost targets. Strength of a Raging Fire and He Hurled His Thunderbolt handle board pressure.",
-            "keyCards": [
-                "Tipo - Growing Son",
-                "Sail the Azurite Sea",
-                "Doc - Bold Knight",
-                "Goliath - Clan Leader",
-                "Jasmine - Steady Strategist",
-                "Pete - Ghost of Christmas Past",
-                "Vincenzo Santorini - The Explosives Expert",
-                "Tinker Bell - Giant Fairy",
-                "Strength of a Raging Fire",
-                "He Hurled His Thunderbolt"
-            ],
-            "gameplan": "Ramp with Tipo/Sail. Turn 3: Pete or Jasmine as blocker/singer. Turn 4+: Shift Jasmine into He Hurled His Thunderbolt. Goliath counters Clarabelle. Close with Vincenzo/Tinker Bell.",
-            "strengths": [
-                "Goliath disrupts Clarabelle-based decks",
-                "Jasmine is removal-resistant",
-                "Strong top end threats",
-                "Good removal depth"
-            ],
-            "weaknesses": [
-                "Slightly slower than Emerald/Sapphire",
-                "Fewer answers to Dogs early curve than Amber/Steel",
-                "Less raw card advantage than Amethyst lines"
-            ],
-            "mulligan": "Keep early blockers + Tipo or Sail. Ideal: Ramp piece + Pete or Jasmine."
-        },
-        {
-            "name": "Amber/Sapphire Mufasa Control",
-            "tier": "B",
-            "colors": [
-                "Amber",
-                "Sapphire"
-            ],
-            "archetype": "Control/Midrange",
-            "winRate": "~10%",
-            "description": "Emerging archetype that turned heads at DLC Ghent (top 16). Features Mufasa - Ruler of Pride Rock as a dominant threat alongside Ohana Means Family for burst card draw. Nakoma - Waiting Out the Storm as a resilient midgame blocker. Won a Set Champs (Princess Power! variant).",
-            "keyCards": [
-                "Mufasa - Ruler of Pride Rock",
-                "Nakoma - Waiting Out the Storm",
-                "Scuttle - Birdbrained",
-                "Hades - Infernal Schemer",
-                "Stitch - Carefree Surfer",
-                "Ohana Means Family",
-                "Raging Storm",
-                "Belle - Snowfield Strategist"
-            ],
-            "gameplan": "Midgame: Deploy Nakoma to threaten and contest anything the opponent has played. Pivot into Mufasa to dominate the board with stats. Ohana Means Family for burst draw. Scuttle/Stitch quest while Mufasa wins challenges.",
-            "strengths": [
-                "Mufasa dominates board when unchecked",
-                "Nakoma is hard to remove efficiently",
-                "Ohana Means Family generates game-winning card advantage",
-                "Unexpected game plans confuse opponents"
-            ],
-            "weaknesses": [
-                "Dogs can go under it if Nakoma doesn't arrive on time",
-                "Less consistent than dedicated Sapphire ramp decks",
-                "Still being refined"
-            ],
-            "mulligan": "Keep Nakoma, any early tempo piece, Hades. Ideal: Turn-3 Nakoma + follow-up plan."
-        },
-        {
-            "name": "Amber/Ruby Boost Control",
-            "tier": "B",
-            "colors": [
-                "Amber",
-                "Ruby"
-            ],
-            "archetype": "Control/Midrange",
-            "winRate": "~9%",
-            "description": "Off-meta success — won a Set Champs (Black Dragon Games). Raging Storm provides no-questions-asked board reset. Works around the Dogs and Sapphire triangle with flexible removal and midrange threats. Lilo - Escape Artist and Rampking-style combo lines.",
-            "keyCards": [
-                "Raging Storm",
-                "Lilo - Escape Artist",
-                "Amber Champion threats",
-                "Ruby tempo engine"
-            ],
-            "gameplan": "Control early board with Ruby tempo, deploy midrange threats, Raging Storm when behind. Close with Amber card advantage engines.",
-            "strengths": [
-                "Raging Storm is a clean answer to Dogs flood",
-                "Unexpected deck — opponents rarely know the lines",
-                "Flexible removal suite"
-            ],
-            "weaknesses": [
-                "Less powerful than top meta decks in fair fights",
-                "Inconsistent without Raging Storm",
-                "Slower tempo than dedicated aggro"
-            ],
-            "mulligan": "Keep early Ruby plays + any removal. Raging Storm is the most important singleton to find."
-        },
-        {
-            "name": "Amethyst/Emerald Hyper Aggro",
-            "tier": "B",
-            "colors": [
-                "Amethyst",
-                "Emerald"
-            ],
-            "archetype": "Aggro",
-            "winRate": "~8%",
-            "description": "Won a Winterspell Set Champs. 28+ one-cost characters, closes with Enigmatic Inkcaster. Extremely fast but fragile. Amethyst Chromicon fuels refill. Mulan burn variant also active.",
-            "keyCards": [
-                "Enigmatic Inkcaster",
-                "Amethyst Chromicon",
-                "Show Me More!",
-                "They Never Come Back",
-                "The White Rose - Jewel of the Garden"
-            ],
-            "gameplan": "Flood with 1-cost creatures every turn, trigger Enigmatic Inkcaster twice, close with lore generation before opponent stabilizes.",
-            "strengths": [
-                "Ultra fast",
-                "Beats most Sapphire ramp decks",
-                "Won a Set Champs"
-            ],
-            "weaknesses": [
-                "Destroyed by Amethyst/Steel",
-                "No plan B if Inkcaster is removed",
-                "Dogs can race it"
-            ],
-            "mulligan": "Keep any 1-cost creatures, mulligan everything else."
-        },
-        {
-            "name": "Amethyst/Ruby Control",
-            "tier": "B",
-            "colors": [
-                "Amethyst",
-                "Ruby"
-            ],
-            "archetype": "Control/Midrange",
-            "winRate": "~8%",
-            "description": "Won a Winterspell Set Champs. Diablo - Watchful Raven and Peter Pan - High Flyer provide aggressive evasive threats. Beast's Castle - Winter Gardens as a powerful new location that doubles lore and protects characters.",
-            "keyCards": [
-                "Diablo - Watchful Raven",
-                "Peter Pan - High Flyer",
-                "Beast's Castle - Winter Gardens",
-                "Hercules - Mighty Leader",
-                "Beast - Snowfield Troublemaker",
-                "Lumiere - Fiery Friend"
-            ],
-            "gameplan": "Establish Beast's Castle early, deploy evasive threats that challenge freely while generating lore. Diablo into Beast's Castle turns any challenge into free lore gains.",
-            "strengths": [
-                "Diablo + Beast's Castle is unfair",
-                "Resists taking damage when challenging",
-                "Unexpected in most metas"
-            ],
-            "weaknesses": [
-                "Location-heavy strategy loses to targeted removal",
-                "Slower setup than pure aggro",
-                "Weaker in no-location metas"
-            ],
-            "mulligan": "Keep Beast's Castle and any 2-drop. Ideal: Location + evasive threat."
+            "mulligan": "Keep Angel - Siren Singer or Cinderella - Dream Come True plus Akood Et Emuti."
         }
     ],
     "playTips": [
-        "Amber/Emerald Dogs is public enemy #1 — know how to beat it or play it yourself",
-        "Emerald/Sapphire wins by mastering the Under the Sea + Malicious, Mean and Scary pivot against Dogs — don't skip that line",
-        "Amber/Steel's Angel - Experiment 624 is the hardest counter to Dogs; consider it in any Steel shell",
-        "Akood Et Emuti enables turn-2 4-drops or 3-drops; sequence your singers carefully for this effect",
-        "Grandmother Willow - Ancient Advisor enables characters to dodge Under the Sea — sequence her before key threats",
-        "Sapphire/Steel is underrated and rising — Jasmine - Steady Strategist on turn 2 via ramp is undervalued",
-        "Amethyst/Sapphire is still the most powerful deck in a vacuum but Dogs was adapted around at Taipei — the meta shifts are ongoing",
-        "Set Championship season has diversified the format — Amber/Ruby, Sapphire/Steel, and Amethyst/Ruby now all win high-level events",
-        "Hiram Flaversham - Toymaker is banned — update all Steel decks that relied on Fortisphere enabling",
-        "Set 13 is now legal in Core, and early testing suggests meaningful shifts in tempo and value mirrors before DLC Indianapolis/Dortmund"
+        "Core Constructed has rotated — Attack of the Vine! era is live. Format is healthily diverse across aggro, midrange, combo, and control. No single dominant deck.",
+        "Amethyst/Steel has TWO viable builds: Maleficent & Diablo - Evil Incarnate Shift build and Omnidroid/Syndrome - Out for Revenge combo. Know which you face.",
+        "Amber/Ruby Boosties key line: Sulley - New Boss shifts into Sulley & Boo - Scare Buddies. After Raging Storm wipes the board and banishes Scare Buddies, Sulley - New Boss replays for FREE and you draw a card. This breaks Raging Storm's intended design.",
+        "Darkwing Duck Detective (Sapphire/Steel) punishes questing — do NOT quest blindly into a board of cheap Darkwings with Judy Hopps - Lead Detective in play.",
+        "Mulan - Resourceful Recruit (new from Attack of the Vine!) in Amber/Emerald Elinor Aggro: buff her with Snow Fort or Dale - Ready For His Shot and she quests for 3+ lore as a Princess demanding an immediate answer.",
+        "Gaston - Superior Archer (new from Attack of the Vine!) is the go-to removal for large control targets. Red Alert handles aggro. Both appear across Amber/Ruby and Amber/Emerald lists.",
+        "Morph - Little Imitator (new from Attack of the Vine!) is a key Shift target in Amethyst/Steel — cheap body that doubles as Shift fodder and loads the discard.",
+        "In Infinity format: Amethyst/Emerald Tempo (Diablo-based) is the consensus best purple deck. Diablo - Devoted Herald + Snow Fort + 12 Shift targets (8 hit on turn 2) is the core package.",
+        "Ruby/Sapphire Shark won DLC Indianapolis. Olaf - Snowman of Action is the new engine — inkable and drains lore massively after Be Prepared. Multiple Olaf after a sweep is game-ending.",
+        "Amber/Emerald Dogs Infinity tech: Kida - Protector of Atlantis + Kida - Atlantean enable Under the Sea in ANY matchup. The Queen - Devious Disguise dodges removal and quests for 3 in race scenarios.",
+        "Hiram Flaversham - Toymaker is still banned in Core Constructed. Verify deck lists before events.",
+        "Benja - Guardian of the Dragon Gem in Amethyst/Steel is excellent item hate against Ruby/Sapphire builds in both Core and Infinity.",
+        "Pull the Lever! / Wrong Lever! in Amethyst/Emerald Infinity: discarding Pull the Lever! to Shift Diablo turns Wrong Lever! into unconditional removal — effectively 6 copies of Friends on the Other Side.",
+        "Attack of the Vine! Set Championships approximately 5 weeks from Jul 29, 2026 — now is the time to pick a deck and get reps.",
+        "Format Coconut (new Commander-like multiplayer format) announced by Ravensburger — not in official play yet but worth tracking for upcoming seasons."
     ],
     "metaPairings": [
         {
@@ -663,86 +748,187 @@
     ],
     "formats": {
         "infinity": {
-            "note": "Infinity format featured as main event at upcoming DLC Indianapolis and DLC Dortmund. Hiram Flaversham - Toymaker recently banned affects Infinity builds.",
+            "note": "Infinity fully validated by DLC Dortmund (Jun 6-7, 2026) and DLC Indianapolis (Jun 20-21, 2026). DLC Manila (Jul 11-12) was the final Infinity DLC of Season 2. Results: Amethyst/Emerald Tempo won Dortmund Grand Final; Ruby/Sapphire Shark won Indianapolis. Amber/Emerald Dogs remains S-tier despite not winning either event final. All sets 1-14 legal in Infinity.",
             "topDecks": [
+                {
+                    "name": "Ruby/Sapphire Shark",
+                    "tier": "S",
+                    "colors": ["Ruby", "Sapphire"],
+                    "archetype": "Midrange/Control",
+                    "winRate": "~24%",
+                    "description": "Won DLC Indianapolis (Bryan Pereira / Splooshmcgoo). Stabilizes with Maui - Hero to All, Firefly Swarm, and Sisu sweepers, then closes with multiple Olaf - Snowman of Action draining lore after Be Prepared. Olaf - Snowman of Action (from Wilds Unknown) is the new key card — inkable and pulls multiple lore back post-sweep.",
+                    "keyCards": [
+                        "Maui - Half-Shark",
+                        "Maui - Hero to All",
+                        "Firefly Swarm",
+                        "Sisu - Empowered Sibling",
+                        "Olaf - Snowman of Action",
+                        "Be Prepared",
+                        "A Pirate's Life",
+                        "Pawpsicle",
+                        "Merlin's Carpetbag",
+                        "Tamatoa - Happy as a Clam",
+                        "Tipo - Growing Son",
+                        "Sail the Azurite Sea",
+                        "How Far I'll Go",
+                        "Maleficent - Monstrous Dragon",
+                        "Spooky Sight"
+                    ],
+                    "gameplan": "Ramp with Tipo/Sail. Draw with Pawpsicle + Merlin's Carpetbag + Tamatoa. Stabilize with Maui - Hero to All and Sisu/Firefly Swarm sweepers. Sweep with Be Prepared then flood with multiple Olaf - Snowman of Action to drain opponent lore. A Pirate's Life closes.",
+                    "strengths": [
+                        "Olaf - Snowman of Action is inkable and drains massive lore after Be Prepared",
+                        "Multiple sweeper variants cover all threat types",
+                        "Maui - Half-Shark loops actions for near-infinite value",
+                        "Draw engine is extremely consistent"
+                    ],
+                    "weaknesses": [
+                        "Setup-heavy — needs ramp and draw before executing",
+                        "Vulnerable to hand disruption before key pieces arrive"
+                    ],
+                    "mulligan": "Keep Tipo or Sail the Azurite Sea. Ideal: Ramp piece plus Pawpsicle or Tamatoa."
+                },
                 {
                     "name": "Amber/Emerald Dogs",
                     "tier": "S",
-                    "colors": [
-                        "Amber",
-                        "Emerald"
-                    ],
+                    "colors": ["Amber", "Emerald"],
                     "archetype": "Aggro",
-                    "winRate": "~27%",
-                    "description": "Same dominant threat as Core Constructed but with access to all previous Amber/Emerald tools from sets 1-10.",
+                    "winRate": "~26%",
+                    "description": "2nd Place DLC Indianapolis (IMP_Alphos). Most-played Infinity archetype. New innovations: Kida - Protector of Atlantis + Kida - Atlantean for Under the Sea in any matchup; Elinor - Renowned Diplomat for card advantage; The Queen - Devious Disguise as Evasive lore-questing threat that dodges removal and quests for 3.",
                     "keyCards": [
-                        "Lady - Decisive Dog",
-                        "Tramp - Enterprising Dog",
+                        "Tramp - Street-Smart Dog",
                         "Grandmother Willow - Ancient Advisor",
-                        "Nani - Stage Manager",
-                        "Under the Sea"
+                        "Under the Sea",
+                        "Kida - Protector of Atlantis",
+                        "Kida - Atlantean",
+                        "Elinor - Renowned Diplomat",
+                        "The Queen - Devious Disguise",
+                        "Aurora - Holding Court",
+                        "Lilo - Escape Artist",
+                        "Lady - Decisive Dog"
                     ],
-                    "gameplan": "Same as Core Constructed — flood cheaply, use Grandmother Willow and Under the Sea to close.",
+                    "gameplan": "Flood board turns 1-3. Grandmother Willow accelerates to Tramp - Street-Smart Dog. Kida - Protector of Atlantis shifts in to shrink opposing board before Under the Sea sweeps. Elinor and The Queen generate card advantage and lore pressure.",
                     "strengths": [
-                        "Same dominance as Core Constructed but wider card pool"
+                        "Kida package powers Under the Sea in any matchup",
+                        "Elinor - Renowned Diplomat is backbreaking in multiples",
+                        "The Queen - Devious Disguise dodges removal and quests for 3",
+                        "Core aggressive plan proven across many high-level events"
                     ],
                     "weaknesses": [
-                        "Infinity counter-decks can run older removal suites"
+                        "Amethyst/Emerald Tempo favorable via Diablo + Snow Fort",
+                        "Ruby/Sapphire Shark resets with repeated sweepers",
+                        "Amber/Steel Singer punishes via Princess singers + removal songs"
                     ],
-                    "mulligan": "Same as Core Constructed Dogs — keep Grandmother Willow and cheap dogs."
+                    "mulligan": "Keep Grandmother Willow, cheap dogs, Kida - Atlantean. Mulligan all hands without a turn 1-2 play."
                 },
                 {
-                    "name": "Amethyst/Sapphire Control",
+                    "name": "Amethyst/Emerald Tempo",
                     "tier": "S",
-                    "colors": [
-                        "Amethyst",
-                        "Sapphire"
-                    ],
+                    "colors": ["Amethyst", "Emerald"],
                     "archetype": "Midrange/Control",
-                    "winRate": "~24%",
-                    "description": "The most powerful deck in the game in a vacuum. Access to full Whispers/Winterspell card pool.",
+                    "winRate": "~23%",
+                    "description": "Won DLC Dortmund Grand Final (Alessandro Danesi). 3rd Place DLC Indianapolis (Ramen — 5 cards different). De facto purple deck in Infinity. Built around Diablo - Devoted Herald with 12 Shift targets; 8 can Shift Diablo on turn 2. Snow Fort keeps Diablo out of Let the Storm Rage On range. Pull the Lever!/Wrong Lever! chain creates 6 copies of Friends on the Other Side.",
                     "keyCards": [
-                        "Tipo - Growing Son",
-                        "Sail the Azurite Sea",
+                        "Diablo - Devoted Herald",
+                        "Diablo - Obedient Raven",
+                        "Diablo - Spiteful Raven",
+                        "Ursula - Deceiver",
+                        "Snow Fort",
+                        "Dumbo - Ninth Wonder of the Universe",
                         "Genie - Wish Fulfilled",
-                        "Demona - Scourge of the Wyvern Clan",
-                        "Hades - Infernal Schemer"
+                        "Elsa - The Fifth Spirit",
+                        "Peter Pan - Shadow Finder",
+                        "Pull the Lever!",
+                        "Wrong Lever!",
+                        "So Be It!",
+                        "Madam Mim - Fox",
+                        "Merlin - Crab",
+                        "Under the Sea",
+                        "Friends on the Other Side"
                     ],
-                    "gameplan": "Ramp → card advantage → finishers. Standard Amethyst/Sapphire plan with deeper card pool.",
+                    "gameplan": "Turn 2: Shift Diablo via one of 8 turn-2 Shift targets. Snow Fort keeps Diablo out of removal range. Pull the Lever! discards to shift; Wrong Lever! becomes removal. Dumbo/Genie/Elsa/Peter Pan all draw cards. So Be It! eliminates Ruby/Sapphire items. Under the Sea sweeps aggressive boards.",
                     "strengths": [
-                        "Deepest card pool",
-                        "Multiple redundant engines"
+                        "Diablo draws cards every turn once established",
+                        "Snow Fort blocks critical damage-based removal on Diablo",
+                        "Pull the Lever!/Wrong Lever! combo = 6 copies of Friends on the Other Side",
+                        "So Be It! is dedicated no-questions-asked item removal",
+                        "Under the Sea handles aggro identical to Core Constructed"
                     ],
                     "weaknesses": [
-                        "Dogs still a concern in Infinity"
+                        "Non-damage removal hard-counters Diablo",
+                        "Less explosive than Dogs on turns 1-3",
+                        "Indianapolis showed list still being refined (Sabotage vs So Be It! debate)"
                     ],
-                    "mulligan": "Keep Tipo or Sail the Azurite Sea."
+                    "mulligan": "Keep any 2-cost Shift target plus Diablo - Obedient Raven or Diablo - Devoted Herald. Turn-2 Diablo is the ideal line."
                 },
                 {
-                    "name": "Amber/Steel",
+                    "name": "Amber/Steel Singer",
                     "tier": "A",
-                    "colors": [
-                        "Amber",
-                        "Steel"
-                    ],
+                    "colors": ["Amber", "Steel"],
                     "archetype": "Aggro/Tempo",
-                    "winRate": "~18%",
-                    "description": "Lilo - Bundled Up has won an Infinity local tournament. Akood Et Emuti and Angel - Experiment 624 are as powerful here as in Core Constructed.",
+                    "winRate": "~20%",
+                    "description": "Won DLC Dortmund Saturday (Alex Kuik). Princess-heavy singer shell with full 4x each of the three most efficient Steel songs. Aurora - Holding Court and Cinderella - Ballroom Sensation enable early songs. Beast - Tragic Hero and Cinderella - Stouthearted as finishers. Beyond the Horizon preferred over A Whole New World to avoid refilling opponent's hand.",
                     "keyCards": [
+                        "Aurora - Holding Court",
+                        "Cinderella - Ballroom Sensation",
+                        "Cinderella - Stouthearted",
+                        "Ariel - Spectacular Singer",
+                        "Ariel - Ethereal Voice",
+                        "Rapunzel - Gifted with Healing",
+                        "Beast - Tragic Hero",
+                        "Akood et Emuti",
                         "Angel - Experiment 624",
-                        "Akood Et Emuti",
-                        "Lilo - Bundled Up",
-                        "Cinderella - Stouthearted"
+                        "Beyond the Horizon",
+                        "The Bare Necessities"
                     ],
-                    "gameplan": "Same as Core Constructed Amber/Steel — accelerate into Angel or Stitch, outpace opponent.",
+                    "gameplan": "Turn 2-3: Cinderella or Ariel enable early Steel removal songs. Aurora ramps multiple princess plays per turn. Beast - Tragic Hero dominates with stats + card draw. Cinderella - Stouthearted provides sticky threat. The Bare Necessities answers Be Prepared and Under the Sea.",
                     "strengths": [
-                        "Lilo - Bundled Up resilience",
-                        "Angel still hard-counters Dogs"
+                        "Full 4x each of top Steel removal songs guarantees interaction",
+                        "Aurora enables multiple princess plays simultaneously",
+                        "Beast - Tragic Hero card draw dominates the mid-game board",
+                        "The Bare Necessities is critical tech vs Be Prepared and Under the Sea in Infinity"
                     ],
                     "weaknesses": [
-                        "Infinity field has wider access to answers"
+                        "Slightly soft into slower Sapphire control shells",
+                        "Needs singers alive for song discount engine",
+                        "Be Prepared disrupts midgame if not answered"
                     ],
-                    "mulligan": "Keep Angel - Siren Singer and Akood Et Emuti."
+                    "mulligan": "Keep Cinderella - Ballroom Sensation plus Steel removal song. Ideal: Singer plus Aurora plus removal."
+                },
+                {
+                    "name": "Ruby/Sapphire Items",
+                    "tier": "A",
+                    "colors": ["Ruby", "Sapphire"],
+                    "archetype": "Midrange/Combo",
+                    "winRate": "~19%",
+                    "description": "2nd Place both DLC Dortmund heats (Dillon Leduc / Rafaelo Sarmiento). 30+ items, Oswald - The Lucky Rabbit as engine. Maurice's Workshop generates card advantage for every item played. Lucky Dime + Tamatoa - So Shiny! is the game-winning activation. Scrooge McDuck - Resourceful Miser becomes a free 4/4 at item density.",
+                    "keyCards": [
+                        "Oswald - The Lucky Rabbit",
+                        "Maurice's Workshop",
+                        "Lucky Dime",
+                        "Tamatoa - So Shiny!",
+                        "Tamatoa - Happy as a Clam",
+                        "Scrooge McDuck - Resourceful Miser",
+                        "Sisu - Daring Visitor",
+                        "Sisu - Empowered Sibling",
+                        "Hidden Trap",
+                        "Sapphire Coil",
+                        "Belle - Inventor Apprentice",
+                        "Fishbone Quill",
+                        "Pawpsicle",
+                        "Liquidator - Iced Over"
+                    ],
+                    "gameplan": "Establish Maurice's Workshop. Flood items via Oswald engine (30 items = near-guaranteed hits). Workshop replaces each item. Scrooge - Resourceful Miser becomes free at item density. Tamatoa - Happy as a Clam recycles Pawpsicles. Lucky Dime + Tamatoa - So Shiny! is the win condition.",
+                    "strengths": [
+                        "Maurice's Workshop generates absurd card advantage at item density",
+                        "Oswald hits nearly every shuffle with 30+ items",
+                        "Scrooge - Resourceful Miser becomes a free 4/4 early",
+                        "Sisu provides both early board control and late sweeps"
+                    ],
+                    "weaknesses": [
+                        "So Be It! (Amethyst/Emerald) and Benja - Guardian of the Dragon Gem (Amethyst/Steel) are targeted item hate",
+                        "Setup-heavy — weak to aggressive starts before Workshop lands"
+                    ],
+                    "mulligan": "Keep Maurice's Workshop or Oswald - The Lucky Rabbit. Any item plus Workshop is a strong keep."
                 }
             ]
         }
